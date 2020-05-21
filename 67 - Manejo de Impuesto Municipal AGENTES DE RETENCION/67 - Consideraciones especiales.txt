@@ -1,0 +1,38 @@
+esta solucion esta resuelta temporalmete al 30/09/2011 con el formato de retencion municipal desde generador de reportes, que filtra por tipocxp=41, rif del proveedor y codoper='04-020 al 04-024 hasta la fecha.!
+
+
+
+
+
+
+Esta solucion comienza por peticion de:
+
+Planet Cars por haber recibido notificacion del municipio sotillo Anzoategui.
+y luego: todos los concesionarios de Mun Caroni estado Bolivar.
+
+
+La solucion consiste en resolver varios detalles:
+
+xmo Creacion del tipode operacion Retencion Municipal
+
+xmo. Creacion y manejo de un consecutivo exclusivo NUEVO para estos comprobantes de retencion. y un contador
+x ro.  Poder indicar en la ficha de proveedores (El nro de licencia de ctividades economicas) LAE exigido en el comprobante de retencion y el indicador si es sujeto pasivo del impuesto
+xdo. Poder indicar en la ficha de proveedores el o los grupos de alicuotas a las que pertenecen las actividades dell proveedor.
+xdo. poder indicar en la ficha de la empres el nro de licencia de actividad economica. exigida en la factura art 15 reglamento
+xro . Realizar Trigger que realice:
+         El ingreso en SAACXP el registro automatico de la retencion similar como lo hace SAINT con la retencion de IVA en el proceso de compra o por las CXP.
+         
+         Restar dicha retencion del saldo restante pendiente de la facturade compra.
+         aumentar el contador del numero de la retencion.
+         
+xto. Generar automaticamente el comprobante de retencion similar al del IVA.
+xto. Generar reporte de control de Retenciones aplicadas
+xto. Generar reporte TXT para el proceso de TRANSMISION DE INFORMACION al portal de la ALCALDIA del CARONI entre otras.
+
+
+Nota importante: Esta solucion esta basada solo con la premisa que la retencion se hace en momento del registro de la compra.
+adicionalmente.
+
+El concepto de la resolcion aplica para cualquier alcaldia que maneje de manera similar el tema de este impuesto como es el caso de la alcaldia de Sotillo en Anzoategui entre otras.
+ 
+

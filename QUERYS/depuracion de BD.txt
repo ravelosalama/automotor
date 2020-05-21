@@ -1,0 +1,33 @@
+
+-- PASO 1: DEL QUERY SIGUIENTE COLOCAR COD INST VALIDO PARA REGISTROS DE VEHICULO
+
+SELECT *
+FROM         SAPROD x INNER JOIN
+                      SAPROD_12_01 y ON x.CodProd = y.CodProd
+WHERE     (x.CodInst <> '12')
+
+-- PASO 2: CORRER SIGUIENTE
+
+UPDATE    SAPROD_12_01
+SET              ATRIBUTOS = 'ELIMINAR'
+FROM         SAPROD x INNER JOIN
+                      SAPROD_12_01 y ON x.CodProd = y.CodProd
+WHERE     (x.CodInst <> '12')
+
+UPDATE    SAPROD_12_01
+SET              ATRIBUTOS = 'ELIMINAR'
+FROM         SAPROD X INNER JOIN
+                      SAPROD_12_01 y ON x.CodProd = y.CodProd
+WHERE     (y.Serial IS NULL OR
+                      y.Serial = '') AND (x.CodInst <> '12')
+
+UPDATE    saprod_12_01
+SET              atributos = 'ELIMINAR'
+FROM         SAPROD_12_01 x LEFT OUTER JOIN
+                      SAPROD y ON x.CodProd = y.CodProd
+WHERE     (y.CodProd IS NULL)
+
+
+-- PASO 3 ELIMINACION DE REGISTROS INVALIDOS
+DELETE FROM SAPROD_12_01
+WHERE     (Atributos = 'ELIMINAR')

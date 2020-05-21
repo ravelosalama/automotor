@@ -1,0 +1,72 @@
+
+
+tecnicos
+Actualiza BD por administrativo
+No reconoce licencia desde versiones anteriores desde el mismo equipo que se activo
+hay que activar de nuevo o actualizar aplicacion sobre la vieja.
+generan 2 nuevos ejecutables
+uno es la conversion monetaria
+otro es para actualizar las estaciones desde una misma instalacion
+CONEXIONM
+SAINTUPDATE
+
+
+Operativos
+Incluyen Accesos directos para ejecutar programas internos y externos desde los modulos Adminis/Ventas/compras/bancos
+Incluyen posibilidad de utilizar el mismo contador en dev/ventas y n/c en CxC (configurador)
+Incluyen posibilidad de editar algunos valores de transacciones desde los modulos cxc y cxp
+Incluyen solucion de reconversion monetaria:
+            1ra parte: informativa: solo basta con parametrizar en configurador/general/otros datos/ tildar
+                uso de reconversion dar valor de divosor y dar simbolo esta solucion aplica 
+                en modulos de compra y venta al totalizar aparecen datos convertidos alternos
+
+            2da parte: es propiamente la reconversion de toda la base de datos,se produce activando el ejecutable que aparece en la raiz donde esta la aplicacion.
+
+Varias Mejoras en reportes de Impuestos/retenciones/IVA/ISLR.
+Incluyen posibilidad de enviar automaticamente reportes desde el generador de reportes
+Incluyen Report Builder version 10.06 en papiamento Ingles-Español
+Incluyen campo activo a todas las tablas maestras
+Incluyen control de Incentivo de fidelidad de cliente en configuradir/otros datos 
+Aumentaron los parametros para Operaciones de inventarios (configurador) 
+Aumentaron los parametros para Operaciones de BAncos (configurador) 
+Agregaron manejo de moneda referencial a Clientes y proveedores para todos los efectos cxc, cxp, ventas y compras
+Agregaron en totalizar compras el campo de fecha de recepcion dentro del mes de trabajo aceptando la fecha de la factura la fecha real que puede ser de meses anteriores...que tal?
+
+Pero nada que funciona los datos adicionales en compra y ventas
+
+Agregaron en la tabla sacomp varios campos entre ellos FechaI que es la fecha real de la factura, hicieron fechae la fecha de recepcion
+NumeroR el numero de comprobante de Retencion IVA.
+
+nUEVA VOZ: SI FUNCIONA DATOS ADICIONALES EN VENTAS Y COMPRas hay que entrar en el configurador y modificar propiedades de la tabla y colocar los modulos donde funcionaran
+
+agregaron varias tablas organizando y clasificando otras prexistente: sataxcxc, sataxcxp, sacorrelsis
+da error en grabar cxc
+
+se agrego posibilidad de colocar reportes en los modulos operacioneas de ventas compras y bancos
+
+
+en cxc registro de ffacturas se elimino calculo automatico de IVA se coloco detalle con seleccionde alicuotas.
+
+EL CAMPO NUMEROR CONTINEN EL NUMERO DE DOCUMENTO AFECTADO CRUZADO ES DECIR FAC / nc O nc / fAC.
+
+EN SAFACT AGREGARON REFERNCIAS CRUIZADAS DE DOCUMENTOS A QUE AFECTAN ES DECIR PAGOS/Nc/nd INCLUSO 
+
+el campo safact.refere hasta la 863 acepta repetidos sin embargo agregan validacion en sacodbar no acepta 
+clave duplicada. solucion: no repetir valores en la tabla safact auque lo acepta
+
+ahora la alicuota adicional no puede ser en un solo valor sino en valores diferetes a la alicuota IVA general
+
+La opcion de consecutivo unico entre NC y DEV en ventas es viable solo si desde el adminisrativo no se emitan NC
+para que vayan de la mano con las devoluciones.
+
+HAY UN NUEVO EJECUTABLE DE CONEXION SUPUESTAMENTE PARA CONECTAR SOLO MODULOS POR SEPARADO. CONEXIONM.EXE
+
+las fuentes en el generador de reportes no funcionan los colores de las fuentes distintas a negro
+en impresoras de matriz de punto.
+
+
+
+Resultados de reconversion
+
+Se corrio el ejecutable sobre BD con data y convirtio todas las tablas satisfactoriamente
+queda evaluar consecuencias ocultas. sobre todo en historicos y estadisticas.

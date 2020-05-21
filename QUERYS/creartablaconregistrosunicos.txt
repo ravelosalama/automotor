@@ -1,0 +1,8 @@
+SELECT DISTINCT CodProd, CodInst, Descrip, Descrip2, Descrip3, Precio1, Precio2, Precio3
+INTO  tEMP2
+FROM SAPROD
+
+
+explicacion:
+
+selecciona (lista) las filas unicamente no esten repetidas los siguientes campos x,y,z grabalos en una tabla de nombre: temp2 desde o leyendo la tabla saprod

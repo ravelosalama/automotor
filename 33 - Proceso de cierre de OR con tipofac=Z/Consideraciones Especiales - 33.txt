@@ -1,0 +1,52 @@
+La solucion consiste en hacer que una Orden de Reparacion que se cierra en un momento dado
+
+1ro recoja la fecha del dia en que se cierra para efectos de los cortes 
+2do que quede no  editable aquellas que no seran contado (es decir: garantia , Interna, accesorios)
+
+
+para ello se agregaran en safact_01 un campo mas adicionales a los ya existentes
+
+    Apertura_OR y 
+    cierre_OR: datetime
+
+y modificar procedimiento: SESA_SP_PROCESA_ESPERA_OR en Solucion 2. 
+
+para que grabe la fecha de cierre y  
+
+ademas se debera agregar y/o modificar:
+
+1) un formato de salida de ordenes de reparaciones cerradas SE AGREGOR FILTRO z
+
+
+2) procedimiento para resbloquear oR cerrada. con clave para efectos de editarla.
+
+   para ello hay que agregar unos campos adicionales con la siguiente estructura
+
+   SACLIE_03: Usuario varchar(35),Orden varchar(15), Motivo Varchar(35),Resultado Varchar(35)
+
+
+
+3) los reportes de o/r que contemple como condicional adicional la fecha de cierre.
+
+
+4) diseñar un query que llene el campo nuevo Cerrada igual a la fechaE actual a todos
+   los registros de Safact cuya Safact_01.status=`'cerrada' and liquidacion <> 'CONTADO'
+
+5) Disenar en el mismo quiery que agregue la palabra 'cerrada' a los registros de 
+   safact_01 cuyo tipofac='A' es decir que esten facturadas
+
+6)
+    
+
+
+
+
+
+
+Mar- 2008 Se esta desarrollando en  probando en promoauto y metropolis Y 
+
+EL 03-04-2008 FUE INSTALADO EN PLANET CARS esta solucion.
+
+Se desarrolla, prueba e instala en Metropolis la solucion completa con sus correcciones 17/08/2008 
+
+Se monta la solucion completa el 22/04/2008 en Planet Remotamente.

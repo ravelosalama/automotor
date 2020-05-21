@@ -1,0 +1,13 @@
+'**********************************************************************
+'  Visual Basic Transformation Script
+'  Copy each source column to the
+'  destination column
+'************************************************************************
+
+Function Main()
+	DTSDestination("TipoFac") = DTSSource("TipoFac")
+	DTSDestination("NumeroD") = DTSSource("NumeroD")
+	DTSDestination("Nro_OR") = DTSSource("Orden_de_REPARACION")
+	DTSDestination("Vale") = DTSSource("Orden_de_COMPRA")
+	Main = DTSTransformStat_OK
+End Function

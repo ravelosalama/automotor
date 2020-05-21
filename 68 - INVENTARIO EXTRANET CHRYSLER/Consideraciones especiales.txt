@@ -1,0 +1,3 @@
+Este reporte funciono con formato de dos campos, codprod y existen, sin embargo debido a que el portal solo admite repuestos chrysler no de plaza el usuario tiende a modificarlo para que el portal lo acepte, por lo que se mejoro agregando los campos de descripcion y descripcion de instancia asi mismo
+se ordeno de forma de instancias y de codigo para facilitar al usuario su edicion constante sobre excel
+esta modificacion se dio el 20/04/2012 comenzando por liberty cars

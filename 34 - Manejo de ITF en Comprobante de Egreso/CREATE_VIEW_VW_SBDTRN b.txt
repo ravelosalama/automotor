@@ -1,0 +1,94 @@
+ SET QUOTED_IDENTIFIER ON 
+GO
+SET ANSI_NULLS ON 
+GO
+
+-- ************************************************************** 
+-- * NOMBRE: VW_SBDTRN                                          *
+-- * AUTOR:  infoproyectos@mipunto.com                          *
+-- * FECHA:   18-02-2008                                        *
+-- * DESCRIPCION:                                               *
+-- * Crea una vista para incluir el idb/itf en la impresion     *
+-- * de las cuentas contables del comprobante de cheques        *
+-- * bancarios, permitiendonos totalizar el asiento con el itf  *
+-- ************************************************************** 
+
+
+-- CREA VISTA DE REGISTRO DE TRANSACCIONES BANCARIAS
+IF EXISTS (SELECT TABLE_NAME 
+	   FROM   INFORMATION_SCHEMA.VIEWS 
+	   WHERE  TABLE_NAME = N'VW_SBDTRN')
+    DROP VIEW VW_SBDTRN
+GO
+
+create view VW_SBDTRN AS
+select t2.codbanc, t2.nope, t2.codcta, t2.descripcion, t2.monto, t2.mtodb, t2.mtocr 
+from sbtran t1 
+inner join sbdtrn t2 
+on t1.nope=t2.nope 
+where t1.cdcd=0
+union all
+select t2.codbanc, t1.operel, t2.codcta, t2.descripcion, t2.monto, t2.mtodb, t2.mtocr 
+from sbtran t1 
+inner join sbdtrn t2 
+on t1.nope=t2.nope 
+where t1.cdcd=3 and operel<>0
+
+ 
+
+GO
+----------------
+-- ALGORITMO QUE AGREGA LA TABLA Y CAMPOS EN MASTER Y OBJETS PARA QUE ESTEN DISPONIBLES EN GENERADOR DE REPORTES
+
+
+
+declare @TNAME CHAR(9)
+declare @ALIAS CHAR(9)
+SET @TNAME = 'VW_SBDTRN'
+SET @ALIAS = 'VW_SBDTRN'
+ 
+Delete SATABL
+Where TableName=@TNAME
+ 
+DELETE SAFIEL
+Where TableName=@TNAME
+
+Insert Into SATABL
+(tablename, tablealias)
+Values (@TNAME, @ALIAS)
+
+Insert Into  SAFIEL 
+(TableName, FieldName, FieldAlias, DataType, Selectable, Searchable, Sortable, AutoSearch, Mandatory)
+ 
+(
+Select A.Name As TableName, B.Name As FieldName, B.Name As FieldAlias, 
+       Case B.XType
+    When 56  Then 'dtLongInt'
+	When 58  Then 'dtInteger'
+	When 106 Then 'dtDouble'
+        When 167 Then 'dtString'
+        When 61  Then 'dtDateTime'
+	When 35  Then 'dtMemo'
+        When 52  Then 'dtInteger'
+	When 34  Then 'dtGraphic'
+	When 165 Then 'dtBlob'        
+        End As DataType,
+       'T' Selectable, 
+       'T' Searchable,  
+       'T' Sortable, 
+       'F' AutoSearch, 
+       'F' Mandatory
+from SysObjects A, syscolumns B 
+where A.name=@TNAME
+and   A.Id=B.Id
+) 
+
+
+GO
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+-- NOTA:
+-- En el formato de cheques debemos enlazar las tablas por el campor NOPE 

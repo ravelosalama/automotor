@@ -1,0 +1,2074 @@
+6.8.12.10541
+
+
+
+
+FEBRERO 2014
+
+
+CASO: ESTANDARIZAR LIBROS DE IVA NUEVOS TODAS LOS CONCESIONARIOS
+
+CASO: MANEJO DE RETENCIONES DE OTROS PERIODOS VENTAS.
+
+CASO: NOTAS DE CREDITOS DE VEHICULOS MB Y EXCELLENT
+
+CASO: REPORTE DE MITSUBISHI PROVEEDORES/GREGORIO
+
+CASO: REPORTE DE MITSUBISHI FREDY.
+
+CASO: REPORTE DE AUDITORIA REPUESTOS DESPACHADOS AL TALLER
+
+CASO: ALMACEN VALE ELECTRONICO/COMANDA.GUAYANAUTO
+
+CASO: GARANTIA PASA A FACTURARSE POR CAJA EN GUAYANAUTO.
+
+
+
+
+
+
+
+ENERO 2014
+
+
+
+
+
+SE IMPLEMENTA EN MB NC y devolucines EN COMPRAS Y SE REVISA EN RESTO DE CONCESIONARIOS
+
+SE DISEÑA ESTRATEGIA PARA SOLICITAR CONSULTA AL SENIAT/INDEPABIS SOBRE NUEVA LEY DE PRECIOS JUSTOS  (COSTO DE COMPRA + COSTOS OPERATIVOS + % UTILIDAD MAXIMO)
+
+sE DETECTA PROBLEMA CON REPORTE DE ARCV
+
+SE DETECTA PROBLEMA CON LOS COMPROMETIDOS Y EL DESPACHO EN TALLER TABLAS INVOLUCRADAS SAEXIS, SAPROD CAMPOS COMPRO Y CANTCOM
+
+SE ARRANCA MES CON 8820 EN TODOS LOS CONCESIONARIOS SIN MAYORES INCOVENIENTES APARENTES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oct-2013
+
+se PROSIGUE EL ANALISIS Y CORRECCION DE LA VERSION 8820 SOBRE LIBERTYLABORATORIO EN 10.0.0.43
+SE REALIZA EL CIERRE DE OCTUBRE SOBRE LABORATORIO SATISACTORIAMENTE
+
+
+
+
+20/09/2013 - 25/10/2013
+
+SE SE REALIZO RESPALDO DE BD LIBERYCARSANUALDB Y LUEGO SE RESTAURO COMO LABORATORIO EN 10.0.0.43
+LABORATORIO SE CONECTO Y ACTUALIZO A LA 8831 SI APARENTE DIFICULTAD SOLO UN MENSAJE AL FINAL QUE DIJO QUE SE HABIAN PROCESADO CON ERRORES Y QUE HABIA QUE CORRER SQL
+SE PROCEDE A ENTRAR EN LOS DIFERENTES MODULOS
+ADMINISTRATIVO REPORTES LA MAYORIA CORREN SIN DIFICULTAD INCLUIDOS LOS NUEVOS LIBROS FISCALES.
+ADMINISTRATIVO PRODUCTOS SE AGREGAN MODELOS Y VHICULOS SIN DIFICULTAD
+VENTAS/SERVICIOS/SALE ERROR EN GENERACION Y EDICION DE or
+COMPRAS/ERROR EN REGSITRO DE VEHICULO
+CONFIGURADOR AL PARECER SIN PROBLEMA APARENTE
+SE CONCLUYEMPO QUE LA VERSION 8831 TIENE PROBLEMAS EN FUENTE DE FORMULARIOS DE VENTA Y COMPRA PARA EL CAMPO NUEVO CODSUCU LOS CUALES SAINT OLVIDO ACTUALIZAR EN DELPHY.
+SE PROCEDE A ANALIZAR LA 8820 TAMBIEN PRESENTA PROBLEMAS EN SECUENCIAS DE ACTUALIZACION DE TABLAS CON CONSECUENCIAS EN LA LOGICA DE LOS DESENCADENADORES TRIGGER HACIENDO NECESARIO
+MODIFICAR ALGUNOS TRIGGER Y REDIRECCIONARLOS A OTRAS TABLAS PARA LOGRAR EL MISMO EFECTO ORIGINAL. CASO SAFACT_03 A SAITEMFAC (tg_CARGO DE REPUESTO A or)
+TAMBIEN EN EL TG_aCTUALIZA_or DE LA SOLUCION 40 EL TRIGGER FUNCIONA EN UN 80% EL RESTO DEJA DE FUNCIONAR POR CAMBIOS EN LA SECUENCIA DE ACTUALIZACION DE TABLAS.
+SE REVISA LA VERSION 8749 Y SE CONCLUYE QUE ES LA PEOR DE TODAS A EFECTOS DE ACTUALIZACION. SE VUELVE A EVALUAR LA 8820 CONCLUYENDOSE QUE ES LA QUE SE ACTUALIZARA. PARA GANAR TIEMPO Y PROGRAMAR MODULOS NUEVOS EN DELPHY
+
+
+PREPARAR PARA NUEVA PROGRAMACION DE MODULOS DELPHY
+
+
+NUEVO DIAGRAMA FUNCIONAL DE MODULOS O PROGRAMAS.
+NUEVA ESTRUCTURA DE CARPETAS Y SOLUCIONES
+
+
+
+FUNCIONALIDADES A AGRAGAR EN MODULOS SAINT.
+
+GESTION DE TRAZAS TRANSACCIONALES QUIEN MODIFICA,DESDE DONDE, QUE MODIFICA, CUANDO MODIFICA.
+
+MODULO DE CONFIGURACION CONCEIONARIOS RELAIONADO A SAUSUA :
+
+	RESGTRIGCCIONES ADICIONALES MODULOS CONCESIONARIOS SEGUN PERFIL DE GRUPOS SAINT.
+	ACCESOS ESPECIALES DE MODULOS CONCESIONARIOS SEGUN PERFIL DE GRUPOS SAINT.
+
+SISTEMA DE ERRORES, ADVERTENCIAS, VALIDACIONES, CODIFICADAS. 
+
+SISTEMAS DE TABLAS INDEPENDIENTES DE SAINT PARA PROGRAMACION DE MODULOS CONCESINARIOS CON ENLACES POR ACTUALIZACION A TABLAS DE SAINT SOBRE REGISTROS BASICOS INICIALES (dOCUEMNTOS EN ESPERA)
+
+NOMENCLATURAS DE OBJETOS NUEVAS DE DISEÑO:
+
+SQL PROGRAMACION
+
+TG_
+VW_
+PA_
+SQL TABLAS
+CS_VEHICULOS
+CS_MODELOS
+CS_MENSAJES
+CS_TRAZAS
+
+
+
+
+
+DEPHY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+05/08/2013
+
+
+SE IMPORTA PLANTILLA ORIGEN DE TABLA CONTENTIVA DE PROGRAMACION DE REPORTES A BD DESTINO (SAITRE) A REPORTES.
+
+SE COPIA SAITRE DE BD DESTINO A TABLA ADICION EN LA MISMA BD COMO REPOLD
+
+SE ENLAZAN REPORTES Y REPOLD POR EL MAS LEJANO AMPLIO. MAYOR NRO DE REGITROS.
+
+SE ORDENAN POR ITEMID
+
+SE REVISA QUE AMBOS CONTENIDOS SEAN IGUALES SINO SE ACTUALIZA COMO BASE REPORTE
+
+LOS REGISTROS CON MISMO ITEMID PERO DIFERENTES CONTENIDOS SE SINCRONIZAN EN BASE A REPORTES.
+
+LUEGO DE SINCRONIZADOS EN REGISTROS SE REVISAN LOS MAS ACTUALIZADOS Y SE ACTUALIZAN 
+
+
+
+se dejan solo en repold los reportes que estan mas actualizadosque el reporte plantilla
+
+se realiza importancion completa desde reportes a repold
+
+este ultimo es la plantilla nueva con el cual se actualizara saitre activo
+
+
+02/08/2013
+
+
+queda pendiente:
+
+
+dainery planet libros.
+
+guayana libro de compra y venta procedimiento explicado.
+
+lista de precio de repuesto de MB camiones.
+
+datos y cifras para calculo de prestaciones de victor y yo. y calculo de vacaciones.
+
+pago de fideicomiso.
+
+pago de ivss.
+
+inscripcion y pago en banhavit.
+
+pago de IVA.
+
+pago ince.
+
+
+
+
+
+
+
+
+
+03/07/2013
+estudiando bien el caso de la tabla borrada por error en planetcars sase_retivacxc se observa que el procedimiento de registrar 
+retenciones en ventas no se utiliza la propiedad de cliente contribuyente especial por tanto la retencion no queda como tipo 81 sino como 41
+
+
+para resolver el caso
+
+hay que preparar query que inserte en saacxc el registro 81 con todos los datos del registro 41 pero adecuado al formato de retenciones
+para ello hay que estudiar bien la estructura de contenidos de los registro 81 y codoper¿02-004 de liberty y realizar query con exactitud en 
+planet
+
+antes hay que precisar bien los registros 41 que sean de retenciones para utilizarlos como guia de barrido.
+
+
+
+una vez hecho eso se puede estructurar la tabla sase_retivacxc del fallo original utilizando el query de la solucion 8.
+
+
+
+se recibe llamadas de Nieran, reporta problema de seguridad en mb camiones con un vendedor de repuestos.
+
+se recibe llamada de Adriana, reporta problema de procedimientos con asesores y repuestos con talonarios de ordenes de compras.
+
+Persiste el problema de metropolis y el disco del servidor victor prapara otro equipo provisional para montar base de datos recuperadas de
+
+1er servidor.
+
+
+
+02/07/2013
+
+ACTUALIZANDO SAITRE EN PLANET CARS EN BASE A LIBERTY SE OBSERVAN EN PLANET EL ITEMID 88 MAS NUEVO QUE EL DE LIBERTY
+Y EN LIBERTY 30,48,61,64,81,94,100,120 MAS RECIENTES Y NUEVOS QUE EN PLANET CARS SE SINCRONIZAS AMBAS TABLAS.
+
+PARA INSTALAR EL LBRO DE VENTA NUEVO SE INSTALA REPORTE Y SE CORRE NUEVAMENTE VISTA DE LA SOLUCION 48.
+
+
+
+
+
+
+
+
+28/06
+
+SE REGISTRO UN CASO DE UNCLIENTE EXONERADO DEL COBRO DE IVA SEGUN RESLUCION DEL MNISTERIO DE HABITAT AL SENIAT
+SE PROCEDIO A INDICAR EN LA FICHA DEL CLIENTE EN SAINT COMO INTERNO/EXONERADO.
+LA FACTURA SE EMITIO SATISFACTORIAMENTE
+EL LIBRO A LA PRIMERA CORRIDA NO CUADRO LOS TOTALES DE CONVALIDACION
+SE MODIFICO EL CAMPO TGRAVABLE A CERO Y TEXONERADO A 11XXX EN LA TABLA SAFACT
+ADICIONALMENTE SE INSERTO UN REGISTRO EN SATAXVTA EL CUAL NO SE REGISTRO
+ADICIONALMENTE SE TUMBO A CERO LOS VALORES DE LAS TABLAS SATAXITF CORRESPONDIENTES A LA FACTURA 058141
+
+
+
+
+
+
+27/06
+
+en libertyycarsanualdb
+SE CORRIGE EN LIBRO DE VENTAS NUEVO ASIGNACION DE VARIABLE EN SUBREPORTE DE RETENCIONES PARA QUE EL MARGEN DEL SALTO DE PAGINA NO AFECTE LA ASIGNACION DE LA VARIABLE
+Y SE QUITO DE DETALLE Y SE COLOCO EN FOOT PIE DE PAGINA. ( TAXRET2:= DBCalc16.Value;) 
+se corrige en libro de compras nuevo linea de retencion de iva reducida y se alinean mejor los montos totales del cuadro resumen
+
+se idea una nueva manera de llevar control de todos los objetos modificados en el sistema saint concesionarios. en excel se importan las tablas de saitre, ssfmtos,
+
+por tipo de objetos
+
+       numero del objeto, 
+
+
+reportes
+
+formatos
+
+vistas
+
+trigguers
+
+procedimientos almacenados
+
+tablas adicionales
+
+campos adicionales
+
+
+
+
+
+
+
+
+
+
+25 de junio
+
+se atiendo solicitud de cristian en llevar 662 registros a stock cero.
+
+
+
+ 
+
+
+
+
+
+
+impresora mb camones formato media carta recibo caja cobranzas y anticipo.
+
+no cambiar liquidacion en or con clave de asesor de servicio.
+ 
+revisar restrigcines en asesores garantias.verificar 
+
+tot de servicios verificar que se cobre procedimiento dise;ar.
+
+
+
+
+
+
+
+
+19 Y 20 SE REVISARON LOS PROCEDIMIENTO Y SE DIAGNOSTICA QUE SE DEBE COMPLETAR VALIDACION EN EL CASO DE NOTA DE DEITO /ANTICIPO VALIDAR TRANSAACION DENTRO DE LA MISMA QUINCENA DE LA COMPRA AUNQUE 
+DE POS SI LAS TRANSAACION SON EXCLUYENTES.
+
+se corre en metropolis, promoauto, prestige y liberty correcciones de la solucion 66 en triggers y vista.
+
+POR OTRA PARTE SE VERIFICA QUE SAACXP 
+
+FECHAE ES FECHA DE POSTEO (COLOCADO POR USUARIO)
+FECHAT ES FECHA DE HOY (SISTEMA)
+FECHAI ES FECHA REAL O EMISION DEL DOCUMENTO A REGISTRAR
+
+EL TRIGGER COMPARA LAS FECHAT DE LOS REGISTROS DE COMPRA TIPOCXP='10' Y FECHAT DE LAS NOTAS DE DEBITO TIPOCXP='31'PARA ESTABLECER SI PROCEDE O NO EL REVERSO DE RETENCION.
+
+se modifica en liberty el reporte de 101- complemento de vehiculos se agrega agrupacion por vendedor.
+
+
+
+17 Y 18 DE JUNIO SE OPTIMIZO EL PROCEDIMIENTO DE MANEJO DE NOTAS DE CRETO
+
+SE MEJORARON LA VISTA Y EL TRIGGER BASE DE LA SOLUCION 66 HAY QUE HACER UNA REVISION GENERAL Y UNA VEZ CORREGIDO SE DEBEN CORRER IFICA QUE EN SAAEN PRESTIGE, 
+METROPOLIS, PROMOAUTO, Y EL RESTO DE LOS CONCESIONARIOS
+
+
+05/06/2013
+EN METROPOLIS 
+
+SE REALIZO ACTUALIZACION DE LOS LIBROS DE COMPRA Y VENTA CON TODO Y MANEJO DE NOTAS DE CREDITOS EN COMPRAS
+
+SE OPTIMIZO TRIGGER DE LA SOLUCION 66
+
+QUEDA PENDIENTE OPTIMIZAR PROCEDIMIENTO DE ELIMINACION DE COMPRAS PARA QUE NO ELIMINE LA RETENCION GENERADA EN LA COMPRA SINO QUE LLEVE A CERO SUS VALORES
+
+QUEDA PENDIENTE ACTUALIZAR PROMOAUTO
+
+REUNION CON SANDRA Y DNILA
+
+REUNION CON GREGORIO Y SANDRO 
+
+RESOLVER CASOS PENDIENTES.
+
+revisar en liberty, metropolis, promoauto, list de retenciones y txt y fecha de retenciones aplicadas de facturas de meses anteriores en libro de venta.
+
+
+
+
+
+
+
+09/05/2013
+
+URGENCIA CORREGIR LIBRO DE COMPRA CON CRONOLOGIA Y CONSECUTIVIDAD DE LOS NUMEROS DE DOCUMENTOS. POR FISCALIZACION EN PRESTIGE.
+
+ VW-ADM-TAXCOMCRE se modifica agregando 2 uniones mas la vista no ha sido compilada ni instalada solo esta modificacion al dia de hoy, se requiere terminar compliar y probar, previo a emitir reportes aleatorios de meses anteriores bajo la anterior vista y compararlos con los que se muestran en el actual.
+
+
+
+RECORDATORIO DE CONTENIDO DE FECHAS EN COMPRAS
+
+SACOMP:  FECHAE - POSTEO O RESGITRO
+                FECHAV  VENCIMIENTO DE FACTURA
+                FECHAI - EMISION FACTURA COMPRA
+                FECHAT - FECHA DEL SISTEMA 
+
+FC
+SAACXP 10   FECHAE - POSTEO O REGISTRO
+                    FECHAV - VENCIMIENTO
+                    FECHAI  - EMISION DE FACTURA
+                    FECHAT - FECHA DEL SISTEMA
+ND
+SAACXP 21   FECHAE - POSTEO O REGISTRO
+                    FECHAV - VENCIMIENTO
+                    FECHAI  - EMISION DE NOTA DE CREDITO / DOCUMENTO
+                    FECHAT - FECHA DEL SISTEMA
+
+REV/RET/IVA
+SAACXP 31   FECHAE - POSTEO O REGISTRO / FECHA DEL SISTEMA / EMISION RETENCION
+                    FECHAV - VENCIMIENTO
+                    FECHAI  - EMISION DEL DOCUMENTO ND
+                    FECHAT - FECHA DEL SISTEMA
+RET/IVA
+SAACXP 81   FECHAE - POSTEO O REGISTRO / EMISION DE LA RETENCION / FECHA DEL SISTEMA
+                    FECHAV - VENCIMIENTO
+                    FECHAI  - EMISION DE FACTURA  DE COMPRA
+                    FECHAT - FECHA DEL SISTEMA       
+    
+
+
+
+
+
+
+25,26 de abril
+
+SE PRUEBAN Y CORRIGEN FALLAS EN REPORTES DE LIBRO DE COMPRAS Y RETENCIONES CCON RESPECTO A SUMATORIAS.
+QUEDANDO TOTALMENTE OPERATIVO Y CONSITENTE EN PRESTIGECARS.NO-IP.BIZ/PRESTIGECARSANUALDB/COMO PILOTO 
+
+SE MEJORA Y COMPLEENTA TRIGGER [CORRELRETIVA] CORRIGUENDO CAMPO EN SAACXP SALDOACT, PARA CASOS DE 31
+
+
+SE COMIENZA CORRECCION DEL LIBRO DE VENTA COMMO LO SOLICITA FISCALES DEL SENIAT. EN SOLUCION 53.
+EN LCARS001/LIBERTYCARSANUALDB COMO PILO TO DE ESTA SOLUCION.
+
+24/04/2013
+
+REALIZAR INSTALACION EN LIBERTY, PLANET Y GUAYANA LUEGO METROPOLIS, RORAIMA, MB CAMIONES, PROMOAUTO, ETC.
+
+REVISAR CAMBIOS PENDIENTES EN LIBRO DE VENTAS.
+
+REVISAR LISTADO DE RETENCIONES Y REVERSOS QUINCENALES REPORTE Y TXT.
+
+22/04/2013
+
+Evaluacion del libro de compras piloto de prestige con respecto a filtro h,i,21,81 es decir cmpra, devolucion,nc,reten (SE ELIMINA EL FILTRO I)
+
+lIBRO DE COMPRAS EN PILOTO LISTO Y PULIDO SOLO SE DEBE LIMPIAR INTERNAMENTE TABLAS Y VISTAS INNECESARIAS Y SOLO DEJAR LAS VISTAS EN USO.
+
+SE MEJORA TRIGGER [CORRELRETIVA] Y SE GREGA PARTE 2.
+
+SE PRUEBA REGISTRAR ND -ANTICIPO DE CHRYSLER Y DE OTROS PROVEEDORES Y REALIZA EL DESGLOSE DE BI E IVA Y LO MUESTRA EN LIBROS.
+
+
+12/04/2013
+
+
+querys 
+
+WHERE     (TipoCxP = '81' OR
+                      TipoCxP = '31') AND (YEAR(FechaE) = '2013')
+
+
+
+
+viene del 10/04 y 11/04
+libro compra maneja
+
+ ND normales con rev de retencion     libro de compras descripcion de datos generales , columnas bi,iva,retiva restando columnas y colocando nroretencion, rebaja saldo de factura de compra
+ (Si Compra esta pendiente y NC-prov se registra en el mismo periodo impositivo que la compra que le dio origen)
+
+
+ ND normales sin rev de retencion      libro de compras descripcion de datos generales , columnas bi,iva restando columna retiva en cero y en blanco nroretencion, rebaja saldo de factura de compra
+ (Si Compra esta pendiente y NC-prov NO se registra en el mismo periodo impositivo que la compra que le dio origen)
+
+
+ ND anticipo (sin rev de retencion)     libro de compras descripcion de datos generales , columnas bi,iva restando columna retiva en cero y en blanco nroretencion, genera saldo a favor del proveedor para se aplicado a futuro a cualquier factura
+(Si compra esta Pagada o no esta pendiente)
+
+
+SE DEJA LISTO: TRIGGER QUE TOMA CONSECUTIVO DE RETENCION E INCREMENTA EN UNO PARA REVERSO DE TRETENCIONES ADEMAS DE COMPLETAR CAMPOS REQUERIDOS DE VALORES 
+
+SE DEJA LISTO VISTA NUEVA VW'ADM'TAXCOMCRE
+
+EL FORMATO DE REVERSO DE RETENCION 
+
+EL LIBRO DE COMPRA SOLO FALTA REVISAR LOS TOTALES DEL RESUMEN VS LO DE COLUMNAS.
+
+FALTA RESOLVER DESGLOSE DE CAMPOS BASE IMPONIBLE, IMPUESTOS, EN CASOS DE ND REGISTRADAS COMO ANTICIPOS
+
+FALTA MODIFICAR Y ADAPTAR LISTADOS DE RETENCIONES PARA EL PORTAL DEL SENIAT (TXT).
+
+FALTA PROBAR MANEJO DE EXCENTOS, Y DEVOLUCIONES DE COMPRAS.
+
+TODO LOS DE ARRIBA PROBADOS PARA TODOS LOS CASOS DE NOTAS DE CREDITOS FINANCIERAS CON O SIN REVERSO DE RETENCION.
+ 
+SOLVENTAR DUDA SI: EL CORRELATVO Y CRONOLIGA DEL LIBRO DE VENTA EN EL CUERPO PRINCIPAL VAN TODAS LAS RETENCIONES REGISTRADAS EN EL PERIODO TANTOS DE FACTURAS DEL MISMO MES
+COMO DE MESES DIFERENTES.
+
+
+
+
+
+
+
+
+
+
+11/04/2013
+
+
+CURSO SAINT NOMINA. SILVIA/DANILA/SANDRA,KEISER,RAVELO
+CONVERSATORIO CON NEIRAN CELULAR CASO ESTRUCTURAS DE LIBROS DE COMPRAS Y VENTAS (CRONOLOGIAS Y LINEAS SEPARADAS POR DOCUMENTOS)
+                                                     CASO NOTAS DE CREDITO CHRSYLER.X GTALK
+                                                     CASO ALUCUOTA IMP AL LUJO DESDE ORIGEN (IMPORTACION O ENSAMBLAJE) COMO PREMISA DE APLICACION. MB CAMIONES/EXCELLENT
+se continua actividad del 10/04
+
+
+
+10/04/2013
+
+SE RETOMA CASO NOTAS DE CREDITOS CHRSYLER VIENE DEL 02/04/2013
+
+  EN PRESTIGECARS.NO-IP.BIZ/PRESTIGECARSANUALDB
+  SE VERIFICA DISEÑO Y EJECUCION SATISFACTORIA DE TRIGGER QUE TOMA CONSECUTIVO DE RETENCION Y LO INCREMENTA PARA LOS REV/RETENCION IVA EN CASO DE NOTAS DE DEBTO/CXP.
+
+  SE INICIA ADAPTACION Y MODIFICACION DE LA VISTA VW_ADM_TAXCOMCRE DE LA SOLUCION 1 DESDE CLIENTE LOCAL DE MANAGER SQL A PRESTIGE Y PROBADO EN LIBRO EN CONTRUCCION CONEXION REMOTA.
+
+
+
+
+SE MODIFICA FORMATO DE PREFACTURA DE REPUESTOS AGREGANDO EL CAMPO DE UBICACION.
+
+se atienden CORREOS DE FREDY/RORAIMA Y CRISTIAN/LIBERTY.
+
+09/04/2013
+
+en LCARS001 / LIBERTYCARSANUALDB SE DISEÑO LOS REPORTES DE:
+  INVENTARIO LIBERTY SIN STOCK CON DISPONIBILIDAD EN GUAYANAUTO
+  DISPONIBLE EN GUAYANA DE ARTICULOO NUNCA COMERCIALIZADOS EN LIBERTY
+
+
+EN rORAIMAMOTORS.NO-IP.BIZ/RORAIMAMOTORSANUALDB SE MODIFICO LOS FORMATOS DE FACTURA DEFINITIVA/ESPECIAL/CONDUCTO DE DATOS DE SERVICIOS A REPUESTOS AGREGANDO A LA VISTA CAMPO DE SAITEMFAC. LINEAC PARA FILTRAR POR VALOR 0 CERO QUE INDICA 
+EL ARTICULO BASE COMPUESTO O ITEM PURO (NO PARTES). PARA RESOLVER REPETIDOS EN ACCESORIOS.
+
+
+SE ATIENDE CASO DE GUAYANAUTO / OTTO / COSTOYA / JHONNY / NEIRAN / CHEQUE REEMBOLSO.
+
+
+
+
+04/04/2013
+
+roraima motors
+
+REUNION - TALLER DE GERENTES  POR DEPARTAMENTOS
+
+INTRODUCCION
+
+IMPRESION PARTICULAR
+
+INDUCCION DE REPORTES GERENCIALES
+
+POTENCIAL DE CRECIMIENTO Y DE OPTIMIZACION
+
+INFORMACION FINAL DE IMPLEMENTACON 
+
+SERVICIO
+     CARLOS/I   : 
+
+
+ALMACEN
+     YESENIA  - CLAVE CUANDO CARGA
+                   - TRIGGER VALE/ORDEN DE COMPRAS/NOTAS1 VALE INTERNO 
+                    - VERIFICR POR QUE PRESUPUESTO NO SE ELIMINA SI ES PROCESADO
+
+CAJA
+    FCTURACION
+    NOTA DE CREDITO/DEVOLUCION. 
+
+
+COBRANZA
+
+
+
+
+02/04/2013
+
+query base de prueba y manejo
+
+
+
+SELECT     CodProv, NroUnico, NroRegi, FechaE, FechaV, CodSucu, CodEsta, CodUsua, CodOper, NroCtrol, FromTran, TipoCxP, Moneda, Factor, MontoMEx, 
+                      SaldoMEx, [Document], Notas1, Notas2, Notas3, Notas4, Notas5, Notas6, Notas7, Notas8, Notas9, Notas10, Monto, MontoNeto, MtoTax, RetenIVA, 
+                      OrgTax, Saldo, SaldoAct, EsLibroI, BaseImpo, CancelI, CancelA, CancelE, CancelC, CancelT, CancelG, EsUnPago, EsReten, DetalChq, AfectaCom, 
+                      SaldoOrg, FechaI, NumeroN, Descrip, ID3, TExento, FechaR, FechaT, NumeroDN, NumeroD, NroOPago, CancelD, EsRetenIVA
+FROM         SAACXP
+WHERE     (CodProv = 'V10115144')
+
+
+
+en prestige cars se inicia solucion notas de creditos en compras
+
+SOBRE SOLUCION 66 Y 1
+
+consiste en diseñar un procedimiento que contemple en  buen y adecuado manejo de notas de creditos en las compras 
+para contribuyentes especiales pasando por todos los escenarios posibles
+
+las notas de creditos puedes generarse por dos casos: 
+
+     TIPOS SEGUN SU CAUSA
+
+        Devolucion en compras (modulo de compras - devolucion)   sacomp.tipocom='I'
+
+        Descuento financiero en compras por causas diversas ( errores en tarifas aplicadas, pronto pago, descuentos especiales, etc) x Administrativo  SAACXP.TIPOCXP='21' nd y '31' rev/ret
+
+
+     TIPOS SEGUN SU APLICACION
+
+          
+               Registro como Administrativo/cxp/nota de debito (normal) debe ir casada con una factura PENDIENTE obligatoriamente y podra o no generar reverso de                           retencion si se registra dentro del mismo periodo impositivo. Rebajara el saldo de la compra que le dio origen origen por ende a la cxp. Este caso 
+                          de utiliza cuando la compra se encuentra pendiente en sistema y en la practica.
+
+
+               Registro como una Administrativo/cxp/nota de debito (anticipo) aunque su origen diga que afecta a una compra en la practica su valor va
+                           a ser cruzado con cualquir factura pendiente distinta a la que le dio origen por establecer con el usuario afectando finalmente
+                           tambien a la cxp, se colocara en descripcion el numero de la factura afecada original para efectos del libro de compras.
+                           este caso se utiliza cuando la compra ya se encuentra cancelada con uno  o mas instrumentos de pagos.
+
+                 
+     TIPOS SEGUN SU CONDICION FISCAL
+
+               Se genera Reverso de retencion siempre y cuando la nota de debito se registre dentro del mismo periodo impositivo que la compra que le dio origen.
+               Se describe en el libro de compras afectando en negativo todas las columnas.
+
+
+               NO se genera reverso de retencion si se registra fuera del periodo impositivo de la compra que le dio origen.
+               Se describe en el libro de compras afectando en negativo todas las columnas menos IVA retenido que en este caso ira en cero.
+
+
+
+      TIPOCXP DE CASOS QUE SE MANEJAN EN TODOS LOS ESCENARIOS POSIBLES
+
+                  10 - COMPRA
+                  81 - RET/COMPRA
+
+                  21 - N/C PROV = N/D EMPRESA       FALLA DETECTADA EN SAINT X RESOLVER: SAACXP.MONTO REGISTRA BI+RETENCION EN VEZ DE BI+IVA
+                                                                   Y EN LA INTERFASE DEL REGISTRO EN ADMINISTRATIVO/CXP/NOTA DE DEBITO LA BI NO CARGA BIEN Y HAY QUE                                                                                                                                     COLOCARLA A MANO Y PRESIPITAR UN RECALCULO DEL RESTO DE LOS CAMPOS
+
+                                                                  (SOLUCION EN DISE;O DE REPORTE DONDE SE MUESTRE TOTAL COMPRA INCLUYENDO IVA LA SUMA EX+BI+IVA
+
+                  31 - REV/RET/N/C PROV                FALLA DETECTADA EN SAINT X RESOLVER: NO UTILIZA CONSECUTIVO DE RETENCION EN NUMEROD SINO DOC ORIGEN
+                                                                  (TRIGGER SOBRE SAACXP POR INSERT QUE TOME CONSECUTIVO DE RETENCION LO GRABE EN NUMEROD E
+                                                                  INCREMENTE CONSECUTIVO EN UNO Y GRABE EN SACORREL
+
+                  50 - N/D - ANTICIPO / QUEDA DISPONIBLE EN  SALDO ANTICIPADO PARA CUZARLO CON OTRAS FACTURAS DEBE HACERSE POR ADMINISTRATIVO PR TANTO ORIGEN=0
+
+
+        LIBRO DE COMPRA
+                  COMPLEMENTAR VISTA VW_ADM_TAXCOMCRE  SOLUCION 1 REVISAR UNION 
+
+ 
+
+                
+  
+
+
+
+27/03/2013
+
+se procesaron las solicitudes de arsenio y neiran depuracion en generadl data de troraima distorsiones de mplementacion fechas, etc.
+
+se migro plan de cuentas a sbctas roraima
+
+queda pendiente corregir codigos de bancos con los codigos contables
+
+
+queda pendiente: configurar formato de retenciones regionales y reportes 
+
+se considera estrategia de elaborar todos los puntos de mejoras y optimizaciones que estan pendiente a nivel de sql
+para iniciar pruebas de ultima version a la fecha de saint y luego de haber actualizado a todos los concesionarios
+se procede  programar modulos especiales de servicios, repuestos y vehiculos.
+
+
+
+
+21/03/2013
+
+actividades en desarrollo
+
+X DECLARACION DE ISLR. MOA.
+
+EN LCARS001/LIBERTYCARSANUALDB SE ESTA DISELANDO EL REPORTE COMPARATIVO DE CONCESIONARIOS EN REPUESTO
+
+EN RORAIMAMOTORS.NO-IP.BIZ/RORAIMAMOTORSANUALDB/SE ESTA MODIFICANDO EN COPIA FACTURA DEFINITIVA MODIFICADA/ LA FACTURA DE ACCESORIOS-COMPUESTOS 
+
+sE DEBE INICIAR SOLUCON DE NC/ANTICIPOS EN LIBRO DE COMPRAS CON TODOS LOS ASPECTOS Y ESCENARIOS FISCALES.
+ 
+SE DEBE INICIAR MEJORAS EN TRIGGERS Y PROGRAMACION EN SQL DE VALIDACIONES Y MEJORAS COMO:
+
+VISOR ALTERNO DE MENSAJES DE VALIDACIONES.
+
+RECONSTRUCCION DIRIGIDA DE CARGAS DE REPUESTOS A ORDENES DE REPARACION.
+
+ASIENTO AUTOMATICO EN CAJAS FACTURACIONS, COBRANZAS Y ANTICIPOS DESDE CIERRE DE CAJA Y TRANSACCIONES CXC Y CXP.
+
+REVESRAR CXC Y CXP AL ANULAR DEPOSITO O CHEQUE.
+
+VALIDAR NO ELIMINAR COMPRAS SI YA ESTA ENTERADA.
+
+VALE ELECTRONICO
+02/
+
+
+
+
+
+
+
+
+
+
+
+09/03/2013
+
+REVISAR LA LOGICA DEL PROCEDIMIENTO DE FACTURACION VS DEJAR LAS NOTAS DE ENTREGAS VIVAS 
+EN TEORIA DEBERIA DE ELIMINARSE SIMULANDO HALAR LA NOTA YA QUE SE GENERADA DESDE UN DOCUMENTO EN ESPERA SIN EMBARGO SI SE DEJA PUEDE SERVIR DE AUDITORIA. TAMBIEN REVISAR LAS CONCECUENCIAS EN CAMPOS DE COMPROMETIDOS Y STOCK PARA CUANDO SON DEVUELTOS Y EN GENERAL
+
+
+QUEDA PENDIENTE RESOLVER CASOS DE:
+
+ NOTAS DE CREDITOS FINANCIERAS EN VENTAS Y QUE APAREZCAN EN EL LIBRO DE VENTAS
+
+ NOTAS DE DEBITOS FINANCIERAS EN COMPRAS Y QUE APAREZCAN EN LIBRO DE COMPRA Y QUE GENEREN REV DE RETENCION SI APLICA ES DECIR SI SE REGISTRA EN EL MISMO PERIODO IMPOSITIVO QUE SU FACTURA ORIGEN
+
+DEVOLUCION EN COMPRAS APAREZCA EN LIBRO E IGUAL QUE EL PUNTO ANTERIOR SE GENERE O NO EL REVERSO DE RETENCION SI APLIASE.
+ 
+
+
+
+
+
+27/02/2013
+
+REPORTES DE SERVICIOS
+VALE ELECTRONICO
+UNIR GARANTIA / CONTADO EN DESPACHO POR  SER GARANTIA FACTURADA UNO POR UNO.
+IMPRIMIR LA COMANDA EN CAJA Y ALMACEN
+REPORTES REPUESTOS
+CAJA EL CIERRE  DE CAJA CON ASIENTO DE SALDOS AUTOMATICOS EN BANCOS.
+RETENCIONES DE ISLR
+LIBRO MANEJO DE NOTAS DE CREDITO Y REVERSOS
+
+
+CHECK LIST IMPLANTACION RORAIMA MOTORS, C.A. MITSUBISHI MARZO 2013. SAINT ENTERPRISE 8748
+
+INSTANCIA SQL: 192.168.0.10 / SVRRORAIMA
+ADMIN/SOPORTE
+
+CREACION DE BASE DE DATOS: RORAIMAMOTORSADMINDB
+
+RESTAURACION DE PLANTILLA: LIBERTYCARSANUALDB_25022013
+
+PREPARACION DE BASE DE DATOS VACIADO DE TABLAS MAESTRAS Y TRANSACCIONALES.
+
+INSTALACION DE CLIENTES EN ESTACIONES
+
+PRUEBAS DE LEVANTAMIENTO POR MODULO
+
+INSTALACION DE APLICACION EN SERVIDOR Y CONFIRGURADOR SLM
+
+LICENCIAMIENTO
+
+MIGRACION
+
+USUARIOS: REGISTRAR
+PROVEEDORES: MIGRAR
+CLIENTES: MIGRAR
+PRODUCTOS: MIGRAR
+SERVICIOS: MIGRAR
+VENDEDORES: REGISTRAR
+SERVIDORES: REGISTRAR
+OPERACIONES: PLANTILLA
+INSTANCIAS: PLANTILLA
+ALMACENES: PLANTILLA
+CUENTAS: MIGRAR
+BANCOS: MIGRAR O REGISTRAR
+CXC: MIGRAR O REGISTRAR
+CXP: MIGRAR O REGISTRAR
+
+
+MARCAR REGISTROS MIGRADOS COMO ORIGEN A2
+
+
+CORRELATIVOS DE CONTROLES INTERNOS Y DOCUMENTOS FISCALES.
+
+REVISION DE FORMATOS LOGOS Y DETALLES 
+
+IMPLEMENTACION
+
+   SERVICIOS
+ 
+   REPUESTOS
+
+   CAJA
+
+   ADMINISTRACION
+
+DETALLES
+
+   REVISAR ESQUEMA DE INSTANCIAS DE INVENTARIOS.
+
+
+
+
+
+
+
+21/02/2013
+
+objetivos: 
+SANDRO:Reportes Estadisticas de Metropolis Servicios
+            Separar comisiones de asesores de servicio y de repuestos
+Libro de compra inclusion notas de credito por administrativo (financiero)
+Libro de venta inclusion nota de debito por administrativo (financiero)
+
+Pendiente:
+Programa para recuperar registros tipo 41 y 50 de saacxc del periodo perdido en prestige
+Programar % de utilidad a todos concesioarios incapie en metropolis, planet.
+Programar deposito virtual (Excellent-Obsoletos) para que se vendan con costo+90% 
+Roraima Motors implementacion. Detalles (vale-electronico)(licencias)(memorias)(migracion).
+Nominas Metropolis, promoauto, Planet cars.
+Creacion de empresas satelites de repuestos.
+
+
+
+17/01/2013
+
+EN DIAS ANTERIORES COMENCE A ESTUDIAR LOS DETALLES A CORREJIR Y MEJORAR DEL SISTEMA SOBRE LA 8748
+ENTRE LOS MODULOS ANEXON EN DELPHY HE REUNIDO LAS SIGUIENTES OLUCIONES
+
+MODULO ANEXO: SERVICIO CREAR DOCUMENTO EN ESPERA O ORDEN DE REPARACION CON TODAS LAS VALIDACIONES 
+MODULO ANEXO: COMPRA DE VEHICULOS CREACION DE PREFACTURA EN COMPRA  CON TODAS LAS VALIDACIONES.
+MODULO ANEXO: REPUESTO DESPACHO A TALLER Y MOSTRADOR CON TODAS SUS VLIDACIONES
+
+
+
+
+MANEJO TOTAL DE NOTAS DE CREDITOS EN COMPRAS TOMANDO EN CUENTA EL PERIODO IMPOSITIVO
+DE LA FACTURA ORIGEN Y GENERACION DE REVERSOS DE RETENCION CUANDO APLIQUEN , REGISTRO EN EL TXT DE RETENCIONES Y REGISTRO EN EL LIBRO DE COMPRAS CONSIDERANDO EL REVERSO DE RETENCION SI APLICA.
+
+OPTIMIZACION DE APLICAR VARIAS NOTAS DE CREDITO O DEBITO A COMPRAS Y VENTAS SIN QUE SE BLOQUEE EL DOCMENTO ORIGINAL HASTA QUE LOS DOCUMENTOS QUE LA AFECTEN LA ANULEN COMPLETAMENTE
+
+
+
+
+
+
+
+
+31/10/2012
+
+ADRIANA: RECIBOS DE ANTICIPOS.
+CRISTIAN: TRASPORTAR DE INVETARIOS
+NEIRAN: MB CAMIONES % UTILIDAD Y ELIMINAR A REPUESTO POSIBILIDAD DE COLOCAR PRECIOS DIFERENTES.
+YELITZA: PROCESAR CORREO
+DAINERY: CORREGIR LIBRO DE VENTA NOTA DE CREDITO PENDIENTE.
+
+
+
+
+
+
+
+
+25/10/2012
+se realizo modificacion sobre 201-consulta de notas de entregas cargadas a OR
+en Guayana colocando valor en rojo de devolucion , el reporte fue posteado el mismo dia a la BD Piloto Liberty cars.
+
+Se coloco no visible los telefonos de clientes en el formao de ordenes de reparacion en guayanauto para evitar que
+se realicen servicios fuera.
+
+
+
+
+26/9/2012
+
+revisar proceso de traslado de inventario (No lo hace)
+revisar proceso de notas de creditos en compra de repuestos (rebaja de inventario) (caso impositivo)
+revisar caso de mb chasis + cabina = nuevo modelo.
+
+
+
+
+
+11/09/2012
+
+Promoauto.
+
+Conciliacion Bancaria
+   Configuracion eliminar debito bancario
+   Conciliacion masiva agosto 2012 hacia atras.
+   Conciliacion activa Septiembre 2012
+
+
+Inventarios de Repuesto
+   Limpieza de negativos
+   Estado de las ubicaciones fisicas
+   Reporte de Toma de inventario.
+   Procedimiento.
+
+
+Sistema de Venta de Vehiculos
+
+  Caja Vehiculo
+  Bancos/Anticipos/Recibo
+  Liquidacion o Cierre del Negocio (Cierre de Carpeta)
+
+
+
+
+
+
+
+4/09/2012
+
+en metropolis se colocan todos los reportes del generador de reporte segun plantilla liberty cars
+se consigue un problema en libro de compra que se resuelve en metropolis con repesto a la visualizacion de los campos de detalle en las columnas de iva reducido, simplemente se redireccionan los campos a la tabla sataxcom_red gravable, alicuota y monto_impuesto y se mandan a imprimir, adicionalmente se corriguen los db calculados de las sumatoria final del repote en estos comapos., esto debe postearse en liberty
+
+
+
+
+
+
+
+17/08/2012
+
+-- realiza realiza query utilizando el campo unidad.saprod varchar(3) para marcar productos que segun chrsyler --son de alta rotacion.
+
+UPDATE    SAPROD
+SET              Unidad = 'ALT'
+FROM         ALTARORACIONCHRYSLER AS X INNER JOIN
+                      SAPROD ON X.ITEMNO = SAPROD.CodProd
+
+-- Se realiza query utilizando el campo costact.saprod para ser actualizado con el costo de la tabla de chrsyler costso nuevos
+
+UPDATE    SAPROD
+SET              CostAct = x.costo
+FROM         NUEVOSPRECIOSCHRYSLER AS x INNER JOIN
+                      SAPROD ON x.codprod2 = SAPROD.CodProd
+
+
+-- este query se realiza para facilitar el calculo de ventas del ultimo mes de cada producto
+-- y se utiliza el campo saprod.volumen 
+
+
+UPDATE    SAPROD
+SET              Volumen = x.CntVentas
+FROM         SAEPRD AS x INNER JOIN
+                      SAPROD ON x.CodProd = SAPROD.CodProd
+WHERE     (x.Periodo = '201207')
+
+
+-- ESTE QUERY SE REALIZA PARA MARCAR LOS ARTICULOS QUE CMABIARON DE COSTO SEGUN LISTA CHRYSLER CON EL PORCENTAJE DE VARIACION LINEAL
+
+
+ UPDATE    SAPROD
+SET              Peso = X.costo / SAPROD.CostPro * 100 - 100
+FROM         NUEVOSPRECIOSCHRYSLER AS X INNER JOIN
+                      SAPROD ON X.codprod2 = SAPROD.CodProd INNER JOIN
+                      SAPROD_01 AS z ON SAPROD.CodProd = z.CodProd
+WHERE     (z.Rotacion = 'alta' OR
+                      z.Rotacion = 'MEDIA' OR
+                      z.Rotacion = 'BAJA') AND (X.costo / SAPROD.CostPro * 100 - 100 > 0)
+
+PROCEDIMIENTO DEFINITIVO
+
+1RO. IMPORTAR TABLAS DE LIBERTYCARSANUALDB  (NUEVOSPRECIOSCHRYSLER  Y  ALTARORACIONCHRYSLER)
+
+2DO. CORRER QUERY DEFINITIVO SOLUCION 78
+
+3RO. CORRER 4 QUERYS ARRIBA DESCRITOS
+
+4TO. MONTAR DISE;O DE REPORTE 201. ANALITICO DE INVENTARIO POR ROTACION CORREGIDO
+
+
+
+
+
+
+a todo los efectos del reporte mejorado se debe correr todos los querys anterios a fin de mantener actualizados los campos al menos mensualmente.
+
+OJO REVISAR LOS QUERYS ANTERIORES PARA OPTIMIZARLOS Y QUITARLE ERROR DE DIVICION POR ZERO APARTE DE REDUNDANCIAS
+
+OJO EL REPORTE SE PUEDE OPTIMIZAR AGREGANDI FILTROS COMO STOCK EN MESES MAYOR QUE , ETC
+
+ojo se observa inconsistenacia en el promedio de venta mensual de cada articulo se debe revisar la formula de calculo en el query de la solucion 78 exhaustivamente.
+
+
+Realizado estos pasos se modifica reporte analitico de inventario por rotacion.
+
+
+08/08/2012
+
+se adaptaron querys originales de la solucion 78 para instancias 33 y 34 pudiera hacerse una ultima revsion final luego. se agregaron 2 niveles mas de clasificacion de rotacion
+
+se esta adaptando el reporte 201- ANALITICO DE INVENTARIO POR ROTACION SE ESTAN AGREGANDO 3 COLUMNAS (CANT/SUGERIDA) MONTO/SUGERIDO, VENTA ULTIMO MES.(OJO LEYENDO MES DE TRABAJO MENOS UNO EN SACONF.
+
+QUEDA PENDIENTE VERIFICAR REPORTES DE OBSOLESCENCIA Y PRACTICAR ALGUNAS CONVALIDACIONES DEL RESILTADO DE LOS QUERYS MODIFICADOS.
+
+TODO ESTO HA SIDO REALIZADO SOBRE LIBERTY CARS.
+
+
+
+
+
+06/08/2012
+
+ACTUALIZAR COSTOS ACTUALES DE REPUESTOS
+
+-- IMPORTAR TXT PRECIOS 2012 A EXCEL: lISTO SE ENCUENTRA EN \CONCESIONARIOS
+
+
+-- ANALIZAR CUANTIFICANDO Y CLASIFICANDO PORCENTAJESS DE AUMENTOS CON EL SIGUIENTE QUERY
+
+SELECT     X.CODPROD, X.DESCRIP, X.PRECIO, Y.CostPro, X.PRECIO - Y.CostPro AS DIF, X.PRECIO / Y.CostPro * 100 - 100 AS PORCENTAJE
+FROM         PRECIOSAGOSTO2012 AS X INNER JOIN
+                      SAPROD AS Y ON X.CODPROD = Y.CodProd
+ORDER BY porcentaje
+
+
+
+SELECT     X.codprod2, X.descrip, X.costo, Y.CostPro, X.costo - Y.CostPro AS DIF, X.costo / Y.CostPro * 100 - 100 AS PORCENTAJE, Y.CodInst, Y.Existen
+FROM         PRECIOSAGOSTO2012 AS X INNER JOIN
+                      SAPROD AS Y ON X.codprod2 = Y.CodProd
+WHERE     (X.costo / Y.CostPro * 100 - 100 = 0)
+
+
+SELECT     X.codprod2, X.descrip, X.costo, Y.CostPro, X.costo - Y.CostPro AS DIF, X.costo / Y.CostPro * 100 - 100 AS PORCENTAJE, Y.CodInst, Y.Existen, 
+                      z.Rotacion
+FROM         PRECIOSAGOSTO2012 AS X INNER JOIN
+                      SAPROD AS Y ON X.codprod2 = Y.CodProd LEFT OUTER JOIN
+                      SAPROD_01 AS z ON Y.CodProd = z.CodProd
+WHERE     (z.Rotacion = 'alta')
+ORDER BY porcentaje
+
+
+
+UPDATE    SAPROD
+SET              Peso = 99
+FROM         NUEVOSPRECIOSCHRYSLER AS X INNER JOIN
+                      SAPROD ON X.codprod2 = SAPROD.CodProd INNER JOIN
+                      SAPROD_01 AS z ON SAPROD.CodProd = z.CodProd
+WHERE     (z.Rotacion = 'alta' OR
+                      z.Rotacion = 'MEDIA' OR
+                      z.Rotacion = 'BAJA') AND (X.costo / SAPROD.CostPro * 100 - 100 > 0)
+
+
+
+LUEGO CORRER ANALIZAR DE LA SOLUCION 78 PARA ACTUALIZAR ALTOS, MEDIOS Y BAJA ROTACION
+
+ESTIMAR COMPRA DE ALTA ROTACION DE PRODUCTOS QUE HAYAS SUBIDO DE PRECIO SEGUN CRYSLER
+
+SUGERIR COMPRA MASIVA PARA OBTENER FACTURA DE COMPRA CON COSTOS ACTUALIZADOS
+
+LUEGO ACTUALIZAR COSTO PROMEDIO A COSTO ACTUAL SEGUN LISTA DE TODOS LOS PRODUCTOS
+
+ESTO HACERLO PARA TODOS LOS CONCESIONARIOS
+
+
+
+
+
+
+14062012
+
+
+PRESTIGE CARS SE CREA INSTANCIA DE INVENTARIO ACCESORIOS VENTAS COD 35
+PARA RECLASIFICAR SOLO ACCESORIOS DE VENTAS
+
+
+
+
+28/05/2012
+
+SE REALIZARON SLUCIONES 78 Y 81 A PLANET CARS.
+
+
+
+27/05/2012
+
+se ajusta margenes de utilidad al 45% en los concesionaios Chrysler.
+se programa query solucion 83 programable y aplicable inmediata.
+
+
+
+10/05/2012
+
+SE APLICO SOLUCION 78 Y 81 A GUAYANAUTO
+SE INICIO MEJORA A REPORTES:
+201- ANALITICO DE INVENTARIO POR ROTACION (SE AGREGA MESES EN STOCK EN DESARROLLO DE FILTRO POR NUMEROS DE MESES EN STOCK) HAY QUE DISE;AR VISTA STOCK/PROM CUANDO PRM ES CERO
+201- EXTRANET CHRYSLER (SE MEJORO AGREGANDO FILTRO DEPOSITO) 
+SE APLICO QUERY DE CALCULO DE MAX Y MIN A LIBERTY NUEVAMENTE PARA REPARAR MAXIMOS Y MINIMOS EN FUNCION A 3 SEMANAS Y NO 4
+SE PASO EMBLEMAS A REPUESTOS EN PRESTIGE
+SE LIMPIO NEGATIVOS EN GUAYANA
+
+
+24/04/2012
+
+SE COMPARA LISTA DE REPORTES DEL GR DE PRESTIGE CON EL DE LINERTY Y SE PROCEDE A CENTRALIZAR TODO EN LIBERTY
+SE PROCEDE A REVISAR Y MONTAR REPORTES POR POSTEAR EN PILOTO (LIBERTY)
+SE VERIFICA Y CONFIRMA QUE PILOTO SE ENCUENTRA ACTUALIZADO AL 24/04/2012 CON TODOS LOS REPORTES AL DIA.
+SE VERIFICO QUE EN PLANET, GUAYANA SOLO HAY QUE MONTR LOS REPORTES MIGRANDO LA TABLA SAITRE DE LIBERTY-PILOTO.
+
+
+PROCESO PARA MONTAR SOLUCIONES DE MAXIMOS Y MINIMOS, PROMEDIO MENSUAL, RECLASIFICACION, ETC.
+
+SOLUCION 78 max,min,promedio,rotacion
+
+AGREGAR INSTANCIAS Nuevas EN ESTRUCTURA DE INSTANCIAS DE INVENTARIOS (OTRAS ESTADISTICAS)
+AGREGAR CAMPOS ADICIONAES E SAPROD 
+                                         Fecha_de_inicio=@FechaI
+                                         ,ultimo_estudio=GETDATE()
+                                         ,PROM_MENSUAL=@PROMEDIO
+                                         ,PROM_MOSTRADOR=@PROM_M
+                                         ,PROM_SERVICIO=@PROM_S                                         
+                                         ,Rotacion=@ROTACION
+
+CORRER QUERY que reclasifica y orgeaniza instancias 
+
+SOLUCION 81 SIMPLEMENTE MONTAR OS REPORTES.
+
+MIGRAR TABLA SAITRE DESDE LIBERTY-PILOTO A CADA CONCESIONARIO.
+
+
+23/04/2012
+
+SE PREPARA PROCEDIMIENTO EN BLOQUE (BATH) PARA 
+
+SE CULMINA LOS REPORTES SIGUIENTES:
+ 
+se mejoraron
+
+201 - ESTUDIO DE STOCK EN OBSOLESCENCIA
+201 - INTRANET CHRYSLER
+
+SE LIBERAN LOS SIGUIENTES REPORTES.
+
+000 - ACTA DE COMPENSANCION EN CUENTAS POR COBRAR (LIBERTY)
+
+000 - PROCOMPETENCIA 13 DETALLADO PRESTIGE
+000 - PROCOMPETENCIA 13 RESUMIDO PRESTIGE
+000 - PROCOMPETENCIA 15 DETALLADO PRESTIGE
+000 - PROCOMPETENCIA 15 RESUMIDO PRESTIGE 
+101 - REPORTE DE VENTA COMPLEMENTO DE VEHICULO (PRESTIGE)
+101 - VEHICULOS VENDIDOS CON FINANCIMIENTO (PRESTIGE)
+201 - LISTADO DE CODIGO DE INSTANCIA (PRESTIGE)
+201 - VALORACION DE INVENTARIOS (COSTO ACTUAL VS COSTO PROMEDIO)
+201 - ANALITICO DE INVENTARIO POR ROTACION
+201 - VENTAS PERDIDAS (COMPLETO)
+201 - VENTAS PERDIDAS (SOLO SERVICIO)
+201 - REPORTES DE COMPRAS SEGMENTADOS POR PROVEEDOR Y DEPARTAMENTO (PRESTIGE) OJO CON ESTE REPORTE NO SE PUEDE CARGAR SALE ERROR
+
+OJO LIMPIAR COSTOS POR ENCIMA DE PRECIOS PARA EVITAR UTILIDAD NEGATIVA
+        HACER REPORTE DE TOTALES DE REGISTROS DE PRODUCTOS
+                      EJEMPLO:    37920 REGISTROS EN SAPROD
+                                             18900 VEHICULOS
+                                                 209 MODELO
+                                             31909 REPUESTOS
+                                               5500 ACTIVOS
+                                                
+
+
+
+12/03/2012
+
+SE INICIA PROGRAMACION DE REPORTE VENTAS PERDIDAS EN LIBERTY ACTIVA
+
+
+ASIGNACION AUTOMATICA DE MAXIMOS Y MINIMOS
+
+
+ASIGNCION AUTOMATICA DE NIVEL DE ROTACION ( ALTO, MEDIO, BAJO)
+
+
+REVISION Y CORRECCION DE ACCESORIOS A ACCESORIOS.
+
+
+TRASPASO DE INVENTARIO DE ARTICULOS DORMIDOS U OBSOLETOS.
+
+
+29/02/2012
+
+se prueba net send en consultoria como servidor y mensajes en unico satisfactoriamente y viceversa.
+solo queda instaurar trigger principal nro 40 en bd liberty activa y probar. con vlidacion de solucion 40
+
+se activi licencia de ecellent en consultoria bd. liberty
+para poder hacer pruebas
+
+se determino por pruebas que la instruccion que provoca el error que simula rollback es raiserror, roll bak no sirve 
+por lo que hay que combinar el netsend con raiserror falta probar con breake
+
+se vislumbra manejo de tabla de configuracion de concesionarios con campos de estaciones de mensajerias 1,2 3 , 
+algunos contadores especiales, variable globales, usuarios permitidos para determinadas funciones caso jack para
+cerrar ordenes
+
+las estacines deben tener un max de caracteres en sus nombres de 10 
+
+
+INICIO SOLUCION VENTAS PERDIDAS
+
+     POR MOSTRADOR 
+              PREFACTURAS NO FACTURADAS 
+                      TEMAS A SUPERAR, FACTURAR EN NEGATIVO
+                    
+     POR TALLER 
+              VALES ELECTRONICOS EN BACK ORDER.
+
+201 - REPORTE DE COMPRAS SEGMENTADO POR PROVEEDORES Y DEPARTAMENTOS
+
+28/02/2012
+
+101 - VEHICULOS VENDIDOS CON FINCANCIAMIENTO (LISTO EN REVISION X USUARIO) EN PRESTIGE
+101 - REPORTE DE VENTA COMPLEMENTO DE VEHICULOS
+
+27/02/2012
+
+SE RETOMA ACTUALIZACION DE AMBIENTE DE TRABAJO EN CONSULTORIA A FIN DE SEGUIR LA PROGRAMACION DE ASUNTOS PENDIENTE EN BASE DE DATOS DE CONCESIONARIOS
+
+SE RESPADA AMBIENTE DE TRABAJO ANTERIOR CONSULTORIA.LIBERTYCARSANUALDB PREPARADA EN DICIEMBRE-2011/ENERO 2012
+SE RESTAURA EN CONSULTORIA.PLANTILLA
+SE RESPALDA BD LCARS001.LIBERTYCARSANUALDB Y SE RESTAURA EN CONSULTORIA.LIBERTYCARSANUALDB
+
+SE DEBEN PASAR A LA BD AMBIENTE DE TRABAJO (AT) LAS TABLAS QUE YA SE HAN PREPARADO COMO GRUPOS DE TRABJO, PERMISOLOGIAS Y OPCIONES DE MENU.
+
+SE DEBE PROSEGUIR CON:
+
+   REQUERIMIENTOS URGENTES PENDIENTES POR RESOLVER (REPORTE YELITZA) listo en revision
+  unificar reportes realizados en bd particulares y postearlas en bd principal son 3 reportes por postear de prestige a liberty
+
+
+
+   AVISOS DE ADVERTENCIAS EN VALIDACIONES
+
+   SOLUCION   VALE ELECTRONICO
+
+   SOLUCION VENTAS PERDIDAS
+
+   SOLUCION RESTRIGCION CERRAR ORDENES ASESORES. 
+
+   REPORTES DE REPUESTOS Y SERVICIOS SEGUN EVALUACIONES CHRYSLER.
+
+   ATENDER VIEJOS REQUERIMIENTOS.
+   
+
+   CONTABILIDAD
+  
+
+
+
+
+31/01/2012
+
+PROCEDIMIENTO REGISTRO Y MANEJO DE DEVOLUCIONES EN COMPRAS CON REVERSOS DE RETENCIONES
+
+1RO. DEBE POSEER EL MISMO CONCECUTIVO DE RETENCIONES
+2DO SE USAN DOS FORMATOS RETENCIONES SALDOS POSITIVOS Y REVERSO DE RETENCION CON SALDOS EN NEGATIVO
+
+3RO. DESCRICIONN TECNICA EN TABLAS DE AMBAS TRANSACCIONES
+
+    SAACXP:  TIPOCXP 81 RETENCION AMARRADA A UNA FACTURA TIPOCXP 10 POR MEDIO DE NROREGIDE 81=NROUNICO DE 10
+    SAACXP: TIPOCXP 31 REVERSO      AMARRADA A UN ADELANTO TIPOCXP 50  POR MEDIO DE NROREGIDE 31=NROUNICO DE 50 : ESTO CUANDO EL PROVEEDOR OTORGA N/C Y QUEDA SALDO A FAVOR  DE LA EMPRESA NUESTRA PARA USO EN PAGO FUTURO.
+    
+    ELABORAR TRIGGER QUE GENERE REGISTROS EN SAACXP TIPO 50 Y EL 31 CUANDO SE REGISTRE UNA DEVOLUCION EN COMPRA / NOTA DE CREDITO
+
+    REVISAR LOS FORMATOS DE RETENCIONE Y REVERSO
+
+    REVISAR REPORTE DE RETENCIONES DE IVA DEBE INCLUIR TAMBIEN LOS REVERSOS
+
+   REVISAR LIBRO DE COMPRAS DEBE INCLUIR TAMBIEN LAS DEVOLUCIONES Y REVERSOS DE RETENCIONES CON SALDOS EN NEGATIVO
+       
+   OJO SE GENERAN REVERSOS SOLO CUANDO LAS NOTAS DE CREDITO SON POSTEADAS O REGISTRADAS DENTRO DEL MISMO PERIODO IMPOSITIVO. 
+
+   EL REVERSO EN ESTE CASO REBAJA LA RETENCION ORIGINAL DENTRO DE UN MISMO PERIODO IMPOSITIVO
+
+   DE LO CONTRARIO NO SE GENERA EL REVERSO Y LA NOTA DE CREDITO QUEDA AFECTANDO LA TOTALIDAD DE LA CXP
+
+
+
+
+
+
+
+31/01/2012
+
+PROCEDIMIENTO VALE DIGITAL POR SAINT
+
+EQUIPO EN TALLER
+
+GRUPO DE USUARIO TALLER
+
+PERFIL DE USUARIO VENTAS CON SOLO PRESUPUESTO CONFIGURADO CON CLIENTE, ALMACEN, VENDEDOR  FIJOS Y CON RENGLON FIJO GENERICO.
+
+SE CONFIGURA LA SALIDA DEL FORMATO HACIA IMPRESORAS DE REPUESTOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRESTIGE CARS
+
+    STOCK PRECISO DE ACCESORIOS Y SE COLOCA APARTE EN EL DUAS
+
+    REPORTE QUE DEMUESTRE EL COMPORTAMIENTO DE SU MEZCLA POR TIPO DE PEDIDO A CHRSYLER DE VENEZUELA
+    VOLUMEN DE COMPRA
+    CUMPLIMIENTO DE OBJETIVOS Y OTROS INDICATIVOS
+
+    RESULTADOS DE RENTABILIDAD DENTRO DEL CONCESIONARIO
+
+   solicitud de taller a repuestos
+
+
+    MOVIMIENTOS DIARIOS, VENTAS PERDIDAS YPEDIDOS EMITIDOS.
+
+
+
+09/01/2012 hora 6,30 am 
+
+05/01/2012 HORA 10 AM PRESTIGE CARS, METROPOLIS, PROMOAUTO, EXCELLENT
+
+04/01/2012 HORA 10AM  GUAYANAUTO, SURAUTO, MB CAMIONES, PLANET CARS
+
+02/01/2012 HORA 10AM PRUEBAS DE LABORATORIOS Y CONFIGURACIONES
+
+
+ACTUALIZACION 8744 A 8748:  (ACCIONES TECNICAS)
+
+      RESPALDAR LA BASE DE DATOS ORIGINAL 8744 DEL 02012012 : G,S,MB, PLA,PRES,PRO,MET,EXC
+
+      INSTALAR LA VERSION NUEVA G,S,MB, PLA,PRES,PRO,MET,EXC
+
+      INSTALAR EL SLM V 2 G,S,MB, PLA,PRES,PRO,MET,EXC
+
+     ACTIVAR LICENCIA ADMINISTRATIVO Y ACTUALIZAR BD G,S,MB, PLA,PRES,PRO, MET,EXC
+
+     AGREGAR CAMPO CODOPER VARCHAR 10 A SAPAGCXC Y SAPAGCXP G,S,MB, PLA,PRES, PRO, MET,EXC
+
+    CERRAR MES DE TRABAJO DICIEMBRE NUEVO MES ENERO 2012 : G,S,MB,PLA,PRES, MET,EXC
+
+     CONECTAR LAS ESTACIONES: G,S, 
+
+     TABLAS A UNIFICAR EN TODAS LAS BASES DE DATOS DESDE PLANTILLA DE LABORATORIO DE BASE LIBERTYCARS (CONSULTORIA\SQLEXPRESS)
+ 
+           SSUSRS   --    IMPORTAR SOLO USUARIOS NOMINALES
+           SSOPMN --    OPCIONES DE MENUES
+           SSNIVL   --     GRUPOS DE USUARIOS
+           SSPARM --    CONFIGURACION Y PARAMETROS
+           SAUSRREP    MENUES DE REPORTES AGREGADOS
+           SAITRE    --    REPORTES DEL GENERADOR DE REPORTES OJO CON LOS CONCESIONARIOS PEQUEÑOS ; METROPOLIS,PROMOAUTO, EXCELLENT, MB CAMIONES, SURAUTO
+ 
+
+CONFIGURACION ESPECIAL DE ACCESOS Y RESTRIGCIONES A USUARIOS (CONFIGURADOR)
+
+      ANTES DE ENTRAR AL CONFIGURADOR LUEGO DE ACTUALIZAR LA BD SE DEBE RENOMBRER MENU.SMU PARA EVITAR QUE PIDA ACTUALIZAR EL MENU DEL ADMINISTRATIVO G,S,
+
+       COLOCAR SOLO REPUESTO Y SUPERR NO FACTURAR EN NEGATIVO EL RESTO DE LOS USUARIOS ABRIRLO.
+
+       COLOCAR CLAVE DE AUTORIZACION EN REPUESTO Y SUPERR AUTORIZA BAJO MINIMO Y BAJO COSTO.
+
+       RESTRIGIR ACCESO A COMPRA PARA REPUESTOS Y SI A SUPERR
+
+       ACTIVAR EN COMPRAS VEHICULOS, SUPERR, SUPERS  Y ADMON Y GASTOS GENERALES LA OPCION DE EMITIR RETENCION IVA
+
+       configurar en venta advertir existencia en repuestos,superr, vehculo PARA PEDIDOS, ENTREGAS Y VENTAS
+
+       CREAR GRUPO ñ PRESIDENCIA/GERENCIA GRAL QUE AUTORICE OPERACIONES CRITICAS
+
+
+ARREGLOS DE FORMATOS DE SALIDAS Y REPORTES 
+
+
+      NO APARECEN LA LINA DESCRIPCION EN FORMATO DE PREFACTURA DE SERVICIO (REVISAR)
+
+      HACER REPORTE QUE REVISE VENTAS POR DEBAJO DE COSTOS EN LOS ULTIMOS 12 MESES
+
+      ACOMODAR FORMATO DE PREFACTURS CON ALICUOTAS DE IVA ETC ETC ETC
+ 
+      LA FECHA DE LA FACTURA EN FORMATO DE SALIDA DE RETENCION DE IVA A PROVEEDOR ESTA COMO FECHA DE POSTEO. (REPARADO EN PLANTILLA)
+
+      ARREGLOS EN FORMATOS DE PREFACTURAS ALICUOTAS, DESCRIPCION.
+
+      ARREGLOS EN FORMATOS DE FACTURAS DEFINITIVA, SE AGREGA NOMBRE DEL VENDEDOR.
+
+      ARREGLAR RANGO DE FECHAS FINAL DE REPORTES Y CNSULTAS. AMPLIAR A 2012 O 2013
+
+
+
+QUERYS DE REVISION Y REPARACION DE DATOS
+
+     HACER QUERY QUE REVISE Y CORRIJA PRECIOS POR DEJAO DE COSTOS PROMEDIO
+
+     HACER QUERY QUE LIMPIE LAS SAPAGCXC Y SAPAGCXP CUANDO ESTEN HUERFANAS DE SAACXC Y SAACXP
+
+     HACER QUERY QUE CORRIJA COMPROMETIDOS EN FUNCION A ORDENES ABIERTAS ACTUALES REALES.
+
+
+DATOS MAESTROS EN ADMINISTRATIVO
+
+
+      CREAR LOS IMPUESTOS Y ENLAZARLOS CON LOS TIPOS DE OPERACIONES G,liberty,prestige,metropolis,promoauto,
+      COLOCAR DATOS DE FINANCIMIENTO EN CLIENTES OPERATIVOS 99001,99002,99003,99004,99005 PARA QUE ACTIVE BOTOM ACEPTAR EN NE Y PEDIDOS.
+
+
+
+FALLAS Y DESMEJORAS POR REPORTAR
+
+        NO SE MANEJAN LOS MENSAJES DE ADVERTENCIAS NI DE VALIDACIONES.
+        EN GUAYANAUTO DESAPARECIO EL REPORTE  DE LIBRO DE COMPRAS.
+
+
+
+
+
+
+
+
+
+
+0----------------------0---------------------0----------------------0-----------------------0--------------------------0--------------------0---------------------0-----------------------------0-----------------------------------0------------------------------0--------------------------0------------------------0----------------------0
+
+
+
+
+ORGANIZACION Y METODO DE TRABAJO
+
+GTALK METODO DIRECTO DE REPORTAR CASOS
+
+   ETIQUETAS                          SIGNIFICADO
+
+     MOA                                    REPORTE OFICIAL DE USUARIOS        
+     POSTERGADO                   SOLUCION POSTERGADA DEPENDE DE MI 100%
+     SEGUIMIENTO                  SUPERVISAR DEPENDE DE SUBALTERNOS O EQUIPOS DE TRABAJO
+     PARCIALMENTE              PARCIALMENTE SOLUCIONADO
+     SOLUCIONADO                SOLUCIONADO AL USUARIO QUE REPORTO
+     POSTEADO                        SOLUCION COLOCADA EN BASE DE DATOS PILOTO: LIBERTY
+     DISTRIBUIDO                   SOLUCION DISTRIBUIDA A RESTO DE BASES DE DATOS.
+     CERRADO                          CASO CERRADO
+
+BITACORA DE CONCESIONARIOS
+
+PARTE 1.    
+  BLOQUES DE ACTIVIDADES Y PROCEDIMIENTOS DE ACTUALIZACION POR FASES. 
+ 
+     NOMENCLATURA:    FECHA:USUARIO:DESCRIPCION:SOLUCION: CONCESIONARIO SOLUCIONADO.
+
+PARTE 2.
+  LISTADO DINAMICO DE NUEVOS REQUERIIENTOS PENDIENTES POR PROCESAR  
+
+     NOMENCLATURA:   FECHA:USUARIO:DESCRIPCION:
+
+PARTE 3.
+   INFORMES DE ACTUALIZACION   
+
+
+PARTE 4
+CASOS DE ESTUDIOS Y CRITERIOS DE ANALISIS
+
+
+PARTE 5
+IDEAS E INNOVACIONES
+
+CURSOS EN LINEAS POR CASO POR DEPARTAMENTO
+
+CONTROL DE MATERIAL DICTADO
+
+PRUEBAS DE SUFICIENCIAS HACIA USUARIOS.
+
+WEB SOLUCIONES CON MANUALES
+
+
+
+
+
+0-----------------0-----------------0--------------------0-----------------0------------------------0----------------------0--------------------0--------------------0------------------0--------------0
+
+
+PARTE 1. BLOQUE 2.  PROCEDIMIENTO SECUENCIAL DE ACTALIZAZION / 18  JULIO 2011
+
+1807 JACK: HISTORICO DE SERVICIOS:  SOLUCION 6,33,40,71:  PRESTIGE, PLANET
+
+2107 ANA/DAINERY: RETENCIONES DE IVA DE LINEAS AEREAS: SOLUCION 77: LIBERTY,
+        (OJO REVISAR QUE ARCHIVO ALMACENA LOS FORMATOS DEL CONFIGURADOR Y REPORTES DE SAINT.
+
+2107 COLOCAR EN PLANTILLA LA TABLA: SFTITM: ESTA GUARDA LA PROGRAMACION DE REPORT BUIDER DE LOS FORMATOS  DEL CONFIGURADOR.
+ SSFMTS : GUARDA LOS NOMBRES Y CARPETAS DE FORMATOS DEL CONFIGURADOR
+
+18/07 Incremento permitido 15% garantias: PLANET, 
+
+18/07 PERMITIR INVENTARIO EN NEGATIVO A SERVICIOS,SUPERS,ACCESORIO: 
+
+18/07 CONFIGURACION CORRECTA DE DEVOLUCIONES: GUAYANAUTO
+
+15/07 CAROLINA:PASAR PRESUPUESTOS POR CORREOS: PRESTIGE
+
+15/07 DAINERY: COMPROBANTES DE RETENCION MUNICIPAL:PLANET
+
+15/07 MIRIAM: NO VE REPORTES SE CREA 2DO USUARIO ADM: PRESTIGE
+
+13/07 LEILA/CARO/FRANC/: MENU DE REPORTES MUY SENSIBLE: SOLUCION TEMPORAL CON TECLADO:
+
+13/07 RAIZA: REPORTES:  RELACION DE UNIDADES VENDIDAS.
+                                                 RELACION DE COMPRA VENTA.
+                                                 RELACION DE VENTAS POR VENDEDOR.  (VEHICULOS)
+
+13/07 RAVELO: VENDER BAJO COSTO Y BAJO MINIMO NO FUNCIONA: SOLUCION QUERY
+
+
+
+0-----------------0-----------------0---------------------0--------------0----------------------0---------------------0--------------------0---------------------0------------------0---------------0
+
+PARTE 1. BLOQUE 1. PROCEDIMIENTO SECUENCIAL DE ACTALIZACION  11/07/2011
+
+MODO 1:
+COPIAR MATERIAL DE ACTUALIZACION (OJO CON LA VERSIONES DE LOS MOTORES DEL SERVIDOR SQL)
+BD
+BITACORA : LIBERTY,
+
+MODO 2:
+100% ACTIVIDADES DESDE CONSULTORIA
+CONDICIONES QUE LA PLANTILLA DE BD DEBE ESTAR EN CONSULTORIA
+MANAGER STUDIO LOCAL SE CONECTAN SERVIDOR LOCAL Y SERVIDOR REMOTO.
+
+
+MODO 3:
+
+50% ACTIVIDAD DE MONTAR TRIGGER, VISTAS, PROCEDIMIENTOS ALMACENADOS,  CORRER QUERYS, DESDE CONSULTORIA
+50% ACTIVIDAD DE IMPORTAR DATOS DESDE BD PLANTILLA DESDE LIBERTYCARS.NO-IP.BIZ
+
+
+RESPALDAR BD ACTIVA DEL CADA SERVIDOR :LIBERTY, PLANET,PRESTIGE,GUAYANAUTO
+
+SACAR DE CONEXION PARA GARANTIZAR TODOS FUERA. GUAYANAUTO
+
+DBCC CHECHDB LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+ 1.2   CORRER CREAR VISTA VW-SAFACT : PRESTIGE, GUAYANAUTO,PLANET
+
+9 CORRER TODOS LOS QUERYS DE CREACION DE TRIGGER/VISTA
+
+40 CORRER TRIGGER PPAL : LIBERTY,PLANET,PRESTIGE, GUAYANAUTO
+
+40.4   COLOCAR TRIGGER VALIDA CAMBIO DE LIQUIDACION:LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+42 PROVISIONAL :LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+     DEPURACION DEL CAMPO ID3 DE CLIENTES Y PROVEEDORESPARA LIBROS
+     LIMPIEZA RADICAL DE DBTHIRD
+
+POSTPONER COLOCACION DE TRIGGER VALIDA CODIGO Y ID3 EN INSERT 
+
+50      CORRER VISTA UNICA DOS VECES LA SEGUNDA TERMINADA EN _B:   PRESTIGE,GUAYANAUTO,PLANET
+
+
+76.1 DEPURRAR COMPROMETIDOS:  LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+76.2 DEPURAR PRIMERO STOCK DE INVENTARIO: LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+76.3 RECLASIFICAR ARTICULOS POR INSTANCIAS:LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+-- LIMPIEZA DE TABLAS DE CONFIGUACION, PERFILES Y USUARIOS:LIBERTY,PLANET,PRESTIGE, GUAYANAUTO
+-- DELETE FROM SSUSRS   --  IMPORTAR SOLO USUARIOS NOMINALES
+DELETE FROM SSOPMN -- OPCIONES DE MENUES
+DELETE FROM SSNIVL   -- GRUPOS DE USUARIOS
+DELETE FROM SSPARM -- CONFIGURACION Y PARAMETROS
+DELETE FROM SAUSRREP   -- MENUES DE REPORTES AGREGADOS
+DELETE FROM SAITRE    -- REPORTES DEL GENERADOR DE REPORTES
+
+
+
+COLOCAR REPORTES EN TABLA (CONFIGURAR Y UNIFICAR REPORTES. (SAITRE) ) LIBERTY, PLANET,PRESTIGE,GUAYANAUTO
+
+COLOCAR GRUPOS DE REPORTES AGREGADOS A USUARIOS (CONFIGURAR MENUES DE REPORTES. (SAUSRREP)) : LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+ 
+COLOCAR PERFILES DE GRUPOS (CONFIGURAR PERMISOLOGIAS Y ACCESOS POR GRUPOS (SSPARM)):LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+CONFIGURAR MENUES OPERACIONES POR GRUPO    MenuX.sis ojo reconstruye menu original de saint. (nO ES NECESARIO CORRERLO EN ESTA OPORTUNIDAD)
+
+NIVELES O GRUPOS DE USUARIOS: SSNVLS: LIBERTY,PLANET, PRESTIGE,GUAYANAUTO
+
+OPCIONES DE MENU: SSOPMN: LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+USUARIOS NOMINALES DE LABORATORIO: SSUSRS: LIBERTY,PLANET,PRESTIGE,GUAYANAUTO
+
+
+DEPOSITOS (ALMACENES). 001 ALMACEN PPAL,002 MOSTRADOR,003 RECIBIDA DA;ADA,004 RECIBIDA FALTANTE,005 HERRAMIENTAS, 006 POP/GALERIA
+
+INSTANCIAS DE INVENTARIOS Y DE SERVICIOS: REAGRUPAR Y ORGANIZAR INSTANCIAS
+
+
+0--------------------0----------------0---------------------0-----------------------0-------------------------0-------------------------------0---------------------------0-------------------------0
+ PARTE 4.  CASOS DE ESTUDIO Y CRITERIOS DE ANALISIS
+
+
+VERSION 8744 AHORA MANEJA BACK ORDER CUANDO SE DEJA DE FACTURAR ALGUN RUBRO DEL DOCUMENTO EN ESPERA ORIGINAL
+
+PEDIR SOBRE PEDIDOS AL DESHABILITARLO NO PERMITE RELIZAR PEDIDOS EN VENTAS SOBRE NO DISPOBIBLES ES DECIR SOBRE EXISTENCIA-COMPROMTIDOS
+
+FACTURAR EN NEGATIVO DESHABLITADO NO PERMITE FACTURAR ITEM SIN EXISTENCIA, PERO NO LO ADVIERTE SOLO ELIMINA EL RUBRO INCLUSO CUANDO 
+SE ESTA OPERANDO LA ORDEN DE REPARACION.(ESTO ULTIMO PUEDE CAUSAR INCONSISTENCIAS)
+
+OJO CON MONTAR SIN PILOTO PORQUE SE DEBE PREVEER CONSECUENCIAS DE NO FACTURAR EN NEGATIVOS Y NO PEDIR SOBRE PEDIDOS Y NO FACTURAR COMPROMETIDOS.
+
+LOS COMPROMETIDOS NO SIEMPRE PROVIENEN DE LOS PEDIDOS, AHORA TAMBIEN DE LAS DEVOLUCIONES DE SERVICIOS PORQUE SUPONE UNA FACTURA SUSTITUTIVA. 
+
+AL GENERAR PEDIDO SE COMPROMETE INVENTARIO AL BORRAR SE LIBERA LOS COMPROMETIDOS EN NINGUN CASO SE ALTERA EXISTENCIA
+
+EL UNICO CASO QUE NO SUMABA NI RESTABA DE COMPROMETIDO ERA CUANDO SE FACTURABA Y SE DEVOLVIAN FACTURAS DE SERVICIOS YA FUE RESUELTO EN 
+TRIGGER PRINCIPAL DE SOLUCION 40
+
+
+INCONSISTENCIAS MAYORES ESPORADICAS: 
+
+PROBAR CUANDO UN DOCUMENTO EN ESPERA SE GRABA CON REPUESTOS Y AL PASAR A CAJA LA EXISTENCIA Y/O DISPONIBILIDAD NO CUBREN LA VENTA: QUE PASA SE FACTURA EL SALDO O TUMBA COMPLETAMENTE LA VENTA. 
+
+OTRA INCONSISTENCIA ES QUE A PESAR DE TODA LA CONFIGURACION DE PERFILES EL ASESOR DE SERVICIO PUEDE CAMBIAR LA CANTIDAD DE LOS REPUESTOS EN MAS O EN MENOS. AUN CUANDO NO PUEDA CAMBIAR PRECIOS, NI BORRAR NO NAVEGAR CON TECLADO NI CURSOR SOBRE LOS ITEMS DE REPUESTOS.
+
+OTRA INCONSISTENCIA ES QUE EN VENTAS LOS CALCULOS DE DISPONIBILIDAD PARA PRODUCIR LA VENTA NO SE HACEN BIEN CUANDO EL MISMO PRODUCTO ES
+COLOCADO EN VARIOS ITEMS DIFERENTES.
+
+PROBAR FUNCIONAMIENTO DE LAS VISTAS DE CONSULTAS DE RPUESTOS ENTREGADOS Y DE ORDEN CARGADA CON ENTREGA
+CUANDO: UNA O MAS ENTREGAS SON REVERSADAS SE MANTIENE LOS REGISTROSEN SAFACT COMO C CON EL REVERSO COMO D
+Y LOS REGSTRSO EN SAFACT_03. REVISAR SI LOS DUPLICA EN REPORTES.
+
+INCOSISTENCIA EN FORMATO DE CONSULTA DE VEHICULO CUANDO UN VEHICULO HA CAMBIADO DE PLACAS Y/O TIENE ORDENES ACTURADAS Y CERRADAS NO MUESTRA LOS RUBROS DE LA ORDEN POR TIOFAC Z.
+
+0---------------0------------0-----------------------0---------------------0-------------------0-------------------0----------------0----------------------0--------------------0----------0-----------------0------------------0----------------0
+
+PARTE 3.  INFORME SOBRE ULTIMOS CAMBIOS Y AJUSTES DEL SISTEMA SAINT CONCESIONARIOS VERSION 8744  
+a ser implantados SOBRE CONCESIONARIOS GRUPO BARROSO a partir del (11/07/2011) en el siguiente orden:
+Piloto:  Liberty Cars.
+
+ 2. Prestige cars, 3 Planet Cars, 4 Guayanauto, 5 Mb Camiones, 6 Metro 7 promo, 8 Surauto, 9 Excellent
+
+SEGURIDAD GENERAL
+
+SE CORRIGIERON LAS PERMISOLOGIAS Y ACCESOS DE LOS SIGUIENTES GRUPOS DE USUARIOS:
+(DIRECTIVA,ADMINISTRACION,VEHICULOS, REPUESTOS, SERVICIOS, TALLER) SUPERA, SUPERV, SUPERR, SUPERS, SUPERT, ACCESORIOS,  STAND, CAJA
+
+SE CIERRA POSIBILIDAD DE GENERAR FACTURAS POR ERROR   POR USUARIOS Y/O ESTACIONES DISTINTAS A CAJA.
+
+SE CIERRA POSIBILIDAD DE ELIMINAR DATOS MAESTROS
+
+SERVICIOS
+SE AGREGO CONTROL Y VALIDACION SOBRE CAMBIOS DE LIQUIDACION (TIPO DE ORDEN) CUANDO HAY REPUESTOS CARGADOS.
+SE CIERRA POSIBILIDAD DE ELIMINAR ORDEN DE REPARACION O SERVICIO POR ERROR O INTENCIONALMENTE.
+
+REPUESTOS
+SE CIERRA POSIBILIDAD DE FACTURAR Y DESPACHAR EN NEGATIVOS LISTO
+SE CIERRA POSIBILIDAD DE CARGAR Y DESCARGAR ARTICULOS (SOLO SE PERMITE AJUSTAR inventario BAJO CLAVES DE ADMINISTRACION CIERTAS CONDICIONES APLICAN) Y TRASLADO DE INVENTARIOS LISTO
+SE CIERRA POSIBILIDAD DE FACTURAR ATICULOS COMPROMETIDOS LISTO
+SE CIERRA POSIBILIDAD DE NO VENDER ARTICULOS DE OTROS DEPOSITOS DISTINTOS A 001 - ALMACEN PRINCIPAL ARTICULOS DISPONIBLES LISTO
+
+SE RECONSTRUYE EN BD VALORES DE COMPROMETIDOS SEGUN PEDIDOS REALIZADOS SOBRE OR/PENDIENTES ACTUALES (2011) LISTO
+
+SE LIMPIAN STOCK EN NEGATIVOS Y LLEVAN A CERO O SE CRUZAN CON EXISTENCIA EN OTROS ALMACENES.
+SE RECLASIFICARON LOS REPUESTOS EN: 
+     
+    ACTIVOS                  (CON MOVIMIENTOS ENTRE LOS ULT 12 MESES) CON O SIN STOCK ACTUAL
+    NO ACTIVOS           (SIN MOVIMIENTOS EN LOS ULTIMOS 12 MESES) SIN STOCK ACTUAL   (SE DESACTIVARON NO ELIMINARON PERO NO ESTORBAN)
+
+   DORMIDOS U
+   OBSOLETOS            (SIN MOVIMIENTOS EN LOS ULTIMOS 12 MESES) CON STOCK ACTUAL
+
+
+SE CREAN REPORTES CONSULTAS : REPUESTOS CARGADOS EN ORDENES DE SERVICIOS. (PUBLICO)
+                                                                      PEDIDOS CARGADOS  SOBRE ORDENES DE SERVICIOS. (PUBLICO)
+                                                                      REPUESTOS CARGADOS EN ORDENES (GARANTIA, INTERNA, ACCESORIOS)
+                                                                      ENTREGAS CARGADAS SOBRE ORDENES DE SERVICIOS. (PUBLICO)
+
+GERENCIA
+
+SE AGREGARON LOS REPORTES:
+
+RESUMEN GERENCIAL DE COSTOS Y GASTOS DETALLADO Y RESUMIDO
+RESUMEN DE VENTAS POR VENDEDOR 
+
+
+DATOS MAESTROS
+
+SE UNIFICARON  REGISTROS BASICOS EN:
+ OPERACIONES, 
+ SERVICIOS (GASTOS),
+ INSTRUMENTOS DE PAGO,
+ CLIENTES: 99001 HASTA 99XXX (OJO MODIFICAR TRIGGERS PRINCIPAL Y PEDIDOS, ENTREGAS) 
+CUENTAS. 
+DEPOSITOS (ALMACENES).
+INSTANCIAS DE INVENTARIOS Y DE SERVICIOS.
+
+
+
+
+0---------------0------------0-----------------------0---------------------0-------------------0-------------------0----------------0----------------------0--------------------0----------0-----------------0------------------0----------------0
+ORDEN DE PRIORIDADES
+
+SE CORRIGIO Y REACTIVO CONTROL PARA NO REGISTRAR CLIENTES NI PROVEEDORES NUEVOS A LA BASE DATOS QUE NO CUMPLAN CON EL FORMATO VALIDO DE RIF.
+(SOLO REVERSA LA TRANSACCION NO INFORMA SOBRE EL ERROR)
+
+
+ 1) REVISION Y CORRECCION DE PERFILES DE GRUPOS Y PERMISOLOGIAS LISTO
+
+ 2)REPORTES DE CHRYSLER
+    RESUMEN DE COMPRAS LISTO
+   RESUME DE VENTAS POR VENDEDOR DETALLADO Y RESUMIDO LISTO
+
+
+ 3)REINGENIERIA DE MANEJO DE REPUESTOS
+    limpiar comprometidos LISTO
+    corregir comprometidos al devolver LISTO
+    limpiar inventario en negativo LISTO
+    clasificar articulos dormidos,activos,obsoletos, inactivos LISTO
+    cerrar vender sobre comprometido LISTO
+    cerrar vender inventario en cero o negativo LISTO
+    reporte de consultas de pedidos activos sobre ordenes PENDIENTES. LISTO
+    reporte de consulta de articulo pedidos, despachados A ORDENES PENDIENTES. LISTO
+    manejo de pedidos electronicos desde taller FALTA
+   formatos de escritura de ubicaciones (unificar cliterios) FALTA
+clasificar inventario por clasificar planta a,b,c,d,e,f, etc. mb camiones FALTA
+PROCEDIMIENTO MENSUAL QUE RECLASIFIQUE INVENTARIO EN ACTIVOS, OBSOLETO Y DESACTIVADOS. AMMARADO AL CIERRE DEL MES.
+Y OBSOLETOS SIN STOCK DESACTIVARLOS FALTA
+ descripcion 3 en puesto de saexisFALTA
+eliminar con query prefacturas de repuestos viejas. FALTA EVALUAR CONVENIENCIA POR SEGURIDAD
+reporte al corte de fecha de inventario FALTA
+reporte de maximos y minimos sugeridos por estadisticas. FALTA
+procedimiento que genere los maximos y minimos. FALTA
+
+REPORTE DE SEGUIMIENTO DE PRODUCTO CARGADOS A ORDENES REQ NEW
+REPORE DE VENTAS PERDIDAS (ESTIMADA)REQ NEW
+REPORTE DE PRODUCTOS COMPROMETIDOSREQ NEW
+REPORTE DE PRODUCTOS CON STOCK POR ENCIMA DEL MAXIMOREQ NEW
+REPORTE DE PRODUCTOS CON STOCK POR DEBAJO  DEL MINIMOREQ NEW
+RECORD DE SERVICIOS DE VEHICULO : BUSQUEDA POR PLACAS VIEJAS Y NUEVAS, POR SERIAL, EN ORDEN DE KILOMETRAJE. DESCRIBIENDO: O/R, FECHAOR, FACT, FECHA FAC, PLACA, SERIAL, MONTO TOTAL 
+
+
+CORREGIR REPORTE ORDENES DE REPARACIONES FACTURADAS (NO TOMA EN CUENTA LAS DEVOLUCIONES)
+CORREGIR ENCABEZADOS Y SUBTITULOS DE COLUMNA A RESUMEN DE FACTURACIN
+CORREGIR PERMISOLOGIA Y ACCESOS A SUPER R Y SUPERS : REPORTES AGREGADOS. 
+
+UNIFICAR REGISTROS BASICOS EN:
+ OPERACIONES, 
+ SERVICIOS (GASTOS),
+ INSTRUMENTOS DE PAGO,
+ CLIENTES: 99001 HASTA 99XXX (OJO MODIFICAR TRIGGERS PRINCIPAL Y PEDIDOS, ENTREGAS) 
+CUENTAS. 
+
+ 4)PROGRAMACION
+
+   caso agencias de viaje retenciones lineas aereas LISTO
+   FORMATO DE IMPRESION CONCILIACIONES FALTA
+    Validar facturas con devoluciones parciales no sean bloqueadas hasta que la suma de todas las devoluciones reversen totalmente la factura orginal FALTA
+ REALIZAR UN TRIGGER POR MODIFICACION, ELIMINACION DE DATOS TRANSACCIONALES PARA QUE DEJE TRAZA DEL AUTOR, MAQUINA Y FECHA
+(PEDIDOS, CHEQUES, ETC ETC ETC.) FALTA 
+validad que no se eliminen clientes, proveedores, productos, servicios con movimientos o estadisticas IMPLICITO EN CERRAR POSIBILIDAD DE ELIMINAR DATOS MAESTROS
+VALIDAR SOLO PAGOS /ADMIISTRATIVOS/RETENCIONES
+
+ 
+ARREGLAR LIBRO DE VENTA UNIFICADO DE PLANET HACIA OTROS CONCESIONARIOS 
+ARREGLAR LIBRO DE COMPRA LIBERTY UNIFICADO A OTROS CONCEISONARIOS
+CORRER QUERY QUE REPARA RIF Y CONDICION DE CLIENTE
+
+ asignacion de margen de utilidad en funcion a costo actual +30 si costo actual es mayor al costo promedio sino en funcion al costo promedio
+     LIMPIEZA DE LAS cxc Y cxp  
+    
+     calculo de max y min automaticos segun compra venta. y estadistica (OJO como sugerencia)
+     Agregar campo en ficha de productos (Repuestos) con definicion de fecha de venta perdida. + procedimiento
+     Computadora para almacen (consulta de ubicacion)
+     
+
+     Computadora para jefe de taller (solicitud de repuestos y commplemento de diagnostico)
+
+     Cerrar posibilidad de cerrar ordenes de reparacion (solo gerente se servicio)
+
+    REVISION DE CONSULTA FINANCIERA DE VEHICULO REFLEJAR REVERSOS DE ANTICIPOS SOLO TRANSACCIONES VIVAS
+
+   POSIBILIDAD DE GENERAR RECONSTRUCCION DE REPUESTOS CARGADOS CADA VEZ QUE SE GUARDA UNA ORDEN.
+
+   CONCECUENCIA DE CERRAR VENTAS EN NEGATIVO Y SOBRE COPROMETIDO SOBRE AMBIENTE DE VENTAS DE REPUESTOS SE
+   DEBE PERMITIR VENTAS EN CERO Y COMPROMETIDOS EN SERVICIOS Y CAJA PARA EVITAR QUE SE ELIMINEN POR FALTA DE STOCK O    DISPONIBILIDAD.
+GENERAL
+REVISAR PERFILES CON TOWIND
+LIBRO COMPRAS LIBERTY
+LIBRO DE VENTA PLANET
+AMBOS SE LLEVO A PLANTILLA Y ESTAN OPERATIVOS EN: LIBERTY, PLANET, PRESTIGE
+   
+
+0---------------0------------0-----------------------0---------------------0-------------------0-------------------0----------------0----------------------0--------------------0----------0-----------------0------------------0----------------0
+NECESIDADES RECOPILADAS A JULIO 2011 EXTRA SAINT
+
+metropolis caso miguel-sandra-danila.       
+
+	personal con perfil por debajo de lo requerido.
+                   potencial de producir mas 
+                   compras de mercancia utiles y de oportunidad .
+                   caso miguel - sandra -dinero perdido.
+                   desgaste fisico y emosional. miguel.
+                   
+                    
+caso perfil de Arnoldo Salas.
+
+mb camiones caso empresa paralela con licencia de distribucion de mercedes para comerciar repuestos
+
+fiat pvp otros concesionario mas del 100% revisar precios.
+
+mitsubishi mas del 60% aun cuando hubo acuerdo de vender por 35%
+
+correos de mitsubishi y  fiat activarlos victor
+
+configuracion de bb para lectura de correos via web y gtalk
+
+
+CAMBIAR FORMTO EN MB DE UBICACIONES (SIN GUINES)
+
+CAMBIAR FORMTO EN DOSCAMINOS UBIICACIONES (SIN ESPACIOS)
+
+ 
+CORREGIR MB FORMATO DE UNICACION
+
+
+revisar eliminar almacen cuando tiene stock LISTO
+
+habilitar opcion de reporte/cxp a jairo. LISTO
+
+mejorar formato de presupuesto para ocultar codigo del producto conidionces de pago y tiempo  de entrega (contra competencia)
+
+mejorar formato de orden de compra agregar datos de empresa
+rif direccion etc etc etc
+ 
+
+PROCEDIMIENTO REVISIOIN DE VERIFICACION DE DEPOSITOS 
+
+POR MEDIO DE INTERNET.
+
+
+REVISAR CASO JAIRO CORREO VIEJO FACTURA SEGURO
+
+CRAR COMBOS DE ACCESORIOS PARA MITSUBISHI Y FIAT
+
+CREAR FORMATO Y OPCION PARA NOTAS DE ENTRAGAS VERDADERAS A CLIENTES.
+
+COMPROBANTE DE ANULACION O/Y ELIMINACION DE NOTAS DE ENTRAGAS Y DESPACHOS PARA SOPORTE.
+
+0---------------0------------0-----------------------0---------------------0-------------------0-------------------0----------------0----------------------0--------------------0----------0---------------0------------------0----------------0
+
+
+procedimiento nuevo de servicios
+
+reportes especiales de prestige
+
+reportes de planet cars (ventas)
+
+ 
+
+REPORTE DE SALDOS EN COMPRA POR AGRUPACION (chrysler) listo
+
+
+FORMATO DE BANCO CONCILIACION SALDOS EN TRANSITO
+ 
+
+0---------------0------------0-----------------------0---------------------0-------------------0-------------------0----------------0----------------------0--------------------0----------0------------SURuto ordenes
+facturas equipos robo metropolis
+facturacion abril moa
+facturacion mayo moa
+impuestos IVA abril y mayo
+conciliacion bancaria.
+Facturacion
+
+   Permitir realizar devoluciones multiples a una factura.
+
+Repuestos 
+
+   Colocar query que asigne una ubicacion indicada a los articulos ajustados en operaciones
+
+   de inventarios
+
+
+Servicios
+
+  Agregar subcategoria de liquidacion que defina : retornos / insumos / 
+
+  No permitir eliminar orden de reparacion
+
+  No permitir cambiar liquidacion de orden cuando hayan cargados repuestos
+
+Bancos / caja
+
+  Recalcular libro de banco (ult/conciliacion + debitos - creditos)
+
+  Formato de tranferencia de cjas (Carta modelo).
+
+Reportes del DUAS.
+
+
+Ventas repuestos
+
+    MOSTRADOR                    COSTO DE VENTA  /  TOTAL VENTA = UTILIDAD BRUTA
+    TALLER CLIENTE                
+    TALLER GARANTIA
+    TALLER INTERNA
+    TALLER ACCESORIOS
+
+
+Ventas servicios
+
+    taller cliente
+
+    taller garantia
+
+    taller interna
+
+               interna
+               retornos
+
+crear menu de consultas varias en reportes y reorganizar las distints consultas.
+
+25/04/2011
+
+JOSE RAVELO
+NOMINA MOA
+VIATICOS PUERTO RDAZ
+LIQUIDACIONES PTO ORDAZ
+DECLARACION IVA
+FACTURACION MOA
+
+
+ESTRUCTURA FUNCIONALES DE REPORTES EN BASES DE DATOS PARA COPIAR EN CONCESIONARIOS
+ESTRUCTURA FUNCIONALES DE PERMISOLOGIAS EN BD PARA COPIAR EN CONCESIONARIOS
+
+
+RETOMAR DISE;O Y ELABORACION DE REPORTES GERENCIALES.
+
+
+VICTOR RUEDA
+
+EQUIPO DE NORELYS
+EQUIPO DE MERY
+EQUIPO DE JOSE SERVICIO (PERSONAL)
+
+
+GARMIN E71
+SERVER 2008 LICENCIA MODELO
+
+
+31/03/2011
+ACTUALIZACION EXCELENT
+DECLARACION DE ISLR MOA
+MODIFICACION FORMATOS RETENCION IVA E ISLR EN PLANET PARA EMITIRLAS A NOMBRE DE LA LINEA AEREA.
+ESTA SOLUCION ES LA APERTURA DE LA SOLUCION COMPLETA. 
+
+
+28/03/2011
+
+BG/EGP/DECLARACION ISLR 2010 MOA
+NOMINA MOA
+ACTUALIZACION GUAYANAUTO
+ACTUALIZACION PROMO/METRO
+
+
+AA561JF
+
+REPORTES GENERALES DE CRHYSLER CULMINAR 
+REVISION DE MANEJO DE STOCK, PEDIDOS Y COMPROMETIDOS PROCEDIMIENTO DESPACHO  ALMACEN-TALLER
+REVISION DE ASIGNACION DE COSTOS/PRECIOS EN COMPRAS DE REPUESTOS
+REVISION DE PROCEDIMIENTO DE DIAGNOSTICO TECNICO EN TALLER Y COLOCACION EN OR.
+REVISION DE PROCEDIMIENTO PARA SOLICITUD DE REPUESTOS ASESORES-REPUESTOS COMANDA/
+
+04/03/2011
+
+Se Reactivaron licencias de MBcamiones, Guayanauto, Excellent, Prestige
+Se optimizaron varios reportes agregados 
+Se dise;o Resumen de Venta de vehiculo por modelo y vendedor
+Se atendio problematica de servicio en Liberty Mery abandona en la tarde/ se definen cuellos de botella Antonio/Jose Herrera/4 mecanicos de permiso.
+
+24/01/2011
+
+Actualizacion de precios en todos los concesionarios al 35%
+Limpieza de CxP Chrysler Liberty.
+Limpieza Bancos, CxC, CxP Metropolis
+Configurar Consolidador.
+Actualizar codigos de cuenta para los bancos del Administrativo Liberty 
+Reportes especiales de prestige (Yelitza)
+
+17/01/2011
+
+actualizacion de precios en repuestos Prestige cars. 1.8,2,2.2 y desc max 30%. instrucciones cesar Barroso.
+
+14/01/2011
+
+x NOMINA MOA
+x IVA MOA
+ACTUALIZACION LIBERTY 8744C
+LAS ACTUALIZACIONES DEBEN HACERSE EN EL MODULO CONFIGURADOR
+SE DEBE ELIMINAR LOS REGISTROS DE SACODBAR DA ERROR DE CLAVE DUPLICADA
+
+EQUIPO GERENTE DE SERVICIO
+x CAMBIO DE SCANNER A OFICINA DE SANDRO
+INTERNET
+VIDEO
+
+
+PENDIENTE CONCESIONARIOS
+
+15/11/2010
+
+PAGO DE UTILIDADES
+PAGO DE TARJETA MASTER LICENCIAS
+RECAUDOS FERNANDO VISA AMERICANA
+                 REGISTRO MERCANTIL
+                 CARTA DE TRABAJO
+                 ESTADOS DE CUENTA MOA.
+
+REPORTE LUIS ZAMBRANO (SERVICIO)
+REPORTE DE EXISTENCIA PARA CONSULTA CON DROPBOX
+SOLUCION RETENCION DE IMP. MUNICIPAL
+REPORTES DUAS
+
+
+SISTEMAS DE RESPALDOS (DROPBOX)
+MANUALES OPERATIVOS
+MANUALES PROCEDIMENTALES
+PAGINA WEB SOLUCIONES MOA
+
+MOA: DECLARACION DE IVA JULIO Y AGOSTO
+     
+PROMOAUTO: REPORTE A MIGUEL GOMEZ.
+
+
+MB CAMIONES
+
+REVISION DEL PROCESO DE CUADRE DE CAJA.
+REVISION DEL MANEJO OPERATIVO DE CARGA DE REPUESTOS A SERVICIO.
+AFINACION DE PARAMETROS DE PERMISOLOGIAS Y ACCESOS.
+FORMATOS DE RECIBOS. (COBRANZA Y ANTICIPOS Y ENTREGA DE VEHICULO)
+PROCESO PARA MANEJO DE IMPUESTOS MUNICIPALES.
+LIMPIAR CXC.
+REVISION DE MANEJO DE BANCOS.
+REVISION DE SALDOS DE BD.
+
+
+MANEJODE INVENTARIOS
+CIFRAS DE COMPROMETIDOS ACUMULADOS
+ESTABLECIMIENTO DE PRECIOS Y COSTOS
+RESTRICCIONES DE VER Y MODIFICAR COSTOS
+CAMBIAR GARANTIAS PARA SER FACTURADAS
+DESCARGA DOBLE DE GARANTIAS Y DESPUES SE FACTURA
+FORMATO DE ORDEN DE COMPRA (LOGO Y DATOS DE MB) CONDICIONES DE PAGO.
+                            PRESUPUESTO: ELIMINAR LOS CODIGOS DE PRODUCTOS. AGREGAR PIE DE PAGINA CON TEXTO: 
+CONDICIONES DE PAGO, TIEMPO DE ENTREGA ESTIMADA, Y VALIDEZ DE LA OFERTA."
+ACTUALIZAR REPORTE DE TOMA DE INVENTARIO OJO FILTRAR POR DESCRIPCION Y EXISTENCIAS MENOR Y MAYOR.
+SE INTRUYO SOBRE EL MECANISMO PARA HACER INVENTARIO
+
+
+REUNION CON COSTOYA
+
+PARAR TALLER PARA ATENDER CLIENTE CRITICOS
+SITUACION CASOS DE SACAR REPUESTOS A VEHICULOS PROPIOS Y SUS CONTROLES
+SITUACION DE PRESTAR CARRO
+CASO DE GENERAR SERVICIOS COMO GARANTIAS SIN RESPUESTA DE APROBACION DE PLANTA.
+REVISAR CUENTAS POR COBRAR SITUACION.
+SITUACION PAGO DE COMISIONES.
+CHEQUES RETENIDOS EN CAJA SIN ENVIARLO A DEPOSITAR
+CASO UNIDAD MOVIL (CHEQUE 13300) VS FACTURACION. 
+
+
+
+

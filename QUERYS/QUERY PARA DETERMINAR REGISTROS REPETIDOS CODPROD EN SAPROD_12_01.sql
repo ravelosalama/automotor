@@ -1,0 +1,51 @@
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[SERIALREPETIDO]') AND type in (N'U'))
+DROP TABLE [dbo].[SERIALREPETIDO]
+GO
+
+  
+
+CREATE TABLE [dbo].[SERIALREPETIDO](
+	[SERIAL] [varchar](25) NULL 	
+) ON [PRIMARY]
+
+GO
+         
+DECLARE @SERIAL VARCHAR(25)
+DECLARE @SIGUIENTE VARCHAR(25)
+DECLARE @ACTUAL VARCHAR(25)
+
+  
+DECLARE MIREG CURSOR FOR
+      SELECT SERIAL
+         FROM SAPROD_12_01 ORDER BY SERIAL 
+         OPEN MIREG
+      FETCH NEXT FROM MIREG INTO @SERIAL
+      WHILE (@@FETCH_STATUS = 0) 
+      BEGIN
+         SET @SIGUIENTE=@ACTUAL
+         SET @ACTUAL=@SERIAL
+         IF @ACTUAL=@SIGUIENTE
+            BEGIN
+            INSERT SERIALREPETIDO (SERIAL) VALUES (@ACTUAL)
+            PRINT @aCTUAL
+            END
+            FETCH NEXT FROM MIREG INTO @SERIAL
+      END
+      CLOSE MIREG
+      DEALLOCATE MIREG
+      
+ GO
+ 
+-- SELECT * FROM SAPROD WHERE CODINST=11  
+ 
+ 
+      
+      
+      
+      
+      
+      
+      
+
+ 

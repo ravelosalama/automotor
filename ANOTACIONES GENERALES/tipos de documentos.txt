@@ -1,0 +1,47 @@
+Tipos de Documentos
+
+Ventas
+ 'A';  { Factura         }
+ 'B';  { Devolucion      }
+ 'C';  { Nota de entrega }
+ 'D';  { devolucion Nota de entrega }
+ 'E';  { Pedido          }
+ 'F';  { Presupuesto     }
+ 'G';  { Transaccion en Espera  }
+
+Compras
+ 'H';  { Compra          }
+ 'I';  { Devolucion      }
+ 'J';  { Nota de entrega }
+ 'K';  { Devolucion Nota de entrega }
+ 'L';  { Orden de compra }
+ 'M';  { Transaccion en Espera   }
+
+Operaciones de Inventario
+ 'N';  { Traslados       }
+ 'O';  { Cargos          }
+ 'P';  { Descargos       }
+ 'Q';  { Ajustes         }
+ 'R';  { Operaciones en espera }
+
+Otros
+ 'V';  { Oferta          }
+
+Cuenta Por Cobrar y Por Pagar.
+		10 Factura
+		50 Pago Adelantado
+		60 Giro
+		70 Cuota
+		81 Retencion IVA
+N/D		21 Nota de Debito a  Factura       en CXX RETENCION DE ISLR
+		26                   Giro
+		27                   Cuota
+N/C		31 Nota de Credito a Factura       en CXX RETENCION DE ISLR
+		36                   Giro
+		37                   Cuota
+Pago Normal	41 Pago              Factura
+		46                   Giro
+		47                   Cuota
+Pago Adelantado	51 Pago Adelantado   Factura
+		56                   Giro
+		57                   Cuota

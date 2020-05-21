@@ -1,0 +1,3 @@
+el 26 de Enero de 2010
+hubo que retirar el trigger por cuanto presenta fallas, el mismo elimina las cxc cuando se 
+produce una simple modificacion de la transaccion por banco.

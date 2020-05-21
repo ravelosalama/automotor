@@ -1,0 +1,26 @@
+Con el aprendizaje de Delphi 2009 se aprovecha el potencial ganado del conocimiento de las estructuras de SAINT y la experiencia de mas de 20 a;os
+se determina desarrollar modulos independientes de gestion para completar las funciones limitadas o resringidas de SAINT
+Simepre se habla de completar y no suplantar por cuanto SAINT simpre seguira siendo plataforma de la aplicacion ademas de aprovechar las ventajas de saint contabilidad y nomina solo con Delphi ganamos mas libertad de 
+realizar cosas a nuestro gusto y necesidad en el administrativo sin pasar por la interfaz controlada de SAINT. lo que supone el dise;o y desarrollo de:
+
+
+MENU PRINCIPAL DE SINAT COCESIONARIOS
+
+
+MODULO DE GESTION DEVEHICULOS DELPHI
+
+MODULOS DE GESTION DE ORDENES DE REPARACION DELPLHI
+
+MODULO DE GESTION DE REPUESTOS DELPHI
+
+
+FACTURACION (SAINT)
+
+CXC RETENCIONES Y LIQUIDACIONES DELPHI
+
+CXP RETENION Y LIQUIDACIONES SAINT
+ 
+
+BANCOS SAINT
+
+

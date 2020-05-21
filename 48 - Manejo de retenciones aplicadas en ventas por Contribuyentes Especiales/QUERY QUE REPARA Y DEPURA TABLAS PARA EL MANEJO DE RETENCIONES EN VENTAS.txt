@@ -1,0 +1,50 @@
+
+UPDATE    SAACXC
+SET              CODOPER = '04-002'
+FROM         SAACXC
+WHERE     (TipoCxc = '81')
+
+
+
+UPDATE    SASE_RETIVACXC
+SET              MONTO = Y.MONTO
+FROM         SASE_RETIVACXC X INNER JOIN
+                      SAACXC Y ON X.NROPPAL = Y.NroUnico 
+
+UPDATE    SAACXC
+SET              NUMERON = X.NUMEROD
+FROM         SASE_RETIVACXC X INNER JOIN
+                      SAACXC Y ON X.NROPPAL = Y.NroUnico
+WHERE     (Y.NumeroN IS NULL)
+
+
+UPDATE    SAACXC
+SET              FECHAR = Y.FECHAE
+FROM         SAACXC X INNER JOIN
+                      SAFACT Y ON X.NumeroN = Y.NumeroD
+WHERE     (X.TipoCxc = '41' OR
+                      X.TipoCxc = '81') AND X.CodOper = '04-002' AND Y.TipoFac = 'A' AND X.FECHAR IS NULL
+
+UPDATE    SACLIE
+SET              TIPOCLI = 1
+FROM         SACLIE
+WHERE     (SUBSTRING(CodClie, 1, 1) = 'V') OR
+                      (SUBSTRING(CodClie, 1, 1) = 'E') OR
+                      (SUBSTRING(CodClie, 1, 1) = 'P') OR
+                      SUBSTRING(ID3, 1, 1) = 'V' OR
+                      SUBSTRING(ID3, 1, 1) = 'E' OR
+                      SUBSTRING(ID3, 1, 1) = 'P'
+
+UPDATE    SACLIE
+SET              TIPOCLI = 0
+FROM         SACLIE
+WHERE     (SUBSTRING(CodClie, 1, 1) ='J') OR (SUBSTRING(ID3, 1, 1) = 'G') OR (SUBSTRING(ID3, 1, 1) ='J') OR (SUBSTRING(CodClie, 1, 1) = 'G')
+
+
+UPDATE    saclie
+SET              tipocli = '4'
+FROM         SAACXC x INNER JOIN
+                      SACLIE y ON x.CodClie = y.CodClie
+WHERE     (x.TipoCxc = '41' OR
+                      x.TipoCxc = '81') AND (x.CodOper = '04-002')
+

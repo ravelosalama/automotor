@@ -1,0 +1,8 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[SESA_VW_VEHICULO_NUEVO_SERVICIO]') and OBJECTPROPERTY(id, N'IsView') = 1)
+drop view SESA_VW_VEHICULO_NUEVO_SERVICIO
+GO
+
+CREATE VIEW SESA_VW_VEHICULO_NUEVO_SERVICIO
+AS SELECT *
+FROM SAFACT_02
+GO

@@ -1,0 +1,3 @@
+SELECT     SUM(Monto) AS Expr1
+FROM         SAACXP
+WHERE     (TipoCxP = 81) AND (MONTH(FechaE) = 02) AND (YEAR(FechaE) = 2007) AND (FromTran = 0)

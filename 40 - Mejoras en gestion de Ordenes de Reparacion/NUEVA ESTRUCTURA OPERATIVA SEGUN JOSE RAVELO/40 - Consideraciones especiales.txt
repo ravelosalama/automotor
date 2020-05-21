@@ -1,0 +1,87 @@
+vigente al julio 2011 
+
+ 
+VIENE DE LA 8643
+VIENE DE LA 8733
+ACTUAL 8744
+
+Las mejoras consisten principalmente en:
+
+Simplificar la escritura y diseños de trigger, procedimientos almancenados y vistas.
+Incluir las validaciones operacionales necesarias para mantener la consistenia de la data.
+
+
+cuando se crea una orden de reparacion se valida:
+
+   al crearse:
+   existencia de otra orden con las mismas caracteristicas para el mismo vehiculo
+   consistencia del codigo del cliente al crearse nuevo.
+   existencia del vehiculo en bd.
+   consistencia entre datos del vehiculos  seriales, placas, etc.  
+   ojo revisar validacin de liquidacion y status al menos primera letra.
+   validar cliente asignado (revisar posibilidad)
+   haya definido datos en las lineas de requerimientos
+  
+      
+   Al modificarse: 
+   que los items de repuestos no puedan editarse
+   que los datos una vez creados de vehiculos no puedan cambiarse.(SOLO POR ADMINISTRATIVO)
+   no permitir crear ni modificar si no tiene asignado un vendedor valido.
+
+
+   al cerrarse
+   cuando se cierre no pueda editarse 
+   no permitir cerrar si existen servicios sin mecanico asignado.
+   que pueda reabrirse la OR previa autorizacion.
+   que valide la fecha de cierre no sea anterior a la fecha de apertura.
+
+
+   al eliminarse (x desarrollar)
+   no se puede eliminar si hay servicios validos cargados.
+   no se puede eliminar si existen repuestos cargados.
+
+   
+cuando se cargan repuestos a la ordenes se valida:
+
+      Que correspondan a pedidos - contados o Notas de entrega a g,i,a.
+      Que codclie sea el correspondiente a cada caso.
+      QUE EL CODIGO DEL VENDEDOR SEA CORRECTO (FALTA)
+      Que la OR exista y que este pendiente
+      Que los formatos se emitan solo cuando esta correcto el pedido o la NE.
+
+      
+cuando se eliminan o anulan cargas de repuestos a ordenes se debe validar
+     que exista y que este pendiente
+     que la OR no haya sido facturada.
+     que se eliminen los item de repuestos solo de ese pedido o nota de entrega.
+     que se devuelvan cantidades comprometidos y o cargar al inventario.(FALTA)
+
+
+   
+
+
+mecanica operativa para crear y modificar OR (LISTO)
+mecanica operativa para cargar repuestos a OR (LISTO)
+mecanica operativa para cerrar OR y facturarlas (LISTO)
+
+formatos OR-PreFac-pedidos-NE-factura (LISTO)
+
+rportes y listados de servicios.
+
+ojo hay que diseñar querys que aducuan los datos de las tablas viejas a las nuevas.
+
+ojo los datos de tablas adicionales no se borran junto con la eliminacion de doc en esperas
+
+ojo verificar que se actualice la factura y fecha de venta en saprod_12_01 cuando se factura un vehiculo.
+    esto crea un problema para cuando el vehiculo viene a servicio.GENERA UN ERROR CUANDO SE CARGA SERVICO (LISTO)
+
+ojo el priblema en la venta es que se ejecuta el trigger de OR (LISTO)
+
+OJO VERIFICAR QUE CUANDO SE FACTURE UN SERVICIO SE CIERRE EL CAMPO STATUS EN REGISTRO DE SAFACT_01 
+PORQUE SI NO QUEDA COMO SI EL VEHICULO ESTUVIESE EN SERVICIO TODAVIA NO PERMITIENDO ABRIR NUEVA ORDEN.(LISTO)
+
+
+
+SOLO FALTA RUTINA DE ELIMINACION DE REGISTROS DE OR(GARANTIA,INTERNA,ACCESORIO) CUANDO SE ANULA ENTREGA DE REPUESTO listo
+
+

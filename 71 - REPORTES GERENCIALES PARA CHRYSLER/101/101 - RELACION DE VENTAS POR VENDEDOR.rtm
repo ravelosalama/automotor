@@ -1,0 +1,2122 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Ventas
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A4 (210 x 297 mm)'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 210079
+  PrinterSetup.mmPaperWidth = 297127
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = '101 - RELACION DE VENTAS POR VENDEDOR'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'F:\CONCESIONARIOS\My Dropbox\SAINT\SOLUCIONES\71 - REPORTES GERE' +
+    'NCIALES PARA CHRYSLER\101\101 - RELACION DE VENTAS POR VENDEDOR.' +
+    'rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PDFSettings.EmbedFontOptions = []
+  PreviewFormSettings.WindowState = wsMaximized
+  ShowAutoSearchDialog = True
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 176
+  Top = 88
+  Version = '11.06'
+  mmColumnWidth = 0
+  DataPipelineName = 'Ventas'
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 31485
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'RELACION DE VENTA DE VEHICULOS '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2963
+      mmLeft = 118269
+      mmTop = 4233
+      mmWidth = 46313
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 125413
+      mmTop = 7938
+      mmWidth = 33073
+      BandType = 0
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 268817
+      mmTop = 529
+      mmWidth = 7408
+      BandType = 0
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'LIBERTY CARS, C.A.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 18
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 7620
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 62907
+      BandType = 0
+    end
+    object ppMemo1: TppMemo
+      UserName = 'Memo1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Memo1'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      Visible = False
+      mmHeight = 5292
+      mmLeft = 1058
+      mmTop = 24342
+      mmWidth = 255323
+      BandType = 0
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppMemo2: TppMemo
+      UserName = 'Memo2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Memo2'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 114829
+      mmTop = 12171
+      mmWidth = 106363
+      BandType = 0
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppMemo3: TppMemo
+      UserName = 'Memo3'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Memo3'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 137319
+      mmTop = 18256
+      mmWidth = 49742
+      BandType = 0
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 12965
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'FechaE'
+      DataPipeline = daADOQueryDataView1.Ventas
+      DisplayFormat = 'DD/MM/yyyy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 6879
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'NumeroD'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 23283
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Notas4'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2963
+      mmLeft = 107686
+      mmTop = 529
+      mmWidth = 6421
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodItem'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 37306
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Serial'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 78052
+      mmTop = 529
+      mmWidth = 5821
+      BandType = 4
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodClie'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 120121
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2963
+      mmLeft = 137319
+      mmTop = 529
+      mmWidth = 12488
+      BandType = 4
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodProd'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 56356
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'Ventas'
+      mmHeight = 2910
+      mmLeft = 0
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Telef'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2963
+      mmLeft = 204523
+      mmTop = 6085
+      mmWidth = 10513
+      BandType = 4
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Direc1'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2963
+      mmLeft = 204523
+      mmTop = 529
+      mmWidth = 11359
+      BandType = 4
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Direc2'
+      DataPipeline = daADOQueryDataView1.Ventas
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Ventas'
+      mmHeight = 2963
+      mmLeft = 204523
+      mmTop = 3440
+      mmWidth = 11359
+      BandType = 4
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 13229
+    mmPrintPosition = 0
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'CodVend'
+    DataPipeline = daADOQueryDataView1.Ventas
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    NewFile = False
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'Ventas'
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 17992
+      mmPrintPosition = 0
+      object ppShape1: TppShape
+        UserName = 'Shape1'
+        Brush.Color = clSilver
+        Shape = stRoundRect
+        mmHeight = 6085
+        mmLeft = 0
+        mmTop = 10319
+        mmWidth = 283369
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppDBText6: TppDBText
+        UserName = 'DBText6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'CodVend'
+        DataPipeline = daADOQueryDataView1.Ventas
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Ventas'
+        mmHeight = 4318
+        mmLeft = 0
+        mmTop = 3969
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppDBText10: TppDBText
+        UserName = 'DBText10'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'Descrip_2'
+        DataPipeline = daADOQueryDataView1.Ventas
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        DataPipelineName = 'Ventas'
+        mmHeight = 4233
+        mmLeft = 19050
+        mmTop = 3969
+        mmWidth = 27164
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Fecha'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 6879
+        mmTop = 11642
+        mmWidth = 7144
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel4: TppLabel
+        UserName = 'Label4'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'No.Fac.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2963
+        mmLeft = 23283
+        mmTop = 11642
+        mmWidth = 9059
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label5'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Modelo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 37306
+        mmTop = 11642
+        mmWidth = 8996
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Placa'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 56356
+        mmTop = 11642
+        mmWidth = 6615
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label7'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Serial'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 78052
+        mmTop = 11642
+        mmWidth = 7144
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label8'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'C.Orig.'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 107686
+        mmTop = 11642
+        mmWidth = 8467
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label9'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'RIF/CI'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 120121
+        mmTop = 11642
+        mmWidth = 8731
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Cliente'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 137319
+        mmTop = 11642
+        mmWidth = 8731
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label11'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Telefonos'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2910
+        mmLeft = 220134
+        mmTop = 11642
+        mmWidth = 11906
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel12: TppLabel
+        UserName = 'Label12'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Direccion y'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2963
+        mmLeft = 204523
+        mmTop = 11642
+        mmWidth = 13801
+        BandType = 3
+        GroupNo = 0
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 3704
+      mmPrintPosition = 0
+      object ppDBCalc2: TppDBCalc
+        UserName = 'DBCalc2'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataPipeline = daADOQueryDataView1.Ventas
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        Transparent = True
+        DBCalcType = dcCount
+        DataPipelineName = 'Ventas'
+        mmHeight = 2963
+        mmLeft = 103452
+        mmTop = 742
+        mmWidth = 17198
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppLabel13: TppLabel
+        UserName = 'Label13'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'Total vendedor:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Tahoma'
+        Font.Size = 7
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 2963
+        mmLeft = 60061
+        mmTop = 742
+        mmWidth = 19558
+        BandType = 5
+        GroupNo = 0
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65061D
+      47726F757048656164657242616E6431416674657247656E65726174650B5072
+      6F6772616D54797065070B747450726F63656475726506536F757263650C4601
+      000070726F6365647572652047726F757048656164657242616E643141667465
+      7247656E65726174653B0D0A626567696E0D0A4D454D4F312E4C494E45532E43
+      4C4541523B0D0A5265706F72742E4765744175746F5365617263684465736372
+      697074696F6E4C696E6573284D454D4F312E4C696E6573293B0D0A4D454D4F32
+      2E4C494E45532E434C4541523B0D0A4D454D4F322E4C494E45532E4144442827
+      504552494F444F2044454C20272B20434F5059284D454D4F312E544558542C34
+      392C3131292B2720414C20272B20434F5059284D454D4F312E544558542C3632
+      2C313229293B0D0A4D454D4F332E4C494E45532E434C4541523B0D0A4D454D4F
+      332E4C494E45532E4144442827272B20466F726D61744461746574696D652827
+      6D6D6D6D6D2F79797979272C56656E7461735B27456D6973696F6E275D29293B
+      0D0A656E643B0D0A0D436F6D706F6E656E744E616D65061047726F7570486561
+      64657242616E6431094576656E744E616D65060D416674657247656E65726174
+      65074576656E74494402190000}
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Ventas'
+      Height = 596
+      Left = 37065
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 27
+      TypeColumnWidth = 52
+      Width = 327
+      AutoSearchTabOrder = 0
+      object Ventas: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Ventas'
+        object ppField1: TppField
+          FieldAlias = 'Ret_impuesto'
+          FieldName = 'CancelI'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAFACT'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cod_Cliente'
+          FieldName = 'CodClie'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAFACT'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Estacion'
+          FieldName = 'CodEsta'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAFACT'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cod_operacion'
+          FieldName = 'CodOper'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAFACT'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAFACT'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Cod_Deposito'
+          FieldName = 'CodUbic'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAFACT'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Cod_Vendedor'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SAFACT'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Costo_productos'
+          FieldName = 'CostoPrd'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SAFACT'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Costo_servicios'
+          FieldName = 'CostoSrv'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SAFACT'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SAFACT'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SAFACT'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SAFACT'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Direccion3'
+          FieldName = 'Direc3'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SAFACT'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Emision'
+          FieldName = 'FechaE'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SAFACT'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Fecha_factura'
+          FieldName = 'FechaI'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SAFACT'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Fecha_Retencion'
+          FieldName = 'FechaR'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SAFACT'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Vencimiemto'
+          FieldName = 'FechaV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SAFACT'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Identificador'
+          FieldName = 'ID3'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SAFACT'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Monto'
+          FieldName = 'Monto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SAFACT'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Impuestos'
+          FieldName = 'MtoTax'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SAFACT'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Total_factura'
+          FieldName = 'MtoTotal'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SAFACT'
+        end
+        object ppField22: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'SAFACT'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Nota1'
+          FieldName = 'Notas1'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'SAFACT'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Nota10'
+          FieldName = 'Notas10'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'SAFACT'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Nota2'
+          FieldName = 'Notas2'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'SAFACT'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Nota3'
+          FieldName = 'Notas3'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'SAFACT'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Nota4'
+          FieldName = 'Notas4'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'SAFACT'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Nota5'
+          FieldName = 'Notas5'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'SAFACT'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Nota6'
+          FieldName = 'Notas6'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'SAFACT'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Nota7'
+          FieldName = 'Notas7'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'SAFACT'
+        end
+        object ppField31: TppField
+          FieldAlias = 'Nota8'
+          FieldName = 'Notas8'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'SAFACT'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Nota9'
+          FieldName = 'Notas9'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'SAFACT'
+        end
+        object ppField33: TppField
+          FieldAlias = 'NumeroFac'
+          FieldName = 'NumeroD'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'SAFACT'
+        end
+        object ppField34: TppField
+          FieldAlias = 'Signo'
+          FieldName = 'Signo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'SAFACT'
+        end
+        object ppField35: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 30
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'SAFACT'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Exento'
+          FieldName = 'TExento'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'SAFACT'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Gravable'
+          FieldName = 'TGravable'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'SAFACT'
+        end
+        object ppField38: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'SAFACT'
+        end
+        object ppField39: TppField
+          FieldAlias = 'Total_producto'
+          FieldName = 'TotalPrd'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'SAFACT'
+        end
+        object ppField40: TppField
+          FieldAlias = 'Total_servicio'
+          FieldName = 'TotalSrv'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'SAFACT'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Descripcion (2)'
+          FieldName = 'Descrip_2'
+          FieldLength = 60
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'SAVEND'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Cod_Producto'
+          FieldName = 'CodProd'
+          FieldLength = 15
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Modelo'
+          FieldName = 'Modelo'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Serial'
+          FieldName = 'Serial'
+          FieldLength = 35
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField45: TppField
+          FieldAlias = 'Cod_Item'
+          FieldName = 'CodItem'
+          FieldLength = 15
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'SASEPRFAC'
+        end
+        object ppField46: TppField
+          FieldAlias = 'MONTH_SAFACT_FECHAE'
+          FieldName = 'MONTH_SAFACT_FECHAE'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'SAFACT'
+        end
+        object ppField47: TppField
+          FieldAlias = 'serialcorto'
+          FieldName = 'right_saprod_12_01_serial'
+          FieldLength = 6
+          DisplayWidth = 10
+          Position = 46
+          TableName = 'SAPROD_12_01'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Ventas'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAFACT.CancelI, SAFACT.CodClie, '
+          '       SAFACT.CodEsta, SAFACT.CodOper, '
+          '       SAFACT.CodSucu, SAFACT.CodUbic, '
+          '       SAFACT.CodVend, SAFACT.CostoPrd, '
+          '       SAFACT.CostoSrv, SAFACT.Descrip, '
+          '       SAFACT.Direc1, SAFACT.Direc2, '
+          '       SAFACT.Direc3, SAFACT.FechaE, '
+          '       SAFACT.FechaI, SAFACT.FechaR, '
+          '       SAFACT.FechaV, SAFACT.ID3, SAFACT.Monto, '
+          '       SAFACT.MtoTax, SAFACT.MtoTotal, '
+          '       SAFACT.NIT, SAFACT.Notas1, SAFACT.Notas10, '
+          '       SAFACT.Notas2, SAFACT.Notas3, '
+          '       SAFACT.Notas4, SAFACT.Notas5, '
+          '       SAFACT.Notas6, SAFACT.Notas7, '
+          '       SAFACT.Notas8, SAFACT.Notas9, '
+          '       SAFACT.NumeroD, SAFACT.Signo, '
+          '       SAFACT.Telef, SAFACT.TExento, '
+          '       SAFACT.TGravable, SAFACT.TipoFac, '
+          '       SAFACT.TotalPrd, SAFACT.TotalSrv, '
+          '       SAVEND.Descrip Descrip_2, '
+          '       SAPROD_12_01.CodProd, SAPROD_12_01.Modelo, '
+          '       SAPROD_12_01.Serial, SASEPRFAC.CodItem, '
+          '       MONTH(SAFACT.FECHAE) MONTH_SAFACT_FECHAE, '
+          '       right(saprod_12_01.serial,6) right_saprod_12_01_serial'
+          'FROM SAFACT SAFACT'
+          '      LEFT OUTER JOIN SAVEND SAVEND ON '
+          '     (SAVEND.CodVend = SAFACT.CodVend)'
+          '      LEFT OUTER JOIN SASEPRFAC SASEPRFAC ON '
+          '     (SASEPRFAC.NumeroD = SAFACT.NumeroD)'
+          '      LEFT OUTER JOIN SAPROD_12_01 SAPROD_12_01 ON '
+          '     (SAPROD_12_01.Serial = SASEPRFAC.NroSerial)'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( SAFACT.CodOper = '#39'01-101'#39' )'
+          '       AND ( SAFACT.TipoFac IN ('#39'A'#39') )'
+          '       AND ( SAFACT.NumeroR IS NULL  )'
+          
+            '       AND ( SAFACT.FechaE BETWEEN CONVERT(DATETIME,'#39'2011-01-01'#39 +
+            ',120) AND CONVERT(DATETIME,'#39'2011-02-01'#39',120) )'
+          '      )')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'MONTH_SAFACT_FECHAE'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Emision'
+          FieldLength = 0
+          FieldName = 'FechaE'
+          SQLFieldName = 'MONTH_SAFACT_FECHAE'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+          CalcType = dacaExpression
+          Expression = 'MONTH(SAFACT.FECHAE)'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'serialcorto'
+          DisplayWidth = 10
+          FieldAlias = 'Serial'
+          FieldLength = 6
+          FieldName = 'Serial'
+          SQLFieldName = 'right_saprod_12_01_serial'
+          TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+          CalcType = dacaExpression
+          Expression = 'right(saprod_12_01.serial,6)'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = '01-101'
+          object TdaField
+            Alias = 'Cod_operacion'
+            DisplayWidth = 10
+            FieldAlias = 'Cod_operacion'
+            FieldLength = 10
+            FieldName = 'CodOper'
+            SQLFieldName = 'CodOper'
+            TableAlias = 'Ventas'
+            TableName = 'SAFACT'
+            TableSQLAlias = 'SAFACT'
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          Value = 'A'
+          object TdaField
+            Alias = 'TipoFac'
+            DisplayWidth = 10
+            FieldAlias = 'TipoFac'
+            FieldLength = 10
+            FieldName = 'TipoFac'
+            SQLFieldName = 'TipoFac'
+            TableAlias = 'Ventas'
+            TableName = 'SAFACT'
+            TableSQLAlias = 'SAFACT'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBlank
+          object TdaField
+            Alias = 'NroNCredito'
+            DisplayWidth = 10
+            FieldAlias = 'NroNCredito'
+            FieldLength = 10
+            FieldName = 'NumeroR'
+            SQLFieldName = 'NumeroR'
+            TableAlias = 'Ventas'
+            TableName = 'SAFACT'
+            TableSQLAlias = 'SAFACT'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          Value = '01/01/2011,01/02/2011'
+          object TdaField
+            Alias = 'Emision'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'Emision'
+            FieldLength = 10
+            FieldName = 'FechaE'
+            SQLFieldName = 'FechaE'
+            TableAlias = 'Ventas'
+            TableName = 'SAFACT'
+            TableSQLAlias = 'SAFACT'
+          end
+          object TdaNumericValue
+            Value = 40544.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 40575.000000000000000000
+          end
+        end
+        object daCriteria5: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'Cod_Vendedor'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Vendedor'
+            FieldLength = 10
+            FieldName = 'CodVend'
+            SQLFieldName = 'CodVend'
+            TableAlias = 'Ventas'
+            TableName = 'SAFACT'
+            TableSQLAlias = 'SAFACT'
+          end
+        end
+        object daCriteria6: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'serialcorto'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Serial'
+            FieldLength = 6
+            FieldName = 'Serial'
+            SQLFieldName = 'right_saprod_12_01_serial'
+            TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+            TableName = 'SAPROD_12_01'
+            TableSQLAlias = 'SAPROD_12_01'
+            CalcType = dacaExpression
+            Expression = 'right(saprod_12_01.serial,6)'
+          end
+        end
+        object daCriteria7: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'Cod_Producto'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Producto'
+            FieldLength = 10
+            FieldName = 'CodProd'
+            SQLFieldName = 'CodProd'
+            TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+            TableName = 'SAPROD_12_01'
+            TableSQLAlias = 'SAPROD_12_01'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Ret_impuesto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Ret_impuesto'
+          FieldLength = 3
+          FieldName = 'CancelI'
+          SQLFieldName = 'CancelI'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField2: TdaField
+          Alias = 'Cod_Cliente'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Cliente'
+          FieldLength = 15
+          FieldName = 'CodClie'
+          SQLFieldName = 'CodClie'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField3: TdaField
+          Alias = 'Estacion'
+          DisplayWidth = 10
+          FieldAlias = 'Estacion'
+          FieldLength = 10
+          FieldName = 'CodEsta'
+          SQLFieldName = 'CodEsta'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField4: TdaField
+          Alias = 'Cod_operacion'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_operacion'
+          FieldLength = 10
+          FieldName = 'CodOper'
+          SQLFieldName = 'CodOper'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField5: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField6: TdaField
+          Alias = 'Cod_Deposito'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Deposito'
+          FieldLength = 10
+          FieldName = 'CodUbic'
+          SQLFieldName = 'CodUbic'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField7: TdaField
+          Alias = 'Cod_Vendedor'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Vendedor'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField8: TdaField
+          Alias = 'Costo_productos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Costo_productos'
+          FieldLength = 3
+          FieldName = 'CostoPrd'
+          SQLFieldName = 'CostoPrd'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField9: TdaField
+          Alias = 'Costo_servicios'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Costo_servicios'
+          FieldLength = 3
+          FieldName = 'CostoSrv'
+          SQLFieldName = 'CostoSrv'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField10: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField11: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 60
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField12: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 60
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField13: TdaField
+          Alias = 'Direccion3'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion3'
+          FieldLength = 60
+          FieldName = 'Direc3'
+          SQLFieldName = 'Direc3'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField14: TdaField
+          Alias = 'Emision'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Emision'
+          FieldLength = 0
+          FieldName = 'FechaE'
+          SQLFieldName = 'FechaE'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField15: TdaField
+          Alias = 'Fecha_factura'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_factura'
+          FieldLength = 0
+          FieldName = 'FechaI'
+          SQLFieldName = 'FechaI'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField16: TdaField
+          Alias = 'Fecha_Retencion'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_Retencion'
+          FieldLength = 0
+          FieldName = 'FechaR'
+          SQLFieldName = 'FechaR'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField17: TdaField
+          Alias = 'Vencimiemto'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Vencimiemto'
+          FieldLength = 0
+          FieldName = 'FechaV'
+          SQLFieldName = 'FechaV'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField18: TdaField
+          Alias = 'Identificador'
+          DisplayWidth = 10
+          FieldAlias = 'Identificador'
+          FieldLength = 15
+          FieldName = 'ID3'
+          SQLFieldName = 'ID3'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField19: TdaField
+          Alias = 'Monto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Monto'
+          FieldLength = 3
+          FieldName = 'Monto'
+          SQLFieldName = 'Monto'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField20: TdaField
+          Alias = 'Impuestos'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Impuestos'
+          FieldLength = 3
+          FieldName = 'MtoTax'
+          SQLFieldName = 'MtoTax'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField21: TdaField
+          Alias = 'Total_factura'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_factura'
+          FieldLength = 3
+          FieldName = 'MtoTotal'
+          SQLFieldName = 'MtoTotal'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField22: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField23: TdaField
+          Alias = 'Nota1'
+          DisplayWidth = 10
+          FieldAlias = 'Nota1'
+          FieldLength = 60
+          FieldName = 'Notas1'
+          SQLFieldName = 'Notas1'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField24: TdaField
+          Alias = 'Nota10'
+          DisplayWidth = 10
+          FieldAlias = 'Nota10'
+          FieldLength = 60
+          FieldName = 'Notas10'
+          SQLFieldName = 'Notas10'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField25: TdaField
+          Alias = 'Nota2'
+          DisplayWidth = 10
+          FieldAlias = 'Nota2'
+          FieldLength = 60
+          FieldName = 'Notas2'
+          SQLFieldName = 'Notas2'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField26: TdaField
+          Alias = 'Nota3'
+          DisplayWidth = 10
+          FieldAlias = 'Nota3'
+          FieldLength = 60
+          FieldName = 'Notas3'
+          SQLFieldName = 'Notas3'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField27: TdaField
+          Alias = 'Nota4'
+          DisplayWidth = 10
+          FieldAlias = 'Nota4'
+          FieldLength = 60
+          FieldName = 'Notas4'
+          SQLFieldName = 'Notas4'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField28: TdaField
+          Alias = 'Nota5'
+          DisplayWidth = 10
+          FieldAlias = 'Nota5'
+          FieldLength = 60
+          FieldName = 'Notas5'
+          SQLFieldName = 'Notas5'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField29: TdaField
+          Alias = 'Nota6'
+          DisplayWidth = 10
+          FieldAlias = 'Nota6'
+          FieldLength = 60
+          FieldName = 'Notas6'
+          SQLFieldName = 'Notas6'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField30: TdaField
+          Alias = 'Nota7'
+          DisplayWidth = 10
+          FieldAlias = 'Nota7'
+          FieldLength = 60
+          FieldName = 'Notas7'
+          SQLFieldName = 'Notas7'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField31: TdaField
+          Alias = 'Nota8'
+          DisplayWidth = 10
+          FieldAlias = 'Nota8'
+          FieldLength = 60
+          FieldName = 'Notas8'
+          SQLFieldName = 'Notas8'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField32: TdaField
+          Alias = 'Nota9'
+          DisplayWidth = 10
+          FieldAlias = 'Nota9'
+          FieldLength = 60
+          FieldName = 'Notas9'
+          SQLFieldName = 'Notas9'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField33: TdaField
+          Alias = 'NumeroFac'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroFac'
+          FieldLength = 10
+          FieldName = 'NumeroD'
+          SQLFieldName = 'NumeroD'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField34: TdaField
+          Alias = 'Signo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Signo'
+          FieldLength = 0
+          FieldName = 'Signo'
+          SQLFieldName = 'Signo'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField35: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 30
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField36: TdaField
+          Alias = 'Exento'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Exento'
+          FieldLength = 3
+          FieldName = 'TExento'
+          SQLFieldName = 'TExento'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField37: TdaField
+          Alias = 'Gravable'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Gravable'
+          FieldLength = 3
+          FieldName = 'TGravable'
+          SQLFieldName = 'TGravable'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField38: TdaField
+          Alias = 'TipoFac'
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 1
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField39: TdaField
+          Alias = 'Total_producto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_producto'
+          FieldLength = 3
+          FieldName = 'TotalPrd'
+          SQLFieldName = 'TotalPrd'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField40: TdaField
+          Alias = 'Total_servicio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Total_servicio'
+          FieldLength = 3
+          FieldName = 'TotalSrv'
+          SQLFieldName = 'TotalSrv'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField41: TdaField
+          Alias = 'Descripcion (2)'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 60
+          FieldName = 'Descrip'
+          IsDetail = True
+          SQLFieldName = 'Descrip_2'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          TableSQLAlias = 'SAVEND'
+        end
+        object daField42: TdaField
+          Alias = 'Cod_Producto'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Producto'
+          FieldLength = 15
+          FieldName = 'CodProd'
+          IsDetail = True
+          SQLFieldName = 'CodProd'
+          TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField43: TdaField
+          Alias = 'Modelo'
+          DisplayWidth = 10
+          FieldAlias = 'Modelo'
+          FieldLength = 25
+          FieldName = 'Modelo'
+          IsDetail = True
+          SQLFieldName = 'Modelo'
+          TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField44: TdaField
+          Alias = 'Serial'
+          DisplayWidth = 10
+          FieldAlias = 'Serial'
+          FieldLength = 35
+          FieldName = 'Serial'
+          IsDetail = True
+          SQLFieldName = 'Serial'
+          TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField45: TdaField
+          Alias = 'Cod_Item'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Item'
+          FieldLength = 15
+          FieldName = 'CodItem'
+          IsDetail = True
+          SQLFieldName = 'CodItem'
+          TableAlias = 'Seriales_ventas'
+          TableName = 'SASEPRFAC'
+          TableSQLAlias = 'SASEPRFAC'
+        end
+        object daField46: TdaField
+          ChildType = 2
+          Alias = 'Cod_Vendedor'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Vendedor'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daField47: TdaField
+          ChildType = 2
+          Alias = 'Emision'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Emision'
+          FieldLength = 10
+          FieldName = 'FechaE'
+          SQLFieldName = 'FechaE'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+          TableSQLAlias = 'SAFACT'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Ventas'
+          JoinType = dajtNone
+          SQLAlias = 'SAFACT'
+          TableAlias = 'Ventas'
+          TableName = 'SAFACT'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Vendedores'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAVEND'
+          TableAlias = 'Vendedores'
+          TableName = 'SAVEND'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField49: TdaField
+              ChildType = 3
+              Alias = 'Cod_Vendedor'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Vendedor'
+              FieldLength = 10
+              FieldName = 'CodVend'
+              SQLFieldName = 'CodVend'
+              TableAlias = 'Vendedores'
+              TableName = 'SAVEND'
+              TableSQLAlias = 'SAVEND'
+            end
+            object daField48: TdaField
+              ChildType = 4
+              Alias = 'Cod_Vendedor'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Vendedor'
+              FieldLength = 10
+              FieldName = 'CodVend'
+              SQLFieldName = 'CodVend'
+              TableAlias = 'Ventas'
+              TableName = 'SAFACT'
+              TableSQLAlias = 'SAFACT'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Seriales_ventas'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SASEPRFAC'
+          TableAlias = 'Seriales_ventas'
+          TableName = 'SASEPRFAC'
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField51: TdaField
+              ChildType = 3
+              Alias = 'NumeroFac'
+              DisplayWidth = 10
+              FieldAlias = 'NumeroFac'
+              FieldLength = 10
+              FieldName = 'NumeroD'
+              SQLFieldName = 'NumeroD'
+              TableAlias = 'Seriales_ventas'
+              TableName = 'SASEPRFAC'
+              TableSQLAlias = 'SASEPRFAC'
+            end
+            object daField50: TdaField
+              ChildType = 4
+              Alias = 'NumeroFac'
+              DisplayWidth = 10
+              FieldAlias = 'NumeroFac'
+              FieldLength = 10
+              FieldName = 'NumeroD'
+              SQLFieldName = 'NumeroD'
+              TableAlias = 'Ventas'
+              TableName = 'SAFACT'
+              TableSQLAlias = 'SAFACT'
+            end
+          end
+        end
+        object daTable4: TdaTable
+          ChildType = 5
+          Alias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAPROD_12_01'
+          TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField53: TdaField
+              ChildType = 3
+              Alias = 'Serial'
+              DisplayWidth = 10
+              FieldAlias = 'Serial'
+              FieldLength = 10
+              FieldName = 'Serial'
+              SQLFieldName = 'Serial'
+              TableAlias = 'SAPROD_12:Otros_datos_del_Vehiculo'
+              TableName = 'SAPROD_12_01'
+              TableSQLAlias = 'SAPROD_12_01'
+            end
+            object daField52: TdaField
+              ChildType = 4
+              Alias = 'Serial'
+              DisplayWidth = 10
+              FieldAlias = 'Serial'
+              FieldLength = 10
+              FieldName = 'NroSerial'
+              SQLFieldName = 'NroSerial'
+              TableAlias = 'Seriales_ventas'
+              TableName = 'SASEPRFAC'
+              TableSQLAlias = 'SASEPRFAC'
+            end
+          end
+        end
+      end
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

@@ -1,0 +1,250 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Inventario
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = '201 - INVENARIO EXTRANET CHRYSLER'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'C:\Documents and Settings\Administrador\Escritorio\Reportes\201\' +
+    '201 - INVENARIO EXTRANET CHRYSLER.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PDFSettings.EmbedFontOptions = []
+  PreviewFormSettings.WindowState = wsMaximized
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 176
+  Top = 88
+  Version = '11.06'
+  mmColumnWidth = 0
+  DataPipelineName = 'Inventario'
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 5292
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodProd'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 12
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 5122
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 25950
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Existen'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 12
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 5027
+      mmLeft = 49213
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Inventario'
+      Height = 711
+      Left = 297
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 1
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Inventario: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Inventario'
+        object ppField1: TppField
+          FieldAlias = 'Cod_Producto'
+          FieldName = 'CodProd'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAPROD'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Existencia'
+          FieldName = 'Existen'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAPROD'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Inventario'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAPROD.CodProd, SAPROD.Existen'
+          'FROM SAPROD SAPROD'
+          'WHERE ( SAPROD.CodInst NOT IN (11,12,27) )'
+          '       AND ( SAPROD.Existen >= 1 )'
+          'ORDER BY SAPROD.CodInst, SAPROD.CodProd')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotInList
+          Value = '11,12,27'
+          object TdaField
+            Alias = 'Cod_Instancia'
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Instancia'
+            FieldLength = 10
+            FieldName = 'CodInst'
+            SQLFieldName = 'CodInst'
+            TableAlias = 'Inventario'
+            TableName = 'SAPROD'
+            TableSQLAlias = 'SAPROD'
+          end
+          object TdaNumericValue
+            Value = 11.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 12.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 27.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoGreaterThanOrEqualTo
+          Value = '1'
+          object TdaField
+            Alias = 'Existencia'
+            DataType = dtDouble
+            DisplayWidth = 10
+            FieldAlias = 'Existencia'
+            FieldLength = 10
+            FieldName = 'Existen'
+            SQLFieldName = 'Existen'
+            TableAlias = 'Inventario'
+            TableName = 'SAPROD'
+            TableSQLAlias = 'SAPROD'
+          end
+          object TdaNumericValue
+            Value = 1.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Cod_Producto'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Producto'
+          FieldLength = 20
+          FieldName = 'CodProd'
+          SQLFieldName = 'CodProd'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField2: TdaField
+          Alias = 'Existencia'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Existencia'
+          FieldLength = 3
+          FieldName = 'Existen'
+          SQLFieldName = 'Existen'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField3: TdaField
+          ChildType = 2
+          Alias = 'Cod_Instancia'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Instancia'
+          FieldLength = 10
+          FieldName = 'CodInst'
+          SQLFieldName = 'CodInst'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField4: TdaField
+          ChildType = 2
+          Alias = 'Cod_Producto'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Producto'
+          FieldLength = 10
+          FieldName = 'CodProd'
+          SQLFieldName = 'CodProd'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Inventario'
+          JoinType = dajtNone
+          SQLAlias = 'SAPROD'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+        end
+      end
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

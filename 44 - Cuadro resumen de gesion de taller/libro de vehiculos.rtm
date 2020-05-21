@@ -1,0 +1,2139 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 210079
+  PrinterSetup.mmPaperWidth = 297127
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = 'V-04- LIBRO DE VEHICULOS'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'e:\Documents and Settings\jravelo\Mis documentos\CONCESIONARIOS\' +
+    'SAINT\SOLUCIONES\44 - Cuadro resumen de gesion de taller\libro d' +
+    'e vehiculos.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PreviewFormSettings.WindowState = wsMaximized
+  ShowAutoSearchDialog = True
+  TextSearchSettings.DefaultString = '<HallarTexto>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 16
+  Top = 160
+  Version = '10.07'
+  mmColumnWidth = 0
+  DataPipelineName = 'VW_ADM_VehiculoModelo'
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 34925
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'LIBRO  DE VEHICULOS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 9
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 113242
+      mmTop = 9525
+      mmWidth = 35719
+      BandType = 0
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 16
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 7535
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 29972
+      BandType = 0
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'RIF'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 9
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 4233
+      mmLeft = 0
+      mmTop = 7673
+      mmWidth = 5122
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 118004
+      mmTop = 15610
+      mmWidth = 27517
+      BandType = 0
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'F.Comp'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 7938
+      mmTop = 26988
+      mmWidth = 8932
+      BandType = 0
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'No.Fac'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 20108
+      mmTop = 26988
+      mmWidth = 8128
+      BandType = 0
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Costo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3302
+      mmLeft = 35983
+      mmTop = 26988
+      mmWidth = 6604
+      BandType = 0
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Modelo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 48419
+      mmTop = 26988
+      mmWidth = 8202
+      BandType = 0
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Serial'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 72496
+      mmTop = 26988
+      mmWidth = 6615
+      BandType = 0
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Placa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 92340
+      mmTop = 26988
+      mmWidth = 6350
+      BandType = 0
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Color'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 112184
+      mmTop = 26988
+      mmWidth = 6085
+      BandType = 0
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'F.Venta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 134673
+      mmTop = 26988
+      mmWidth = 8731
+      BandType = 0
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'No.Fac'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 149225
+      mmTop = 26988
+      mmWidth = 8202
+      BandType = 0
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 165365
+      mmTop = 27252
+      mmWidth = 7938
+      BandType = 0
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Precio'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 195792
+      mmTop = 27252
+      mmWidth = 7144
+      BandType = 0
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label13'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'IVA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 211932
+      mmTop = 27252
+      mmWidth = 4233
+      BandType = 0
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label14'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Total'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 226219
+      mmTop = 27252
+      mmWidth = 5556
+      BandType = 0
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label15'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Utilidad'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 241565
+      mmTop = 27252
+      mmWidth = 8467
+      BandType = 0
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label16'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Financiadora'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 254530
+      mmTop = 27252
+      mmWidth = 14552
+      BandType = 0
+    end
+    object ppLabel17: TppLabel
+      UserName = 'Label17'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Vendedor'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3175
+      mmLeft = 273580
+      mmTop = 27252
+      mmWidth = 10848
+      BandType = 0
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 5292
+      mmLeft = 265
+      mmTop = 32015
+      mmWidth = 283898
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 2910
+    mmPrintPosition = 0
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'EMISION_COM'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = 'dd/mm/yyyy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 7144
+      mmTop = 0
+      mmWidth = 14817
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'NROCOMPRA'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 20638
+      mmTop = 0
+      mmWidth = 14023
+      BandType = 4
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'SUBTOTAL_COM'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 27252
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'COD_MODELO'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 45244
+      mmTop = 0
+      mmWidth = 14817
+      BandType = 4
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Serial'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 83344
+      mmTop = 0
+      mmWidth = 5292
+      BandType = 4
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'PLACA'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 94192
+      mmTop = 0
+      mmWidth = 6879
+      BandType = 4
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Color'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 122238
+      mmTop = 0
+      mmWidth = 5027
+      BandType = 4
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'EMISION_FAC'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = 'DD/MM/YYYY'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 128323
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'NROVENTA'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 145786
+      mmTop = 0
+      mmWidth = 11642
+      BandType = 4
+    end
+    object ppDBText12: TppDBText
+      UserName = 'DBText12'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CLIENTE'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 163513
+      mmTop = 0
+      mmWidth = 27517
+      BandType = 4
+    end
+    object ppDBText13: TppDBText
+      UserName = 'DBText13'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'VENDEDOR'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 273580
+      mmTop = 0
+      mmWidth = 8996
+      BandType = 4
+    end
+    object ppDBText14: TppDBText
+      UserName = 'DBText14'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'SUBTOTAL_FAC'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 194469
+      mmTop = 0
+      mmWidth = 10848
+      BandType = 4
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText15'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'TAX_FAC'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 209815
+      mmTop = 0
+      mmWidth = 9790
+      BandType = 4
+    end
+    object ppDBText16: TppDBText
+      UserName = 'DBText16'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'TOTAL_FAC'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 225425
+      mmTop = 0
+      mmWidth = 11113
+      BandType = 4
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Arial'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2381
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 6350
+      BandType = 4
+    end
+    object ppDBText17: TppDBText
+      UserName = 'DBText17'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'UTILIDAD'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 241036
+      mmTop = 0
+      mmWidth = 11906
+      BandType = 4
+    end
+    object ppDBText18: TppDBText
+      UserName = 'DBText18'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'FINANCIA'
+      DataPipeline = daADOQueryDataView1.VW_ADM_VehiculoModelo
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 6
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'VW_ADM_VehiculoModelo'
+      mmHeight = 2910
+      mmLeft = 256646
+      mmTop = 0
+      mmWidth = 12965
+      BandType = 4
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 3704
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_VW_ADM_VehiculoModelo'
+      Height = 588
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 200
+      AutoSearchTabOrder = 0
+      object VW_ADM_VehiculoModelo: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'VW_ADM_VehiculoModelo'
+        object ppField1: TppField
+          FieldAlias = 'Ano'
+          FieldName = 'Ano'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField2: TppField
+          FieldAlias = 'CERT_ORIGEN'
+          FieldName = 'CERT_ORIGEN'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cilindros'
+          FieldName = 'Cilindros'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Clase'
+          FieldName = 'Clase'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField5: TppField
+          FieldAlias = 'CLIENTE'
+          FieldName = 'CLIENTE'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField6: TppField
+          FieldAlias = 'COD_MODELO'
+          FieldName = 'COD_MODELO'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField7: TppField
+          FieldAlias = 'CodClie'
+          FieldName = 'CodClie'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField8: TppField
+          FieldAlias = 'CodProv'
+          FieldName = 'CodProv'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField9: TppField
+          FieldAlias = 'CODVEND'
+          FieldName = 'CODVEND'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Color'
+          FieldName = 'Color'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField11: TppField
+          FieldAlias = 'CONDICION'
+          FieldName = 'CONDICION'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField12: TppField
+          FieldAlias = 'EMISION_COM'
+          FieldName = 'EMISION_COM'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField13: TppField
+          FieldAlias = 'EMISION_FAC'
+          FieldName = 'EMISION_FAC'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField14: TppField
+          FieldAlias = 'EXENTO_COM'
+          FieldName = 'EXENTO_COM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField15: TppField
+          FieldAlias = 'EXENTO_FAC'
+          FieldName = 'EXENTO_FAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField16: TppField
+          FieldAlias = 'FINANCIA'
+          FieldName = 'FINANCIA'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField17: TppField
+          FieldAlias = 'GRAVABLE_COM'
+          FieldName = 'GRAVABLE_COM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField18: TppField
+          FieldAlias = 'GRAVABLE_FAC'
+          FieldName = 'GRAVABLE_FAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Kilometraje'
+          FieldName = 'Kilometraje'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField20: TppField
+          FieldAlias = 'MODELO'
+          FieldName = 'MODELO'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField21: TppField
+          FieldAlias = 'NROCOMPRA'
+          FieldName = 'NROCOMPRA'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField22: TppField
+          FieldAlias = 'NROVENTA'
+          FieldName = 'NROVENTA'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Peso'
+          FieldName = 'Peso'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField24: TppField
+          FieldAlias = 'PLACA'
+          FieldName = 'PLACA'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField25: TppField
+          FieldAlias = 'PROVEEDOR'
+          FieldName = 'PROVEEDOR'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Puestos'
+          FieldName = 'Puestos'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField27: TppField
+          FieldAlias = 'REGISTRO_COM'
+          FieldName = 'REGISTRO_COM'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField28: TppField
+          FieldAlias = 'SALDO_COM'
+          FieldName = 'SALDO_COM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField29: TppField
+          FieldAlias = 'SALDO_FAC'
+          FieldName = 'SALDO_FAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Serial'
+          FieldName = 'Serial'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField31: TppField
+          FieldAlias = 'SERIAL_CORTO'
+          FieldName = 'SERIAL_CORTO'
+          FieldLength = 6
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Serial_motor'
+          FieldName = 'Serial_motor'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField33: TppField
+          FieldAlias = 'SUBTOTAL_COM'
+          FieldName = 'SUBTOTAL_COM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField34: TppField
+          FieldAlias = 'SUBTOTAL_FAC'
+          FieldName = 'SUBTOTAL_FAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField35: TppField
+          FieldAlias = 'TAX_COM'
+          FieldName = 'TAX_COM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField36: TppField
+          FieldAlias = 'TAX_FAC'
+          FieldName = 'TAX_FAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Tipo'
+          FieldName = 'Tipo'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField38: TppField
+          FieldAlias = 'TipoCom'
+          FieldName = 'TipoCom'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField39: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField40: TppField
+          FieldAlias = 'TOTAL_COM'
+          FieldName = 'TOTAL_COM'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField41: TppField
+          FieldAlias = 'TOTAL_FAC'
+          FieldName = 'TOTAL_FAC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Uso'
+          FieldName = 'Uso'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField43: TppField
+          FieldAlias = 'VENDEDOR'
+          FieldName = 'VENDEDOR'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField44: TppField
+          FieldAlias = 'GUIA'
+          FieldName = 'GUIA'
+          FieldLength = 8
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+        object ppField45: TppField
+          FieldAlias = 'UTILIDAD'
+          FieldName = 'UTILIDAD'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'VW_ADM_VehiculoModelo'
+        LinkColor = clMaroon
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT VW_ADM_VehiculoModelo.Ano, '
+          '       VW_ADM_VehiculoModelo.CERT_ORIGEN, '
+          '       VW_ADM_VehiculoModelo.Cilindros, '
+          '       VW_ADM_VehiculoModelo.Clase, '
+          '       VW_ADM_VehiculoModelo.CLIENTE, '
+          '       VW_ADM_VehiculoModelo.COD_MODELO, '
+          '       VW_ADM_VehiculoModelo.CodClie, '
+          '       VW_ADM_VehiculoModelo.CodProv, '
+          '       VW_ADM_VehiculoModelo.CODVEND, '
+          '       VW_ADM_VehiculoModelo.Color, '
+          '       VW_ADM_VehiculoModelo.CONDICION, '
+          '       VW_ADM_VehiculoModelo.EMISION_COM, '
+          '       VW_ADM_VehiculoModelo.EMISION_FAC, '
+          '       VW_ADM_VehiculoModelo.EXENTO_COM, '
+          '       VW_ADM_VehiculoModelo.EXENTO_FAC, '
+          '       VW_ADM_VehiculoModelo.FINANCIA, '
+          '       VW_ADM_VehiculoModelo.GRAVABLE_COM, '
+          '       VW_ADM_VehiculoModelo.GRAVABLE_FAC, '
+          '       VW_ADM_VehiculoModelo.Kilometraje, '
+          '       VW_ADM_VehiculoModelo.MODELO, '
+          '       VW_ADM_VehiculoModelo.NROCOMPRA, '
+          '       VW_ADM_VehiculoModelo.NROVENTA, '
+          '       VW_ADM_VehiculoModelo.Peso, '
+          '       VW_ADM_VehiculoModelo.PLACA, '
+          '       VW_ADM_VehiculoModelo.PROVEEDOR, '
+          '       VW_ADM_VehiculoModelo.Puestos, '
+          '       VW_ADM_VehiculoModelo.REGISTRO_COM, '
+          '       VW_ADM_VehiculoModelo.SALDO_COM, '
+          '       VW_ADM_VehiculoModelo.SALDO_FAC, '
+          '       VW_ADM_VehiculoModelo.Serial, '
+          '       VW_ADM_VehiculoModelo.SERIAL_CORTO, '
+          '       VW_ADM_VehiculoModelo.Serial_motor, '
+          '       VW_ADM_VehiculoModelo.SUBTOTAL_COM, '
+          '       VW_ADM_VehiculoModelo.SUBTOTAL_FAC, '
+          '       VW_ADM_VehiculoModelo.TAX_COM, '
+          '       VW_ADM_VehiculoModelo.TAX_FAC, '
+          '       VW_ADM_VehiculoModelo.Tipo, '
+          '       VW_ADM_VehiculoModelo.TipoCom, '
+          '       VW_ADM_VehiculoModelo.TipoFac, '
+          '       VW_ADM_VehiculoModelo.TOTAL_COM, '
+          '       VW_ADM_VehiculoModelo.TOTAL_FAC, '
+          '       VW_ADM_VehiculoModelo.Uso, '
+          '       VW_ADM_VehiculoModelo.VENDEDOR, '
+          '       VW_ADM_VehiculoModelo.GUIA, '
+          '       VW_ADM_VehiculoModelo.UTILIDAD'
+          'FROM VW_ADM_VehiculoModelo VW_ADM_VehiculoModelo'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          
+            '      ( VW_ADM_VehiculoModelo.EMISION_COM BETWEEN CONVERT(DATETI' +
+            'ME,'#39'2006-01-01'#39',120) AND CONVERT(DATETIME,'#39'2008-12-31'#39',120) )'
+          '      )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          Value = '01/01/2006,31/12/2008'
+          object TdaField
+            Alias = 'EMISION_COM'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'EMISION_COM'
+            FieldLength = 10
+            FieldName = 'EMISION_COM'
+            SQLFieldName = 'EMISION_COM'
+            TableAlias = 'VW_ADM_VehiculoModelo'
+            TableName = 'VW_ADM_VehiculoModelo'
+            TableSQLAlias = 'VW_ADM_VehiculoModelo'
+          end
+          object TdaNumericValue
+            Value = 38718.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 39813.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          object TdaField
+            Alias = 'EMISION_FAC'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'EMISION_FAC'
+            FieldLength = 10
+            FieldName = 'EMISION_FAC'
+            SQLFieldName = 'EMISION_FAC'
+            TableAlias = 'VW_ADM_VehiculoModelo'
+            TableName = 'VW_ADM_VehiculoModelo'
+            TableSQLAlias = 'VW_ADM_VehiculoModelo'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'COD_MODELO'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'COD_MODELO'
+            FieldLength = 10
+            FieldName = 'COD_MODELO'
+            SQLFieldName = 'COD_MODELO'
+            TableAlias = 'VW_ADM_VehiculoModelo'
+            TableName = 'VW_ADM_VehiculoModelo'
+            TableSQLAlias = 'VW_ADM_VehiculoModelo'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'CODVEND'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'CODVEND'
+            FieldLength = 10
+            FieldName = 'CODVEND'
+            SQLFieldName = 'CODVEND'
+            TableAlias = 'VW_ADM_VehiculoModelo'
+            TableName = 'VW_ADM_VehiculoModelo'
+            TableSQLAlias = 'VW_ADM_VehiculoModelo'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Ano'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Ano'
+          FieldLength = 0
+          FieldName = 'Ano'
+          SQLFieldName = 'Ano'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField2: TdaField
+          Alias = 'CERT_ORIGEN'
+          DisplayWidth = 10
+          FieldAlias = 'CERT_ORIGEN'
+          FieldLength = 60
+          FieldName = 'CERT_ORIGEN'
+          SQLFieldName = 'CERT_ORIGEN'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField3: TdaField
+          Alias = 'Cilindros'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cilindros'
+          FieldLength = 0
+          FieldName = 'Cilindros'
+          SQLFieldName = 'Cilindros'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField4: TdaField
+          Alias = 'Clase'
+          DisplayWidth = 10
+          FieldAlias = 'Clase'
+          FieldLength = 10
+          FieldName = 'Clase'
+          SQLFieldName = 'Clase'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField5: TdaField
+          Alias = 'CLIENTE'
+          DisplayWidth = 10
+          FieldAlias = 'CLIENTE'
+          FieldLength = 60
+          FieldName = 'CLIENTE'
+          SQLFieldName = 'CLIENTE'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField6: TdaField
+          Alias = 'COD_MODELO'
+          DisplayWidth = 10
+          FieldAlias = 'COD_MODELO'
+          FieldLength = 15
+          FieldName = 'COD_MODELO'
+          SQLFieldName = 'COD_MODELO'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField7: TdaField
+          Alias = 'CodClie'
+          DisplayWidth = 10
+          FieldAlias = 'CodClie'
+          FieldLength = 10
+          FieldName = 'CodClie'
+          SQLFieldName = 'CodClie'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField8: TdaField
+          Alias = 'CodProv'
+          DisplayWidth = 10
+          FieldAlias = 'CodProv'
+          FieldLength = 10
+          FieldName = 'CodProv'
+          SQLFieldName = 'CodProv'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField9: TdaField
+          Alias = 'CODVEND'
+          DisplayWidth = 10
+          FieldAlias = 'CODVEND'
+          FieldLength = 10
+          FieldName = 'CODVEND'
+          SQLFieldName = 'CODVEND'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField10: TdaField
+          Alias = 'Color'
+          DisplayWidth = 10
+          FieldAlias = 'Color'
+          FieldLength = 25
+          FieldName = 'Color'
+          SQLFieldName = 'Color'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField11: TdaField
+          Alias = 'CONDICION'
+          DisplayWidth = 10
+          FieldAlias = 'CONDICION'
+          FieldLength = 10
+          FieldName = 'CONDICION'
+          SQLFieldName = 'CONDICION'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField12: TdaField
+          Alias = 'EMISION_COM'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'EMISION_COM'
+          FieldLength = 0
+          FieldName = 'EMISION_COM'
+          SQLFieldName = 'EMISION_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField13: TdaField
+          Alias = 'EMISION_FAC'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'EMISION_FAC'
+          FieldLength = 0
+          FieldName = 'EMISION_FAC'
+          SQLFieldName = 'EMISION_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField14: TdaField
+          Alias = 'EXENTO_COM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'EXENTO_COM'
+          FieldLength = 3
+          FieldName = 'EXENTO_COM'
+          SQLFieldName = 'EXENTO_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField15: TdaField
+          Alias = 'EXENTO_FAC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'EXENTO_FAC'
+          FieldLength = 3
+          FieldName = 'EXENTO_FAC'
+          SQLFieldName = 'EXENTO_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField16: TdaField
+          Alias = 'FINANCIA'
+          DisplayWidth = 10
+          FieldAlias = 'FINANCIA'
+          FieldLength = 60
+          FieldName = 'FINANCIA'
+          SQLFieldName = 'FINANCIA'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField17: TdaField
+          Alias = 'GRAVABLE_COM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'GRAVABLE_COM'
+          FieldLength = 3
+          FieldName = 'GRAVABLE_COM'
+          SQLFieldName = 'GRAVABLE_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField18: TdaField
+          Alias = 'GRAVABLE_FAC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'GRAVABLE_FAC'
+          FieldLength = 3
+          FieldName = 'GRAVABLE_FAC'
+          SQLFieldName = 'GRAVABLE_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField19: TdaField
+          Alias = 'Kilometraje'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Kilometraje'
+          FieldLength = 0
+          FieldName = 'Kilometraje'
+          SQLFieldName = 'Kilometraje'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField20: TdaField
+          Alias = 'MODELO'
+          DisplayWidth = 10
+          FieldAlias = 'MODELO'
+          FieldLength = 40
+          FieldName = 'MODELO'
+          SQLFieldName = 'MODELO'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField21: TdaField
+          Alias = 'NROCOMPRA'
+          DisplayWidth = 10
+          FieldAlias = 'NROCOMPRA'
+          FieldLength = 20
+          FieldName = 'NROCOMPRA'
+          SQLFieldName = 'NROCOMPRA'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField22: TdaField
+          Alias = 'NROVENTA'
+          DisplayWidth = 10
+          FieldAlias = 'NROVENTA'
+          FieldLength = 10
+          FieldName = 'NROVENTA'
+          SQLFieldName = 'NROVENTA'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField23: TdaField
+          Alias = 'Peso'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Peso'
+          FieldLength = 0
+          FieldName = 'Peso'
+          SQLFieldName = 'Peso'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField24: TdaField
+          Alias = 'PLACA'
+          DisplayWidth = 10
+          FieldAlias = 'PLACA'
+          FieldLength = 15
+          FieldName = 'PLACA'
+          SQLFieldName = 'PLACA'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField25: TdaField
+          Alias = 'PROVEEDOR'
+          DisplayWidth = 10
+          FieldAlias = 'PROVEEDOR'
+          FieldLength = 60
+          FieldName = 'PROVEEDOR'
+          SQLFieldName = 'PROVEEDOR'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField26: TdaField
+          Alias = 'Puestos'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Puestos'
+          FieldLength = 0
+          FieldName = 'Puestos'
+          SQLFieldName = 'Puestos'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField27: TdaField
+          Alias = 'REGISTRO_COM'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'REGISTRO_COM'
+          FieldLength = 0
+          FieldName = 'REGISTRO_COM'
+          SQLFieldName = 'REGISTRO_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField28: TdaField
+          Alias = 'SALDO_COM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'SALDO_COM'
+          FieldLength = 3
+          FieldName = 'SALDO_COM'
+          SQLFieldName = 'SALDO_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField29: TdaField
+          Alias = 'SALDO_FAC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'SALDO_FAC'
+          FieldLength = 3
+          FieldName = 'SALDO_FAC'
+          SQLFieldName = 'SALDO_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField30: TdaField
+          Alias = 'Serial'
+          DisplayWidth = 10
+          FieldAlias = 'Serial'
+          FieldLength = 35
+          FieldName = 'Serial'
+          SQLFieldName = 'Serial'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField31: TdaField
+          Alias = 'SERIAL_CORTO'
+          DisplayWidth = 10
+          FieldAlias = 'SERIAL_CORTO'
+          FieldLength = 6
+          FieldName = 'SERIAL_CORTO'
+          SQLFieldName = 'SERIAL_CORTO'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField32: TdaField
+          Alias = 'Serial_motor'
+          DisplayWidth = 10
+          FieldAlias = 'Serial_motor'
+          FieldLength = 35
+          FieldName = 'Serial_motor'
+          SQLFieldName = 'Serial_motor'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField33: TdaField
+          Alias = 'SUBTOTAL_COM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'SUBTOTAL_COM'
+          FieldLength = 3
+          FieldName = 'SUBTOTAL_COM'
+          SQLFieldName = 'SUBTOTAL_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField34: TdaField
+          Alias = 'SUBTOTAL_FAC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'SUBTOTAL_FAC'
+          FieldLength = 3
+          FieldName = 'SUBTOTAL_FAC'
+          SQLFieldName = 'SUBTOTAL_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField35: TdaField
+          Alias = 'TAX_COM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TAX_COM'
+          FieldLength = 3
+          FieldName = 'TAX_COM'
+          SQLFieldName = 'TAX_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField36: TdaField
+          Alias = 'TAX_FAC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TAX_FAC'
+          FieldLength = 3
+          FieldName = 'TAX_FAC'
+          SQLFieldName = 'TAX_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField37: TdaField
+          Alias = 'Tipo'
+          DisplayWidth = 10
+          FieldAlias = 'Tipo'
+          FieldLength = 25
+          FieldName = 'Tipo'
+          SQLFieldName = 'Tipo'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField38: TdaField
+          Alias = 'TipoCom'
+          DisplayWidth = 10
+          FieldAlias = 'TipoCom'
+          FieldLength = 1
+          FieldName = 'TipoCom'
+          SQLFieldName = 'TipoCom'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField39: TdaField
+          Alias = 'TipoFac'
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 1
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField40: TdaField
+          Alias = 'TOTAL_COM'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TOTAL_COM'
+          FieldLength = 3
+          FieldName = 'TOTAL_COM'
+          SQLFieldName = 'TOTAL_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField41: TdaField
+          Alias = 'TOTAL_FAC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TOTAL_FAC'
+          FieldLength = 3
+          FieldName = 'TOTAL_FAC'
+          SQLFieldName = 'TOTAL_FAC'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField42: TdaField
+          Alias = 'Uso'
+          DisplayWidth = 10
+          FieldAlias = 'Uso'
+          FieldLength = 25
+          FieldName = 'Uso'
+          SQLFieldName = 'Uso'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField43: TdaField
+          Alias = 'VENDEDOR'
+          DisplayWidth = 10
+          FieldAlias = 'VENDEDOR'
+          FieldLength = 40
+          FieldName = 'VENDEDOR'
+          SQLFieldName = 'VENDEDOR'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField44: TdaField
+          Alias = 'GUIA'
+          DisplayWidth = 10
+          FieldAlias = 'GUIA'
+          FieldLength = 8
+          FieldName = 'GUIA'
+          SQLFieldName = 'GUIA'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField45: TdaField
+          Alias = 'UTILIDAD'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'UTILIDAD'
+          FieldLength = 3
+          FieldName = 'UTILIDAD'
+          SQLFieldName = 'UTILIDAD'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daField46: TdaField
+          ChildType = 2
+          Alias = 'EMISION_COM'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'EMISION_COM'
+          FieldLength = 10
+          FieldName = 'EMISION_COM'
+          SQLFieldName = 'EMISION_COM'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+          TableSQLAlias = 'VW_ADM_VehiculoModelo'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'VW_ADM_VehiculoModelo'
+          JoinType = dajtNone
+          SQLAlias = 'VW_ADM_VehiculoModelo'
+          TableAlias = 'VW_ADM_VehiculoModelo'
+          TableName = 'VW_ADM_VehiculoModelo'
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Datos_Empresa'
+      Height = 245
+      Left = 279
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 3
+      TypeColumnWidth = 52
+      Width = 310
+      AutoSearchTabOrder = 0
+      object Datos_Empresa: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Datos_Empresa'
+        object ppField1: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'EMail'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Logo'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 5
+          Searchable = False
+          Sortable = False
+          TableName = 'SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SACONF'
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Datos_Empresa'
+        LinkColor = clNavy
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SACONF.CodSucu, SACONF.Descrip, '
+          '       SACONF.Direc1, SACONF.Direc2, '
+          '       SACONF.Email, SACONF.Imagen, SACONF.NIT, '
+          '       SACONF.RIF, SACONF.Telef'
+          'FROM SACONF SACONF'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'EMail'
+          DisplayWidth = 10
+          FieldAlias = 'EMail'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'Logo'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Logo'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 15
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Datos_Empresa'
+          JoinType = dajtNone
+          SQLAlias = 'SACONF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+        end
+      end
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

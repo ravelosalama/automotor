@@ -1,0 +1,62 @@
+DROP TRIGGER VALIDA_CERRAR_ORDEN 
+
+GO
+ 
+CREATE TRIGGER VALIDA_CERRAR_ORDEN ON SAITEMFAC
+WITH ENCRYPTION
+AFTER INSERT, UPDATE
+AS
+
+-----------------------------------
+-- DECLARACION DE VARIABLES 
+-----------------------------------
+
+-- Contenido de campos de safact
+DECLARE @TipoFac     varchar (1),
+        @NumeroD     varchar (10),
+        @liquidacion Varchar(15),
+        @status Varchar(15),
+        @Codmeca varchar(10),
+        @servicio smallint,
+        @STATUSERROR INT,
+        @DESCRIPERROR VARCHAR(256)
+       
+
+SELECT @NUMEROD=NUMEROD, @TIPOFAC=TIPOFAC, @servicio=esserv, @CODMECA=CODMECA FROM INSERTED 
+
+SELECT @STATUS=STATUS FROM SAFACT_01 WHERE NUMEROD=@NUMEROD AND TIPOFAC=@TIPOFAC 
+
+
+
+ -- Valida si al cerrar orden posee tecnicos validos
+     IF SUBSTRING(@STATUS,1,1)='C' AND @SERVICIO=1 AND EXISTS (SELECT * FROM SAITEMFAC WHERE @CODMECA='AAAAA' and numerod=@numerod and tipofac=@tipofac)
+        BEGIN
+         SET @STATUSERROR=1
+         SET @DESCRIPERROR='No se puede cerrar la O/R con rubros de servicios sin definicion de técnico asignado valido'             
+        END  
+
+      IF @Tipofac='A' AND @SERVICIO=1 AND EXISTS (SELECT * FROM SAITEMFAC WHERE @CODMECA='AAAAA' and numerod=@numerod and tipofac=@tipofac)
+        BEGIN
+         SET @STATUSERROR=1
+         SET @DESCRIPERROR='No se puede FACTURAR La O/R con rubros de servicios sin definicion de técnico asignado valido'             
+        END   
+        
+
+
+
+
+
+
+-- MUESTRA PANTALLA CON RESULTADO DE VALIDACIONES SI LAS HAY.
+
+   IF @STATUSERROR=1
+   BEGIN
+      RAISERROR (@DESCRIPERROR,16,1)
+      ROLLBACK TRANSACTION
+      RETURN
+   END
+
+
+
+
+  

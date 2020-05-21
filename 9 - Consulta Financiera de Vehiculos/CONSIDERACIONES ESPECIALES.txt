@@ -1,0 +1,45 @@
+HAY QUE PREPARAR LOS CAMPOS EN SAFACT EN LAS BASES DE DATOS DONDE SE INSTALE ESTA SOLUCION
+en Configuracion de Ventas de Vehiculos : TRINA,AURORA,RAIZA.
+
+NOTAS1: 'LEY DE TIMBRE FISCAL BLA, BLA, BLA.......'
+NOTAS2: 'RESERVA DE DOMINIO A FAVOR DE:'
+NOTAS3: ' INDICAR LA RAZON SOCIAL DEL BANCO'
+
+En Configuracion de Comras de Vehiculos : Dainery, AURORA, Yelitza.
+
+NOTAS1: CERTIFICADO DE ORIGEN.
+
+
+
+reporte probado hasta encabezado de venta falta detalle de cobranzas y bancos. LISTO
+
+Ojo con los rubros exentos entre compra y ventas a veces no coinciden y debn por cuanto 
+puede estarse perdiendo dinero.
+
+
+Falta Validacion de que si ha sido vendido para calculo de dias y de utilidad LISTO
+
+Falta cod y nombre del vendedor. LISTO
+
+falta aclarar lo de la utilidad. LISTO    2 PORCENTAJES 
+
+Configurar en el configurador por venta de vehiculo: las notas1,2,3
+
+ya se parametrizaron las lineas en los tres concesionarios 
+
+ENLACE DE LOS ANTICIPO DE CLIENTES cuando no se ha producido venta  CON TABLA DE VISTA PPAL
+
+Incluir Nota de debitos y creditos. ( vinculadas a facturacion)
+
+Y FACTURAS DE ACCESORIOS VINCULADAS A LA VENTA DE VEHICULO.
+ 
+OJO volver a cambiar sacomp.notas1 por safact.notas4 por facilidad.
+
+
+ojo agregar filtro  'G' en espera de prefactura de vehiculos en vista principal.
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+Luego de la evaluación del fin de semana del 12 y 13 de julio se concluyo que la manera mas economica 
+de abordar el cambio de placa es utilizando el campo de referencia pues este alimenta de manera
+eficiente la tabla sacodbar y a su vez mantiene el dato de la placa vieja en su contenido de busqueda.
+solo hay que ajustar los apuntes de campos de placa a referencia.
+

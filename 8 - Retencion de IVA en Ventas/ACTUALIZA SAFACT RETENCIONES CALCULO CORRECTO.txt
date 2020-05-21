@@ -1,0 +1,5 @@
+UPDATE    safact
+SET              reteniva = x.monto
+FROM         SAIPACXC x INNER JOIN
+                      SAACXC y ON x.NroPpal = y.NroUnico INNER JOIN
+                      SAFACT Z ON Z.NumeroD = y.NumeroN 

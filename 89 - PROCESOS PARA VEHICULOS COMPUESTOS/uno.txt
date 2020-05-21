@@ -1,0 +1,63 @@
+DROP VIEW dbo.SESA_RP_ITEMFACTVEHICULO
+GO
+CREATE VIEW dbo.SESA_RP_ITEMFACTVEHICULO -- WITH ENCRYPTION
+AS
+ 
+ SELECT     SAITEMFAC.TipoFac, SAITEMFAC.NumeroD, SAITEMFAC.NroLinea, SAITEMFAC.CodItem, SAITEMFAC.Descrip1, SAITEMFAC.Descrip2, SAITEMFAC.Descrip3, 
+                      SAITEMFAC.Refere, SAITEMFAC.Precio, SAITEMFAC.Cantidad, SAITEMFAC.Cantidad * SAITEMFAC.Precio AS SUBTOTAL, SERIALES.NroSerial, MODELOS.Descrip, 
+                      MODELOS.Marca, MODELOS.Ano, MODELOS.Peso, MODELOS.Puestos, MODELOS.Cilindros, MODELOS.Clase, MODELOS.Uso, VEHICULOS.Color, 
+                      VEHICULOS.CodProd AS PLACA, VEHICULOS.Atributos, VEHICULOS.Serial_motor, SAITEMFAC.NroLineaC, SAITEMFAC.Descrip4, SAITEMFAC.Descrip5, 
+                      SAITEMFAC.Descrip6, SAITEMFAC.Descrip7, SAITEMFAC.Descrip8, SAITEMFAC.Descrip9, SAITEMFAC.Descrip10, dbo.SAPROD.Descrip AS Expr1, 
+                      dbo.SAPROD.CodInst
+FROM         dbo.SAPROD LEFT OUTER JOIN
+                      dbo.SESA_RP_MODELOS AS MODELOS ON dbo.SAPROD.CodProd = MODELOS.CodProd RIGHT OUTER JOIN
+                      dbo.SAITEMFAC AS SAITEMFAC ON MODELOS.CodProd = SAITEMFAC.CodItem LEFT OUTER JOIN
+                      dbo.SASEPRFAC AS SERIALES ON SAITEMFAC.TipoFac = SERIALES.TipoFac AND SAITEMFAC.NumeroD = SERIALES.NumeroD AND 
+                      SAITEMFAC.NroLinea = SERIALES.NroLinea AND SAITEMFAC.CodItem = SERIALES.CodItem LEFT OUTER JOIN
+                      dbo.SESA_RP_VEHICULOS AS VEHICULOS ON SERIALES.NroSerial = VEHICULOS.Serial_carroc
+
+go
+----------------
+
+declare @TNAME CHAR(24)
+declare @ALIAS CHAR(24)
+SET @TNAME = 'SESA_RP_ITEMFACTVEHICULO'
+SET @ALIAS = 'SESA_RP_ITEMFACTVEHICULO'
+ 
+Delete SATABL
+Where TableName=@TNAME
+ 
+DELETE SAFIEL
+Where TableName=@TNAME
+
+Insert Into SATABL
+(tablename, tablealias)
+Values (@TNAME, @ALIAS)
+
+Insert Into  SAFIEL 
+(TableName, FieldName, FieldAlias, DataType, Selectable, Searchable, Sortable, AutoSearch, Mandatory)
+ 
+(
+Select A.Name As TableName, B.Name As FieldName, B.Name As FieldAlias, 
+       Case B.XType
+    When 56  Then 'dtLongInt'
+	When 58  Then 'dtInteger'
+	When 106 Then 'dtDouble'
+        When 167 Then 'dtString'
+        When 61  Then 'dtDateTime'
+	When 35  Then 'dtMemo'
+        When 52  Then 'dtInteger'
+	When 34  Then 'dtGraphic'
+	When 165 Then 'dtBlob'        
+        End As DataType,
+       'T' Selectable, 
+       'T' Searchable,  
+       'T' Sortable, 
+       'F' AutoSearch, 
+       'F' Mandatory
+from SysObjects A, syscolumns B 
+where A.name=@TNAME
+and   A.Id=B.Id
+) 
+
+

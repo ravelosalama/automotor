@@ -1,0 +1,19 @@
+Un vehiculo se elimna por dos dos causas y por dos vias
+
+causa uno: error en algun dato clave o generacion erronea del tipo de registro
+
+Via 1: Cuando el registro es creado por Servicios.
+       se debe eliminar por Administrativo/producto/vehiculo/ficha borrar vehiculo.
+
+via 2: Cuando el vehiculo es creado por la compra. y tambien se desea eliminar la compra para
+       registrarla nueva correctamente
+       se debe eliminar por Administrativo / Proveedor/ eliminar compra. 
+       Este procedimiento funciona perfectamente incluso contiene las ultimos cambios de estructuras de tablas.
+
+
+  
+ADVERTENCIA: SE HAN REPORTADOS CASOS QUE SE CREA EL REGISTRO NUEVO DE MODELO NUEVO PERO SE REGISTRA ERRONEAMENTE
+             COMO VEHICULO. AL ELIMINAR EL REGISTRO QUEDAN LOS DATOS ADICIONALES INTACTOS QUEDANDO REGITROS EN SAPROD_11_01
+             Y EN SAPROD_12_01.
+
+ 

@@ -1,0 +1,2242 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.Inventario
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4 (210 x 297 mm)'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = '201 - Listado para la toma de Inventario'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'F:\CONCESIONARIOS\My Dropbox\SAINT\SOLUCIONES\71 - REPORTES GERE' +
+    'NCIALES PARA CHRYSLER\201\201 - Listado para la toma de Inventar' +
+    'io.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PDFSettings.EmbedFontOptions = []
+  PreviewFormSettings.WindowState = wsMaximized
+  ShowAutoSearchDialog = True
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 176
+  Top = 88
+  Version = '11.06'
+  mmColumnWidth = 0
+  DataPipelineName = 'Inventario'
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 49213
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 7408
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 58738
+      BandType = 0
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Listado para la toma de Inventario'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 18
+      Font.Style = []
+      Transparent = True
+      mmHeight = 7408
+      mmLeft = 56621
+      mmTop = 12435
+      mmWidth = 95779
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4191
+      mmLeft = 89694
+      mmTop = 20638
+      mmWidth = 30607
+      BandType = 0
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 178859
+      mmTop = 0
+      mmWidth = 10054
+      BandType = 0
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Codigo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 0
+      mmTop = 42069
+      mmWidth = 12171
+      BandType = 0
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Descripci'#243'n'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4191
+      mmLeft = 31750
+      mmTop = 42069
+      mmWidth = 20108
+      BandType = 0
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Ref.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4191
+      mmLeft = 87577
+      mmTop = 42069
+      mmWidth = 6646
+      BandType = 0
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Existencia'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 103717
+      mmTop = 41540
+      mmWidth = 17463
+      BandType = 0
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Ubicacion'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 146579
+      mmTop = 34925
+      mmWidth = 16933
+      BandType = 0
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 46831
+      mmWidth = 196586
+      BandType = 0
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'P'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 147373
+      mmTop = 41010
+      mmWidth = 2381
+      BandType = 0
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'E'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 153459
+      mmTop = 41010
+      mmWidth = 2381
+      BandType = 0
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'N'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 158486
+      mmTop = 41010
+      mmWidth = 2646
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 4763
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodProd'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 20320
+      BandType = 4
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 31750
+      mmTop = 0
+      mmWidth = 16651
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Existen_2'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 93117
+      mmTop = 265
+      mmWidth = 19332
+      BandType = 4
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'PuestoI'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 59531
+      mmTop = 265
+      mmWidth = 9948
+      BandType = 4
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Refere'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 77523
+      mmTop = 0
+      mmWidth = 15381
+      BandType = 4
+    end
+    object ppLine3: TppLine
+      UserName = 'Line3'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 1058
+      mmLeft = 101600
+      mmTop = 3704
+      mmWidth = 96044
+      BandType = 4
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodUbic'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3704
+      mmLeft = 127794
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'substring_saexis_puestoi'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 147109
+      mmTop = 265
+      mmWidth = 9384
+      BandType = 4
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'substring_saexis_puesto_2'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3598
+      mmLeft = 153194
+      mmTop = 265
+      mmWidth = 10866
+      BandType = 4
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'substring_saexis_puesto_3'
+      DataPipeline = daADOQueryDataView1.Inventario
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 9
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'Inventario'
+      mmHeight = 3704
+      mmLeft = 158750
+      mmTop = 265
+      mmWidth = 2910
+      BandType = 4
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 13229
+    mmPrintPosition = 0
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 265
+      mmWidth = 197380
+      BandType = 8
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_Inventario'
+      Height = 588
+      Left = 10
+      NameColumnWidth = 144
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 352
+      AutoSearchTabOrder = 0
+      object Inventario: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Inventario'
+        object ppField1: TppField
+          FieldAlias = 'Activo'
+          FieldName = 'Activo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAPROD'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cantidad_empaque'
+          FieldName = 'CantEmpaq'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAPROD'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Cod_Instancia'
+          FieldName = 'CodInst'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAPROD'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Cod_Producto'
+          FieldName = 'CodProd'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAPROD'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Cant_comprometida'
+          FieldName = 'Compro'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAPROD'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Costo_actual'
+          FieldName = 'CostAct'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAPROD'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Costo_anterior'
+          FieldName = 'CostAnt'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SAPROD'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Costo_promedio'
+          FieldName = 'CostPro'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SAPROD'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Tiene_comision'
+          FieldName = 'DEsComi'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SAPROD'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Es_compuesto'
+          FieldName = 'DEsComp'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SAPROD'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SAPROD'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Descripcion2'
+          FieldName = 'Descrip2'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SAPROD'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Descripcion3'
+          FieldName = 'Descrip3'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SAPROD'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Tiene_lote'
+          FieldName = 'DEsLote'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SAPROD'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Es_serial'
+          FieldName = 'DEsSeri'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SAPROD'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Tiene_vencimiento'
+          FieldName = 'DEsVence'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SAPROD'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Usa_Empaque'
+          FieldName = 'EsEmpaque'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SAPROD'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Es_enser'
+          FieldName = 'EsEnser'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SAPROD'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Es_exento'
+          FieldName = 'EsExento'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SAPROD'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Es_importado'
+          FieldName = 'EsImport'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SAPROD'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Tiene_oferta'
+          FieldName = 'EsOferta'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SAPROD'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Usa_Balanza'
+          FieldName = 'EsPesa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'SAPROD'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Existencia'
+          FieldName = 'Existen'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'SAPROD'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Exist_consignacion'
+          FieldName = 'ExistenCon'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'SAPROD'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Exist_unidades'
+          FieldName = 'ExUnidad'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'SAPROD'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Unid_consignacion'
+          FieldName = 'ExUnidadCon'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'SAPROD'
+        end
+        object ppField27: TppField
+          FieldAlias = 'Ult_compra'
+          FieldName = 'FechaUC'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'SAPROD'
+        end
+        object ppField28: TppField
+          FieldAlias = 'Ult_venta'
+          FieldName = 'FechaUV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'SAPROD'
+        end
+        object ppField29: TppField
+          FieldAlias = 'Marca'
+          FieldName = 'Marca'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'SAPROD'
+        end
+        object ppField30: TppField
+          FieldAlias = 'Maximo'
+          FieldName = 'Maximo'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'SAPROD'
+        end
+        object ppField31: TppField
+          FieldAlias = 'Minimo'
+          FieldName = 'Minimo'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'SAPROD'
+        end
+        object ppField32: TppField
+          FieldAlias = 'Cant_pedida'
+          FieldName = 'Pedido'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'SAPROD'
+        end
+        object ppField33: TppField
+          FieldAlias = 'Precio1'
+          FieldName = 'Precio1'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'SAPROD'
+        end
+        object ppField34: TppField
+          FieldAlias = 'Precio2'
+          FieldName = 'Precio2'
+          FieldLength = 5
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'SAPROD'
+        end
+        object ppField35: TppField
+          FieldAlias = 'Precio3'
+          FieldName = 'Precio3'
+          FieldLength = 5
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'SAPROD'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Precio_unitario'
+          FieldName = 'PrecioU'
+          FieldLength = 5
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'SAPROD'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Referencia'
+          FieldName = 'Refere'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'SAPROD'
+        end
+        object ppField38: TppField
+          FieldAlias = 'Tara'
+          FieldName = 'Tara'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'SAPROD'
+        end
+        object ppField39: TppField
+          FieldAlias = 'Unidad_empaque'
+          FieldName = 'UndEmpaq'
+          FieldLength = 3
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'SAPROD'
+        end
+        object ppField40: TppField
+          FieldAlias = 'Unidad'
+          FieldName = 'Unidad'
+          FieldLength = 3
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'SAPROD'
+        end
+        object ppField41: TppField
+          FieldAlias = 'Cant_Com'
+          FieldName = 'CantCom'
+          FieldLength = 3
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'SAEXIS'
+        end
+        object ppField42: TppField
+          FieldAlias = 'Cant_Pedi'
+          FieldName = 'CantPed'
+          FieldLength = 3
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'SAEXIS'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Cod_Producto (2)'
+          FieldName = 'CodProd_2'
+          FieldLength = 15
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'SAEXIS'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Cod_Deposito'
+          FieldName = 'CodUbic'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'SAEXIS'
+        end
+        object ppField45: TppField
+          FieldAlias = 'Existencia (2)'
+          FieldName = 'Existen_2'
+          FieldLength = 3
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'SAEXIS'
+        end
+        object ppField46: TppField
+          FieldAlias = 'Unidades'
+          FieldName = 'ExUnidad_2'
+          FieldLength = 3
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'SAEXIS'
+        end
+        object ppField47: TppField
+          FieldAlias = 'Puesto'
+          FieldName = 'PuestoI'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 46
+          TableName = 'SAEXIS'
+        end
+        object ppField48: TppField
+          FieldAlias = 'Unid_Com'
+          FieldName = 'UnidCom'
+          FieldLength = 3
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 47
+          TableName = 'SAEXIS'
+        end
+        object ppField49: TppField
+          FieldAlias = 'Unid_Pedi'
+          FieldName = 'UnidPed'
+          FieldLength = 3
+          IsDetail = True
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'SAEXIS'
+        end
+        object ppField50: TppField
+          FieldAlias = 'Pasillo'
+          FieldName = 'substring_saexis_puestoi'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'SAEXIS'
+        end
+        object ppField51: TppField
+          FieldAlias = 'Estante'
+          FieldName = 'substring_saexis_puesto_2'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'SAEXIS'
+        end
+        object ppField52: TppField
+          FieldAlias = 'nivel'
+          FieldName = 'substring_saexis_puesto_3'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 51
+          TableName = 'SAEXIS'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Inventario'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAPROD.Activo, SAPROD.CantEmpaq, '
+          '       SAPROD.CodInst, SAPROD.CodProd, '
+          '       SAPROD.Compro, SAPROD.CostAct, '
+          '       SAPROD.CostAnt, SAPROD.CostPro, '
+          '       SAPROD.DEsComi, SAPROD.DEsComp, '
+          '       SAPROD.Descrip, SAPROD.Descrip2, '
+          '       SAPROD.Descrip3, SAPROD.DEsLote, '
+          '       SAPROD.DEsSeri, SAPROD.DEsVence, '
+          '       SAPROD.EsEmpaque, SAPROD.EsEnser, '
+          '       SAPROD.EsExento, SAPROD.EsImport, '
+          '       SAPROD.EsOferta, SAPROD.EsPesa, '
+          '       SAPROD.Existen, SAPROD.ExistenCon, '
+          '       SAPROD.ExUnidad, SAPROD.ExUnidadCon, '
+          '       SAPROD.FechaUC, SAPROD.FechaUV, '
+          '       SAPROD.Marca, SAPROD.Maximo, '
+          '       SAPROD.Minimo, SAPROD.Pedido, '
+          '       SAPROD.Precio1, SAPROD.Precio2, '
+          '       SAPROD.Precio3, SAPROD.PrecioU, '
+          '       SAPROD.Refere, SAPROD.Tara, '
+          '       SAPROD.UndEmpaq, SAPROD.Unidad, '
+          '       SAEXIS.CantCom, SAEXIS.CantPed, '
+          '       SAEXIS.CodProd CodProd_2, SAEXIS.CodUbic, '
+          '       SAEXIS.Existen Existen_2, '
+          '       SAEXIS.ExUnidad ExUnidad_2, '
+          '       SAEXIS.PuestoI, SAEXIS.UnidCom, '
+          '       SAEXIS.UnidPed, '
+          '       substring(saexis.puestoi,1,2) substring_saexis_puestoi, '
+          '       substring(saexis.puestoi,4,2) substring_saexis_puesto_2, '
+          '       substring(saexis.puestoi,7,1) substring_saexis_puesto_3'
+          'FROM SAPROD SAPROD'
+          '      LEFT OUTER JOIN SAEXIS SAEXIS ON '
+          '     (SAEXIS.CodProd = SAPROD.CodProd)'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          '      ( SAPROD.CodInst NOT IN (11,12,27) )'
+          '       AND ( SAEXIS.Existen <> 999999 )'
+          '       AND ( SAPROD.Existen < 9999999999 ))')
+        SQLType = sqSQL2
+        object daCalculation1: TdaCalculation
+          ChildType = 8
+          Alias = 'Pasillo'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 2
+          FieldName = 'PuestoI'
+          SQLFieldName = 'substring_saexis_puestoi'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+          CalcType = dacaExpression
+          Expression = 'substring(saexis.puestoi,1,2)'
+        end
+        object daCalculation2: TdaCalculation
+          ChildType = 8
+          Alias = 'Estante'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 2
+          FieldName = 'PuestoI'
+          SQLFieldName = 'substring_saexis_puesto_2'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+          CalcType = dacaExpression
+          Expression = 'substring(saexis.puestoi,4,2)'
+        end
+        object daCalculation3: TdaCalculation
+          ChildType = 8
+          Alias = 'nivel'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 1
+          FieldName = 'PuestoI'
+          SQLFieldName = 'substring_saexis_puesto_3'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+          CalcType = dacaExpression
+          Expression = 'substring(saexis.puestoi,7,1)'
+        end
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotInList
+          Value = '11,12,27'
+          object TdaField
+            Alias = 'Cod_Instancia'
+            AutoSearch = True
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Instancia'
+            FieldLength = 10
+            FieldName = 'CodInst'
+            SQLFieldName = 'CodInst'
+            TableAlias = 'Inventario'
+            TableName = 'SAPROD'
+            TableSQLAlias = 'SAPROD'
+          end
+          object TdaNumericValue
+            Value = 11.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 12.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 27.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'Cod_Instancia'
+            AutoSearch = True
+            DataType = dtLongint
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Instancia'
+            FieldLength = 10
+            FieldName = 'CodInst'
+            SQLFieldName = 'CodInst'
+            TableAlias = 'Inventario'
+            TableName = 'SAPROD'
+            TableSQLAlias = 'SAPROD'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          object TdaField
+            Alias = 'Cod_Producto'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Producto'
+            FieldLength = 10
+            FieldName = 'CodProd'
+            SQLFieldName = 'CodProd'
+            TableAlias = 'Inventario'
+            TableName = 'SAPROD'
+            TableSQLAlias = 'SAPROD'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          object TdaField
+            Alias = 'Cod_Deposito'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Cod_Deposito'
+            FieldLength = 10
+            FieldName = 'CodUbic'
+            SQLFieldName = 'CodUbic'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+          end
+        end
+        object daCriteria5: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoNotEqual
+          Value = '999999'
+          object TdaField
+            Alias = 'Existencia'
+            AutoSearch = True
+            DataType = dtDouble
+            DisplayWidth = 10
+            FieldAlias = 'Existencia'
+            FieldLength = 10
+            FieldName = 'Existen'
+            SQLFieldName = 'Existen'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+          end
+          object TdaNumericValue
+            Value = 999999.000000000000000000
+          end
+        end
+        object daCriteria6: TdaCriteria
+          ChildType = 7
+          Level = 0
+          object TdaField
+            Alias = 'Existencia'
+            AutoSearch = True
+            DataType = dtDouble
+            DisplayWidth = 10
+            FieldAlias = 'Existencia'
+            FieldLength = 10
+            FieldName = 'Existen'
+            SQLFieldName = 'Existen'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+          end
+        end
+        object daCriteria7: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoLessThan
+          Value = '9999999999'
+          object TdaField
+            Alias = 'Existen'
+            AutoSearch = True
+            DataType = dtDouble
+            DisplayWidth = 29
+            FieldAlias = 'Existen'
+            FieldLength = 3
+            FieldName = 'Existen'
+            SQLFieldName = 'Existen'
+            TableAlias = 'Inventario'
+            TableName = 'SAPROD'
+            TableSQLAlias = 'SAPROD'
+          end
+          object TdaNumericValue
+            Value = 9999999999.000000000000000000
+          end
+        end
+        object daCriteria8: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'Puesto'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Puesto'
+            FieldLength = 10
+            FieldName = 'PuestoI'
+            SQLFieldName = 'PuestoI'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+          end
+        end
+        object daCriteria9: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'Pasillo'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Puesto'
+            FieldLength = 2
+            FieldName = 'PuestoI'
+            SQLFieldName = 'substring_saexis_puestoi'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+            CalcType = dacaExpression
+            Expression = 'substring(saexis.puestoi,1,2)'
+          end
+        end
+        object daCriteria10: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'Estante'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Puesto'
+            FieldLength = 2
+            FieldName = 'PuestoI'
+            SQLFieldName = 'substring_saexis_puesto_2'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+            CalcType = dacaExpression
+            Expression = 'substring(saexis.puestoi,3,2)'
+          end
+        end
+        object daCriteria11: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaCalculation
+            ChildType = 8
+            Alias = 'Nivel'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Puesto'
+            FieldLength = 1
+            FieldName = 'PuestoI'
+            SQLFieldName = 'substring_saexis_puesto_3'
+            TableAlias = 'Existencias_inventario'
+            TableName = 'SAEXIS'
+            TableSQLAlias = 'SAEXIS'
+            CalcType = dacaExpression
+            Expression = 'substring(saexis.puestoi,5,1)'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Activo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Activo'
+          FieldLength = 0
+          FieldName = 'Activo'
+          SQLFieldName = 'Activo'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField2: TdaField
+          Alias = 'Cantidad_empaque'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cantidad_empaque'
+          FieldLength = 3
+          FieldName = 'CantEmpaq'
+          SQLFieldName = 'CantEmpaq'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField3: TdaField
+          Alias = 'Cod_Instancia'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Instancia'
+          FieldLength = 0
+          FieldName = 'CodInst'
+          SQLFieldName = 'CodInst'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField4: TdaField
+          Alias = 'Cod_Producto'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Producto'
+          FieldLength = 20
+          FieldName = 'CodProd'
+          SQLFieldName = 'CodProd'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField5: TdaField
+          Alias = 'Cant_comprometida'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cant_comprometida'
+          FieldLength = 3
+          FieldName = 'Compro'
+          SQLFieldName = 'Compro'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField6: TdaField
+          Alias = 'Costo_actual'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Costo_actual'
+          FieldLength = 3
+          FieldName = 'CostAct'
+          SQLFieldName = 'CostAct'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField7: TdaField
+          Alias = 'Costo_anterior'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Costo_anterior'
+          FieldLength = 3
+          FieldName = 'CostAnt'
+          SQLFieldName = 'CostAnt'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField8: TdaField
+          Alias = 'Costo_promedio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Costo_promedio'
+          FieldLength = 3
+          FieldName = 'CostPro'
+          SQLFieldName = 'CostPro'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField9: TdaField
+          Alias = 'Tiene_comision'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tiene_comision'
+          FieldLength = 0
+          FieldName = 'DEsComi'
+          SQLFieldName = 'DEsComi'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField10: TdaField
+          Alias = 'Es_compuesto'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_compuesto'
+          FieldLength = 0
+          FieldName = 'DEsComp'
+          SQLFieldName = 'DEsComp'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField11: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 40
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField12: TdaField
+          Alias = 'Descripcion2'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion2'
+          FieldLength = 40
+          FieldName = 'Descrip2'
+          SQLFieldName = 'Descrip2'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField13: TdaField
+          Alias = 'Descripcion3'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion3'
+          FieldLength = 40
+          FieldName = 'Descrip3'
+          SQLFieldName = 'Descrip3'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField14: TdaField
+          Alias = 'Tiene_lote'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tiene_lote'
+          FieldLength = 0
+          FieldName = 'DEsLote'
+          SQLFieldName = 'DEsLote'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField15: TdaField
+          Alias = 'Es_serial'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_serial'
+          FieldLength = 0
+          FieldName = 'DEsSeri'
+          SQLFieldName = 'DEsSeri'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField16: TdaField
+          Alias = 'Tiene_vencimiento'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tiene_vencimiento'
+          FieldLength = 0
+          FieldName = 'DEsVence'
+          SQLFieldName = 'DEsVence'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField17: TdaField
+          Alias = 'Usa_Empaque'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Usa_Empaque'
+          FieldLength = 0
+          FieldName = 'EsEmpaque'
+          SQLFieldName = 'EsEmpaque'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField18: TdaField
+          Alias = 'Es_enser'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_enser'
+          FieldLength = 0
+          FieldName = 'EsEnser'
+          SQLFieldName = 'EsEnser'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField19: TdaField
+          Alias = 'Es_exento'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_exento'
+          FieldLength = 0
+          FieldName = 'EsExento'
+          SQLFieldName = 'EsExento'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField20: TdaField
+          Alias = 'Es_importado'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Es_importado'
+          FieldLength = 0
+          FieldName = 'EsImport'
+          SQLFieldName = 'EsImport'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField21: TdaField
+          Alias = 'Tiene_oferta'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Tiene_oferta'
+          FieldLength = 0
+          FieldName = 'EsOferta'
+          SQLFieldName = 'EsOferta'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField22: TdaField
+          Alias = 'Usa_Balanza'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Usa_Balanza'
+          FieldLength = 0
+          FieldName = 'EsPesa'
+          SQLFieldName = 'EsPesa'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField23: TdaField
+          Alias = 'Existencia'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Existencia'
+          FieldLength = 3
+          FieldName = 'Existen'
+          SQLFieldName = 'Existen'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField24: TdaField
+          Alias = 'Exist_consignacion'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Exist_consignacion'
+          FieldLength = 3
+          FieldName = 'ExistenCon'
+          SQLFieldName = 'ExistenCon'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField25: TdaField
+          Alias = 'Exist_unidades'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Exist_unidades'
+          FieldLength = 3
+          FieldName = 'ExUnidad'
+          SQLFieldName = 'ExUnidad'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField26: TdaField
+          Alias = 'Unid_consignacion'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Unid_consignacion'
+          FieldLength = 3
+          FieldName = 'ExUnidadCon'
+          SQLFieldName = 'ExUnidadCon'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField27: TdaField
+          Alias = 'Ult_compra'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Ult_compra'
+          FieldLength = 0
+          FieldName = 'FechaUC'
+          SQLFieldName = 'FechaUC'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField28: TdaField
+          Alias = 'Ult_venta'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Ult_venta'
+          FieldLength = 0
+          FieldName = 'FechaUV'
+          SQLFieldName = 'FechaUV'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField29: TdaField
+          Alias = 'Marca'
+          DisplayWidth = 10
+          FieldAlias = 'Marca'
+          FieldLength = 20
+          FieldName = 'Marca'
+          SQLFieldName = 'Marca'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField30: TdaField
+          Alias = 'Maximo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Maximo'
+          FieldLength = 3
+          FieldName = 'Maximo'
+          SQLFieldName = 'Maximo'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField31: TdaField
+          Alias = 'Minimo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Minimo'
+          FieldLength = 3
+          FieldName = 'Minimo'
+          SQLFieldName = 'Minimo'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField32: TdaField
+          Alias = 'Cant_pedida'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cant_pedida'
+          FieldLength = 3
+          FieldName = 'Pedido'
+          SQLFieldName = 'Pedido'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField33: TdaField
+          Alias = 'Precio1'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Precio1'
+          FieldLength = 3
+          FieldName = 'Precio1'
+          SQLFieldName = 'Precio1'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField34: TdaField
+          Alias = 'Precio2'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Precio2'
+          FieldLength = 5
+          FieldName = 'Precio2'
+          SQLFieldName = 'Precio2'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField35: TdaField
+          Alias = 'Precio3'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Precio3'
+          FieldLength = 5
+          FieldName = 'Precio3'
+          SQLFieldName = 'Precio3'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField36: TdaField
+          Alias = 'Precio_unitario'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Precio_unitario'
+          FieldLength = 5
+          FieldName = 'PrecioU'
+          SQLFieldName = 'PrecioU'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField37: TdaField
+          Alias = 'Referencia'
+          DisplayWidth = 10
+          FieldAlias = 'Referencia'
+          FieldLength = 15
+          FieldName = 'Refere'
+          SQLFieldName = 'Refere'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField38: TdaField
+          Alias = 'Tara'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Tara'
+          FieldLength = 3
+          FieldName = 'Tara'
+          SQLFieldName = 'Tara'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField39: TdaField
+          Alias = 'Unidad_empaque'
+          DisplayWidth = 10
+          FieldAlias = 'Unidad_empaque'
+          FieldLength = 3
+          FieldName = 'UndEmpaq'
+          SQLFieldName = 'UndEmpaq'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField40: TdaField
+          Alias = 'Unidad'
+          DisplayWidth = 10
+          FieldAlias = 'Unidad'
+          FieldLength = 3
+          FieldName = 'Unidad'
+          SQLFieldName = 'Unidad'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField41: TdaField
+          Alias = 'Cant_Com'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cant_Com'
+          FieldLength = 3
+          FieldName = 'CantCom'
+          IsDetail = True
+          SQLFieldName = 'CantCom'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField42: TdaField
+          Alias = 'Cant_Pedi'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cant_Pedi'
+          FieldLength = 3
+          FieldName = 'CantPed'
+          IsDetail = True
+          SQLFieldName = 'CantPed'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField43: TdaField
+          Alias = 'Cod_Producto (2)'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Producto'
+          FieldLength = 15
+          FieldName = 'CodProd'
+          IsDetail = True
+          SQLFieldName = 'CodProd_2'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField44: TdaField
+          Alias = 'Cod_Deposito'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Deposito'
+          FieldLength = 10
+          FieldName = 'CodUbic'
+          IsDetail = True
+          SQLFieldName = 'CodUbic'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField45: TdaField
+          Alias = 'Existencia (2)'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Existencia'
+          FieldLength = 3
+          FieldName = 'Existen'
+          IsDetail = True
+          SQLFieldName = 'Existen_2'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField46: TdaField
+          Alias = 'Unidades'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Unidades'
+          FieldLength = 3
+          FieldName = 'ExUnidad'
+          IsDetail = True
+          SQLFieldName = 'ExUnidad_2'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField47: TdaField
+          Alias = 'Puesto'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 10
+          FieldName = 'PuestoI'
+          IsDetail = True
+          SQLFieldName = 'PuestoI'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField48: TdaField
+          Alias = 'Unid_Com'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Unid_Com'
+          FieldLength = 3
+          FieldName = 'UnidCom'
+          IsDetail = True
+          SQLFieldName = 'UnidCom'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daField49: TdaField
+          Alias = 'Unid_Pedi'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Unid_Pedi'
+          FieldLength = 3
+          FieldName = 'UnidPed'
+          IsDetail = True
+          SQLFieldName = 'UnidPed'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daCalculation4: TdaCalculation
+          ChildType = 2
+          Alias = 'Pasillo'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 2
+          FieldName = 'PuestoI'
+          SQLFieldName = 'substring_saexis_puestoi'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+          CalcType = dacaExpression
+          Expression = 'substring(saexis.puestoi,1,2)'
+        end
+        object daCalculation5: TdaCalculation
+          ChildType = 2
+          Alias = 'Estante'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 2
+          FieldName = 'PuestoI'
+          SQLFieldName = 'substring_saexis_puesto_2'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+          CalcType = dacaExpression
+          Expression = 'substring(saexis.puestoi,4,2)'
+        end
+        object daCalculation6: TdaCalculation
+          ChildType = 2
+          Alias = 'nivel'
+          DisplayWidth = 10
+          FieldAlias = 'Puesto'
+          FieldLength = 1
+          FieldName = 'PuestoI'
+          SQLFieldName = 'substring_saexis_puesto_3'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+          CalcType = dacaExpression
+          Expression = 'substring(saexis.puestoi,7,1)'
+        end
+        object daField50: TdaField
+          ChildType = 2
+          Alias = 'Cod_Producto'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Producto'
+          FieldLength = 10
+          FieldName = 'CodProd'
+          SQLFieldName = 'CodProd'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          TableSQLAlias = 'SAEXIS'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Inventario'
+          JoinType = dajtNone
+          SQLAlias = 'SAPROD'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'Existencias_inventario'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAEXIS'
+          TableAlias = 'Existencias_inventario'
+          TableName = 'SAEXIS'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField52: TdaField
+              ChildType = 3
+              Alias = 'Cod_Producto'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Producto'
+              FieldLength = 10
+              FieldName = 'CodProd'
+              SQLFieldName = 'CodProd'
+              TableAlias = 'Existencias_inventario'
+              TableName = 'SAEXIS'
+              TableSQLAlias = 'SAEXIS'
+            end
+            object daField51: TdaField
+              ChildType = 4
+              Alias = 'Cod_Producto'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Producto'
+              FieldLength = 10
+              FieldName = 'CodProd'
+              SQLFieldName = 'CodProd'
+              TableAlias = 'Inventario'
+              TableName = 'SAPROD'
+              TableSQLAlias = 'SAPROD'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Datos_Empresa'
+      Height = 245
+      Left = 476
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 29
+      TypeColumnWidth = 52
+      Width = 200
+      AutoSearchTabOrder = 0
+      object Datos_Empresa: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Datos_Empresa'
+        object ppField1: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'EMail'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Logo'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 5
+          Searchable = False
+          Sortable = False
+          TableName = 'SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SACONF'
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Datos_Empresa'
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SACONF.CodSucu, SACONF.Descrip, '
+          '       SACONF.Direc1, SACONF.Direc2, '
+          '       SACONF.Email, SACONF.Imagen, SACONF.NIT, '
+          '       SACONF.RIF, SACONF.Telef'
+          'FROM SACONF SACONF')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'EMail'
+          DisplayWidth = 10
+          FieldAlias = 'EMail'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'Logo'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Logo'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 15
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Datos_Empresa'
+          JoinType = dajtNone
+          SQLAlias = 'SACONF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+        end
+      end
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

@@ -1,0 +1,51 @@
+Esta solucion consta de 2 partes
+
+nombre del reorte: 201 - ANALITICO DE INVENTARIO POR ROTACION (PILOTO:LIBERTY)
+
+
+parte 1.
+
+Preparar la data para estblecer los valores de maximos y minimos de la tabla saprod
+Preparar la data para establecer los valores de los datos adionales de saprod_01. : promedio de venta, promedio de compra, rotacion, fecha de inicio, fecha de ultimo estudio de articulos.
+en esta parte se dise;a una vista desde sql que realiza calculos 
+esta vista es untilizada luego para enlazarl con las tablas y realizar las actualizaciones de acuerdo a los criterios establecidos
+
+
+
+                                                                                                              ALTA                     m=Pvm/3, M=Pvm
+ACTIVOS                                           STOCK = 0
+UV<12 MESES                                   STOCK>0                               MEDIA                  m=Pvm/2, M=Pvm                                          
+
+                                                                                                              BAJA                     m=Pvm/2, M=Pvm
+
+
+
+OBSOLETOS                                    STOCK = 0                              NULA                    m=0, M=Stock
+UV>=12 MESES                               STOCK>0
+
+
+titanio:  15095548
+dorada: 15095565
+ 
+
+
+
+
+
+parte 2.
+
+Generar los reportes 
+
+Reporte de ventas perdidas. al cliente (mostrador/servicio) provisional y definitivo
+Reportes de compras realizadas a otra plaza.
+Reportes de compras realizadas a planta.
+
+Reporte de compra sugerida minima. para llegar al minimo requerido
+Reporte de compra sugerida maxima. para llegar al maximo requerido
+
+Reportes de repuestos de alta, media y baja rotacion.
+inventarios de repuestos activos (Alta, media y baja rotacion)
+
+reportes de articulos en obsolescencia. 
+
+

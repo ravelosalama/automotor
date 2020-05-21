@@ -1,0 +1,30 @@
+Hay que crear tabla de datos adicionales transaccional pro hay que hacerle el 
+trabajo de adaptacion idem a 
+
+PASO 1 LIMPIAR TABLAS ADICIONALES PREEXISTENTES (no usadas en la aplicacion)
+       CREAR NUEVA TABLA SAPROV_03
+       CAMBIAR PARAMETROS EN SAGRUPOS y hacerla transaccional
+       REDISEÑAR TABLA AGREGANDO 3 COLUMNAS mas 
+       NROUNICO CON INCREMENTO AUTO EN 1 SIN VALORES NULL COMO CLAVE SECUNDARIA DE INDICE PRINCIPAL
+       FECTRN COMO DATETIME
+
+PASO 2. APLICAR TRIGGER SOBRE TABLA.
+
+
+
+
+
+
+
+
+solucion para eliminar compras segun creterios
+
+     no debe estar la compra declarada en libro de iva de meses anteriores
+     no de debe estar cancelada PREFERIBLEMENTE
+
+
+21/11/2007 SE IMPLANTA EN PRESTIGE REMOTAMENTE APROVECHANDO SOLICITUD DE YELITZA sobre version 8642
+           SE IMPLANTA EN LIBERTY LOCALMENTE APROVECHANDO SOLICITUD DE SINDY sobre version 8642
+
+
+Falta adaptar validaciones automaticas 

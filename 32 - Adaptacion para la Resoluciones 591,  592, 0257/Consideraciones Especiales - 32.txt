@@ -1,0 +1,14 @@
+Se unifica en un solo formato todas las opciones de Facturas.
+
+Repuestos. 01-201
+Servicios. 01-301
+Vehiculos. Normales 01-101 IVA
+Vehiculos. Lujo     01-101 ADI
+Especiales. 01-401
+
+ADICIONAL SE MEJORA FUENTE Y TAMAÑO EN DATOS SERIAL, CI/RIF
+PLACA/
+
+SE AJUSTA TAMAÑO EN SECCION DE FACTURA DE SERVICIOS PARA QUE NO 
+SE IMPRIMAN FACTURA DE MAS DE UNA PAGINA
+

@@ -1,0 +1,37 @@
+Se hara por Ventas Presupuestos con adaptaciones en configuracion para el grupo de vehiculos
+configuraciones de menues, y titulos de opciones/titulos de notas en comentarios
+no manejara creacion de clientes
+se desactivo el presupuesto de repuestos y servicios para que el consecutivo poderlo casar con el numero de control de las formas preimpresas de recibos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+solucion de Bancos Descartadas por los momentos
+
+
+Esta solucion consiste en habilitar el modulo de bancos a los vendedores de vehiculos
+con una cuanta de bancos tipo caja vehiculo donde ellos registren los datos 
+del cliente que abona y emita el recibo en una forma preimpresa numerada
+y sincronizada con el consecutivo interno del sistema para esa cuenta.
+
+
+1) crear a los vendedores como Usuarios de saint con acceso a Bancos solo Caja vehiculo y Admon Reportes
+2) Crear cuenta en banco Caja vehiculo sincronizando el numero de recibo preimpreso
+3) Colocar Impresora de matriz de punto
+4) Colocar formato de Guayanauto y adecuarlo a formato de Recibo de Banco.
+4) probar reportes, etc.

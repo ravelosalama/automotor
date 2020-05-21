@@ -1,0 +1,12 @@
+Ambos formatos son escencialmente del configurador 
+ESPECIAL RECIBO DE PAGO: se genera al pagar o abonar factura sobre el modulo de bancos.
+ESPECIAL RECIBO ANTICIPO: SE genera al anticipar desde el modulo de banco.
+
+sin embargo,
+el ESPECIAL - RECIBO ANTICIPO debe copiarse en el generador de reporte del administrativo
+con una modificacion en la busqueda por numerod (Docuemnto) En LISTA para poder ser utilizado en
+reporte/cliente/recibo de anticipo, ya que al menos hasta la version 8733 no imprime el recibo desde el estado de cuenta (Imprimir anticipo). 
+y hay que valerse de este artificio provicionalmente.
+
+adicionalmente hay que verificar que la configuracion de Asignacion de formatos en el configurador apunte a estos archivos.
+

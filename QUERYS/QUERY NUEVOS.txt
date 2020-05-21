@@ -1,0 +1,33 @@
+-- ESTUDIA EN SATAXCOM LAS ALICUOTAS NO CONCORDANTES 
+
+SELECT     NumeroD, CodProv, MtoTax, TGravable, Monto, ROUND(TGravable * (MtoTax / 100), 2) AS Expr1, (Monto * 100) / (TGravable + Monto) 
+                      AS TAXCORRECTO
+FROM         SATAXCOM
+WHERE    (ROUND(TGravable * (MtoTax / 100), 2) - Monto < 1) AND (ROUND(TGravable * (MtoTax / 100), 2) <> ROUND(Monto, 2))
+
+
+
+-- funciona bien coloca en expr1 la verdadera alicuota en funcion a los calculos de tgravable y monto
+
+SELECT     NumeroD, MtoTax, TGravable, Monto, totalfac, ROUND(Monto * 100 / TGravable, 2) AS Expr1
+FROM         SATAXCOM
+WHERE     (ROUND(Monto, 2) <> ROUND(TGravable * (MtoTax / 100), 2))
+
+
+-- acualiza alicuota en la tabla en funcion al calculo correcto.
+
+update sataxcom set mtotax= ROUND(Monto * 100 / TGravable, 2) where tGravable>0
+
+
+ 
+WHERE     (ROUND(Monto, 2) <> ROUND(TGravable * (MtoTax / 100), 2))
+
+
+QUERY PARA REVISAR EN SAFACT LOS REGISTROS DE RETENCIONES 
+
+SELECT     NumeroD, CodClie, MtoTax, RetenIVA, Notas9
+FROM         SAFACT
+WHERE     (RetenIVA IS NOT NULL) AND (TipoFac = 'A') AND (RetenIVA <> 0)
+
+
+

@@ -1,0 +1,106 @@
+DETALLES POR REPORTAR A SAINT
+
+en la 8731 aun cuando se ha avanzado en el tema del manejo de retenciones de iva en cxc provenientes de contribuyentes especiales
+se percibe lo siguiente
+
+el correlativo de devoluciones y de notas de credito.
+
+opcion uno. correlativos separados
+
+opcion dos. mismo correlativo
+
+      
+conclusion:
+Se suguiere separar correlativo de nota de credito al de adelantos para que el correlativo realmente de nc no se vea afectado
+cada vez que se registre un anticipo.
+
+
+EN VENTAS CUANDO SE BLOQUEA LA OPCION DE NO PODER EDITAR ITEMS ANTERIORES EFECTIVAMENTE BLOQUEA EL PUNTERO DEL MOUSE
+Y LAS FLECHAS DE NAVEGACION, PERO LAS TECLAS PAG UP Y PAG DOWN ESTAN HABILITADAS PARA SUBIR AL PRIMER ITEM Y LUEGO SE PUEDE BAJAR A CUALQUIERA.
+
+
+EN EL CONFIGURADOR AL CREAR MAS DE UNA TABLA ADICIONAL A VENTAS SE VUELVE LOCO (solo cuando los campos de diferentes tablas son iguales
+
+
+SALE UN ERROR AL NAVEGAR EN EL BUSCADOR EN LA EDICION DE PRODUCTOS EN EL ADMINISTRATIVO SALE "LIST POINT"
+
+
+REVISAR PROCEDIMIENTOS DE ELIMINACION DE REGISTROS EN TABLAS MAESTRAS Y TRANSACCIONALES CON RESPECTO A LOS REGISTRO 
+DE SUS TABLAS ADICIONALES EN AGUNOS CASOS AL ELIMINAR UN PADRE EN TABLA MAESTRA NO SE ELIMINAN LOS HIJOS DE LASD TABLAS
+ADICIONALES
+ SUCEDE AL MENOS EN SAPROD, SAFACT.
+
+
+en los clientes que se definen como contribuyentes especiales la retencion de Iva se calcula automaticamente, estaria bien si y solo 
+ubiese un campo donde indicar en edicion posterior el numero de la retencion que el cliente emitira para que salga dicha retencion en el libro de ventas con su descripcion
+
+
+tambien hay que revisar los reversos de tales operaciones.
+
+REVISAR EN DEVOLUCION DE NOTA DE ENTREGA LAS OPCIONES POSIBLES DE CARGAR (NOTAS DE ENTREGA Y PEDIDO?)
+
+POSIBILIDAD DE INTEGRAR EN LAS BUSQUEDAS EN ADMINISTRATIVO/PRODUCTOS POR CODBAR O CODIGOS ALTERNOS
+
+POSIBILIDAD DE INTEGRAR VALIDACIONES AL MENOS DE RANGO DE VALOR A DATOS ADICIONALES
+
+POSIBILIDAD DE INTEGRAR DATOS ADICIONALES DEL TIPO SCROLL
+
+
+
+DETALLES POR REPORTAR A SAINT
+
+
+EN VENTAS CUANDO SE BLOQUEA LA OPCION DE NO PODER EDITAR ITEMS ANTERIORES EFECTIVAMENTE BLOQUEA EL PUNTERO DEL MOUSE
+Y LAS FLECHAS DE NAVEGACION, PERO LAS TECLAS PAG UP Y PAG DOWN ESTAN HABILITADAS PARA SUBIR AL PRIMER ITEM Y LUEGO SE PUEDE BAJAR A CUALQUIERA.
+
+
+EN EL CONFIGURADOR AL CREAR MAS DE UNA TABLA ADICIONAL A VENTAS SE VUELVE LOCO (solo cuando los campos de diferentes tablas son iguales
+
+
+
+SALE UN ERROR AL NAVEGAR EN EL BUSCADOR EN LA EDICION DE PRODUCTOS EN EL ADMINISTRATIVO SALE "LIST POINT"
+
+
+REVISAR PROCEDIMIENTOS DE ELIMINACION DE REGISTROS EN TABLAS MAESTRAS Y TRANSACCIONALES CON RESPECTO A LOS REGISTRO 
+DE SUS TABLAS ADICIONALES EN AGUNOS CASOS AL ELIMINAR UN PADRE EN TABLA MAESTRA NO SE ELIMINAN LOS HIJOS DE LASD TABLAS
+ADICIONALES
+ SUCEDE AL MENOS EN SAPROD, SAFACT.
+
+
+
+
+
+en los clientes que se definen como contribuyentes especiales la retencion de Iva se calcula automaticamente, estaria bien si y solo 
+ubiese un campo donde indicar en edicion posterior el numero de la retencion que el cliente emitira para que salga dicha retencion en el libro de ventas con su descripcion
+
+
+tambien hay que revisar los reversos de tales operaciones.
+
+puntos aproponer a Saint Maracibo (Aplicación Concesionarios).
+
+Posibilidad de configurar eventos (modificar, eliminar, agregar).
+Posibilidad de configurar tipo de docuemntos a cargar
+Posibilidad de configurar nombre de los documentos
+Posibilidad de configurar campos de busquedas en 
+Posibilidad de colocar como campo de busqueda los codigos alternos (importantes) 
+Validar facturacion con fecha de emision superior o igual a la ultima
+Arreglar campos obligatorios en campos adicionales en ventas y compras.
+Limpiar pantalla de avance de impresion en ventas interrumpidas.
+Posibilidad de editar 
+Correccion de fallas: guardar documentos en espera en compras. (se pierden).
+Busqueda de facturas puntuales en cuentas por pagar y cuentas por cobrar.
+otros criterios de busquedas en cxc y cxp 
+ampliar campos de edicion en cxc y cxp y que tengan consistencias con otras tablas relacionadas.
+revisar error que sale a no poder manejar diferentes cantidades de fichas en saprod datos adicionales.
+colocar campo de puesto replicado en ficha informativa de producto.
+
+
+
+
+
+Aspecto Tributario para contribuyentes especiales. (mejoras).
+
+
+
+
+

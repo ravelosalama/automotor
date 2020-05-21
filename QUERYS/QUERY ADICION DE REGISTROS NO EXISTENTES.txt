@@ -1,0 +1,167 @@
+INSERT INTO SESA_HOR (OrdenReparacion, NroFact, Placa, FechaInicio, FechaFinal,
+                            Kilometraje, Liquidacion, Status, Revisado, CodClie,
+                            NombClie, CodVend, Notas1, Notas2, Notas3, Notas4,
+                            Notas5, Notas6, Notas7, Notas8, Notas9, Notas10)
+         SELECT Y.Orden_de_reparacion, Y.NumeroD, isnull(Y.Placa, 'XXXXXX'), X.FechaE, @FechaHoy, 
+                ISNULL(Y.Kilometraje,0), Y.Liquidacion, Y.Status, Y.Revisado, X.CodClie,
+                       X.Descrip, X.CodVend, X.Notas1, X.Notas2, X.Notas3, X.Notas4, 
+                       X.Notas5, X.Notas6, X.Notas7, X.Notas8, X.Notas9, X.Notas10
+            FROM SAFACT AS X
+            INNER JOIN SESA_VW_ORDENES_REPARACION AS Y
+            ON (X.TipoFac = Y.TipoFac AND X.NumeroD = Y.NumeroD)
+            WHERE (Y.Orden_de_Reparacion = @OrdenReparacion)
+
+--------------0-------------------0----------------------0--------------------0---------------------0
+INVENT:  3584
+SAPROD: 25498      INNER JOIN:  2122
+                   LEFT JOIN:   3584     WHERE SAPROD.DESCRIP IS NULL : 1462
+                   RIGHT JOIN: 25498 
+
+----------------0-------------0---------------0----------------0-----------------0---------------0---
+QUERY PROBADO
+
+-- AGREGA REGISTROS NO COINCIDENTES DE INVENT EN SAPROD
+
+ INSERT INTO SAPROD (CODPROD,
+                    Y.DESCRIP,
+                    DESCRIP2,
+                    CODINST,
+                    CANTEMPAQ,
+                    PRECIO1, 
+                    PRECIO2,
+                    PRECIO3,
+                    PRECIOU,
+                    COSTACT,
+                    COSTPRO,
+                    COSTANT,
+                    EXISTEN,
+                    EXUNIDAD,
+                    EXISTENCON,
+                    EXUNIDADCON,
+                    COMPRO,
+                    PEDIDO,
+                    MINIMO,
+                    MAXIMO,
+                    TARA,
+                    DESCOMP,
+                    DESCOMI,
+                    DESSERI,
+                    DESLOTE,
+                    DESVENCE,
+                    ESPUBLISH,
+                    ESIMPORT,
+                    ESEXENTO,
+                    ESENSER,
+                    ESOFERTA,
+                    ESPESA,
+                    ESEMPAQUE,
+                    EXDECIMAL,
+                    DIASENTR,
+                    FECHAUV,
+                    FECHAUC)
+
+SELECT  codigo,
+       X.descrip,'old',
+       '5',0,
+       costo*2.2,costo*2.2,costo*2.2,0,
+       costo,costo,costo,
+       0,
+       0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,'01/01/2007','01/01/2007'
+   
+FROM INVENT AS X LEFT OUTER JOIN SAPROD AS Y ON X.CODIGO=Y.CODPROD 
+
+WHERE Y.DESCRIP IS NULL
+
+0-------------0-----------------0----------------0----------------0----------------0--------------0
+
+ESTANTE
+COLUMNA 
+FILA
+
+-- ACTUALIZA SAPROD DE INVENT (STOCK, PRECIOS, COSTOS Y UBICACION EN DESCRIP3)
+
+
+UPDATE    SAPROD
+SET              EXISTEN = EXISTENCIA, DESCRIP3 = 'E' + ESTANTE + ' C ' + COLUMNA + FILA, COSTPRO = COSTO, COSTANT = COSTO, COSTACT = COSTO, 
+                      PRECIO1 = COSTO * 2.0, PRECIO2 = COSTO * 2.1, PRECIO3 = COSTO * 2.2
+FROM         INVENT INNER JOIN
+                      SAPROD ON INVENT.CODIGO = SAPROD.CodProd
+
+0--------------0---------------0--------------------0----------------0-------------0---------------0
+-- AGREGA REGISTROS NO COINCIDENTES DE SAPROD EN SAEXIS
+
+ INSERT INTO SAEXIS (CODPROD,
+                    CODUBIC,
+                    PUESTOI,
+                    EXISTEN,
+                    EXUNIDAD,
+                    CANTPED,
+                    UNIDPED,
+                    CANTCOM,
+                    UNIDCOM)
+ 
+SELECT  X.codPROD,
+        '001',
+        X.DESCRIP3,
+        X.EXISTEN,        
+        0,0,0,0,0
+
+
+FROM SAPROD AS X LEFT OUTER JOIN SAEXIS AS Y ON X.CODPROD=Y.CODPROD 
+
+WHERE Y.CODUBIC IS NULL
+
+0----------------0----------------------0------------------------0-------------------0------------
+
+-- actualiza saexis con saprod existencia y puesto segun contenido de descrip3
+
+UPDATE    saexis
+SET              existen = x.existen, puestoi = descrip3
+FROM         SAPROD AS x INNER JOIN
+                      SAEXIS AS y ON x.CodProd = y.CodProd
+
+0--------------0---------------0--------------------0----------------0-------------0---------------0
+
+-- 1624 FILAS AFECTADAS.
+-- AGREGA REGISTROS NO COINCIDENTES DE SAPROD EN SATAXPRD
+
+ INSERT INTO SATAXPRD(CODPROD,
+                    CODTAXS,
+                    MONTO,
+                    ESPORCT)
+ 
+SELECT  X.codPROD,
+        'IVA',
+        9,
+        1        
+    
+
+
+FROM SAPROD AS X LEFT OUTER JOIN SATAXPRD AS Y ON X.CODPROD=Y.CODPROD 
+
+WHERE Y.CODTAXS IS NULL
+
+0----------------0----------------------0------------------------0-------------------0------------
+--- agrega las cxc desde una hoja de excel con la estructura de campos del select
+
+INSERT INTO SAACXC
+                      (CodClie,NroRegi,FechaE,FechaV,
+                       CodSucu,CodEsta,CodUsua,CodOper,
+                       NumeroD,FromTran,TipoCxc,Factor,
+                       MontoMEx,SaldoMEx,Document,Monto,MontoNeto,MtoTax,
+                       RetenIVA,OrgTax,
+                       Saldo,SaldoAct,
+                       EsLibroI,
+                       BaseImpo,
+                       CancelI,CancelA,CancelE,CancelC,CancelT,CancelG,Comision,EsUnPago,AfectaVta,AfectaComi,ESCHQDEV,ESRETEN) 
+
+SELECT CODCLIE,0,FECHAE,FECHAe,
+       '99999','CONSULTOR','001',CODOPER,
+       NUMEROD,'1','10','1',
+       0,0,DOCUMENT,MONTO,BASEIMPO,MTOTAX,
+       0,0,
+       SALDO,SALDO,
+       0,
+       BASEIMPO,
+       0,0,0,0,0,0,0,0,0,0,0,0
+FROM CXC 

@@ -1,0 +1,121 @@
+ 
+
+
+'**********************************************************************
+'  Visual Basic Transformation Script
+'  Copy each source column to the
+'  destination column
+'  pROCEDIMIENTO EJECUTADO CORRECTAMENTE OJO CON LAS COMILLAS Y CAMPOS ADICIONALES
+'  DE VERSIONES SUPERIORES. ULTIMA VERSION PROBADA 870 DEL 31122007
+'************************************************************************
+
+Function Main()
+	DTSDestination("CodProd") = DTSSource("CODIGO")
+	DTSDestination("Descrip") = DTSSource("DESCRIP")
+	DTSDestination("CodInst") = "5"
+	DTSDestination("Descrip2") = ""
+	DTSDestination("Descrip3") = ""
+	DTSDestination("Refere") = DTSSource("CODIGO")
+	DTSDestination("Marca") = DTSSource("MARCA")
+	DTSDestination("Unidad") = DTSSource("UNID")
+	DTSDestination("UndEmpaq") = DTSSource("UNID")
+	DTSDestination("CantEmpaq") = 0
+	DTSDestination("Precio1") = DTSSource("COSTO")
+	DTSDestination("Precio2") = DTSSource("COSTO")
+	DTSDestination("Precio3") = DTSSource("COSTO")
+	DTSDestination("PrecioU") = DTSSource("COSTO")
+	DTSDestination("CostAct") = DTSSource("COSTO")
+	DTSDestination("CostPro") = DTSSource("COSTO")
+	DTSDestination("CostAnt") = DTSSource("COSTO")
+	DTSDestination("Existen") = DTSSource("EXISTENCIA")
+	DTSDestination("ExUnidad") = 0
+	DTSDestination("ExistenCon") = 0
+	DTSDestination("ExUnidadCon") = 0
+	DTSDestination("Compro") = 0
+	DTSDestination("Pedido") = 0
+	DTSDestination("Minimo") = 0
+	DTSDestination("Maximo") = 0
+	DTSDestination("Tara") = 0
+	DTSDestination("DEsComp") = 0
+	DTSDestination("DEsComi") = 0
+	DTSDestination("DEsSeri") = 0
+	DTSDestination("DEsLote") = 0
+	DTSDestination("DEsVence") = 0
+	DTSDestination("EdoABP") = ""
+	DTSDestination("EsPublish") = 0
+	DTSDestination("EsImport") = 0
+	DTSDestination("EsExento") = 0
+	DTSDestination("EsEnser") = 0
+	DTSDestination("EsOferta") = 0
+	DTSDestination("EsPesa") = 0
+	DTSDestination("EsEmpaque") = 0
+	DTSDestination("ExDecimal") = 0
+	DTSDestination("DiasEntr") = 0
+	DTSDestination("FechaUV") = NULL
+	DTSDestination("FechaUC") = NULL 
+        DTSDestination("Activo") = 1
+	Main = DTSTransformStat_OK
+End Function
+
+'**********************************************************************
+'  Visual Basic Transformation Script
+'  Copy each source column to the
+'  destination column
+'  pROCEDIMIENTO EJECUTADO CORRECTAMENTE OJO CON LAS COMILLAS Y CAMPOS ADICIONALES
+'  DE VERSIONES SUPERIORES. ULTIMA VERSION PROBADA 870 EL 23/06/2008 PARA GUAYANAUTO 
+' MOTIVO RECUPERACION DE DATOS COMPLEMENTO
+'************************************************************************
+
+ '**********************************************************************
+'  Visual Basic Transformation Script
+'  Copy each source column to the
+'  destination column
+'************************************************************************
+
+Function Main()
+	DTSDestination("CodProd") = DTSSource("CODIGO")
+	DTSDestination("Descrip") = DTSSource("DESCRIP")
+	DTSDestination("CodInst") = "5"
+	DTSDestination("Descrip2") = DTSSource("APLICACION")
+	DTSDestination("Descrip3") = DTSSource("UBIC")
+	DTSDestination("Refere") = NULL
+	DTSDestination("Marca") = "SILVIO"
+	DTSDestination("Unidad") = DTSSource("UNID")
+	DTSDestination("UndEmpaq") = DTSSource("UNID")
+	DTSDestination("CantEmpaq") = 0
+	DTSDestination("Precio1") = DTSSource("PREBASE")
+	DTSDestination("Precio2") = DTSSource("PREBASE")
+	DTSDestination("Precio3") = DTSSource("PREBASE")
+	DTSDestination("PrecioU") = DTSSource("PREBASE")
+	DTSDestination("CostAct") = DTSSource("COSTO")
+	DTSDestination("CostPro") = DTSSource("COSTO")
+	DTSDestination("CostAnt") = DTSSource("COSTO")
+	DTSDestination("Existen") = DTSSource("EXISTENCIA")
+	DTSDestination("ExUnidad") = 0
+	DTSDestination("ExistenCon") = 0
+	DTSDestination("ExUnidadCon") =0
+	DTSDestination("Compro") = 0
+	DTSDestination("Pedido") = 0
+	DTSDestination("Minimo") = 0
+	DTSDestination("Maximo") = 0
+	DTSDestination("Tara") = 0
+	DTSDestination("DEsComp") = 0
+	DTSDestination("DEsComi") = 0
+	DTSDestination("DEsSeri") = 0
+	DTSDestination("DEsLote") = 0
+	DTSDestination("DEsVence") = 0
+	DTSDestination("EdoABP") = 0
+	DTSDestination("EsPublish") = 0
+	DTSDestination("EsImport") = 0
+	DTSDestination("EsExento") = 0
+	DTSDestination("EsEnser") = 0
+	DTSDestination("EsOferta") = 0
+	DTSDestination("EsPesa") = 0
+	DTSDestination("EsEmpaque") = 0
+	DTSDestination("ExDecimal") = 0
+	DTSDestination("DiasEntr") = 0
+	DTSDestination("FechaUV") = NULL
+	DTSDestination("FechaUC") = NULL
+	DTSDestination("Activo") = 1
+	Main = DTSTransformStat_OK
+End Function

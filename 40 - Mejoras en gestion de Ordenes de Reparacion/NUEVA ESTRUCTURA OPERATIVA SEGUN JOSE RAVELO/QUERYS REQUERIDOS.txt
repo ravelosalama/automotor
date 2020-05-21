@@ -1,0 +1,25 @@
+
+
+QUERY PARA ACTUALIZAR SAFACT.ORDENC CON PLACA PARA QUE SIRVA COMO CAMPO DE BUSQUEDA EN LA GESTION DE OR
+
+
+UPDATE    SAFACT
+SET              ORDENC = Y.PLACA
+FROM         SAFACT X INNER JOIN
+                      SAFACT_01 Y ON X.NumeroD = Y.NumeroD AND X.TipoFac = Y.TipoFac
+WHERE     (X.TipoFac = 'G') AND (X.CodOper = '01-301')
+
+
+QUERY QUE VINCULA CLIENTE CON VEHICULO Y VICEVERSA
+
+
+
+UPDATE    safact
+SET              ordenc = placa + '/' + y.liquidacion
+FROM         SAFACT x INNER JOIN
+                      SAFACT_01 y ON x.NumeroD = y.NumeroD AND x.TipoFac = y.TipoFac
+WHERE     (x.TipoFac = 'g')
+
+
+query prepara el campo ordenc con el valor de la placa y liquidacion de la orden de reparacion para poder 
+ser utilizado como campo de busqueda.

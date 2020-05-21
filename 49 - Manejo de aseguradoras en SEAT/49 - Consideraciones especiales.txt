@@ -1,0 +1,30 @@
+
+
+
+el 31/08/2008 se agrega datos adicionales en tabla nueva safact_04 solo para ventas y devolucion
+solicitado por seat. se agrega trigger sobre la misma tabla para validaciones varias
+se hace dicha actualizacion sobre v8730 01/08/2008 y version 1202
+
+safact_04 (datos de la aseguradora) 1 reg x fact (ventas y Devoluciones)
+
+Codigo_aseguradora texto(15)
+codigo_beneficiario texto(15)
+emision_de_la_orden fecha
+orden_de_reparacion texto(35)
+poliza texto(20)
+siniestro(20)
+   
+   
+
+
+
+
+
+
+
+SE CREA TRIGGER SOBRE SAITEMFAC SESA_TG_ASEGURADORA
+
+SE MODIFICAN LOS FORMATOS DE: ORDEN DE REPARACION, PREFACTURA DE SERVICIO, FACTURA DEFINITIVA(SERVICIO)
+
+SOLO PARA SEAT.
+

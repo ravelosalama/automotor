@@ -1,0 +1,136 @@
+-- VISTA INUTILIZADA NO USAR
+-- VISTA NUEVA PARA EL LIBRO DE VENTA
+-- ELABORADA POR JOSE RAVELO ABRIL 2013
+-- DESCRIPCION: LA PRIMERA PARTE DE LA VISTA ES LA VISTA DESDE EL RPORT BUILDER DE LA VERSION DEL LIBRO VIGENTE
+-- SE REQUIERE UNIR CON TABLA DE RETENCIONES DE CXC QUE CORRESPONDE A LA 2DA PARTE DE LA VISTA.
+-- SE DEJA LISTA PARA SINCRONIZAR Y RELACIONAR LOS CAMPOS Y PROBAR EN FORMATO DE RB EN 
+-- PILOTO DE ESTE LIBRO EN LCARS001/LIBERTYCARSANUALDB
+
+
+DROP VIEW dbo.VW_FACTURACION
+GO
+CREATE VIEW dbo.VW_FACTURACION 
+
+-- WITH ENCRYPTION
+
+AS
+
+
+SELECT   TOP 100 PERCENT
+       SAFACT.CodClie, 
+       SAFACT.CodOper, 
+       SAFACT.CodVend,
+       SAFACT.Descrip, 
+       SAFACT.FechaE,
+       SAFACT.ID3,
+       SAFACT.Monto, 
+       SAFACT.MtoTax,
+       SAFACT.Notas6, 
+       SAFACT.NumeroD,
+       SAFACT.RetenIVA, 
+       SAFACT.Signo,
+       SAFACT.TExento, 
+       SAFACT.TGravable,
+       SAFACT.TipoFac, 
+       SATAXVTA.CodTaxs,
+       SATAXVTA.Monto Monto_2, 
+       SATAXVTA.MtoTax MtoTax_2, 
+       SATAXVTA.NumeroD NumeroD_2, 
+       SATAXVTA.TGravable TGravable_2, 
+       SATAXVTA.TipoFac TipoFac_2,
+       SAFACT.Notas9, 
+       SAFACT.NumeroR,
+       SACLIE.TipoCli, 
+       SAFACT.FechaT, 
+       (safact.tgravable+safact.mtotax+SAFACT.TEXENTO)*safact.signo safact_tgravable_safact, 
+       safact.texento*safact.signo safact_texento_safact_sig, 
+       safact.tgravable*safact.signo safact_tgravable_safact_s, 
+       safact.mtotax*safact.signo safact_mtotax_safact_sign, 
+       (safact.mtotax-safact.retenIVA)*safact.signo safact_mtotax_safact_ret
+       FROM SAFACT SAFACT
+      LEFT OUTER JOIN SATAXVTA SATAXVTA ON 
+     (SATAXVTA.NumeroD = SAFACT.NumeroD)
+      AND (SATAXVTA.TipoFac = SAFACT.TipoFac)
+      LEFT OUTER JOIN SACLIE SACLIE ON 
+     (SACLIE.CodClie = SAFACT.CodClie)
+       
+WHERE ( SAFACT.TipoFac IN ('A','B') ) 
+ORDER BY SAFACT.FechaT
+
+UNION
+
+SELECT VW_ADM_RETIVACXC.BIMPONIBLE, 
+       VW_ADM_RETIVACXC.CLIENTE, 
+       VW_ADM_RETIVACXC.FACTURA, 
+       VW_ADM_RETIVACXC.FFACTURA, 
+       VW_ADM_RETIVACXC.FPAGO, 
+       VW_ADM_RETIVACXC.FRETENCION, 
+       VW_ADM_RETIVACXC.IMPUESTO, 
+       VW_ADM_RETIVACXC.IPERCIBIDO, 
+       VW_ADM_RETIVACXC.IRETENIDO, 
+       VW_ADM_RETIVACXC.NRETENCION, 
+       VW_ADM_RETIVACXC.RIF, 
+       VW_ADM_RETIVACXC.PIMPUESTO, 
+       VW_ADM_RETIVACXC.PRETENIDO, 
+       VW_ADM_RETIVACXC.totalfac, 
+       month(vw_adm_retivacxc.fpago) month_vw_adm_retivacxc_fp
+FROM VW_ADM_RETIVACXC VW_ADM_RETIVACXC
+WHERE 
+      
+ORDER BY VW_ADM_RETIVACXC.FPAGO
+
+
+
+
+go
+----------------
+
+declare @TNAME CHAR(14)
+declare @ALIAS  CHAR(14)
+SET @TNAME  = 'VW_FACTURACION'
+SET @ALIAS   = 'VW_FACTURACION'
+ 
+Delete SATABL
+Where TableName=@TNAME
+ 
+DELETE SAFIEL
+Where TableName=@TNAME
+
+Insert Into SATABL
+(tablename, tablealias)
+Values (@TNAME, @ALIAS)
+
+Insert Into  SAFIEL 
+(TableName, FieldName, FieldAlias, DataType, Selectable, Searchable, Sortable, AutoSearch, Mandatory)
+ 
+(
+Select A.Name As TableName, B.Name As FieldName, B.Name As FieldAlias, 
+       Case B.XType
+    When 56  Then 'dtLongInt'
+	When 58  Then 'dtInteger'
+	When 106 Then 'dtDouble'
+        When 167 Then 'dtString'
+        When 61  Then 'dtDateTime'
+	When 35  Then 'dtMemo'
+        When 52  Then 'dtInteger'
+	When 34  Then 'dtGraphic'
+	When 165 Then 'dtBlob'        
+        End As DataType,
+       'T' Selectable, 
+       'T' Searchable,  
+       'T' Sortable, 
+       'F' AutoSearch, 
+       'F' Mandatory
+from SysObjects A, syscolumns B 
+where A.name=@TNAME
+and   A.Id=B.Id
+) 
+
+
+ 
+
+
+
+
+
+

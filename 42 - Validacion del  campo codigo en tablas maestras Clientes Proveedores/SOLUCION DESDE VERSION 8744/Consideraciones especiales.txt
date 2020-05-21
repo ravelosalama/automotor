@@ -1,0 +1,13 @@
+SOLUCION INCOMPLETA ESTA EN DESARROLLO
+
+
+Consideraciones especiales a julio 2011 version 8744 20/12/2010
+
+tabla dbthird
+
+tipoid3: 1-proveedores 2-clientes 3-vendedores 4-servidores
+
+id3 es el campo identificador corregido sin signos especiales
+id3Org es el campo identificador como fue escrito originalmente
+
+id_alte es el antiguo codigo, es decir codclie.

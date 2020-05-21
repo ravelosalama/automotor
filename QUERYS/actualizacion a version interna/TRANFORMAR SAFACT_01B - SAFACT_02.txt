@@ -1,0 +1,18 @@
+'**********************************************************************
+'  Visual Basic Transformation Script
+'  Copy each source column to the
+'  destination column
+'************************************************************************
+
+Function Main()
+	DTSDestination("TipoFac") = DTSSource("TipoFac")
+	DTSDestination("NumeroD") = DTSSource("NumeroD")
+	DTSDestination("Modelo") = DTSSource("CODIGO")
+	DTSDestination("Color") = DTSSource("Color")
+	DTSDestination("Serial_M") = DTSSource("SERIAL")
+	DTSDestination("Serial") = DTSSource("Serial")
+	DTSDestination("Vendido") = DTSSource("FECHA_VENTA")
+	DTSDestination("Vendio_Concesionario") = ""
+	DTSDestination("Z_INTERNO") = DTSSource("NUMEROD")
+	Main = DTSTransformStat_OK
+End Function

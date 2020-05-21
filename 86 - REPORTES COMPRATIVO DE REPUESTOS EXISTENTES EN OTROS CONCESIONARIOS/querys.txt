@@ -1,0 +1,7 @@
+-- querys de verificacion, analisis y ajustes
+
+
+SELECT    *
+FROM         GUAYANAP AS x LEFT OUTER JOIN
+                      SAPROD AS y ON x.CodProd = y.CodProd
+WHERE     (y.Existen = 0) AND (x.Existen > 0)

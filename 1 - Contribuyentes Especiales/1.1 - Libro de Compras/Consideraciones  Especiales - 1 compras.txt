@@ -1,0 +1,17 @@
+
+
+Queda pendiente:
+
+Arreglar caso de productos con Alicuota Adicional, salen en dos registros
+0-----------------0--------------------0-----------------------0-----------------------0---------0
+28/11/2007 en prestige
+
+Se agrega posibilidad en libro de reflejar devolucion en compras
+se suguiere su uso en estrictos casos y ciertas condiciones aplican
+
+
+
+hay que configurar las notas 3 4 y 5 para modulo de dvoliciones para usuarios de compras
+se adapta libro y vistas.
+
+

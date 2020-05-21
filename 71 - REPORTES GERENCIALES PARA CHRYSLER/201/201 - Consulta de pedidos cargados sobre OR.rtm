@@ -1,0 +1,2672 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 297000
+  PrinterSetup.mmPaperWidth = 210000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = '201 - Consulta de PEDIDOS cargados sobre OR'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'F:\CONCESIONARIOS\My Dropbox\SAINT\SOLUCIONES\71 - REPORTES GERE' +
+    'NCIALES PARA CHRYSLER\201\201 - Consulta de pedidos cargados sob' +
+    're OR.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PDFSettings.EmbedFontOptions = []
+  PreviewFormSettings.WindowState = wsMaximized
+  ShowAutoSearchDialog = True
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 176
+  Top = 88
+  Version = '11.06'
+  mmColumnWidth = 0
+  DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 59002
+    mmPrintPosition = 0
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 88636
+      mmTop = 47890
+      mmWidth = 33073
+      BandType = 0
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 14
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 5842
+      mmLeft = 0
+      mmTop = 794
+      mmWidth = 28321
+      BandType = 0
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'RIF'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 4191
+      mmLeft = 1058
+      mmTop = 7144
+      mmWidth = 5673
+      BandType = 0
+    end
+    object ppDBImage1: TppDBImage
+      UserName = 'DBImage1'
+      AlignHorizontal = ahCenter
+      AlignVertical = avCenter
+      AutoSize = True
+      MaintainAspectRatio = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Imagen'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      GraphicType = 'Bitmap'
+      ParentDataPipeline = False
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 0
+      mmLeft = 87313
+      mmTop = 7144
+      mmWidth = 0
+      BandType = 0
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label14'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'CORTE A LA FECHA:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 3440
+      mmLeft = 58473
+      mmTop = 47890
+      mmWidth = 28310
+      BandType = 0
+    end
+    object ppMemo1: TppMemo
+      UserName = 'Memo1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Memo1'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      Visible = False
+      mmHeight = 5821
+      mmLeft = 2381
+      mmTop = 794
+      mmWidth = 189971
+      BandType = 0
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppMemo2: TppMemo
+      UserName = 'Memo2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Memo2'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 40217
+      mmTop = 36777
+      mmWidth = 107686
+      BandType = 0
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppMemo3: TppMemo
+      UserName = 'Memo3'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Memo3'
+      CharWrap = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      mmHeight = 4498
+      mmLeft = 41804
+      mmTop = 42069
+      mmWidth = 101336
+      BandType = 0
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'CONSULTA DE PEDIDOS CARGADOS SOBRE ORDENES DE SERVICIOS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = 10040115
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold, fsUnderline]
+      Transparent = True
+      mmHeight = 4191
+      mmLeft = 33073
+      mmTop = 31485
+      mmWidth = 121031
+      BandType = 0
+    end
+    object ppDBImage2: TppDBImage
+      UserName = 'DBImage2'
+      AlignHorizontal = ahCenter
+      AlignVertical = avCenter
+      MaintainAspectRatio = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Imagen'
+      DataPipeline = daADOQueryDataView2.Datos_Empresa
+      GraphicType = 'Bitmap'
+      ParentDataPipeline = False
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 21960
+      mmLeft = 151871
+      mmTop = 794
+      mmWidth = 42069
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 4498
+    mmPrintPosition = 0
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Cantidad'
+      DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      mmHeight = 3969
+      mmLeft = 107686
+      mmTop = 265
+      mmWidth = 14023
+      BandType = 4
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CodItem'
+      DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      mmHeight = 4233
+      mmLeft = 15610
+      mmTop = 265
+      mmWidth = 14023
+      BandType = 4
+    end
+    object ppDBText15: TppDBText
+      UserName = 'DBText15'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Precio'
+      DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      mmHeight = 3969
+      mmLeft = 136790
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText16: TppDBText
+      UserName = 'DBText16'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'TotalItem'
+      DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      mmHeight = 3969
+      mmLeft = 170392
+      mmTop = 265
+      mmWidth = 14817
+      BandType = 4
+    end
+    object ppDBText17: TppDBText
+      UserName = 'DBText17'
+      HyperlinkColor = clBlue
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip1'
+      DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      mmHeight = 3969
+      mmLeft = 44715
+      mmTop = 265
+      mmWidth = 13758
+      BandType = 4
+    end
+    object ppDBCalc3: TppDBCalc
+      UserName = 'DBCalc3'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 8
+      Font.Style = []
+      ResetGroup = ppGroup1
+      TextAlignment = taCentered
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      mmHeight = 3260
+      mmLeft = 5821
+      mmTop = 265
+      mmWidth = 6615
+      BandType = 4
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object ppGroup2: TppGroup
+    BreakName = 'Nro_OR'
+    DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+    OutlineSettings.CreateNode = True
+    NewPage = True
+    NewFile = False
+    StartOnOddPage = False
+    UserName = 'Group2'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+    object ppGroupHeaderBand2: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 16140
+      mmPrintPosition = 0
+      object ppShape2: TppShape
+        UserName = 'Shape2'
+        Brush.Color = clSilver
+        Shape = stRoundRect
+        mmHeight = 8996
+        mmLeft = 3704
+        mmTop = 794
+        mmWidth = 88636
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'Nro_OR'
+        DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        mmHeight = 4191
+        mmLeft = 65023
+        mmTop = 2910
+        mmWidth = 13293
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppLabel15: TppLabel
+        UserName = 'Label15'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'ORDEN DE SERVICIO CONSULTADA No.:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        TextAlignment = taRightJustified
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 6085
+        mmTop = 2910
+        mmWidth = 55563
+        BandType = 3
+        GroupNo = 0
+      end
+    end
+    object ppGroupFooterBand2: TppGroupFooterBand
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 8731
+      mmPrintPosition = 0
+      object ppDBCalc2: TppDBCalc
+        UserName = 'DBCalc2'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TotalItem'
+        DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10040115
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup2
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        mmHeight = 4191
+        mmLeft = 157565
+        mmTop = 2910
+        mmWidth = 27644
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppLabel17: TppLabel
+        UserName = 'Label17'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'TOTAL DE REPUESTOS CARGADOS A LA ORDEN DE SERVICIO SIN IVA:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 15610
+        mmTop = 3969
+        mmWidth = 98161
+        BandType = 5
+        GroupNo = 0
+      end
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'NROPEDIDO'
+    DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+    KeepTogether = True
+    OutlineSettings.CreateNode = True
+    NewFile = False
+    StartOnOddPage = False
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 20902
+      mmPrintPosition = 0
+      object ppShape3: TppShape
+        UserName = 'Shape3'
+        Brush.Color = clSilver
+        Shape = stRoundRect
+        mmHeight = 8996
+        mmLeft = 2381
+        mmTop = 1588
+        mmWidth = 143404
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'NROPEDIDO'
+        DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        mmHeight = 4233
+        mmLeft = 30956
+        mmTop = 3969
+        mmWidth = 21167
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppDBText5: TppDBText
+        UserName = 'DBText5'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'FechaE'
+        DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        mmHeight = 3175
+        mmLeft = 58473
+        mmTop = 5027
+        mmWidth = 9790
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel16: TppLabel
+        UserName = 'Label16'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'N/D (PEDIDO) No.:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3260
+        mmLeft = 6085
+        mmTop = 3969
+        mmWidth = 24426
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'PRODUCTO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 15610
+        mmTop = 14023
+        mmWidth = 16140
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'CANTIDAD'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 107156
+        mmTop = 14023
+        mmWidth = 14552
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'PRECIO/U/S/IVA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 132027
+        mmTop = 14023
+        mmWidth = 21960
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel4: TppLabel
+        UserName = 'Label4'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'TOTAL ITEM/S/IVA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 160338
+        mmTop = 12965
+        mmWidth = 24871
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLine1: TppLine
+        UserName = 'Line1'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 4233
+        mmLeft = 3704
+        mmTop = 18256
+        mmWidth = 187325
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'No.Itm'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 3704
+        mmTop = 14023
+        mmWidth = 8731
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label7'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'VALE No.:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10040115
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 3440
+        mmLeft = 107686
+        mmTop = 4233
+        mmWidth = 13758
+        BandType = 3
+        GroupNo = 1
+      end
+      object ppDBText8: TppDBText
+        UserName = 'DBText8'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'Vale'
+        DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 10040115
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        mmHeight = 3387
+        mmLeft = 123296
+        mmTop = 4233
+        mmWidth = 17198
+        BandType = 3
+        GroupNo = 1
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      HideWhenOneDetail = False
+      mmBottomOffset = 0
+      mmHeight = 10054
+      mmPrintPosition = 0
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        HyperlinkColor = clBlue
+        AutoSize = True
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        DataField = 'TotalItem'
+        DataPipeline = daADOQueryDataView1.SESA_VW_PEDIDOS_SOBRE_ORDENES
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        ResetGroup = ppGroup1
+        TextAlignment = taRightJustified
+        Transparent = True
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        mmHeight = 4191
+        mmLeft = 157565
+        mmTop = 3969
+        mmWidth = 27644
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLabel12: TppLabel
+        UserName = 'Label12'
+        HyperlinkColor = clBlue
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Caption = 'TOTAL NOTA DE DESPACHO (PEDIDO) SIN IVA:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 49213
+        mmTop = 5027
+        mmWidth = 64558
+        BandType = 5
+        GroupNo = 1
+      end
+      object ppLine2: TppLine
+        UserName = 'Line2'
+        Border.BorderPositions = []
+        Border.Color = clBlack
+        Border.Style = psSolid
+        Border.Visible = False
+        Weight = 0.750000000000000000
+        mmHeight = 3969
+        mmLeft = 3704
+        mmTop = 1323
+        mmWidth = 187325
+        BandType = 5
+        GroupNo = 1
+      end
+    end
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_Datos_Empresa'
+      Height = 262
+      Left = 434
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 8
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object Datos_Empresa: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Datos_Empresa'
+        object ppField1: TppField
+          FieldAlias = 'Codigo_Postal'
+          FieldName = 'ZipCode'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'EMail'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Logo'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 5
+          Searchable = False
+          Sortable = False
+          TableName = 'SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SACONF'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SACONF'
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Datos_Empresa'
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SACONF.ZipCode, SACONF.Descrip, '
+          '       SACONF.Direc1, SACONF.Direc2, '
+          '       SACONF.Email, SACONF.Imagen, SACONF.NIT, '
+          '       SACONF.RIF, SACONF.CodSucu, SACONF.Telef'
+          'FROM SACONF SACONF'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Codigo_Postal'
+          DisplayWidth = 10
+          FieldAlias = 'Codigo_Postal'
+          FieldLength = 20
+          FieldName = 'ZipCode'
+          SQLFieldName = 'ZipCode'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'EMail'
+          DisplayWidth = 10
+          FieldAlias = 'EMail'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'Logo'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Logo'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 15
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField10: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Datos_Empresa'
+          JoinType = dajtNone
+          SQLAlias = 'SACONF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+        end
+      end
+    end
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_SESA_VW_PEDIDOS_SOBRE_ORDENES'
+      Height = 593
+      Left = 122
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 13
+      TypeColumnWidth = 52
+      Width = 268
+      AutoSearchTabOrder = 0
+      object SESA_VW_PEDIDOS_SOBRE_ORDENES: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        object ppField1: TppField
+          FieldAlias = 'Apertura_OR'
+          FieldName = 'Apertura_OR'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Cantidad'
+          FieldName = 'Cantidad'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField3: TppField
+          FieldAlias = 'CantidadA'
+          FieldName = 'CantidadA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField4: TppField
+          FieldAlias = 'CantidadC'
+          FieldName = 'CantidadC'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField5: TppField
+          FieldAlias = 'CantidadO'
+          FieldName = 'CantidadO'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField6: TppField
+          FieldAlias = 'CantidadU'
+          FieldName = 'CantidadU'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField7: TppField
+          FieldAlias = 'CantidadUA'
+          FieldName = 'CantidadUA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField8: TppField
+          FieldAlias = 'CantMayor'
+          FieldName = 'CantMayor'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Cierre_OR'
+          FieldName = 'Cierre_OR'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField10: TppField
+          FieldAlias = 'CodItem'
+          FieldName = 'CodItem'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField11: TppField
+          FieldAlias = 'CodMeca'
+          FieldName = 'CodMeca'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField12: TppField
+          FieldAlias = 'CodUbic'
+          FieldName = 'CodUbic'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField13: TppField
+          FieldAlias = 'CodVend'
+          FieldName = 'CodVend'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Costo'
+          FieldName = 'Costo'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField15: TppField
+          FieldAlias = 'DEsComp'
+          FieldName = 'DEsComp'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Descrip1'
+          FieldName = 'Descrip1'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Descrip10'
+          FieldName = 'Descrip10'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Descrip2'
+          FieldName = 'Descrip2'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Descrip3'
+          FieldName = 'Descrip3'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Descrip4'
+          FieldName = 'Descrip4'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Descrip5'
+          FieldName = 'Descrip5'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField22: TppField
+          FieldAlias = 'Descrip6'
+          FieldName = 'Descrip6'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 21
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField23: TppField
+          FieldAlias = 'Descrip7'
+          FieldName = 'Descrip7'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 22
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField24: TppField
+          FieldAlias = 'Descrip8'
+          FieldName = 'Descrip8'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField25: TppField
+          FieldAlias = 'Descrip9'
+          FieldName = 'Descrip9'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 24
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField26: TppField
+          FieldAlias = 'Descto'
+          FieldName = 'Descto'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 25
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField27: TppField
+          FieldAlias = 'DEsLote'
+          FieldName = 'DEsLote'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 26
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField28: TppField
+          FieldAlias = 'DEsSeri'
+          FieldName = 'DEsSeri'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 27
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField29: TppField
+          FieldAlias = 'EsExento'
+          FieldName = 'EsExento'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 28
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField30: TppField
+          FieldAlias = 'EsFreeP'
+          FieldName = 'EsFreeP'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 29
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField31: TppField
+          FieldAlias = 'EsPesa'
+          FieldName = 'EsPesa'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField32: TppField
+          FieldAlias = 'EsServ'
+          FieldName = 'EsServ'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField33: TppField
+          FieldAlias = 'EsUnid'
+          FieldName = 'EsUnid'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField34: TppField
+          FieldAlias = 'ExistAnt'
+          FieldName = 'ExistAnt'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField35: TppField
+          FieldAlias = 'ExistAntU'
+          FieldName = 'ExistAntU'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 34
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField36: TppField
+          FieldAlias = 'Expr1'
+          FieldName = 'Expr1'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 35
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField37: TppField
+          FieldAlias = 'Expr3'
+          FieldName = 'Expr3'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 36
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField38: TppField
+          FieldAlias = 'Expr4'
+          FieldName = 'Expr4'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 37
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField39: TppField
+          FieldAlias = 'Expr5'
+          FieldName = 'Expr5'
+          FieldLength = 2
+          DisplayWidth = 10
+          Position = 38
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField40: TppField
+          FieldAlias = 'FechaE'
+          FieldName = 'FechaE'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 39
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField41: TppField
+          FieldAlias = 'FechaL'
+          FieldName = 'FechaL'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 40
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField42: TppField
+          FieldAlias = 'FechaV'
+          FieldName = 'FechaV'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 41
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField43: TppField
+          FieldAlias = 'Kilometraje'
+          FieldName = 'Kilometraje'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 42
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField44: TppField
+          FieldAlias = 'Liquidacion'
+          FieldName = 'Liquidacion'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 43
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField45: TppField
+          FieldAlias = 'Nro_OR'
+          FieldName = 'Nro_OR'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 44
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField46: TppField
+          FieldAlias = 'NroLinea'
+          FieldName = 'NroLinea'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 45
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField47: TppField
+          FieldAlias = 'NroLineaC'
+          FieldName = 'NroLineaC'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 46
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField48: TppField
+          FieldAlias = 'NroLote'
+          FieldName = 'NroLote'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 47
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField49: TppField
+          FieldAlias = 'NROOR'
+          FieldName = 'NROOR'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 48
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField50: TppField
+          FieldAlias = 'NroUnicoL'
+          FieldName = 'NroUnicoL'
+          FieldLength = 0
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 49
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField51: TppField
+          FieldAlias = 'NROPEDIDO'
+          FieldName = 'NROPEDIDO'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 50
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField52: TppField
+          FieldAlias = 'NumeroE'
+          FieldName = 'NumeroE'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 51
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField53: TppField
+          FieldAlias = 'ONumero'
+          FieldName = 'ONumero'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 52
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField54: TppField
+          FieldAlias = 'OTipo'
+          FieldName = 'OTipo'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 53
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField55: TppField
+          FieldAlias = 'Placa'
+          FieldName = 'Placa'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 54
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField56: TppField
+          FieldAlias = 'Precio'
+          FieldName = 'Precio'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 55
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField57: TppField
+          FieldAlias = 'Refere'
+          FieldName = 'Refere'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 56
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField58: TppField
+          FieldAlias = 'Signo'
+          FieldName = 'Signo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 57
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField59: TppField
+          FieldAlias = 'Status'
+          FieldName = 'Status'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 58
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField60: TppField
+          FieldAlias = 'Tara'
+          FieldName = 'Tara'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 59
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField61: TppField
+          FieldAlias = 'TipoFac'
+          FieldName = 'TipoFac'
+          FieldLength = 1
+          DisplayWidth = 10
+          Position = 60
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField62: TppField
+          FieldAlias = 'TotalItem'
+          FieldName = 'TotalItem'
+          FieldLength = 4
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 61
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField63: TppField
+          FieldAlias = 'UsaServ'
+          FieldName = 'UsaServ'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 62
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object ppField64: TppField
+          FieldAlias = 'Vale'
+          FieldName = 'Vale'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 63
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SESA_VW_PEDIDOS_SOBRE_ORDENES.Apertura_OR, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Cantidad, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CantidadA, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CantidadC, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CantidadO, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CantidadU, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CantidadUA, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CantMayor, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Cierre_OR, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CodItem, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CodMeca, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CodUbic, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.CodVend, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Costo, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.DEsComp, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip1, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip10, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip2, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip3, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip4, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip5, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip6, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip7, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip8, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descrip9, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Descto, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.DEsLote, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.DEsSeri, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.EsExento, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.EsFreeP, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.EsPesa, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.EsServ, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.EsUnid, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.ExistAnt, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.ExistAntU, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Expr1, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Expr3, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Expr4, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Expr5, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.FechaE, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.FechaL, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.FechaV, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Kilometraje, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Liquidacion, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Nro_OR, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NroLinea, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NroLineaC, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NroLote, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NROOR, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NroUnicoL, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NROPEDIDO, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.NumeroE, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.ONumero, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.OTipo, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Placa, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Precio, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Refere, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Signo, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Status, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Tara, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.TipoFac, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.TotalItem, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.UsaServ, '
+          '       SESA_VW_PEDIDOS_SOBRE_ORDENES.Vale'
+          'FROM '
+          '     SESA_VW_PEDIDOS_SOBRE_ORDENES SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' ) AND ('
+          
+            '      ( SESA_VW_PEDIDOS_SOBRE_ORDENES.FechaE BETWEEN CONVERT(DAT' +
+            'ETIME,'#39'2011-01-01'#39',120) AND CONVERT(DATETIME,'#39'2011-12-31'#39',120) )'
+          
+            '       AND ( SESA_VW_PEDIDOS_SOBRE_ORDENES.Liquidacion = '#39'CONTAD' +
+            'O'#39' )'
+          
+            '       AND ( SESA_VW_PEDIDOS_SOBRE_ORDENES.Status = '#39'PENDIENTE'#39' ' +
+            ')'
+          '      )')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          Value = '01/01/2011,31/12/2011'
+          object TdaField
+            Alias = 'FechaE'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'FechaE'
+            FieldLength = 10
+            FieldName = 'FechaE'
+            SQLFieldName = 'FechaE'
+            TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          end
+          object TdaNumericValue
+            Value = 40544.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 40908.000000000000000000
+          end
+        end
+        object daCriteria2: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = 'CONTADO'
+          object TdaField
+            Alias = 'Liquidacion'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Liquidacion'
+            FieldLength = 10
+            FieldName = 'Liquidacion'
+            SQLFieldName = 'Liquidacion'
+            TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          end
+        end
+        object daCriteria3: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Value = 'PENDIENTE'
+          object TdaField
+            Alias = 'Status'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Status'
+            FieldLength = 10
+            FieldName = 'Status'
+            SQLFieldName = 'Status'
+            TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          end
+        end
+        object daCriteria4: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoInList
+          object TdaField
+            Alias = 'Nro_OR'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Nro_OR'
+            FieldLength = 10
+            FieldName = 'Nro_OR'
+            SQLFieldName = 'Nro_OR'
+            TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          end
+        end
+        object daCriteria5: TdaCriteria
+          ChildType = 7
+          Level = 0
+          object TdaField
+            Alias = 'Vale'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'Vale'
+            FieldLength = 10
+            FieldName = 'Vale'
+            SQLFieldName = 'Vale'
+            TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          end
+        end
+        object daCriteria6: TdaCriteria
+          ChildType = 7
+          Level = 0
+          object TdaField
+            Alias = 'NROPEDIDO'
+            AutoSearch = True
+            DisplayWidth = 10
+            FieldAlias = 'NROPEDIDO'
+            FieldLength = 10
+            FieldName = 'NROPEDIDO'
+            SQLFieldName = 'NROPEDIDO'
+            TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+            TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          end
+        end
+        object daField1: TdaField
+          Alias = 'Apertura_OR'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Apertura_OR'
+          FieldLength = 0
+          FieldName = 'Apertura_OR'
+          SQLFieldName = 'Apertura_OR'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField2: TdaField
+          Alias = 'Cantidad'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Cantidad'
+          FieldLength = 4
+          FieldName = 'Cantidad'
+          SQLFieldName = 'Cantidad'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField3: TdaField
+          Alias = 'CantidadA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CantidadA'
+          FieldLength = 3
+          FieldName = 'CantidadA'
+          SQLFieldName = 'CantidadA'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField4: TdaField
+          Alias = 'CantidadC'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CantidadC'
+          FieldLength = 3
+          FieldName = 'CantidadC'
+          SQLFieldName = 'CantidadC'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField5: TdaField
+          Alias = 'CantidadO'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CantidadO'
+          FieldLength = 3
+          FieldName = 'CantidadO'
+          SQLFieldName = 'CantidadO'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField6: TdaField
+          Alias = 'CantidadU'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CantidadU'
+          FieldLength = 3
+          FieldName = 'CantidadU'
+          SQLFieldName = 'CantidadU'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField7: TdaField
+          Alias = 'CantidadUA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CantidadUA'
+          FieldLength = 3
+          FieldName = 'CantidadUA'
+          SQLFieldName = 'CantidadUA'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField8: TdaField
+          Alias = 'CantMayor'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'CantMayor'
+          FieldLength = 3
+          FieldName = 'CantMayor'
+          SQLFieldName = 'CantMayor'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField9: TdaField
+          Alias = 'Cierre_OR'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Cierre_OR'
+          FieldLength = 0
+          FieldName = 'Cierre_OR'
+          SQLFieldName = 'Cierre_OR'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField10: TdaField
+          Alias = 'CodItem'
+          DisplayWidth = 10
+          FieldAlias = 'CodItem'
+          FieldLength = 15
+          FieldName = 'CodItem'
+          SQLFieldName = 'CodItem'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField11: TdaField
+          Alias = 'CodMeca'
+          DisplayWidth = 10
+          FieldAlias = 'CodMeca'
+          FieldLength = 10
+          FieldName = 'CodMeca'
+          SQLFieldName = 'CodMeca'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField12: TdaField
+          Alias = 'CodUbic'
+          DisplayWidth = 10
+          FieldAlias = 'CodUbic'
+          FieldLength = 10
+          FieldName = 'CodUbic'
+          SQLFieldName = 'CodUbic'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField13: TdaField
+          Alias = 'CodVend'
+          DisplayWidth = 10
+          FieldAlias = 'CodVend'
+          FieldLength = 10
+          FieldName = 'CodVend'
+          SQLFieldName = 'CodVend'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField14: TdaField
+          Alias = 'Costo'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Costo'
+          FieldLength = 4
+          FieldName = 'Costo'
+          SQLFieldName = 'Costo'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField15: TdaField
+          Alias = 'DEsComp'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'DEsComp'
+          FieldLength = 0
+          FieldName = 'DEsComp'
+          SQLFieldName = 'DEsComp'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField16: TdaField
+          Alias = 'Descrip1'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip1'
+          FieldLength = 40
+          FieldName = 'Descrip1'
+          SQLFieldName = 'Descrip1'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField17: TdaField
+          Alias = 'Descrip10'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip10'
+          FieldLength = 40
+          FieldName = 'Descrip10'
+          SQLFieldName = 'Descrip10'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField18: TdaField
+          Alias = 'Descrip2'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip2'
+          FieldLength = 40
+          FieldName = 'Descrip2'
+          SQLFieldName = 'Descrip2'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField19: TdaField
+          Alias = 'Descrip3'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip3'
+          FieldLength = 40
+          FieldName = 'Descrip3'
+          SQLFieldName = 'Descrip3'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField20: TdaField
+          Alias = 'Descrip4'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip4'
+          FieldLength = 40
+          FieldName = 'Descrip4'
+          SQLFieldName = 'Descrip4'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField21: TdaField
+          Alias = 'Descrip5'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip5'
+          FieldLength = 40
+          FieldName = 'Descrip5'
+          SQLFieldName = 'Descrip5'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField22: TdaField
+          Alias = 'Descrip6'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip6'
+          FieldLength = 40
+          FieldName = 'Descrip6'
+          SQLFieldName = 'Descrip6'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField23: TdaField
+          Alias = 'Descrip7'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip7'
+          FieldLength = 40
+          FieldName = 'Descrip7'
+          SQLFieldName = 'Descrip7'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField24: TdaField
+          Alias = 'Descrip8'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip8'
+          FieldLength = 40
+          FieldName = 'Descrip8'
+          SQLFieldName = 'Descrip8'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField25: TdaField
+          Alias = 'Descrip9'
+          DisplayWidth = 10
+          FieldAlias = 'Descrip9'
+          FieldLength = 40
+          FieldName = 'Descrip9'
+          SQLFieldName = 'Descrip9'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField26: TdaField
+          Alias = 'Descto'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Descto'
+          FieldLength = 3
+          FieldName = 'Descto'
+          SQLFieldName = 'Descto'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField27: TdaField
+          Alias = 'DEsLote'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'DEsLote'
+          FieldLength = 0
+          FieldName = 'DEsLote'
+          SQLFieldName = 'DEsLote'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField28: TdaField
+          Alias = 'DEsSeri'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'DEsSeri'
+          FieldLength = 0
+          FieldName = 'DEsSeri'
+          SQLFieldName = 'DEsSeri'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField29: TdaField
+          Alias = 'EsExento'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsExento'
+          FieldLength = 0
+          FieldName = 'EsExento'
+          SQLFieldName = 'EsExento'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField30: TdaField
+          Alias = 'EsFreeP'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsFreeP'
+          FieldLength = 0
+          FieldName = 'EsFreeP'
+          SQLFieldName = 'EsFreeP'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField31: TdaField
+          Alias = 'EsPesa'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsPesa'
+          FieldLength = 0
+          FieldName = 'EsPesa'
+          SQLFieldName = 'EsPesa'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField32: TdaField
+          Alias = 'EsServ'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsServ'
+          FieldLength = 0
+          FieldName = 'EsServ'
+          SQLFieldName = 'EsServ'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField33: TdaField
+          Alias = 'EsUnid'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'EsUnid'
+          FieldLength = 0
+          FieldName = 'EsUnid'
+          SQLFieldName = 'EsUnid'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField34: TdaField
+          Alias = 'ExistAnt'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ExistAnt'
+          FieldLength = 3
+          FieldName = 'ExistAnt'
+          SQLFieldName = 'ExistAnt'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField35: TdaField
+          Alias = 'ExistAntU'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'ExistAntU'
+          FieldLength = 3
+          FieldName = 'ExistAntU'
+          SQLFieldName = 'ExistAntU'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField36: TdaField
+          Alias = 'Expr1'
+          DisplayWidth = 10
+          FieldAlias = 'Expr1'
+          FieldLength = 1
+          FieldName = 'Expr1'
+          SQLFieldName = 'Expr1'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField37: TdaField
+          Alias = 'Expr3'
+          DisplayWidth = 10
+          FieldAlias = 'Expr3'
+          FieldLength = 1
+          FieldName = 'Expr3'
+          SQLFieldName = 'Expr3'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField38: TdaField
+          Alias = 'Expr4'
+          DisplayWidth = 10
+          FieldAlias = 'Expr4'
+          FieldLength = 10
+          FieldName = 'Expr4'
+          SQLFieldName = 'Expr4'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField39: TdaField
+          Alias = 'Expr5'
+          DisplayWidth = 10
+          FieldAlias = 'Expr5'
+          FieldLength = 2
+          FieldName = 'Expr5'
+          SQLFieldName = 'Expr5'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField40: TdaField
+          Alias = 'FechaE'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaE'
+          FieldLength = 0
+          FieldName = 'FechaE'
+          SQLFieldName = 'FechaE'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField41: TdaField
+          Alias = 'FechaL'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaL'
+          FieldLength = 0
+          FieldName = 'FechaL'
+          SQLFieldName = 'FechaL'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField42: TdaField
+          Alias = 'FechaV'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FechaV'
+          FieldLength = 0
+          FieldName = 'FechaV'
+          SQLFieldName = 'FechaV'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField43: TdaField
+          Alias = 'Kilometraje'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Kilometraje'
+          FieldLength = 0
+          FieldName = 'Kilometraje'
+          SQLFieldName = 'Kilometraje'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField44: TdaField
+          Alias = 'Liquidacion'
+          DisplayWidth = 10
+          FieldAlias = 'Liquidacion'
+          FieldLength = 15
+          FieldName = 'Liquidacion'
+          SQLFieldName = 'Liquidacion'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField45: TdaField
+          Alias = 'Nro_OR'
+          DisplayWidth = 10
+          FieldAlias = 'Nro_OR'
+          FieldLength = 10
+          FieldName = 'Nro_OR'
+          SQLFieldName = 'Nro_OR'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField46: TdaField
+          Alias = 'NroLinea'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NroLinea'
+          FieldLength = 0
+          FieldName = 'NroLinea'
+          SQLFieldName = 'NroLinea'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField47: TdaField
+          Alias = 'NroLineaC'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NroLineaC'
+          FieldLength = 0
+          FieldName = 'NroLineaC'
+          SQLFieldName = 'NroLineaC'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField48: TdaField
+          Alias = 'NroLote'
+          DisplayWidth = 10
+          FieldAlias = 'NroLote'
+          FieldLength = 20
+          FieldName = 'NroLote'
+          SQLFieldName = 'NroLote'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField49: TdaField
+          Alias = 'NROOR'
+          DisplayWidth = 10
+          FieldAlias = 'NROOR'
+          FieldLength = 10
+          FieldName = 'NROOR'
+          SQLFieldName = 'NROOR'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField50: TdaField
+          Alias = 'NroUnicoL'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'NroUnicoL'
+          FieldLength = 0
+          FieldName = 'NroUnicoL'
+          SQLFieldName = 'NroUnicoL'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField51: TdaField
+          Alias = 'NROPEDIDO'
+          DisplayWidth = 10
+          FieldAlias = 'NROPEDIDO'
+          FieldLength = 10
+          FieldName = 'NROPEDIDO'
+          SQLFieldName = 'NROPEDIDO'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField52: TdaField
+          Alias = 'NumeroE'
+          DisplayWidth = 10
+          FieldAlias = 'NumeroE'
+          FieldLength = 10
+          FieldName = 'NumeroE'
+          SQLFieldName = 'NumeroE'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField53: TdaField
+          Alias = 'ONumero'
+          DisplayWidth = 10
+          FieldAlias = 'ONumero'
+          FieldLength = 10
+          FieldName = 'ONumero'
+          SQLFieldName = 'ONumero'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField54: TdaField
+          Alias = 'OTipo'
+          DisplayWidth = 10
+          FieldAlias = 'OTipo'
+          FieldLength = 1
+          FieldName = 'OTipo'
+          SQLFieldName = 'OTipo'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField55: TdaField
+          Alias = 'Placa'
+          DisplayWidth = 10
+          FieldAlias = 'Placa'
+          FieldLength = 10
+          FieldName = 'Placa'
+          SQLFieldName = 'Placa'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField56: TdaField
+          Alias = 'Precio'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Precio'
+          FieldLength = 4
+          FieldName = 'Precio'
+          SQLFieldName = 'Precio'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField57: TdaField
+          Alias = 'Refere'
+          DisplayWidth = 10
+          FieldAlias = 'Refere'
+          FieldLength = 15
+          FieldName = 'Refere'
+          SQLFieldName = 'Refere'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField58: TdaField
+          Alias = 'Signo'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'Signo'
+          FieldLength = 0
+          FieldName = 'Signo'
+          SQLFieldName = 'Signo'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField59: TdaField
+          Alias = 'Status'
+          DisplayWidth = 10
+          FieldAlias = 'Status'
+          FieldLength = 15
+          FieldName = 'Status'
+          SQLFieldName = 'Status'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField60: TdaField
+          Alias = 'Tara'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'Tara'
+          FieldLength = 3
+          FieldName = 'Tara'
+          SQLFieldName = 'Tara'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField61: TdaField
+          Alias = 'TipoFac'
+          DisplayWidth = 10
+          FieldAlias = 'TipoFac'
+          FieldLength = 1
+          FieldName = 'TipoFac'
+          SQLFieldName = 'TipoFac'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField62: TdaField
+          Alias = 'TotalItem'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TotalItem'
+          FieldLength = 4
+          FieldName = 'TotalItem'
+          SQLFieldName = 'TotalItem'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField63: TdaField
+          Alias = 'UsaServ'
+          DataType = dtInteger
+          DisplayWidth = 10
+          FieldAlias = 'UsaServ'
+          FieldLength = 0
+          FieldName = 'UsaServ'
+          SQLFieldName = 'UsaServ'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField64: TdaField
+          Alias = 'Vale'
+          DisplayWidth = 10
+          FieldAlias = 'Vale'
+          FieldLength = 10
+          FieldName = 'Vale'
+          SQLFieldName = 'Vale'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daField65: TdaField
+          ChildType = 2
+          Alias = 'Nro_OR'
+          DisplayWidth = 10
+          FieldAlias = 'Nro_OR'
+          FieldLength = 10
+          FieldName = 'Nro_OR'
+          SQLFieldName = 'Nro_OR'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableSQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          JoinType = dajtNone
+          SQLAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableAlias = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+          TableName = 'SESA_VW_PEDIDOS_SOBRE_ORDENES'
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D650614
+      4865616465724265666F726547656E65726174650B50726F6772616D54797065
+      070B747450726F63656475726506536F757263650C5F01000070726F63656475
+      7265204865616465724265666F726547656E65726174653B0D0A20424547494E
+      0D0A4D454D4F312E4C494E45532E434C4541523B0D0A5265706F72742E476574
+      4175746F5365617263684465736372697074696F6E4C696E6573284D454D4F31
+      2E4C696E6573293B0D0A4D454D4F322E4C494E45532E434C4541523B0D0A4D45
+      4D4F322E4C494E45532E41444428274C49515549444143494F4E3A20272B2043
+      4F5059284D454D4F312E544558542C3130312C37292B272C2020535441545553
+      3A20272B20434F5059284D454D4F312E544558542C3133322C313229293B0D0A
+      4D454D4F332E4C494E45532E434C4541523B0D0A4D454D4F332E4C494E45532E
+      4144442827454E545245203A20272B20434F5059284D454D4F312E544558542C
+      34392C3130292B2720592020272B20434F5059284D454D4F312E544558542C36
+      312C31302920293B0D0A2020454E443B0D0A20200D0A0D0A0D436F6D706F6E65
+      6E744E616D650606486561646572094576656E744E616D65060E4265666F7265
+      47656E6572617465074576656E744944021A0001060F5472614576656E744861
+      6E646C65720B50726F6772616D4E616D65060F4442496D616765314F6E507269
+      6E740B50726F6772616D54797065070B747450726F63656475726506536F7572
+      6365066470726F636564757265204442496D616765314F6E5072696E743B0D0A
+      626567696E0D0A2020202020204442496D616765312E56697369626C65203A3D
+      204E4F5420444243616C63312E416E63686F724C656674546F700D0A20202020
+      2020656E643B0D0A0D436F6D706F6E656E744E616D6506084442496D61676531
+      094576656E744E616D6506074F6E5072696E74074576656E74494402200000}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

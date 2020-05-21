@@ -1,0 +1,7 @@
+-- actualiza notas10 con ordenc por no poderse usar este ultimo en captacion de valor
+
+UPDATE    SAFACT
+SET              Notas10 = SAFACT.OrdenC
+FROM         SAFACT INNER JOIN
+                      SAFACT_01 AS y ON SAFACT.NumeroD = y.NumeroD AND SAFACT.TipoFac = y.TipoFac
+WHERE     (SAFACT.TipoFac = 'G') AND (SAFACT.CodOper = '01-301') AND (y.Status = 'PENDIENTE')

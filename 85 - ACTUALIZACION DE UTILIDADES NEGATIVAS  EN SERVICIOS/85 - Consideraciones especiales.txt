@@ -1,0 +1,21 @@
+UPDATE    SAFACT
+SET              CostoSrv = TotalSrv * 0.75
+WHERE     (TotalSrv - CostoSrv < 0) AND (TipoFac = 'b') AND (CodOper = '01-501')
+
+
+ UPDATE    SAFACT
+SET              CostoSrv = TotalSrv * 0.75
+WHERE     (TotalSrv - CostoSrv < 0) AND (TipoFac = 'A') AND (CodOper = '01-501')
+
+
+UPDATE    SAITEMFAC
+SET              Costo = TotalItem * 0.75
+WHERE     (CodItem = 'S200') OR
+                      (CodItem = 'S202') OR
+                      (CodItem = 'S208') OR
+                      (CodItem = 'S222') OR
+                      (CodItem = 'S223') OR
+                      (CodItem = 'S225')
+
+
+

@@ -1,0 +1,19 @@
+Hay que crear tabla adicional en inventario por categoria vehiculos / modelo
+
+El procedimiento es indicado desde el 
+
+Administrivo/producto/seleccionar algun modelo/edit o modificar/modificar seriales/agregar
+
+SOLO SE DEBE MODIFICAR SERIAL CUANDO EL MISMO SE ENCUENTRE EN STOCK
+
+solucion probada y lista.
+
+EL 12/02/2008 AM FUE IMPLANTADA EN:
+
+PRESTIGE
+LIBERTY
+PLANET
+PROMOAUTO
+
+TODOS FUERON PROBADOS
+

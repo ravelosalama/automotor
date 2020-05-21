@@ -1,0 +1,140 @@
+-- QUERYS VALIDOS SOLO CUANDO LA INSTANCIA PARA OBSOLESCENCIA ERA 27 DEL 33 Y 34 DEBEN SER MODIFICADOS
+-- Repara llevando a cero el stock en negativo
+   
+update SAPROD set Existen=0 
+where Existen<0
+
+update SAEXIS set Existen=0 
+where Existen<0
+
+
+-- Repara llevando a cero el compro en negativo
+   
+update SAPROD set Compro=0 
+where Compro<0
+
+update SAprod set Pedido=0 
+where Pedido<0
+
+
+-- CLASIFICA NUEVOS  PRODUCTOS  QUE ENTRAN EN OBSOLESCENCIA COMO OBSOLETOS EN FUNCION A LA ULTIMA VENTA SEA MENOR A LA 
+-- 
+--INDICADA EN LA VARIABLE  @DESDEUV NORMALMENTE DEBE SER TOMADA 12 MESES ANTES A LA FECHA DE HOY O DE EJECUCION DE LA 
+-- 
+-- CONSULTA.
+
+DECLARE @DESDEUV DATETIME
+SET @DESDEUV='03/31/2011'
+        
+UPDATE SAPROD SET CodInst='27'
+FROM         SAPROD WHERE FechaUV < CONVERT(DATETIME, @DESDEUV, 120) AND CodInst<>'11' AND CodInst<>'12' AND CodInst<>'27'
+
+-- DESINCORPORA EL PRODUCTO EN FUNCION A QUE SEA OBSOLETO Y TENGA STOCK CERO.
+
+   UPDATE SAPROD SET Activo=0  
+   WHERE CodInst='27' AND Existen=0
+
+-- CORRIGE REINCORPORANDO EL PRODUCTO SI TIENE STOCK AUN CUANDO ESTE CLASIFICADO OBSOLETO.     
+
+UPDATE    SAPROD
+SET              Activo = 1
+FROM         SAPROD AS SAPROD_1 CROSS JOIN
+                      SAPROD
+WHERE     (SAPROD.CodInst = '27') AND (SAPROD.Existen <> 0) AND (SAPROD.Activo = 0)
+
+
+-- CORRIGE RECLASIFICANDO Y REINCORPORANDO PRODUCTOS QUE TIENEN MENOS DE 12 MESES DESDE SU ULTIMA VENTA Y ESTABA COMO -- OBSOLETO
+
+DECLARE @DESDEUV DATETIME
+SET @DESDEUV='03/31/2011'
+
+UPDATE SAPROD SET CODINST='5' , ACTIVO=1
+FROM         SAPROD WHERE FechaUV >= CONVERT(DATETIME, @DESDEUV, 120) AND CodInst='27'  
+
+
+
+-- RECLASIFICACION PARA ARTICULOS ACTIVOS 
+
+--- RECLASIFICACION DE ACEITES Y FILTROS
+
+UPDATE    SAPROD
+SET              CodInst = '20'
+WHERE     (Descrip LIKE 'ACEITE%') AND (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34')
+
+UPDATE    SAPROD
+SET              CodInst = '20'
+WHERE     (Descrip LIKE 'FILTRO%') AND (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34')
+
+UPDATE    SAPROD
+SET              CodInst = '20'
+FROM         SAPROD
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (Descrip LIKE '%LIQUIDO%')
+
+UPDATE    SAPROD
+SET              CodInst = '20'
+FROM         SAPROD
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (Descrip LIKE '%LIGA%')
+
+
+--- RECLASIFICACION DE ACCESORIOS
+
+UPDATE    SAPROD
+SET              CodInst = '4'
+WHERE     (Descrip LIKE '%ALFOMBRA%') AND (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34')
+
+UPDATE    SAPROD
+SET              CodInst = '4'
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (SUBSTRING(CodProd, 1, 3) = '822') AND (CodInst <> '4') AND (CodInst <> '20')
+
+--UPDATE    SAPROD
+--SET              CodInst = '4'
+--WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (CodInst = '5') AND (Descrip LIKE '%EMBLEMA%')
+
+UPDATE    SAPROD
+SET              CodInst = '4'
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (Descrip LIKE '%APLIQUE%')
+
+UPDATE    SAPROD
+SET              CodInst = '4'
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (Descrip LIKE '%ESTRIBO%')
+
+--- RECLASIFICACION DE REPUESTOS GENERALES
+
+UPDATE    SAPROD
+SET              CodInst = '32'
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (CodInst = '5')
+
+-- QUERY ESPECIAL DE PLANET CARS
+UPDATE    SAPROD
+SET              CodInst = '32'
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (CodInst = '28')
+
+
+
+-- QUERY ESPECIAL DE GUAYANAUTO
+UPDATE    SAPROD
+SET              CodInst = '32'
+WHERE     (CodInst <> '27') AND (CodInst <> '33') AND (CodInst <> '34') AND (CodInst = '29')
+
+
+-- RECLASIFICACION Y DESACTIVACION DE ARTICULOS OBSOLETOS Y SIN STOCK
+
+UPDATE    SAPROD
+SET              Activo = 0, CodInst = '34'
+WHERE     (CodInst = '27') AND (Existen = 0)
+
+
+-- RECLASIFICACION Y ACTIVACION DE ARTICULOS OBSOLETOS CON STOCK
+
+UPDATE    SAPROD
+SET              Activo = 1, CodInst = '33'
+WHERE     (CodInst = '27') AND (Existen <> 0)
+
+-- precisiones de prestige cars por estar capo fechauv en null
+
+update SAPROD set CodInst='33', Activo=1
+   where  CodInst='32' and   ( FechaUV < CONVERT(DATETIME, @DESDEUV, 120) or FechaUV is null) and Existen<>0
+  
+update saprod set codinst='34', activo=0  
+   where  CodInst='32' and   ( FechaUV < CONVERT(DATETIME, @DESDEUV, 120) or FechaUV is null) and Existen=0
+   

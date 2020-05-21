@@ -1,0 +1,21 @@
+estos reportes se encuentran en la solucion 71.301
+
+historico de servicio: sufre modificacion jul 2011, se corrige trigger principal 40, se corrige trigger para desblouear OR cerradas solucion 33
+y se corrige estructura del reporte 
+
+-- SE HACE QUERY PARA CORREGIR SAFACT_02 CAMPO TIPOFAC, VALOR 'Z'
+
+SELECT     X.TipoFac, X.NumeroD, X.Placa, X.Kilometraje, X.Liquidacion, X.Status, X.Cierre_OR, X.Apertura_OR, Y.TipoFac AS Expr1, Y.NumeroD AS Expr2, 
+                      Y.Modelo, Y.Color, Y.Serial_M, Y.Serial, Y.Vendido, Y.Vendio_Concesionario, Y.Z_INTERNO
+FROM         SAFACT_01 AS X LEFT OUTER JOIN
+                      SAFACT_02 AS Y ON X.NumeroD = Y.NumeroD
+WHERE     (X.TipoFac = 'Z') AND (Y.TipoFac = 'G')
+
+
+-- ACTUALIZA SAFACT_02
+
+UPDATE    SAFACT_02
+SET              TipoFac = X.TipoFac
+FROM         SAFACT_01 AS X LEFT OUTER JOIN
+                      SAFACT_02 ON X.NumeroD = SAFACT_02.NumeroD
+WHERE     (X.TipoFac = 'Z') AND (SAFACT_02.TipoFac = 'G')

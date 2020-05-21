@@ -1,0 +1,85 @@
+Proceso para m,igrar interconcesionarios
+
+1ro Limpiar BD Base o plantilla de version (EXCELLENTMOTORS) SE APLICA QUERY LIMPIEZA RADICAL DE BD
+2do Eliminar del origen datos repetidos como sausr / 001 / 002      A MANO POR EL ADM/CORP
+3ro Eliminar del origen datos null en saprod_12_01 codprod is null or ``    A MANO POR EL ADM/COR
+4to Crear campos de apertura_OR, cierre_or. en safact_01 BD vieja A MANO POR EL ADM/CORP
+4B)to Limpiar integridad en saprod_12_01    SE APLICA QUERY: BUSCAR REGRISTROS REPETIDOS EN SAPROD_12_01
+
+
+5to Importacion masiva de tablas    SE APLICA DTS: IMPORTACIÓN DE DATOS INTER CONCESIONARIOS
+    mas safact_01 de BD origen a safact_01b Destino (nueva estructura)
+   
+    menos saconf
+          sacampos
+          sagrupos
+          sadepo
+          sapais
+          saciudad
+          saestado
+          saaoper?????
+          safiel
+          safldref
+          sainsta
+          saitre??????
+          saoper
+          sargocat
+          sargotjt
+          sasucu
+          satabl
+          satarj
+          sataxes
+          sazona
+          sbfmts    
+          sbmone
+          sftfld
+          sftitm
+          ssautr
+          ssfmts
+          ssnivl
+          ssopmn
+          sspard
+          ssparm
+
+    menos vistas
+    menos temporales 
+
+6mo. Importar safact_01 de estructura vieja completa a BD nueva para recuperar relacion OR - facT- OR.
+Y LLAMARLA SAFACT_01B
+
+7to  Limpiar integridad de datos en tablas origenes:
+      
+     safact_01
+     SAFACT_01B CLAVE=TIPOFAC+NUMEROD
+ 
+
+8RO. Importar desde saseri a saprod_11_03 ojo quitar indices e identidad de tabla provisionalmente mientras se migra
+     por impotar hay que configurar cada campo util y los demas indicar "dajar pasar" los capos en el wizar 
+
+     Importar desde safact_01b a safact_02 solo tipofac= A - FACTURAS B DEVOLUCIONES G - DOCUMENTOS EN ESPERA
+     Importar desde safact_01b a safact_03 solo tipofac= c - ENTREGA D - DEV/ENT E - PEDIDO/DESPACHO.
+     utilizar tranformaciones  
+
+LIMPIAR PRODUCTOS S0000XXX QUE NO TIENE MOVIMIENTO (SOLO EN LIBERTY)
+
+se hace copia de tabla safact como safact2 para un query que repara el campo que relaciona factura - devolucion y viceversa.
+
+
+
+QUIERY NECESARIOS APLICAR. CORRER: PROCESO DE PREPARACION DE TABLAS NUEVA ESTRUCTURA.SQL
+
+
+RENOMBRAR LA TABLA SAFACT_01B POR XXX y safact2 con yyy o eliminar.
+
+REVISAR Y modificar datos de empresa en saconf configurador 
+REVISAR Y modificar contador de notas de creditos segun devolucion de ventas.
+reclasificar usuarios a los nuevos roles.
+importar datos de saconf (ojo no necesariamente si se puede evitar mejor) solo actualizar campos de dirrecion , rif etc etc etc.
+
+activar la licencia 
+
+REVISAR formatos de cheques de cada concesionario
+REVISAR RESTRIGCION DE MONTO PAGADO EN COMPRA SE DESACTIVA.
+REVISAR ESTACION X ESTACION Y USUARIO X USUARIOS, CONFIGURACION DE ROLES, PREDETERMINADOS ETC ETC.
+
+

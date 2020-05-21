@@ -1,0 +1,89 @@
+triggers de evalucaion de tablas para el manejo de retenciones en ventas 
+
+
+preliminar de vista
+SELECT     NumeroD, Document, CodOper, Monto, NumeroN, TipoCxc, FechaE, FechaI, FechaR
+FROM         SAACXC
+WHERE     (TipoCxc = '41' OR
+                      TipoCxc = '81') AND (CodOper = '04-002')
+
+
+
+UPDATE    SAACXC
+SET              CODOPER = '04-002'
+FROM         SAACXC
+WHERE     (TipoCxc = '81')
+
+
+
+QUERY PARA REVISAR MONTOS DE RETENCION EN CXC POR COBRANZAS
+
+SELECT     x.Monto, y.Monto AS Expr1, Z.RetenIVA
+FROM         SAIPACXC x INNER JOIN
+                      SAACXC y ON x.NroPpal = y.NroUnico INNER JOIN
+                      SAFACT Z ON Z.NumeroD = y.NumeroN
+
+OTRO QUERY UTIL
+
+SELECT     X.MONTO, Y.Monto AS Expr1, Z.Monto AS Expr2
+FROM         SASE_RETIVACXC X LEFT OUTER JOIN
+                      SAACXC Y ON X.NROPPAL = Y.NroUnico LEFT OUTER JOIN
+                      SAPAGCXC Z ON Y.NroUnico = Z.NroPpal
+
+
+QUERY SIMPLIFICADO Y PROBADO 100% EFECTIVO EL 28022009
+
+SELECT     X.MONTO, Y.Monto AS Expr1
+FROM         SASE_RETIVACXC X INNER JOIN
+                      SAACXC Y ON X.NROPPAL = Y.NroUnico
+
+
+QUERY PARA REPARAR PROBLEMA DE DECIMALES EN TABLA SASE_RETIVACXC EN BASE A SAACXC
+
+UPDATE    SASE_RETIVACXC
+SET              MONTO = Y.MONTO
+FROM         SASE_RETIVACXC X INNER JOIN
+                      SAACXC Y ON X.NROPPAL = Y.NroUnico 
+
+QUERY PARA LLENAR FACTURA AFECTADA EN CXC DESDE SASE_RETIVA
+
+UPDATE    SAACXC
+SET              NUMERON = X.NUMEROD
+FROM         SASE_RETIVACXC X INNER JOIN
+                      SAACXC Y ON X.NROPPAL = Y.NroUnico
+WHERE     (Y.NumeroN IS NULL)
+
+
+QUERY PARA LLENAR FECHAREN SAACXC  CON FECHAE DE SAFACT 
+
+UPDATE    SAACXC
+SET              FECHAR = Y.FECHAE
+FROM         SAACXC X INNER JOIN
+                      SAFACT Y ON X.NumeroN = Y.NumeroD
+WHERE     (X.TipoCxc = '41' OR
+                      X.TipoCxc = '81') AND X.CodOper = '04-002' AND Y.TipoFac = 'A' AND X.FECHAR IS NULL
+
+query para revisar listado de clienentes que han emitido retencion de iva y deben ser cambiados a contribuyentes espceciales (4)
+
+
+SELECT DISTINCT x.CodClie, y.Descrip, y.TipoCli
+FROM         SAACXC x INNER JOIN
+                      SACLIE y ON x.CodClie = y.CodClie
+WHERE     (x.TipoCxc = '41' OR
+                      x.TipoCxc = '81') AND (x.CodOper = '04-002')
+ORDER BY x.CodClie
+
+
+query que actualiza a contibuyentes especiales segun consulta anterior
+
+UPDATE    saclie
+SET              tipocli = '4'
+FROM         SAACXC x INNER JOIN
+                      SACLIE y ON x.CodClie = y.CodClie
+WHERE     (x.TipoCxc = '41' OR
+                      x.TipoCxc = '81') AND (x.CodOper = '04-002')
+
+
+
+
+

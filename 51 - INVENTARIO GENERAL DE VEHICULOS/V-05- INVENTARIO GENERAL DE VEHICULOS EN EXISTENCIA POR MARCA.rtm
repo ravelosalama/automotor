@@ -1,0 +1,1990 @@
+object ppReport1: TppReport
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 215900
+  PrinterSetup.mmPaperWidth = 279401
+  PrinterSetup.PaperSize = 119
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = 'V-05 - INVENTARIO GENERAL DE VEHICULO EN EXISTENCIA POR MARC'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'e:\Documents and Settings\jravelo\Mis documentos\CONCESIONARIOS\' +
+    'SAINT\SOLUCIONES\51 - INVENTARIO GENERAL DE VEHICULOS\V-05- INVE' +
+    'NTARIO GENERAL DE VEHICULOS EN EXISTENCIA POR MARCA.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PreviewFormSettings.WindowState = wsMaximized
+  TextSearchSettings.DefaultString = '<HallarTexto>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 16
+  Top = 160
+  Version = '10.07'
+  mmColumnWidth = 0
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 43127
+    mmPrintPosition = 0
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'INVENTARIO GENERAL DE VEHICULOS EN EXISTENCIA POR MARCA'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5027
+      mmLeft = 62706
+      mmTop = 26194
+      mmWidth = 141288
+      BandType = 0
+    end
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'Descrip'
+      DataPipeline = daADOQueryDataView5.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 16
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 7535
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 29972
+      BandType = 0
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      AutoSize = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'RIF'
+      DataPipeline = daADOQueryDataView5.Datos_Empresa
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'Datos_Empresa'
+      mmHeight = 4699
+      mmLeft = 0
+      mmTop = 7673
+      mmWidth = 5800
+      BandType = 0
+    end
+    object ppImage1: TppImage
+      UserName = 'Image1'
+      MaintainAspectRatio = False
+      Stretch = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Picture.Data = {
+        0A544A504547496D61676554060000FFD8FFE000104A46494600010100000100
+        010000FFDB004300090607080706090807080A0A090B0D160F0D0C0C0D1B1415
+        1016201D2222201D1F1F2428342C242631271F1F2D3D2D3135373A3A3A232B3F
+        443F384334393A37FFDB0043010A0A0A0D0C0D1A0F0F1A37251F253737373737
+        3737373737373737373737373737373737373737373737373737373737373737
+        37373737373737373737373737FFC00011080022009603012200021101031101
+        FFC4001C0001000203010101000000000000000000000607010305040802FFC4
+        0039100001030302020704090403000000000001020304000511061221310713
+        1422415161324381B1151652717291A1C1C2082393D24262D1FFC40019010101
+        0101010100000000000000000000000103020405FFC400211101000201040105
+        00000000000000000000021101031221312204517181F0FFDA000C0301000211
+        0311003F00E5D9950D7AA2E89E9897343FB87654C82E88DCCEEDBB7863D9DBFF
+        001C67C6ACAD129E8FD37958D1EA8DDBBA856F1194E91D5E539CE7BBCF6FAD4E
+        880471E2281207218A0A4BA7E5494EA2D35D94A82B0AC712139DE8C671E15DFE
+        90D5AD068ABB19E9B108DD4FF70C55BFD66370F672319AB3A9415FF4185C5747
+        B14BA5455D7BDED673ED1AADF48DA557AD75AB9B7ADED5C5C614FB91E3CA796D
+        B6A575F8C6E1C8E09C787CEBE88A50513D18F5275EBBDA65C8D3B2595940B102
+        E756FF0077182B5A8827273B71E453568EB6D196ED5D0435294E4796D8FEC4B6
+        4E16D9F5FB49F43F0C1E3525C52828DE8F9EBEEB795234EEA3BBC85DAED472EA
+        5B050E4DEF6D4A56E732918FBCE789F1165EBB8B0D9D132E21B9AEC914210DA6
+        4C76D47AA1B80036A78E0F238F026A4F5F80EB6A56D4B8927C8286683E6A11AD
+        B64B638A6E6E8BBEECDCBCBE2476A778E40183CFC055CDD145C5771D24D15591
+        CB436D38A4B6D296B525C07BDBD257DEC654471CF2E07CA63B539CE067CF159A
+        0A211778F67E9EAE52EEB2CC6848DE0ADC276025A4E3F5AB5606BAD2F7198CC3
+        85798CF48795B5B6D39CA8F972A9153141507F51AA75365B39654B07B4AF3B09
+        FB3E951D8FF57FA86F7BDA2F76C19DEE4DDD9C78F1E75F40D2838161547568B6
+        0C2546532222820C42A2D70073B7777B19CF3E3546F4696672E5A6EF737E836A
+        F5322B8DEC624BEE36A2829513B08E6780E1E3E79C03F48D28295E861D87DB6E
+        325CBF3F01D5052556570A908606E1DE49714ADD8C633CC64E798A55D58079F1
+        A502B972957C6DC518ADC079BCF777AD6DAB1F911FAD750D2823CEDC7503092A
+        76D2C140E65B74AFF44827F4AE639AD94D28A5E6A3208E616A5A48FCD22A694A
+        B6959435AD6E97465B6E32F1CF6BC0D6CFAE58E6C31FE748FDEA4571B541B9A0
+        267456DEC72278287DC47115CB568CB19F663C847E098F0FE756F095973CEB50
+        3DCC5F8CB6C7F2AD90B56393A6331591112B755B410FB6B23E017935BD5A22D9
+        EEE4DD1BFC37077F726BC73747CE8A8ED1A7EFB706A5238A5B94F758DAFD0E47
+        0F8E7EEA707922B72D606E33E5B6D3EF391D82843694AD282FAD6ADADF1C1080
+        AC15701909009512768F2B929F8695BEF4A53E1B054E30D2DE0AC0F6B6152D40
+        91FF0064E0FA7846E4DB1F817298D3CDB90DF5EC575650545A71B396C800E549
+        C129CA73DDC1E04655ED8D73DC14DBB0DF656A46C5B9DE7072E3B46DCE7F1015
+        F2F5A7EA233E2FEBF7CF5CBD30869CA3CA6BA5755BAE5DA45A5728AD6DA4AD87
+        14014B8366F482386328CA814ED1DD5029E00ABAA9D6C9F14443F74B6BFDEABA
+        D276ABA4DBF3F2AC63AB78E101F3C5115011D5A72788DC119000C9EF13C30316
+        342D2311D52DA917EBBCA92D9C3A53294D8CFA01FF00A6BDFA3BB6637F6C278F
+        2A8BF435A24FBA8FF092D9FE559FAE5E4CB3FE64FF00B57A93A26D3EF1DB939F
+        8EE0EFECAADA9D1B6249CF6475647DB94EABE6AAD6F0E6A4E539AE50856D5088
+        957929EE35B23EAF932D7B22C565E51F06C38AF924D4AA2C5621B29662B2865B
+        4F24A06056EA9782B3EEE0A266A37395AE22079AE463E409AE840FA4CA89B808
+        884E382592A51FCC81F2AF7528B45294A8AC9A52940A529418A52940A52941C3
+        D610A24AB2485CA8AC3CA6D24A0B8D85149F4CF2AA5AC6CB4F5F52CBCDA1C6B7
+        81B169053CFCA94AEE3D33976BFE247622C76D98ACB6CB491C10DA02523E028C
+        B6843EF29284A54A50C90304F0A52B8CB4C37D294A0C5294A0CD6294A0CD294A
+        0FFFD9}
+      mmHeight = 8467
+      mmLeft = 178065
+      mmTop = 3175
+      mmWidth = 25135
+      BandType = 0
+    end
+    object ppImage2: TppImage
+      UserName = 'Image2'
+      MaintainAspectRatio = False
+      Stretch = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Picture.Data = {
+        0A544A504547496D616765340D0000FFD8FFE000104A46494600010100000100
+        010000FFDB004300090607080706090807080A0A090B0D160F0D0C0C0D1B1415
+        1016201D2222201D1F1F2428342C242631271F1F2D3D2D3135373A3A3A232B3F
+        443F384334393A37FFDB0043010A0A0A0D0C0D1A0F0F1A37251F253737373737
+        3737373737373737373737373737373737373737373737373737373737373737
+        37373737373737373737373737FFC0001108006D008803012200021101031101
+        FFC4001B00010003000301000000000000000000000005060702030401FFC400
+        4610000103040003050406040A0B000000000102030400050611122131074151
+        617113223281147291A1B1D14262B2C11516334552558293C2E1172325356484
+        92A2B3D2F0FFC4001A0101000301010100000000000000000000000103040502
+        06FFC4003411000201030202050B040300000000000000010203041121311241
+        05617181911314222332515262A1B1C1253342A272C2D1FFDA000C0301000211
+        0311003F00DC294A500A5287A501D6F3CD3082B79C43681D54B5003ED35E0732
+        1B2B5FCA5DA08FF984FE7546B15A06753A75D2F321F31DA78B6C3085682475D7
+        90D11D3A9DD595AC071B6FAC15AFEB3EBFCEAA529CB58AD0E9D4B5B5B7970569
+        B725BA4969D596CF62F2EC791D6EF14FD55EFF000AEA39AE383F9D1AF92567F7
+        511856389E96B68FD6528FE26BB5388E3C3A5A227CD1BA9F59D479FD3BE7FEA7
+        4FF1DF1CFEB46FFBB5FE55C939A638AE97567E6950FDD5DBFC53C7FF00A9E1FF
+        00762B89C431E3FCD1147A2354F59D43F4EF9FFA9C919663EBE977883EB39AFC
+        6BD2DDFACEEEBD9DD21289EE1211F9D781784E38AEB6B6C7D55AC7E06BCCF767
+        D8E380EA23A8FA8FAFF7934F59D4387A3DFF0029AEE4FF0025A10B4B890A4282
+        927A10760D7DACEA145730DCCE15BA24975CB6DC53AF64E1DF0AB98F4D83AE7E
+        0755A2D4C25C5B945D5BAA2E2E32CC64B29EC294A57B328A52940294A500AF84
+        72AFB434051FB26FF72CE1FF00187F613569B94F72314B10E32A54C58DA5A0AE
+        14A47F496A3F08FB49EE0747554EC98FFB2EE49F0987F64544E5F9CCB66E9221
+        D9148610D2F85D7F80294E28723ADF20074ACF19A8534D9DEAD6752EBA46A460
+        B38D75DB96FCFC0B53ED666ADB8D49B320F50C86DC23D388FF0095745AF2E7DA
+        B926D5934210262FF9371276D39E1A3DDF691E954FB1F68974892522EAA13231
+        3A57B812E247882340FA1FB456817CB5C1CB2C4036B428388F6919F1FA248E47
+        D3B88FDF48CB89660F522E2D9DB4953BA82E17B4A3CBFEF635D84DAD696D0A5A
+        D412848DA944E801E754E565773BD4D722E2705B75A6CF0AE6C9D86C7A0FFE3E
+        5512EBB7EBC586D763790B69D7E4B91E53E4ECF03446F7F7FAF0F9D5BE43D6CC
+        42C1BE1F671984F0A103E27147BBCD44FEFAF7C4E5D48CEADE16DA4929CDB692
+        E5A3C65FBF2F65E27958465F1FDF79DB4CC1D4B402DA27D15CC7DA2A66DF3533
+        5A512D38C3C83C2EB2E7C483F2E447811C8D64971ED02FD2E429719F4C36B7EE
+        B6D212743CC9049FBBD2AD181662F5DA77D02EA10A96A41F64FA53C25C039949
+        0396FA91F3F9F88558B961334DDF455CC28BAB38C74F8775DAB6F03B32FE79E6
+        343F5BFC55791545CABDEED0B1C4F80DFDE7F2ABDD590F6A5DA62BDFD9A0BE5F
+        F66294A5587385294A03ED7CA52805294A033DECEE52205BB2179D0A288D214E
+        282473D049DEBFE9ACF2F314C29CE20B9ED42909790E70EB8D2B48583AF9D685
+        85C72F2B2F823E25BAB401EBED055566435DD714877261254F5B93F449691D42
+        01DA15E801D1FF002AC335982EF3ED6D2A469DE5493D9B8A7DF1CAFCAEF25B24
+        C2E3C58B6945A4B8E4D921414852B61C21B2B24781E5AD798A97EC927BEE4399
+        6F750E1698505B6B293A4F17C49DFAF3D799A92B6C55E438B5965B124C69F152
+        16CBDC3C438920A0EC7783A350D8EDE8E337BB8DA6F0D10A912C381C8E096D0A
+        735E3CC03B1F6558928CD49689982A56A9736B52DE5E94E3E3A4B57D7A63EBD4
+        68DC207403ECACB7B4B7E6DCB23876761A73852121A491A0E2D7D48F100686FB
+        B9D69F21E4468EEBEE9D36D20AD47C001B359DA2E32F2DCB999364022A61463C
+        2ECB46F5C675C6123A920F204F75595B55C3EF307446615655F1A453D5EC9F22
+        2862B093834ABAADC70CF656B04857BA385CE029D77F4DEFCEA230F0962EA9B9
+        BAB52198050E2F813C45654A08091CC75E23F206AEB9B308C7F066ED8C38A70B
+        CFA50B715D56492E289F523EFAAFB16C5DBA1D9AD4F24A66DD26B521E6CF5434
+        93A4023E6A3F2F2ACF28E24B1C97D4EEDBDD4AADBCDCA595393C7F8F3FA64B2E
+        4238FB4BB027FA2C93FF0093F2ABD551AE5FEB7B56B627B9B884FF00DAEFE62A
+        F35AA9EF2ED3E6EFB48515F22FBB14A52AC39E294A500A5294028694A028B871
+        F619C64D18F22B5FB403FB44FF008C543DCFE9B82E4EFCD6182EDAE628929E89
+        209D94EFB94093AF23EB527922D58D66D16FC52A306623D8C8291D0EB47EE093
+        E7C26AF485332984AD250EB2E241046949503F88ACEA395C3B34CEF55B9F2528
+        D671E28548A4D75AD1F7AC153C5F21190DF38A043723DBE2C5521455AE6B5292
+        40E5CB9049FB4D457688F4AB25E9ABA4669B718971FE8EFA1D471216527601F0
+        3AD688E7CAB4369A6D94043284A123F4529D0A89CBADCDDCF1C9CC2D1C4B4B4A
+        71AF25A46C7E5F3AF7283E0C675335BDDD25771928621B6339D1F3CF6EA71C92
+        E488F8A4A9E1B6DD4AA38210E6CA55C5A001D751CEA1FB3712A6B370BDCFD17A
+        6BA94A484F082840D0D0F0D923E551173BEDAEEB8742B2C39AE2E6B823B211EC
+        940920A473E5A03E75A2438ACC28AD458C80865A4042123B80A88FA73CE7444D
+        68F9ADABA528E25293DFE158FBBFB148BB65C9C7EF1728974B7B8FF13C97E2A8
+        1012470240EBD3452798DF7D79B09853EFD90B993DD5052DA4111C11A04EB438
+        7F55237CFBC9F5AD09E6197F41E69B738798E3483AFB6BA2E7708B6A80ECB96B
+        0865A4ECF89F003CCF4152E0F3993D1111BD8F92F27469E2724A2DE73D5A2E59
+        29EC0FA4F6B2F91CC4689A3E5EEA7FF7ABDD51FB3A8CFCC9372C8A5A385539C2
+        1A1FAA0ECEBCB7A1FD9ABC54D2DB3EF2AE92695554D7F08A8F7A5AFD45294AB0
+        E78A52940294A500A52940796E56F8D7484EC39AD0719706883DDE041EE23C6A
+        89F46C83065A950C2AE765D9516CFC4D0EFE9F0FA8D8F102B45A5789414B5E66
+        BB7BB9514E0D7141EE9FE3DCFAC85C7F27B5DF903E86F70BFADAA3B9C963E5DE
+        3CC54D7222AAD9060F6EBA3864C42604E07883CC0D02AF1291DFE6346A1D37EC
+        9314506B228A67C107426347640F33DFE8AD1F335E78DC7DBF13479A52B8D6D6
+        5AFC2F7EE7B3FB9698D8BD8E2CC4CB8F6C8E87D2AE24A80F84F881D054C555E4
+        67B8FB3004A44A2EA95D18420FB4DF8107A7A9E5EB50BEDB2ACC79309FE07B52
+        FF004CEF8D69F5E44FCB43CCD38E2B48EBD84799DCD5F4EE1F0C5699967C12DD
+        F713B916676DB31530D932E6EF423B277A3E0A3DDE9CCF954245B05E72B96DCE
+        CA54634241E26A0A3DD27D4777A9F7BD2AC58EE256BB080B61AF6B275CE43BCD
+        5F2EE4FCBEFA9EA70397B7E04BBAA56CB86D56BF13DFB972FB9C1969B61A434C
+        A1286D09094A52341207402B9D3BE9569CC6F2294A500A52940294A500A5782F
+        EEA58B1DC5E5A9E425B8AEA8A98570B800413B49EE5781F1ACF70EB1B5955985
+        CE364D97476CB8A6F81DB8249DA7BF92680D42959445B8DDF16ED2A063C8BE49
+        BC409891ED1B94A0E38C9215D55D411C20F7723D3BEB8B970BB65BDA3DC6C0F5
+        F655A2042E20DB31161B71EE1207C5D493BE2EFE5D077D01AD5715252B494AD2
+        149234411B0456499EC3B96070A35D6CF95DD1C597820C4B83E1E0E0D1248047
+        41AE7CBBFA8A91CC6F0D4A7F156E5CABE407EEAD2349B64A4B4942965B1EF820
+        93A2AFC680B947C52C51A799ACDB994BC4EC6C6D293E294F407D054D567D77C2
+        A45BED92A647CD72161C61B52C3926671363437EF0D0E5F3A88B2E757B73B29B
+        95E5EE176E10DE11DB7D4D8E60940E323A129E33DDAE437DF50925B1654AB52A
+        3CCE4DF69AC52B1D8506EB3313857F7AFB94DD64CB5E971AD32528F63B0A2760
+        83D35A3D399E95EEECF6E485662EDB5E7B29131B8CB52D8BB4B42D09F84FC200
+        3BD11A3E06A4ACD53BEBE560AAB8DE26E6F7F89F49C9E530C4A7BD9B16997C25
+        B01C206C2B60275CB95582C11AE2E5EE0A5D633F691EDD254B9731059001DFBE
+        0279A7968FAD01ADD294A014A52805294A03A66C56A6C37E24849532FB6A6DC0
+        0EB6950D1E7E86A9E8ECAF14427851165A478266BA07ED55DA94057F1FC2F1FC
+        7641936BB7A5B90411ED9C5A9C5E8F5D1513AF9571C8309C7F219024DCE0054A
+        000F6ED2D4DAF974D9491BD79D58A94053E176698B4494892A80E4A75076932D
+        F5BA07C89D1F98A92C930FB364CEC776EEC3AE2E305068B6F29BE1D904FC2478
+        0A9EA5014BFF0045989923DA4392E8077C2E4D748FDAAB346B3DBA2DAC5AE3C1
+        6110380A0C7081C041EA08EFDF7EFAD7BA9405317D96E24A714B6E03CCF17329
+        665BA91F67157BAC182D871FB89B85B23BC8925B2D95B9216BF74EB7C944F80A
+        B2D280A7CCECD318993E4CD7A2C9FA449714EBAA44B713B528ECF207C4D22F66
+        B8D4494CC9658981D65C4B88266BA46C1D8E455CFA55C3BE940294A500A52940
+        7FFFD9}
+      mmHeight = 12171
+      mmLeft = 212990
+      mmTop = 1588
+      mmWidth = 11113
+      BandType = 0
+    end
+    object ppImage3: TppImage
+      UserName = 'Image3'
+      MaintainAspectRatio = False
+      Stretch = True
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Picture.Data = {
+        0A544A504547496D616765610A0000FFD8FFE000104A46494600010100000100
+        010000FFDB004300090607080706090807080A0A090B0D160F0D0C0C0D1B1415
+        1016201D2222201D1F1F2428342C242631271F1F2D3D2D3135373A3A3A232B3F
+        443F384334393A37FFDB0043010A0A0A0D0C0D1A0F0F1A37251F253737373737
+        3737373737373737373737373737373737373737373737373737373737373737
+        37373737373737373737373737FFC00011080071009603012200021101031101
+        FFC4001C0001000203010101000000000000000000000708010506040302FFC4
+        004210000103030104080302090D000000000001000203040511060712213113
+        324151617181911422A142D115232436526274B1C316173553545573929394B2
+        C2F1FFC4001801010003010000000000000000000000000001020304FFC40023
+        1101000202020202020300000000000000000102031104122131133214512241
+        61FFDA000C03010002110311003F009C11110111101111011110111101111011
+        1101111013B113B101111011110111703B61BC5C6CD65A19AD5592D2C92556E3
+        9D1E3246E38E38F880AB6B758D8EF9156876BBD541AE3F876B391ED6FDCAC7DB
+        DEE928299F212E7BA261713DA480AB8F2C5FD0F42222D0111101111011110111
+        1013B113B1011110111101467B77FCDFB6FEDBFC372931467B77FCDFB6FEDBFC
+        372CF2FD2512849DD4779156BED7FD1B49FE033FE215507751DE4558ED4BA959
+        A5B47415DBAD7D4BE28E3A68DDC9CF2DEDF000127CB1DAB9F8F3111332437B74
+        BC5B6D11892E95D4F4AD3D5E9A40D2EF21CCFA2D445AFB4A4AF0C6DEE9413DAF
+        25A3DC80157B9A6B9EA2BB874AF9AB6E154F0D6E78B9C4F203B00F0E4174373D
+        9AEA6B6DB9D5D2D3432B236EFC8C826DE7B0769C638FA655BE7B4F9AC7836B07
+        4B53055C0D9E9278A789DD592278734F911C17D5560D2BA96E1A66E2CAAA091C
+        632474D4E5DF24CDEE23BFB8F30AC8D2DDA8EA2CCCBBB250DA27C1D3F48EFB2C
+        C64E7C8735AE3CB1784BD551510D2C2F9AA658E189832E924706B5A3C49E4B9E
+        935FE948E4319BDD2920F36EF387B818507EB5D5B5BAAAE4F9657BE3A263BF27
+        A6CF060EF23B5C7B4FA0E0BD969D9BEA5BADB595F053C11C52377E36CD36EBDE
+        D3C8818E19F1C2CE73DA67548DA369EED779B65D985D6CAFA6AA0065DD0CA1C5
+        BE60711EABDCAAA3DB71B15D5CD774D455F4AFC1C1DD7B1DE63FF08F053FECE7
+        551D5161E96A77457533BA3A80D180E38E0F03B011F5055F1E6EF3A9F63A1FC2
+        96FF00EDD4BFEB37EF5F565553BE174CC9E2744DCEF48D782D18E792AA6B9A37
+        8FCA39F72DB4371B9565A29F4F51472BE0E99F298206973A679C73039E00E03C
+        CF76338E4FF86D61FF0095FA6FA6E8BF0EDB77F38C7C4B31EF9C2DCC723258DB
+        244F6BD8E196B9A7208F02AA9575056DBE41157D25452BC8C86CF139848F0C85
+        D1682D6557A5EE31B5F2BDF6B91E054404E4341FB6D1D8473E1CF97710AF23CE
+        AD06D63517E58F6BD8D7B1C1CD70C823882117525C36D5B53DD34D525BE4B4C9
+        1B1D3CAF6BFA48C3F200047351E41B53D54F9E363AA69B0E7807F266F7AED36E
+        946F9B4F5155B012DA7AAC3FC039A467DC01EAA1204B482D3823883DCB8F35ED
+        5BF8942DBA8CF6EFF9BF6DFDB3F86E5B1B06D434FD6DBA27DCEAC50D606812C4
+        F63882EED2D201041F75C16D575A51EA592968AD5BEFA4A6739EE99ED2DE91E4
+        60601E38033CF9E7C38EB97256693A9251F3BA8EF22A46DB1D6BDF5162A1CFE2
+        E1B7B65C7EB3F87EE67D570345492D7D641474ED2E96A246C4C1DE5C703F7A91
+        36DF6E7535D6D554D1F897527C383E2C713FB9E3D972D77F1D8711A6AF72E9EB
+        CC373A78229A5843835B2E71F30233C3C095DBFF003CB79FEECA0F77FDEB93D0
+        B15AEA354D153DF2364945339D1B83DC5A03883BB9208FB581EAA6D9367DA3E2
+        8DD2CB698191B1A5CE73A6900681CC93BDC02D3156F35FE322BB4AF1248F7860
+        6073890D6F26E4F20A46A7BC4ACD894D0071CFC69A307F54B84847B1216DFA6D
+        920CFC917A4752BF7AA68AC35DB32AD974833F23A7AB6CEF0D6C832E186B8FCF
+        C783483DDC12B49AEE6263D08739F3524B36C777631AC65AEDE1AD18006FF01E
+        EA36FAF82B096AD13A2EE96EA6AEA5B4C2F86A230F6912C9DA3975B98E5E8AB8
+        62F3BEB3A109EAAD4136A6BB1B954D34304A636B1CD873876338273DB838F40B
+        B0D86D53A3D495D4B93B93D19791E2C7371F473974775A3D975A2BA4A1AF8208
+        EA63C6FB1BD3BF749EC25B919F05B3D18ED0925DDE74AB1A2BDB03892D64C311
+        E467AFC39EEAD298E62FB9B40809DD63E6A6BD86DAE18AC757742C06A279CC41
+        E4710C681C0799273E43B9428EEB1F35396C3EB62974BD452078E9A9EA9C5CDE
+        DDD70041F70E1E8B3E3EBB90DE6D32DB05CB465CBA5634BE9A13511388E2C733
+        8F0F3191EAAB82B21B4CB8476FD13743238074F11A78C13C5CE7F0C0F4C9F205
+        56FCAB7275DA09596D9ED53EAF44D9E590E5C299AC27BF772DFF00AA2FDE82A3
+        750E8DB44120C3C5335EE1DC5DF363EA8BAEBF584B6977B7535DEDB516FAE66F
+        D3D430B1E3B7CC7710704788500EA8D9E5F2C53C861A692BA8B24B2A29D85C71
+        FACD1C5A7E9E2AC4A2AE4C517F62A43DAE8DDBB202D70E61DC0AF65BAD371B9C
+        823B750D4D4B8FF5511701E6790F556A5CC6BBACD07CC657E80C0C058FE2C7ED
+        1A46DB35D9DC9649DB77BDEE1AE00882069DE10E78124F22EC70E1C071E7D9D7
+        6B0D394DA9ECB2DBEA1DD1BF3BF0CA064C6F1C8F88E2411DC4ADDA2DE2958AF5
+        4AAEEA1D3776D3B52E86E948F8DB9C366033149E4EE5E9CFBC2F2CD77B8CF4A2
+        967B955C94C31885F50E733FCA4E15AA7B1AF696BDA1CD3CC11905791968B6C7
+        2748CB7D235FCF79B0341F7C2C278DFA94695DF4B68BBCEA49D9F0B4CF86909F
+        9EAE66911B4787E91F01F4E6AC0D9AC34369B0C5668230FA56C658F0F19E937B
+        3BC5DE793EEB68116B8F14512AF9ADF67D71D3D552CF430CB576B277992C6D2E
+        7443B9E071E1FA5C8F81E0B95A3BB5C28637454571AAA78DDD664350E603E601
+        56B578E6B55BAA24E927A0A591E7ED3E16B8FB90B3B71E37BACE91A561B4DA6E
+        57BA9E86D949355CAE3C4B1B9033DAE7721E64A9E3675A2DBA5282496A9CC96E
+        352074AE6F558D1C98D3F527B4F905D7C5132260644C6B183935A3007A2FD9E4
+        55F1E18A4EFF00B34A92EEB1F35B5B7B2F76AA265F6DAFA9A7A7323A13530388
+        0D70C12D76390391CF81F45A97758F9A9D7626C6BF46CCD7B439AEAC90104641
+        1BAC5C98A9DADA10CDDAF774BCBD8FBAD7CF5459D4123B837C8720B7FB3DD195
+        5A9AE514D3C2E65A617874D2B860498FB0DEF27B71C878E33391D2DA7CCBD29B
+        1DB7A4CE77BE119F72C5E6F1159A363190B4B5ADE3F30635830E207B31DC3C3B
+        F00EF18353BB49A6E000D6800000720117C28EA3E2A9C485858ECB9AE6939C39
+        A4823DC145D497DD1110111101111011616501111011110111107127657A4C9C
+        FC1D47FBA7FDEBA3D3D61A0D3B4268AD71BE380C86421EF2F3BC400789F20B66
+        8AB14AC7A805E5ADB7C15858E94383D8080E69C1C11823C782F4ACF62B0F9C10
+        474D0B6185BBAC6F219CFD4F33E28BE88808888088880888830B288808888088
+        88088880888830B3D889D880888832B08880888832B08880B288830B28883088
+        880B28880B088809D8888088883FFFD9}
+      mmHeight = 10583
+      mmLeft = 235744
+      mmTop = 1588
+      mmWidth = 16140
+      BandType = 0
+    end
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4191
+      mmLeft = 119856
+      mmTop = 33867
+      mmWidth = 30607
+      BandType = 0
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial Unicode MS'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 238919
+      mmTop = 14023
+      mmWidth = 10054
+      BandType = 0
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Al'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 111654
+      mmTop = 33867
+      mmWidth = 3440
+      BandType = 0
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 3969
+      mmLeft = 1588
+      mmTop = 40217
+      mmWidth = 262467
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 5027
+    mmPrintPosition = 0
+    object ppSubReport1: TppSubReport
+      UserName = 'SubReport1'
+      ExpandAll = False
+      NewPrintJob = False
+      OutlineSettings.CreateNode = True
+      TraverseAllData = False
+      DataPipelineName = 'EXISTENCIA_VEHICULOS'
+      mmHeight = 5027
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 266701
+      BandType = 4
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      object ppChildReport1: TppChildReport
+        AutoStop = False
+        DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+        PrinterSetup.BinName = 'Default'
+        PrinterSetup.DocumentName = 'Report'
+        PrinterSetup.Orientation = poLandscape
+        PrinterSetup.PaperName = 'Letter'
+        PrinterSetup.PrinterName = 'Default'
+        PrinterSetup.mmMarginBottom = 6350
+        PrinterSetup.mmMarginLeft = 6350
+        PrinterSetup.mmMarginRight = 6350
+        PrinterSetup.mmMarginTop = 6350
+        PrinterSetup.mmPaperHeight = 215900
+        PrinterSetup.mmPaperWidth = 279401
+        PrinterSetup.PaperSize = 119
+        Template.DatabaseSettings.DataPipeline = ppItems
+        Template.DatabaseSettings.NameField = 'ItemName'
+        Template.DatabaseSettings.TemplateField = 'Template'
+        Template.SaveTo = stDatabase
+        Version = '10.07'
+        mmColumnWidth = 0
+        DataPipelineName = 'EXISTENCIA_VEHICULOS'
+        object ppDetailBand2: TppDetailBand
+          mmBottomOffset = 0
+          mmHeight = 4233
+          mmPrintPosition = 0
+          object ppDBText3: TppDBText
+            UserName = 'DBText3'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Modelo'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 10583
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+          end
+          object ppDBText4: TppDBText
+            UserName = 'DBText4'
+            AutoSize = True
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Serial'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 147373
+            mmTop = 0
+            mmWidth = 8202
+            BandType = 4
+          end
+          object ppDBText5: TppDBText
+            UserName = 'DBText5'
+            AutoSize = True
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Placa'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 128852
+            mmTop = 0
+            mmWidth = 7938
+            BandType = 4
+          end
+          object ppDBText6: TppDBText
+            UserName = 'DBText6'
+            AutoSize = True
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Color'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ParentDataPipeline = False
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 92075
+            mmTop = 0
+            mmWidth = 7673
+            BandType = 4
+          end
+          object ppDBText7: TppDBText
+            UserName = 'DBText7'
+            AutoSize = True
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Descrip'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3598
+            mmLeft = 33867
+            mmTop = 0
+            mmWidth = 16722
+            BandType = 4
+          end
+          object ppDBText8: TppDBText
+            UserName = 'DBText8'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Status'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 183092
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+          end
+          object ppDBCalc2: TppDBCalc
+            UserName = 'DBCalc2'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            ResetGroup = ppGroup1
+            TextAlignment = taRightJustified
+            Transparent = True
+            DBCalcType = dcCount
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 0
+            mmTop = 0
+            mmWidth = 7144
+            BandType = 4
+          end
+          object ppDBText11: TppDBText
+            UserName = 'DBText11'
+            AutoSize = True
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataField = 'Ubicacion'
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3598
+            mmLeft = 205052
+            mmTop = 0
+            mmWidth = 14055
+            BandType = 4
+          end
+          object ppDBText12: TppDBText
+            UserName = 'DBText12'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 8
+            Font.Style = []
+            Transparent = True
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3175
+            mmLeft = 230188
+            mmTop = 0
+            mmWidth = 17198
+            BandType = 4
+          end
+        end
+        object ppSummaryBand1: TppSummaryBand
+          mmBottomOffset = 0
+          mmHeight = 7144
+          mmPrintPosition = 0
+          object ppDBCalc1: TppDBCalc
+            UserName = 'DBCalc1'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = [fsBold]
+            Transparent = True
+            DBCalcType = dcCount
+            DataPipelineName = 'EXISTENCIA_VEHICULOS'
+            mmHeight = 3704
+            mmLeft = 122767
+            mmTop = 2910
+            mmWidth = 17198
+            BandType = 7
+          end
+          object ppLabel5: TppLabel
+            UserName = 'Label5'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            Caption = 'Total de Vehiculos en existencia:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clBlack
+            Font.Name = 'Arial'
+            Font.Size = 9
+            Font.Style = []
+            Transparent = True
+            mmHeight = 3704
+            mmLeft = 57150
+            mmTop = 2910
+            mmWidth = 46567
+            BandType = 7
+          end
+          object ppLine1: TppLine
+            UserName = 'Line1'
+            Border.BorderPositions = []
+            Border.Color = clBlack
+            Border.Style = psSolid
+            Border.Visible = False
+            Weight = 0.750000000000000000
+            mmHeight = 3969
+            mmLeft = 53711
+            mmTop = 794
+            mmWidth = 100013
+            BandType = 7
+          end
+        end
+        object ppPageStyle1: TppPageStyle
+          EndPage = 0
+          SinglePage = 0
+          StartPage = 0
+          mmBottomOffset = 0
+          mmHeight = 0
+          mmPrintPosition = 0
+        end
+        object ppGroup1: TppGroup
+          BreakName = 'Marca'
+          DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+          KeepTogether = True
+          OutlineSettings.CreateNode = True
+          UserName = 'Group1'
+          mmNewColumnThreshold = 0
+          mmNewPageThreshold = 0
+          DataPipelineName = 'EXISTENCIA_VEHICULOS'
+          object ppGroupHeaderBand1: TppGroupHeaderBand
+            mmBottomOffset = 0
+            mmHeight = 13229
+            mmPrintPosition = 0
+            object ppShape1: TppShape
+              UserName = 'Shape1'
+              Brush.Color = clSilver
+              Shape = stRoundRect
+              mmHeight = 5556
+              mmLeft = 0
+              mmTop = 0
+              mmWidth = 57415
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppDBText10: TppDBText
+              UserName = 'DBText10'
+              AutoSize = True
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              DataField = 'Marca'
+              DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 10
+              Font.Style = [fsBold]
+              Transparent = True
+              DataPipelineName = 'EXISTENCIA_VEHICULOS'
+              mmHeight = 4233
+              mmLeft = 18256
+              mmTop = 265
+              mmWidth = 10319
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel4: TppLabel
+              UserName = 'Label4'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Marca:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 10
+              Font.Style = []
+              Transparent = True
+              mmHeight = 3969
+              mmLeft = 4498
+              mmTop = 265
+              mmWidth = 10848
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel6: TppLabel
+              UserName = 'Label6'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Modelo'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 10848
+              mmTop = 9525
+              mmWidth = 10054
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel7: TppLabel
+              UserName = 'Label7'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Descripci'#243'n'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 34131
+              mmTop = 9525
+              mmWidth = 16140
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel8: TppLabel
+              UserName = 'Label8'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Color'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 92075
+              mmTop = 9525
+              mmWidth = 7408
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel9: TppLabel
+              UserName = 'Label9'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Placa'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 128852
+              mmTop = 9525
+              mmWidth = 7408
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel10: TppLabel
+              UserName = 'Label10'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Serial'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 146844
+              mmTop = 9525
+              mmWidth = 7673
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel11: TppLabel
+              UserName = 'Label11'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Status'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 183092
+              mmTop = 9525
+              mmWidth = 8731
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel12: TppLabel
+              UserName = 'Label12'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Ubicacion'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 203994
+              mmTop = 9525
+              mmWidth = 13494
+              BandType = 3
+              GroupNo = 0
+            end
+            object ppLabel13: TppLabel
+              UserName = 'Label13'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Observaci'#243'n'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 8
+              Font.Style = [fsBold]
+              Transparent = True
+              mmHeight = 3440
+              mmLeft = 230188
+              mmTop = 9525
+              mmWidth = 17198
+              BandType = 3
+              GroupNo = 0
+            end
+          end
+          object ppGroupFooterBand1: TppGroupFooterBand
+            mmBottomOffset = 0
+            mmHeight = 6615
+            mmPrintPosition = 0
+            object ppDBCalc3: TppDBCalc
+              UserName = 'DBCalc3'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = [fsBold]
+              ResetGroup = ppGroup1
+              Transparent = True
+              DBCalcType = dcCount
+              DataPipelineName = 'EXISTENCIA_VEHICULOS'
+              mmHeight = 3704
+              mmLeft = 122238
+              mmTop = 2910
+              mmWidth = 17198
+              BandType = 5
+              GroupNo = 0
+            end
+            object ppLabel3: TppLabel
+              UserName = 'Label3'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              Caption = 'Total Vehiculos en existencia:'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              Transparent = True
+              mmHeight = 3704
+              mmLeft = 56621
+              mmTop = 2910
+              mmWidth = 42333
+              BandType = 5
+              GroupNo = 0
+            end
+            object ppDBText9: TppDBText
+              UserName = 'DBText9'
+              Border.BorderPositions = []
+              Border.Color = clBlack
+              Border.Style = psSolid
+              Border.Visible = False
+              DataField = 'Marca'
+              DataPipeline = daADOQueryDataView2.EXISTENCIA_VEHICULOS
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Name = 'Arial'
+              Font.Size = 9
+              Font.Style = []
+              Transparent = True
+              DataPipelineName = 'EXISTENCIA_VEHICULOS'
+              mmHeight = 3704
+              mmLeft = 103981
+              mmTop = 2910
+              mmWidth = 17198
+              BandType = 5
+              GroupNo = 0
+            end
+          end
+        end
+        object raCodeModule1: TraCodeModule
+          ProgramStream = {00}
+        end
+      end
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 0
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_EXISTENCIA_VEHICULOS'
+      Height = 291
+      Left = 105
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 67
+      TypeColumnWidth = 52
+      Width = 460
+      AutoSearchTabOrder = 0
+      object EXISTENCIA_VEHICULOS: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'EXISTENCIA_VEHICULOS'
+        object ppField1: TppField
+          FieldAlias = 'Color'
+          FieldName = 'Color'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SAPROD_11_03'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Placa'
+          FieldName = 'Placa'
+          FieldLength = 7
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SAPROD_11_03'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Serial'
+          FieldName = 'Serial'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SAPROD_11_03'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Status'
+          FieldName = 'Status'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SAPROD_11_03'
+        end
+        object ppField5: TppField
+          FieldAlias = 'Ubicacion'
+          FieldName = 'Ubicacion'
+          FieldLength = 35
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SAPROD_11_03'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Concesionario'
+          FieldName = 'Concesionario'
+          FieldLength = 35
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField7: TppField
+          FieldAlias = 'Factura_compra'
+          FieldName = 'Factura_compra'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField8: TppField
+          FieldAlias = 'Factura_venta'
+          FieldName = 'Factura_venta'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Fecha_venta'
+          FieldName = 'Fecha_venta'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField10: TppField
+          FieldAlias = 'Kilometraje'
+          FieldName = 'Kilometraje'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField11: TppField
+          FieldAlias = 'Modelo'
+          FieldName = 'Modelo'
+          FieldLength = 25
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField12: TppField
+          FieldAlias = 'Serial_motor'
+          FieldName = 'Serial_motor'
+          FieldLength = 35
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 11
+          TableName = 'SAPROD_12_01'
+        end
+        object ppField13: TppField
+          FieldAlias = 'Cod_Deposito'
+          FieldName = 'CodUbic'
+          FieldLength = 10
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 12
+          TableName = 'SASERI'
+        end
+        object ppField14: TppField
+          FieldAlias = 'Ano'
+          FieldName = 'Ano'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'SAPROD_11_01'
+        end
+        object ppField15: TppField
+          FieldAlias = 'Cilindros'
+          FieldName = 'Cilindros'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'SAPROD_11_01'
+        end
+        object ppField16: TppField
+          FieldAlias = 'Peso'
+          FieldName = 'Peso'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 15
+          TableName = 'SAPROD_11_01'
+        end
+        object ppField17: TppField
+          FieldAlias = 'Puestos'
+          FieldName = 'Puestos'
+          FieldLength = 0
+          IsDetail = True
+          DataType = dtLongint
+          DisplayWidth = 10
+          Position = 16
+          TableName = 'SAPROD_11_01'
+        end
+        object ppField18: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 40
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'SAPROD'
+        end
+        object ppField19: TppField
+          FieldAlias = 'Descripcion2'
+          FieldName = 'Descrip2'
+          FieldLength = 40
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 18
+          TableName = 'SAPROD'
+        end
+        object ppField20: TppField
+          FieldAlias = 'Descripcion3'
+          FieldName = 'Descrip3'
+          FieldLength = 40
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 19
+          TableName = 'SAPROD'
+        end
+        object ppField21: TppField
+          FieldAlias = 'Marca'
+          FieldName = 'Marca'
+          FieldLength = 20
+          IsDetail = True
+          DisplayWidth = 10
+          Position = 20
+          TableName = 'SAPROD'
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'EXISTENCIA_VEHICULOS'
+        LinkColor = clNavy
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SAPROD_11_03.Color, SAPROD_11_03.Placa, '
+          '       SAPROD_11_03.Serial, SAPROD_11_03.Status, '
+          '       SAPROD_11_03.Ubicacion, '
+          '       SAPROD_12_01.Concesionario, '
+          '       SAPROD_12_01.Factura_compra, '
+          '       SAPROD_12_01.Factura_venta, '
+          '       SAPROD_12_01.Fecha_venta, '
+          '       SAPROD_12_01.Kilometraje, '
+          '       SAPROD_12_01.Modelo, '
+          '       SAPROD_12_01.Serial_motor, SASERI.CodUbic, '
+          '       SAPROD_11_01.Ano, SAPROD_11_01.Cilindros, '
+          '       SAPROD_11_01.Peso, SAPROD_11_01.Puestos, '
+          '       SAPROD.Descrip, SAPROD.Descrip2, '
+          '       SAPROD.Descrip3, SAPROD.Marca'
+          'FROM SAPROD_11_03 SAPROD_11_03'
+          '      LEFT OUTER JOIN SAPROD_12_01 SAPROD_12_01 ON '
+          '     (SAPROD_12_01.Serial = SAPROD_11_03.Serial)'
+          '      INNER JOIN SASERI SASERI ON '
+          '     (SASERI.NroSerial = SAPROD_12_01.Serial)'
+          '      LEFT OUTER JOIN SAPROD_11_01 SAPROD_11_01 ON '
+          '     (SAPROD_11_01.CodProd = SAPROD_12_01.Modelo)'
+          '      LEFT OUTER JOIN SAPROD SAPROD ON '
+          '     (SAPROD.CodProd = SAPROD_11_01.CodProd)'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Color'
+          DisplayWidth = 10
+          FieldAlias = 'Color'
+          FieldLength = 35
+          FieldName = 'Color'
+          SQLFieldName = 'Color'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          TableName = 'SAPROD_11_03'
+          TableSQLAlias = 'SAPROD_11_03'
+        end
+        object daField2: TdaField
+          Alias = 'Placa'
+          DisplayWidth = 10
+          FieldAlias = 'Placa'
+          FieldLength = 7
+          FieldName = 'Placa'
+          SQLFieldName = 'Placa'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          TableName = 'SAPROD_11_03'
+          TableSQLAlias = 'SAPROD_11_03'
+        end
+        object daField3: TdaField
+          Alias = 'Serial'
+          DisplayWidth = 10
+          FieldAlias = 'Serial'
+          FieldLength = 20
+          FieldName = 'Serial'
+          SQLFieldName = 'Serial'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          TableName = 'SAPROD_11_03'
+          TableSQLAlias = 'SAPROD_11_03'
+        end
+        object daField4: TdaField
+          Alias = 'Status'
+          DisplayWidth = 10
+          FieldAlias = 'Status'
+          FieldLength = 35
+          FieldName = 'Status'
+          SQLFieldName = 'Status'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          TableName = 'SAPROD_11_03'
+          TableSQLAlias = 'SAPROD_11_03'
+        end
+        object daField5: TdaField
+          Alias = 'Ubicacion'
+          DisplayWidth = 10
+          FieldAlias = 'Ubicacion'
+          FieldLength = 35
+          FieldName = 'Ubicacion'
+          SQLFieldName = 'Ubicacion'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          TableName = 'SAPROD_11_03'
+          TableSQLAlias = 'SAPROD_11_03'
+        end
+        object daField6: TdaField
+          Alias = 'Concesionario'
+          DisplayWidth = 10
+          FieldAlias = 'Concesionario'
+          FieldLength = 35
+          FieldName = 'Concesionario'
+          IsDetail = True
+          SQLFieldName = 'Concesionario'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField7: TdaField
+          Alias = 'Factura_compra'
+          DisplayWidth = 10
+          FieldAlias = 'Factura_compra'
+          FieldLength = 10
+          FieldName = 'Factura_compra'
+          IsDetail = True
+          SQLFieldName = 'Factura_compra'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField8: TdaField
+          Alias = 'Factura_venta'
+          DisplayWidth = 10
+          FieldAlias = 'Factura_venta'
+          FieldLength = 10
+          FieldName = 'Factura_venta'
+          IsDetail = True
+          SQLFieldName = 'Factura_venta'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField9: TdaField
+          Alias = 'Fecha_venta'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'Fecha_venta'
+          FieldLength = 0
+          FieldName = 'Fecha_venta'
+          IsDetail = True
+          SQLFieldName = 'Fecha_venta'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField10: TdaField
+          Alias = 'Kilometraje'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Kilometraje'
+          FieldLength = 0
+          FieldName = 'Kilometraje'
+          IsDetail = True
+          SQLFieldName = 'Kilometraje'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField11: TdaField
+          Alias = 'Modelo'
+          DisplayWidth = 10
+          FieldAlias = 'Modelo'
+          FieldLength = 25
+          FieldName = 'Modelo'
+          IsDetail = True
+          SQLFieldName = 'Modelo'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField12: TdaField
+          Alias = 'Serial_motor'
+          DisplayWidth = 10
+          FieldAlias = 'Serial_motor'
+          FieldLength = 35
+          FieldName = 'Serial_motor'
+          IsDetail = True
+          SQLFieldName = 'Serial_motor'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField13: TdaField
+          Alias = 'Cod_Deposito'
+          DisplayWidth = 10
+          FieldAlias = 'Cod_Deposito'
+          FieldLength = 10
+          FieldName = 'CodUbic'
+          IsDetail = True
+          SQLFieldName = 'CodUbic'
+          TableAlias = 'Seriales_inventario'
+          TableName = 'SASERI'
+          TableSQLAlias = 'SASERI'
+        end
+        object daField14: TdaField
+          Alias = 'Ano'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Ano'
+          FieldLength = 0
+          FieldName = 'Ano'
+          IsDetail = True
+          SQLFieldName = 'Ano'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+          TableName = 'SAPROD_11_01'
+          TableSQLAlias = 'SAPROD_11_01'
+        end
+        object daField15: TdaField
+          Alias = 'Cilindros'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Cilindros'
+          FieldLength = 0
+          FieldName = 'Cilindros'
+          IsDetail = True
+          SQLFieldName = 'Cilindros'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+          TableName = 'SAPROD_11_01'
+          TableSQLAlias = 'SAPROD_11_01'
+        end
+        object daField16: TdaField
+          Alias = 'Peso'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Peso'
+          FieldLength = 0
+          FieldName = 'Peso'
+          IsDetail = True
+          SQLFieldName = 'Peso'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+          TableName = 'SAPROD_11_01'
+          TableSQLAlias = 'SAPROD_11_01'
+        end
+        object daField17: TdaField
+          Alias = 'Puestos'
+          DataType = dtLongint
+          DisplayWidth = 10
+          FieldAlias = 'Puestos'
+          FieldLength = 0
+          FieldName = 'Puestos'
+          IsDetail = True
+          SQLFieldName = 'Puestos'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+          TableName = 'SAPROD_11_01'
+          TableSQLAlias = 'SAPROD_11_01'
+        end
+        object daField18: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 40
+          FieldName = 'Descrip'
+          IsDetail = True
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField19: TdaField
+          Alias = 'Descripcion2'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion2'
+          FieldLength = 40
+          FieldName = 'Descrip2'
+          IsDetail = True
+          SQLFieldName = 'Descrip2'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField20: TdaField
+          Alias = 'Descripcion3'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion3'
+          FieldLength = 40
+          FieldName = 'Descrip3'
+          IsDetail = True
+          SQLFieldName = 'Descrip3'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField21: TdaField
+          Alias = 'Marca'
+          DisplayWidth = 10
+          FieldAlias = 'Marca'
+          FieldLength = 20
+          FieldName = 'Marca'
+          IsDetail = True
+          SQLFieldName = 'Marca'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField22: TdaField
+          ChildType = 2
+          Alias = 'Marca'
+          DisplayWidth = 10
+          FieldAlias = 'Marca'
+          FieldLength = 10
+          FieldName = 'Marca'
+          SQLFieldName = 'Marca'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          TableSQLAlias = 'SAPROD'
+        end
+        object daField23: TdaField
+          ChildType = 2
+          Alias = 'Modelo'
+          DisplayWidth = 10
+          FieldAlias = 'Modelo'
+          FieldLength = 10
+          FieldName = 'Modelo'
+          SQLFieldName = 'Modelo'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daField24: TdaField
+          ChildType = 2
+          Alias = 'Color'
+          DisplayWidth = 10
+          FieldAlias = 'Color'
+          FieldLength = 10
+          FieldName = 'Color'
+          SQLFieldName = 'Color'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          TableSQLAlias = 'SAPROD_12_01'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          JoinType = dajtNone
+          SQLAlias = 'SAPROD_11_03'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+          TableName = 'SAPROD_11_03'
+        end
+        object daTable2: TdaTable
+          ChildType = 5
+          Alias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAPROD_12_01'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+          TableName = 'SAPROD_12_01'
+          object daTableJoin1: TdaTableJoin
+            ChildType = 6
+            object daField26: TdaField
+              ChildType = 3
+              Alias = 'Serial'
+              DisplayWidth = 10
+              FieldAlias = 'Serial'
+              FieldLength = 10
+              FieldName = 'Serial'
+              SQLFieldName = 'Serial'
+              TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+              TableName = 'SAPROD_12_01'
+              TableSQLAlias = 'SAPROD_12_01'
+            end
+            object daField25: TdaField
+              ChildType = 4
+              Alias = 'Serial'
+              DisplayWidth = 10
+              FieldAlias = 'Serial'
+              FieldLength = 10
+              FieldName = 'Serial'
+              SQLFieldName = 'Serial'
+              TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Complemento_de_Existencia'
+              TableName = 'SAPROD_11_03'
+              TableSQLAlias = 'SAPROD_11_03'
+            end
+          end
+        end
+        object daTable3: TdaTable
+          ChildType = 5
+          Alias = 'Seriales_inventario'
+          SQLAlias = 'SASERI'
+          TableAlias = 'Seriales_inventario'
+          TableName = 'SASERI'
+          object daTableJoin2: TdaTableJoin
+            ChildType = 6
+            object daField28: TdaField
+              ChildType = 3
+              Alias = 'Serial'
+              DisplayWidth = 10
+              FieldAlias = 'Serial'
+              FieldLength = 10
+              FieldName = 'NroSerial'
+              SQLFieldName = 'NroSerial'
+              TableAlias = 'Seriales_inventario'
+              TableName = 'SASERI'
+              TableSQLAlias = 'SASERI'
+            end
+            object daField27: TdaField
+              ChildType = 4
+              Alias = 'Serial'
+              DisplayWidth = 10
+              FieldAlias = 'Serial'
+              FieldLength = 10
+              FieldName = 'Serial'
+              SQLFieldName = 'Serial'
+              TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+              TableName = 'SAPROD_12_01'
+              TableSQLAlias = 'SAPROD_12_01'
+            end
+          end
+        end
+        object daTable4: TdaTable
+          ChildType = 5
+          Alias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAPROD_11_01'
+          TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+          TableName = 'SAPROD_11_01'
+          object daTableJoin3: TdaTableJoin
+            ChildType = 6
+            object daField30: TdaField
+              ChildType = 3
+              Alias = 'Cod_Producto'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Producto'
+              FieldLength = 10
+              FieldName = 'CodProd'
+              SQLFieldName = 'CodProd'
+              TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+              TableName = 'SAPROD_11_01'
+              TableSQLAlias = 'SAPROD_11_01'
+            end
+            object daField29: TdaField
+              ChildType = 4
+              Alias = 'Modelo'
+              DisplayWidth = 10
+              FieldAlias = 'Modelo'
+              FieldLength = 10
+              FieldName = 'Modelo'
+              SQLFieldName = 'Modelo'
+              TableAlias = 'DIVISION_DE_VEHICULOS:Vehiculos:Otros_datos_del_Vehiculo'
+              TableName = 'SAPROD_12_01'
+              TableSQLAlias = 'SAPROD_12_01'
+            end
+          end
+        end
+        object daTable5: TdaTable
+          ChildType = 5
+          Alias = 'Inventario'
+          JoinType = dajtLeftOuter
+          SQLAlias = 'SAPROD'
+          TableAlias = 'Inventario'
+          TableName = 'SAPROD'
+          object daTableJoin4: TdaTableJoin
+            ChildType = 6
+            object daField32: TdaField
+              ChildType = 3
+              Alias = 'Cod_Producto'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Producto'
+              FieldLength = 10
+              FieldName = 'CodProd'
+              SQLFieldName = 'CodProd'
+              TableAlias = 'Inventario'
+              TableName = 'SAPROD'
+              TableSQLAlias = 'SAPROD'
+            end
+            object daField31: TdaField
+              ChildType = 4
+              Alias = 'Cod_Producto'
+              DisplayWidth = 10
+              FieldAlias = 'Cod_Producto'
+              FieldLength = 10
+              FieldName = 'CodProd'
+              SQLFieldName = 'CodProd'
+              TableAlias = 'DIVISION_DE_VEHICULOS:Modelos:Otros_datos_del_modelo'
+              TableName = 'SAPROD_11_01'
+              TableSQLAlias = 'SAPROD_11_01'
+            end
+          end
+        end
+      end
+    end
+    object daADOQueryDataView5: TdaADOQueryDataView
+      UserName = 'Query_Datos_Empresa'
+      Height = 245
+      Left = 740
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 2
+      TypeColumnWidth = 52
+      Width = 200
+      AutoSearchTabOrder = 0
+      object Datos_Empresa: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'Datos_Empresa'
+        object ppField1: TppField
+          FieldAlias = 'Sucursal'
+          FieldName = 'CodSucu'
+          FieldLength = 5
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'SACONF'
+        end
+        object ppField2: TppField
+          FieldAlias = 'Descripcion'
+          FieldName = 'Descrip'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'SACONF'
+        end
+        object ppField3: TppField
+          FieldAlias = 'Direccion1'
+          FieldName = 'Direc1'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'SACONF'
+        end
+        object ppField4: TppField
+          FieldAlias = 'Direccion2'
+          FieldName = 'Direc2'
+          FieldLength = 80
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'SACONF'
+        end
+        object ppField5: TppField
+          FieldAlias = 'EMail'
+          FieldName = 'Email'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'SACONF'
+        end
+        object ppField6: TppField
+          FieldAlias = 'Logo'
+          FieldName = 'Imagen'
+          FieldLength = 0
+          Linkable = False
+          DataType = dtGraphic
+          DisplayWidth = 10
+          Position = 5
+          Searchable = False
+          Sortable = False
+          TableName = 'SACONF'
+        end
+        object ppField7: TppField
+          FieldAlias = 'NIT'
+          FieldName = 'NIT'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'SACONF'
+        end
+        object ppField8: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'SACONF'
+        end
+        object ppField9: TppField
+          FieldAlias = 'Telefonos'
+          FieldName = 'Telef'
+          FieldLength = 40
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'SACONF'
+        end
+      end
+      object daSQL5: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'Datos_Empresa'
+        LinkColor = clMaroon
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT SACONF.CodSucu, SACONF.Descrip, '
+          '       SACONF.Direc1, SACONF.Direc2, '
+          '       SACONF.Email, SACONF.Imagen, SACONF.NIT, '
+          '       SACONF.RIF, SACONF.Telef'
+          'FROM SACONF SACONF'
+          'WHERE ('#39'c'#39' <> '#39'c'#39' )')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'Sucursal'
+          DisplayWidth = 10
+          FieldAlias = 'Sucursal'
+          FieldLength = 5
+          FieldName = 'CodSucu'
+          SQLFieldName = 'CodSucu'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField2: TdaField
+          Alias = 'Descripcion'
+          DisplayWidth = 10
+          FieldAlias = 'Descripcion'
+          FieldLength = 80
+          FieldName = 'Descrip'
+          SQLFieldName = 'Descrip'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField3: TdaField
+          Alias = 'Direccion1'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion1'
+          FieldLength = 80
+          FieldName = 'Direc1'
+          SQLFieldName = 'Direc1'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField4: TdaField
+          Alias = 'Direccion2'
+          DisplayWidth = 10
+          FieldAlias = 'Direccion2'
+          FieldLength = 80
+          FieldName = 'Direc2'
+          SQLFieldName = 'Direc2'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField5: TdaField
+          Alias = 'EMail'
+          DisplayWidth = 10
+          FieldAlias = 'EMail'
+          FieldLength = 60
+          FieldName = 'Email'
+          SQLFieldName = 'Email'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField6: TdaField
+          Alias = 'Logo'
+          DataType = dtGraphic
+          DisplayWidth = 10
+          FieldAlias = 'Logo'
+          FieldLength = 0
+          FieldName = 'Imagen'
+          Linkable = False
+          Searchable = False
+          Sortable = False
+          SQLFieldName = 'Imagen'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField7: TdaField
+          Alias = 'NIT'
+          DisplayWidth = 10
+          FieldAlias = 'NIT'
+          FieldLength = 15
+          FieldName = 'NIT'
+          SQLFieldName = 'NIT'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField8: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 15
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daField9: TdaField
+          Alias = 'Telefonos'
+          DisplayWidth = 10
+          FieldAlias = 'Telefonos'
+          FieldLength = 40
+          FieldName = 'Telef'
+          SQLFieldName = 'Telef'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+          TableSQLAlias = 'SACONF'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'Datos_Empresa'
+          JoinType = dajtNone
+          SQLAlias = 'SACONF'
+          TableAlias = 'Datos_Empresa'
+          TableName = 'SACONF'
+        end
+      end
+    end
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

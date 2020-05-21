@@ -1,0 +1,1 @@
+SELECT * FROM SAPROD WHERE Compro<>0 AND ExUnidadCon<>0

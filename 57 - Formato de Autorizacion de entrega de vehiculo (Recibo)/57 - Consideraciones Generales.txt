@@ -1,0 +1,14 @@
+La solucion consiste en generar un documento de autorizacion de entrega de vehiculo
+al cliente por cuanto se han cumplid los extremos administrativos y legales para tal fin
+
+Sitio del proceso: Pago o abono de la factura de venta y demas gastos de ventas con los anticipos previamente registrados.
+
+1ro. Crear Operacion. 04-011 Liquidacion en cuenta por venta de vehiculo.
+2do reformular el formato y hacerlo inteligente
+3ro. Eliminar la opcion de registrar anticipos por al administrativo, obligando a registrarse por banco y 
+     quede el deposito hecho en bancos. 
+
+CONCESIONARIOS CON SOLUCION CONFIRMADA
+
+LIBERTY CARS SIEMPRE
+METROPOLIS CARS 25/01/2011

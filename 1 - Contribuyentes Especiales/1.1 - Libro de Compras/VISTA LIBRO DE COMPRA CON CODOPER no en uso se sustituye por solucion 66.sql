@@ -1,0 +1,75 @@
+ drop view dbo.VW_ADM_TAXCOMCRE
+go
+-- ULTIMA COMPILACION 28/11/2007 SE AGREGA FILTRO TIPOCOM='I' EN CLAUSULA WHERE Y SIGNO.
+-- JOSE RAVELO NOV - 2007
+CREATE VIEW dbo.VW_ADM_TAXCOMCRE 
+-- WITH ENCRYPTION
+AS
+SELECT      TOP 100 PERCENT
+            SACOMP.FechaE, 
+            SACOMP.FechaI                                                                               AS FecReal,
+            SACOMP.CodProv                                                                              AS CodProv,
+            SACOMP.ID3                                                                                  AS RIF,
+            SACOMP.codoper                                                                              AS OPERACION,
+            SACOMP.SIGNO,
+            SACOMP.NUMERON                      AS COMPRA_AFECTADA,
+            SACOMP.NOTAS4                       AS MOTIVO_DEVOLUCION,
+            SACOMP.NOTAS5                       AS NroNC,
+            SACOMP.Descrip, 
+            SACOMP.NumeroD, 
+            SACOMP.NroCtrol, 
+            ''                                                                                          AS NroDebito, 
+            SACOMP.NOTAS5                                                                                          AS NroCredito,  
+        MAX(SACOMP.Monto -(SACOMP.Descto1+SACOMP.Descto2) + SACOMP.MtoTax)*SACOMP.SIGNO                 AS MTotVta, 
+            SACOMP.TExento * SACOMP.SIGNO                                                               AS MExento, 
+            SACOMP.RetenIVA*SACOMP.SIGNO                                                                AS RetIVA,
+	SUM(CASE WHEN SATAXCOM.CodTaxs='IVA'  THEN SATAXCOM.TGravable*SACOMP.SIGNO else 0 END)          AS BIIVA,
+	SUM(CASE WHEN SATAXCOM.CodTaxs='IVA'  THEN SATAXCOM.Monto*SACOMP.SIGNO else 0 END)              AS IMPIVA,
+	SUM(CASE WHEN SATAXCOM.CodTaxs='RED'    THEN SATAXCOM.TGravable*SACOMP.SIGNO else 0 END)        AS BIRED,
+	SUM(CASE WHEN SATAXCOM.CodTaxs='RED'    THEN SATAXCOM.Monto*SACOMP.SIGNO else 0 END)            AS IMPRED,
+	SUM(CASE WHEN SATAXCOM.CodTaxs='ADI' THEN SATAXCOM.TGravable*SACOMP.SIGNO else 0 END)           AS BIADI,
+        SUM(CASE WHEN SATAXCOM.CodTaxs='ADI' THEN SATAXCOM.Monto*SACOMP.SIGNO else 0 END)               AS IMPADI,
+            SACOMP.NUMEROD                                                                              AS NRO,
+            SACOMP.TIPOCOM                                                                              AS TIPO
+FROM        dbo.SACOMP SACOMP LEFT JOIN dbo.SACOMP_01 SACOMP01 
+ON         (SACOMP.CodProv=SACOMP01.CodProv AND SACOMP.TipoCom=SACOMP01.TipoCom AND SACOMP.NumeroD=SACOMP01.NumeroD) 
+            LEFT OUTER JOIN dbo.SATAXCOM SATAXCOM 
+ON         (SACOMP.CodProv=SATAXCOM.CodProv AND SACOMP.TipoCom=SATAXCOM.TipoCom AND SACOMP.NumeroD=SATAXCOM.NumeroD)  
+WHERE      (SACOMP.TipoCom = 'H') OR SACOMP.TIPOCOM='I'
+GROUP BY    FechaE,SACOMP.FechaI, SACOMP.CodProv,ID3,Descrip,SACOMP.NumeroD,NroCtrol,TExento,RetenIVA,SACOMP.TIPOCOM,SACOMP.CODOPER,SACOMP.SIGNO,SACOMP.NOTAS3,SACOMP.NOTAS4,SACOMP.NOTAS5,SACOMP.NUMERON
+           
+UNION
+
+SELECT     TOP 100 PERCENT
+           SAACXP.FechaI, 
+           SAACxP.FechaE                                                   AS FecReal,
+           SAACXP.CodProv,                                                  
+           SAPROV.ID3                                                      AS RIF ,
+           SAACXP.CODOPER                                                  AS OPERACION,
+           '1'                                                             AS SIGNO,
+           SAPROV.Descrip, 
+           ''                                                              AS NumeroD,
+           ''                       AS COMPRA_AFECTADA,
+           ''                       AS MOTIVO_DEVOLUCION,
+           ''                       AS NroNC,
+           SAACXP.NroCtrol, 
+	  (CASE WHEN SAACXP.TipoCxP = '21' THEN SAACXP.NumeroD WHEN SAACXP.TipoCxP = '30' THEN '' END) AS NroDebito, 
+          (CASE WHEN SAACXP.TipoCxP = '21' THEN '' WHEN SAACXP.TipoCxP = '30' THEN SAACXP.NumeroD END) AS NroCredito,
+          (CASE WHEN SAACXP.TipoCxP = '21' THEN (SAACXP.Monto)*-1 WHEN SAACXP.TipoCxP = '30' THEN (SAACXP.monto) END) AS MTotVta, 
+          (CASE WHEN SAACXP.TipoCxP = '21' THEN (SAACXP.monto - (SAACXP.MtoTax + SAACXP.BaseImpo))*-1 WHEN SAACXP.TipoCxP = '30' THEN (SAACXP.monto - (SAACXP.MtoTax + SAACXP.BaseImpo)) END) AS MExento,
+          (CASE WHEN SAACXP.TipoCxP = '21' THEN (SAACXP.RetenIVA)*-1 WHEN SAACXP.TipoCxP = '30' THEN (SAACXP.RetenIVA) END) AS RetIVA, 
+	  (CASE WHEN SAACXP.TipoCxP = '21' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 11 AND 18) THEN SAACXP.BaseImpo*-1 WHEN SAACXP.TipoCxP = '30' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 11 AND 18) THEN SAACXP.BaseImpo else 0 END) AS BIIVA,
+	  (CASE WHEN SAACXP.TipoCxP = '21' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 11 AND 18) THEN SAACXP.MtoTax*-1   WHEN SAACXP.TipoCxP = '30' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 11 AND 18) THEN SAACXP.MtoTax   else 0 END) AS IMPIVA,
+	  (CASE WHEN SAACXP.TipoCxP = '21' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 1 AND 9)   THEN SAACXP.BaseImpo*-1 WHEN SAACXP.TipoCxP = '30' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 1 AND 9)   THEN SAACXP.BaseImpo else 0 END) AS BIRED,
+	  (CASE WHEN SAACXP.TipoCxP = '21' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 1 AND 9)   THEN SAACXP.MtoTax*-1   WHEN SAACXP.TipoCxP = '30' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 1 AND 9)   THEN SAACXP.MtoTax   else 0 END) AS IMPRED,
+	  (CASE WHEN SAACXP.TipoCxP = '21' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 20 AND 28) THEN SAACXP.BaseImpo*-1 WHEN SAACXP.TipoCxP = '31' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 20 AND 28) THEN SAACXP.BaseImpo else 0 END) AS BIADI,
+	  (CASE WHEN SAACXP.TipoCxP = '21' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 20 AND 28) THEN SAACXP.MtoTax*-1   WHEN SAACXP.TipoCxP = '30' AND SAACXP.BaseImpo > 0 and (round(SAACXP.MtoTax / SAACXP.BaseImpo * 100,2) BETWEEN 20 AND 28) THEN SAACXP.MtoTax   else 0 END) AS IMPADI,          
+           SAACXP.NUMEROD                                                  AS NRO,
+           SAACXP.TIPOCXP                                                  AS TIPO  
+FROM       dbo.SAACXP SAACXP INNER JOIN dbo.SAPROV SAPROV
+ON         SAACXP.CodProv=SAPROV.CodProv
+WHERE     (SAACXP.TipoCxP='21'AND SAACXP.EsReten=0) OR (SAACXP.TipoCxP= '30')
+
+
+
+

@@ -1,0 +1,61 @@
+Se requiere la estructura de tables creadas en SACLIE
+
+Este procedimiento solo sirve para casos sencillos de reclasificar la forma de pago 
+tomando en cuenta que el trigger validara el monto total del pago y que la factura sea al contado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+SACLIE_01 (Datos complementarios de cliente y nombres largos)
+ Codclie  vc  10
+ Dia_caja vc  15
+ Tipo_clie vc 15
+ Complemento_cliente vc 40
+
+SACLIE_02 (Tabla disponible para gestionar otros eventos)
+
+
+SACLIE_03 (Tabla para Desbloquear OR Cerradas)
+Multiple registros
+Usuario vc 35
+Orden   vc 15
+Motivo  vc 35
+Resultado vc 35
+
+
+SACLIE_04 (Tabla con datos de Vehiculos vinculados al cliente)
+multiples registros
+Placa vc 7
+Modelo vc 10
+Serial vc 20
+Color vc 15
+Vendido datetime
+Concesionario vc 35
+
+
+SACLIE_05 (Tabla para datos de Cambio de forma de pago de facturas al contado)
+Multiple Registro
+Usuario vc 10
+Factura vc 10
+Efectivo decimal 13,2
+Cheque decimal 13,2
+Instrumento_de_pago decimal 13,2
+Resultado vc 35
+
+
+
+
+SACLIE_06 (tabla con datos 1ra Parte de Cerificado de Origen)
+
+
+SACLIE_07 (Tabla con datos 2da parte de Certificado de Origen y libro de Garantia)
+

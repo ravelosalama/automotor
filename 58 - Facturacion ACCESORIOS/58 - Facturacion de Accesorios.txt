@@ -1,0 +1,12 @@
+La factracion de accesorio se realiza
+
+
+1ro. crear los productos idividuales de cada accesorio PREFERIBLEMENTE CON COSTOS REALES NO IMPORTA LOS PRECIOS
+2do. crear instancia de inventario accesorios que maneje compuestos
+3ro. crear los productos compuestos combos COM1 BASICO, COM2,COM3,COM4 E INDICAR LOS PRECIOS DE VENTAS
+4TO. REVISAR SI EL FORMATO DE FACTURA DEFIFINITA ES LA ULTIMA VERSIO DEL 17/03/2009
+5TO. UTILIZAR EN LA EMISION DE LA FACTURA EL COD OPER: 01-501.
+
+ojo BUSCAR SOLUCION 
+
+

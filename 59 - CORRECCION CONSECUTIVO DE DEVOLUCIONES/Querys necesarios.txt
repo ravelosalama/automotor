@@ -1,0 +1,83 @@
+CONCESIONARIOS AFECTADOS
+
+LIBERTY CARS (YA ESTA RESUELTO FALTA POR REPARAR FISICO)
+PLANET CARS
+
+
+
+
+
+
+procedimiento
+
+VERIFICAR HASTA DONDE ESTA CORRECTO EL CONSECUTIVO
+crear tabla facturacion de safact
+eliminar registros distintos a 'b'
+generar secuencia correcta de numero de devolucion creando campo con identidad con increento en 1
+sustituir notas9 con numerod original
+sustituir numerod original con nueva secuencia correcta de todas las tablas aplicando querys de abajo
+indexar el resto de las tablas involucradas por notas9 y sustitir numerod de cada tabla por el numerod de facturacion
+
+
+-- CREA NUEVA SECUENCIA CORRECTA --
+
+UPDATE    facturacion
+SET              notas10 = '000' + RIGHT(str(consecutivo), 3)
+FROM         facturacion
+WHERE     consecutivo > xxx
+
+
+-- SACA RESPALDO DEL VALOR ORIGINAL ERRADO DEL CONSECUTIVO DE DEVOLUCION --
+
+UPDATE    facturacion
+SET              notas9 = NUMEROD
+FROM         facturacion
+WHERE     consecutivo > xxx
+
+
+-- CORRIJE CONSECUTIVO DE DEVOLUCION EN TABLA SAFACT ADEMAS DE RESPALDAR NUMERO ORIGINAL EN NOTAS9
+
+UPDATE    safact
+SET              notas9 = x.notas9, numerod = x.notas10, notas10 = x.notas10
+FROM         facturacion x INNER JOIN
+                      SAFACT y ON x.TipoFac = y.TipoFac AND x.Notas9 = y.NumeroD
+
+
+UPDATE    saITEMFAC
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SAITEMFAC y ON x.TipoFac = y.TipoFac AND x.Notas9 = y.NumeroD
+
+
+UPDATE    saTAXVTA
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SATAXVTA y ON x.TipoFac = y.TipoFac AND x.Notas9 = y.NumeroD
+
+
+UPDATE    saTAXITF
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SATAXITF y ON x.TipoFac = y.TipoFac AND x.Notas9 = y.NumeroD
+
+UPDATE    saSEPRFAC
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SASEPRFAC y ON x.TipoFac = y.TipoFac AND x.Notas9 = y.NumeroD
+
+
+UPDATE    sacfac
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SAcfac y ON x.TipoFac = y.Tipotra AND x.Notas9 = y.NumeroD
+
+UPDATE    safact_01
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SAfact_01 y ON x.TipoFac = y.Tipofac AND x.Notas9 = y.NumeroD
+
+
+UPDATE    safact_02
+SET              numerod = x.notas10
+FROM         facturacion x INNER JOIN
+                      SAfact_02 y ON x.TipoFac = y.Tipofac AND x.Notas9 = y.NumeroD

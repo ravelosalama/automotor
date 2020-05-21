@@ -1,0 +1,88 @@
+INICIO DE EVALUACION: 08/10/2007.
+VERSION 8642.
+BD:PLANETCARS 863 DEL 05/10 ACTUALIZADA SATISFACTORIAMENTE A 8642.
+SERVIDOR LOCAL: CONSULTOR.
+CONFIGURADA: ESTACION NO TO WIND.
+LICENCIADA Y VERIFICADA CON FECHA DE VENCIMIENTO 20 DE OCTUBRE.
+
+0-----------0----------0---------0----------0-----------0-----------0------------0-----------0-------0
+
+1RA PRUEBA: CREACION DE PRODUCTO MODELO: SATISFACTORIO
+            SE ASIGNA IMPUESTO Y DEPOSITO.
+
+
+2DA PRUEBA: CREACION DE PRODUCTO VEHICULO: SATISFACTORIO
+            BORRAR VEHICULO IR A SAPROD_12-01 Y ELIMINAR REGISTRO PUESTOS.
+
+
+3RA PRUEBA: COMPRAS DE VEHICULOS. 
+            HAY QUE ACTIVAR MODULOS DE FUNCIONALIDAD.
+            Campo nuevo monto total de las compras.
+            Campo de verificacion de la compra. sirve para no totalizar
+            Fecha de recepcion. 
+            Fecha Factura. corregir trigger para actualizar fecha real=fecha factura
+            
+
+
+4TA PRUEBA: COMPRA DE REPUESTOS.
+
+
+5TA PRUEBA: COMPRA DE SERVICIOS.
+
+
+6TA PRUEBA: REVISION DE RETENCIONES DE IVA Y ISLR.
+
+
+7MA PRUEBA: LIBROS DE COMPRAS.
+ 
+
+0------------0----------0-------------0------------0-------------0------------0-----------0---------0
+
+
+8V0 PRUEBA: VENTAS DE VEHICULO. NORMALES.
+                                EXONERADOS.
+                                CON ICS.
+                                HAY QUE ACTIVAR MODULOS DE FUNCIONALIDAD.
+                                LAS DEVOLUCIONES VALIDAN FACTURAS YA DEVUELTAS.
+
+
+
+9NA PRUEBA: VENTA DE REPUESTOS.(MOSTRADOR).
+                               (PEDIDO) - SERVICIO - CLIENTE.
+                               (PEDIDO) - SERVICIO - GARANTIA.
+                               (PEDIDO) - SERVICIO - INTERNO - VENTA VEHICULO.
+
+10MA PRUEBA: ELIMINAR PEDIDO: SE REPONE EL COMPROMETIDO?
+
+
+11VA PRUEBA: VENTA DE SERVICIOS:
+
+0------------0----------0-------------0-------------0------------0----------0------------0----------0
+
+12VA PRUEBA: CXP, BANCOS, ANTICIPOS, PAGOS ABONOS, NOTAS DE DEBITO.(INTERNAS?)
+
+
+13VA PRUEBA: CXC, BANCOS, ANTICIPOS, PAGOS ABONOS, NOTAS DE CREDITOS (INTERNAS?).
+
+0 -----------0----------0------------0----------------0---------0-----------0---------------0-------0
+
+14VA PRUEBA: REPORTES DE CONSULTAS DE SERVICIOS.
+
+15VA PRUEBA: REPORTES CONSULTAS GENERALES.
+
+0---------0-----------0-------------0----------------0-----------0---------0-----------------0--------0
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

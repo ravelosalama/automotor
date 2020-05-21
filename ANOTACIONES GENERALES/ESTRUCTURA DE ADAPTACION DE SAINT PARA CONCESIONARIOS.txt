@@ -1,0 +1,21 @@
+
+
+
+PARA CAMBIAR UN SERIAL HAY QUE TOCAR LAS TABLAS:
+
+SASERI
+SAPROD_12_01
+SASEPRCOM
+SAFACT_01
+
+
+query para saber los pedidios realizados hacia una orden de reparacion especifica
+SELECT     *
+FROM         SAFACT_01 INNER JOIN
+                      SAFACT ON SAFACT_01.NumeroD = SAFACT.NumeroD AND SAFACT_01.TipoFac = SAFACT.TipoFac
+WHERE     (SAFACT.TipoFac = 'e') AND (SAFACT_01.Orden_de_reparacion = '002925')
+
+
+
+
+ 

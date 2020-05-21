@@ -1,0 +1,21 @@
+ACTUALIZAR EN GUAYANAUTO ACTIVA DEL DIA
+
+   TRIGGER NOTAS DE ENTREGA
+   TRIGGER DEVOLUCION DE NOTAS DE ENTREGA
+   SP compras - 0 compras de vehiculo.
+   TRIGGER DE GESION DE ORDEN DE REPARACION
+
+   
+
+Configurar roles en perfiles de super R en dev/nE
+
+    quitar Guardar y reducir pantalla de totalizacion.
+
+ELIMINAR REGISTROS DE TABLAS ADICIONALES AL ELIMINAR or 
+
+FORMATO DE ORDEN DE REPARACION.
+
+CORREGIR EN ELIMINAR COMPRA - VEHICULO.  ELIMINACION DE REGISTRO EN SAPROD_11_03.
+CORREGIR SAPROD_11_03 AL CORREGIR SERIALES.
+                              
+                                       

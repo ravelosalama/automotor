@@ -1,0 +1,1416 @@
+object ppReport1: TppReport
+  AutoStop = False
+  DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+  PassSetting = psTwoPass
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.Orientation = poLandscape
+  PrinterSetup.PaperName = 'A4'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.SaveDeviceSettings = False
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 210000
+  PrinterSetup.mmPaperWidth = 297000
+  PrinterSetup.PaperSize = 9
+  SaveAsTemplate = True
+  Template.DatabaseSettings.DataPipeline = ppItems
+  Template.DatabaseSettings.Name = '000 - ESTUDIO ESPECIAL'
+  Template.DatabaseSettings.NameField = 'ItemName'
+  Template.DatabaseSettings.TemplateField = 'Template'
+  Template.FileName = 
+    'C:\Documents and Settings\Administrador\Escritorio\Reportes\000\' +
+    '000 - ESTUDIO ESPECIAL.rtm'
+  Template.Format = ftASCII
+  AllowPrintToArchive = True
+  AllowPrintToFile = True
+  DeviceType = 'Screen'
+  EmailSettings.ReportFormat = 'PDF'
+  OutlineSettings.CreateNode = True
+  OutlineSettings.CreatePageNodes = True
+  OutlineSettings.Enabled = True
+  OutlineSettings.Visible = True
+  PDFSettings.EmbedFontOptions = []
+  PreviewFormSettings.WindowState = wsMaximized
+  ShowAutoSearchDialog = True
+  TextSearchSettings.DefaultString = '<FindText>'
+  TextSearchSettings.Enabled = True
+  TextSearchSettings.Visible = True
+  Left = 176
+  Top = 88
+  Version = '11.06'
+  mmColumnWidth = 0
+  DataPipelineName = 'ESTUDIO_ESPECIAL'
+  object ppHeaderBand1: TppHeaderBand
+    mmBottomOffset = 0
+    mmHeight = 28046
+    mmPrintPosition = 0
+    object ppSystemVariable1: TppSystemVariable
+      UserName = 'SystemVariable1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtDateTime
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      mmHeight = 2963
+      mmLeft = 127794
+      mmTop = 10583
+      mmWidth = 28956
+      BandType = 0
+    end
+    object ppSystemVariable2: TppSystemVariable
+      UserName = 'SystemVariable2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      VarType = vtPageSet
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      mmHeight = 2963
+      mmLeft = 263261
+      mmTop = 1852
+      mmWidth = 6858
+      BandType = 0
+    end
+    object ppLabel2: TppLabel
+      UserName = 'Label2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'ESTUDIO ESPECIAL'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 128323
+      mmTop = 6085
+      mmWidth = 24077
+      BandType = 0
+    end
+    object ppLabel1: TppLabel
+      UserName = 'Label1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'LIBERTY CARS, C.A.'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 12
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 5080
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 42249
+      BandType = 0
+    end
+    object ppLabel3: TppLabel
+      UserName = 'Label3'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Fecha Venta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      WordWrap = True
+      mmHeight = 7408
+      mmLeft = 7144
+      mmTop = 16669
+      mmWidth = 9790
+      BandType = 0
+    end
+    object ppLabel4: TppLabel
+      UserName = 'Label4'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Venta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 23813
+      mmTop = 21167
+      mmWidth = 7144
+      BandType = 0
+    end
+    object ppLabel5: TppLabel
+      UserName = 'Label5'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Total Venta'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      WordWrap = True
+      mmHeight = 6085
+      mmLeft = 37306
+      mmTop = 17992
+      mmWidth = 9525
+      BandType = 0
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'RIF/CI'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 54240
+      mmTop = 21167
+      mmWidth = 8731
+      BandType = 0
+    end
+    object ppLabel7: TppLabel
+      UserName = 'Label7'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Cliente'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 70379
+      mmTop = 21167
+      mmWidth = 8731
+      BandType = 0
+    end
+    object ppLabel8: TppLabel
+      UserName = 'Label8'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Fecha Compra'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      WordWrap = True
+      mmHeight = 7408
+      mmLeft = 128323
+      mmTop = 17992
+      mmWidth = 10319
+      BandType = 0
+    end
+    object ppLabel9: TppLabel
+      UserName = 'Label9'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Compra'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 146050
+      mmTop = 21167
+      mmWidth = 9525
+      BandType = 0
+    end
+    object ppLabel10: TppLabel
+      UserName = 'Label10'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Total Compra'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      WordWrap = True
+      mmHeight = 7673
+      mmLeft = 162719
+      mmTop = 17992
+      mmWidth = 10848
+      BandType = 0
+    end
+    object ppLabel11: TppLabel
+      UserName = 'Label11'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Modelo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 180446
+      mmTop = 21167
+      mmWidth = 8996
+      BandType = 0
+    end
+    object ppLabel12: TppLabel
+      UserName = 'Label12'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Placa'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 197380
+      mmTop = 21167
+      mmWidth = 6615
+      BandType = 0
+    end
+    object ppLabel13: TppLabel
+      UserName = 'Label13'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'PVS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      Visible = False
+      mmHeight = 2910
+      mmLeft = 216430
+      mmTop = 21167
+      mmWidth = 4763
+      BandType = 0
+    end
+    object ppLabel14: TppLabel
+      UserName = 'Label14'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Diferencia Cobrada'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      Visible = False
+      WordWrap = True
+      mmHeight = 6085
+      mmLeft = 227278
+      mmTop = 17992
+      mmWidth = 14023
+      BandType = 0
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Weight = 0.750000000000000000
+      mmHeight = 3704
+      mmLeft = 0
+      mmTop = 25929
+      mmWidth = 283105
+      BandType = 0
+    end
+    object ppLabel15: TppLabel
+      UserName = 'Label15'
+      HyperlinkColor = clBlue
+      AutoSize = False
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = '% Utilidad'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taRightJustified
+      Transparent = True
+      WordWrap = True
+      mmHeight = 8202
+      mmLeft = 239978
+      mmTop = 16669
+      mmWidth = 14023
+      BandType = 0
+    end
+    object ppLabel16: TppLabel
+      UserName = 'Label16'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = '% contra PVS'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      Visible = False
+      WordWrap = True
+      mmHeight = 9260
+      mmLeft = 257440
+      mmTop = 16669
+      mmWidth = 11642
+      BandType = 0
+    end
+    object ppLabel17: TppLabel
+      UserName = 'Label17'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      Caption = 'Dif. %'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      TextAlignment = taCentered
+      Transparent = True
+      Visible = False
+      mmHeight = 2910
+      mmLeft = 273051
+      mmTop = 17992
+      mmWidth = 7938
+      BandType = 0
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 3440
+    mmPrintPosition = 0
+    object ppDBText1: TppDBText
+      UserName = 'DBText1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'VENTA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 21960
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'RIF'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 48948
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'CLIENTE'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2963
+      mmLeft = 69056
+      mmTop = 0
+      mmWidth = 56356
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'MODELO'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 179123
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText5: TppDBText
+      UserName = 'DBText5'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'TOTAL_VENTA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      DisplayFormat = '#,0.00;(#,0.00)'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 32808
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText6: TppDBText
+      UserName = 'DBText6'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'FECHA_VENTA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      DisplayFormat = 'dd/mm/yyyy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 7144
+      mmTop = 0
+      mmWidth = 14552
+      BandType = 4
+    end
+    object ppDBText7: TppDBText
+      UserName = 'DBText7'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'FECHA_COMPRA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      DisplayFormat = 'DD/MM/yyyy'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 128323
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText8: TppDBText
+      UserName = 'DBText8'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'COMPRA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 146050
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText9: TppDBText
+      UserName = 'DBText9'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'TOTAL_COMPRA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 159279
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText10: TppDBText
+      UserName = 'DBText10'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'PLACA'
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      Transparent = True
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 196321
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText11: TppDBText
+      UserName = 'DBText11'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataField = 'PRECIO_SUGERIDO'
+      DataPipeline = daADOQueryDataView2.LISTADO_SUGERIDO
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      ParentDataPipeline = False
+      TextAlignment = taRightJustified
+      Transparent = True
+      Visible = False
+      DataPipelineName = 'LISTADO_SUGERIDO'
+      mmHeight = 2910
+      mmLeft = 208757
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppVariable1: TppVariable
+      UserName = 'Variable1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      BlankWhenZero = False
+      CalcOrder = 0
+      DataType = dtExtended
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      Visible = False
+      mmHeight = 2910
+      mmLeft = 231246
+      mmTop = 0
+      mmWidth = 10054
+      BandType = 4
+    end
+    object ppVariable2: TppVariable
+      UserName = 'Variable2'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      BlankWhenZero = False
+      CalcOrder = 1
+      DataType = dtExtended
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      mmHeight = 2910
+      mmLeft = 243946
+      mmTop = 0
+      mmWidth = 10054
+      BandType = 4
+    end
+    object ppVariable3: TppVariable
+      UserName = 'Variable3'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      BlankWhenZero = False
+      CalcOrder = 2
+      DataType = dtExtended
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      Visible = False
+      mmHeight = 2910
+      mmLeft = 257440
+      mmTop = 0
+      mmWidth = 10054
+      BandType = 4
+    end
+    object ppVariable4: TppVariable
+      UserName = 'Variable4'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      BlankWhenZero = False
+      CalcOrder = 3
+      DataType = dtExtended
+      DisplayFormat = '#,0.00;-#,0.00'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = []
+      TextAlignment = taRightJustified
+      Transparent = True
+      Visible = False
+      mmHeight = 2910
+      mmLeft = 273051
+      mmTop = 0
+      mmWidth = 10054
+      BandType = 4
+    end
+    object ppDBCalc1: TppDBCalc
+      UserName = 'DBCalc1'
+      HyperlinkColor = clBlue
+      Border.BorderPositions = []
+      Border.Color = clBlack
+      Border.Style = psSolid
+      Border.Visible = False
+      DataPipeline = daADOQueryDataView1.ESTUDIO_ESPECIAL
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Tahoma'
+      Font.Size = 7
+      Font.Style = [fsBold]
+      Transparent = True
+      DBCalcType = dcCount
+      DataPipelineName = 'ESTUDIO_ESPECIAL'
+      mmHeight = 2910
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 17198
+      BandType = 4
+    end
+  end
+  object ppFooterBand1: TppFooterBand
+    mmBottomOffset = 0
+    mmHeight = 13229
+    mmPrintPosition = 0
+  end
+  object daDataModule1: TdaDataModule
+    object daADOQueryDataView1: TdaADOQueryDataView
+      UserName = 'Query_ESTUDIO_ESPECIAL'
+      Height = 277
+      Left = 10
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 10
+      TypeColumnWidth = 52
+      Width = 224
+      AutoSearchTabOrder = 0
+      object ESTUDIO_ESPECIAL: TppChildDBPipeline
+        AutoCreateFields = False
+        UserName = 'ESTUDIO_ESPECIAL'
+        object ppField1: TppField
+          FieldAlias = 'CLIENTE'
+          FieldName = 'CLIENTE'
+          FieldLength = 60
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField2: TppField
+          FieldAlias = 'COMPRA'
+          FieldName = 'COMPRA'
+          FieldLength = 20
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField3: TppField
+          FieldAlias = 'FECHA_COMPRA'
+          FieldName = 'FECHA_COMPRA'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField4: TppField
+          FieldAlias = 'FECHA_VENTA'
+          FieldName = 'FECHA_VENTA'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField5: TppField
+          FieldAlias = 'MESANO'
+          FieldName = 'MESANO'
+          FieldLength = 7
+          DisplayWidth = 10
+          Position = 4
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField6: TppField
+          FieldAlias = 'MODELO'
+          FieldName = 'MODELO'
+          FieldLength = 25
+          DisplayWidth = 10
+          Position = 5
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField7: TppField
+          FieldAlias = 'PLACA'
+          FieldName = 'PLACA'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField8: TppField
+          FieldAlias = 'RIF'
+          FieldName = 'RIF'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 7
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField9: TppField
+          FieldAlias = 'TOTAL_COMPRA'
+          FieldName = 'TOTAL_COMPRA'
+          FieldLength = 6
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 8
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField10: TppField
+          FieldAlias = 'TOTAL_VENTA'
+          FieldName = 'TOTAL_VENTA'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 9
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+        object ppField11: TppField
+          FieldAlias = 'VENTA'
+          FieldName = 'VENTA'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+      end
+      object daSQL1: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'ESTUDIO_ESPECIAL'
+        LinkColor = clMaroon
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SQLText.Strings = (
+          'SELECT ESTUDIO_ESPECIAL.CLIENTE, '
+          '       ESTUDIO_ESPECIAL.COMPRA, '
+          '       ESTUDIO_ESPECIAL.FECHA_COMPRA, '
+          '       ESTUDIO_ESPECIAL.FECHA_VENTA, '
+          '       ESTUDIO_ESPECIAL.MESANO, '
+          '       ESTUDIO_ESPECIAL.MODELO, '
+          '       ESTUDIO_ESPECIAL.PLACA, '
+          '       ESTUDIO_ESPECIAL.RIF, '
+          '       ESTUDIO_ESPECIAL.TOTAL_COMPRA, '
+          '       ESTUDIO_ESPECIAL.TOTAL_VENTA, '
+          '       ESTUDIO_ESPECIAL.VENTA'
+          'FROM ESTUDIO_ESPECIAL ESTUDIO_ESPECIAL'
+          'WHERE '
+          
+            '      ( ESTUDIO_ESPECIAL.FECHA_VENTA BETWEEN CONVERT(DATETIME,'#39'2' +
+            '008-01-01'#39',120) AND CONVERT(DATETIME,'#39'2008-12-31'#39',120) )'
+          'ORDER BY ESTUDIO_ESPECIAL.FECHA_VENTA, '
+          '         ESTUDIO_ESPECIAL.VENTA')
+        SQLType = sqSQL2
+        object daCriteria1: TdaCriteria
+          ChildType = 7
+          Level = 0
+          Operator = dacoBetween
+          Value = '01/01/2008,31/12/2008'
+          object TdaField
+            Alias = 'FECHA_VENTA'
+            AutoSearch = True
+            DataType = dtDateTime
+            DisplayWidth = 10
+            FieldAlias = 'FECHA_VENTA'
+            FieldLength = 10
+            FieldName = 'FECHA_VENTA'
+            SQLFieldName = 'FECHA_VENTA'
+            TableAlias = 'ESTUDIO_ESPECIAL'
+            TableName = 'ESTUDIO_ESPECIAL'
+            TableSQLAlias = 'ESTUDIO_ESPECIAL'
+          end
+          object TdaNumericValue
+            Value = 39448.000000000000000000
+          end
+          object TdaNumericValue
+            Value = 39813.000000000000000000
+          end
+        end
+        object daField1: TdaField
+          Alias = 'CLIENTE'
+          DisplayWidth = 10
+          FieldAlias = 'CLIENTE'
+          FieldLength = 60
+          FieldName = 'CLIENTE'
+          SQLFieldName = 'CLIENTE'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField2: TdaField
+          Alias = 'COMPRA'
+          DisplayWidth = 10
+          FieldAlias = 'COMPRA'
+          FieldLength = 20
+          FieldName = 'COMPRA'
+          SQLFieldName = 'COMPRA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField3: TdaField
+          Alias = 'FECHA_COMPRA'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA_COMPRA'
+          FieldLength = 0
+          FieldName = 'FECHA_COMPRA'
+          SQLFieldName = 'FECHA_COMPRA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField4: TdaField
+          Alias = 'FECHA_VENTA'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA_VENTA'
+          FieldLength = 0
+          FieldName = 'FECHA_VENTA'
+          SQLFieldName = 'FECHA_VENTA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField5: TdaField
+          Alias = 'MESANO'
+          DisplayWidth = 10
+          FieldAlias = 'MESANO'
+          FieldLength = 7
+          FieldName = 'MESANO'
+          SQLFieldName = 'MESANO'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField6: TdaField
+          Alias = 'MODELO'
+          DisplayWidth = 10
+          FieldAlias = 'MODELO'
+          FieldLength = 25
+          FieldName = 'MODELO'
+          SQLFieldName = 'MODELO'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField7: TdaField
+          Alias = 'PLACA'
+          DisplayWidth = 10
+          FieldAlias = 'PLACA'
+          FieldLength = 15
+          FieldName = 'PLACA'
+          SQLFieldName = 'PLACA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField8: TdaField
+          Alias = 'RIF'
+          DisplayWidth = 10
+          FieldAlias = 'RIF'
+          FieldLength = 15
+          FieldName = 'RIF'
+          SQLFieldName = 'RIF'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField9: TdaField
+          Alias = 'TOTAL_COMPRA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TOTAL_COMPRA'
+          FieldLength = 6
+          FieldName = 'TOTAL_COMPRA'
+          SQLFieldName = 'TOTAL_COMPRA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField10: TdaField
+          Alias = 'TOTAL_VENTA'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'TOTAL_VENTA'
+          FieldLength = 3
+          FieldName = 'TOTAL_VENTA'
+          SQLFieldName = 'TOTAL_VENTA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField11: TdaField
+          Alias = 'VENTA'
+          DisplayWidth = 10
+          FieldAlias = 'VENTA'
+          FieldLength = 10
+          FieldName = 'VENTA'
+          SQLFieldName = 'VENTA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField12: TdaField
+          ChildType = 2
+          Alias = 'FECHA_VENTA'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA_VENTA'
+          FieldLength = 10
+          FieldName = 'FECHA_VENTA'
+          SQLFieldName = 'FECHA_VENTA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daField13: TdaField
+          ChildType = 2
+          Alias = 'VENTA'
+          DisplayWidth = 10
+          FieldAlias = 'VENTA'
+          FieldLength = 10
+          FieldName = 'VENTA'
+          SQLFieldName = 'VENTA'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+          TableSQLAlias = 'ESTUDIO_ESPECIAL'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'ESTUDIO_ESPECIAL'
+          JoinType = dajtNone
+          SQLAlias = 'ESTUDIO_ESPECIAL'
+          TableAlias = 'ESTUDIO_ESPECIAL'
+          TableName = 'ESTUDIO_ESPECIAL'
+        end
+      end
+    end
+    object daADOQueryDataView2: TdaADOQueryDataView
+      UserName = 'Query_LISTADO_SUGERIDO'
+      Height = 158
+      Left = 524
+      NameColumnWidth = 105
+      SizeColumnWidth = 35
+      SortMode = 0
+      Top = 12
+      TypeColumnWidth = 52
+      Width = 326
+      AutoSearchTabOrder = 0
+      MasterDataViewUserName = 'Query_ESTUDIO_ESPECIAL'
+      object LISTADO_SUGERIDO: TppChildDBPipeline
+        AutoCreateFields = False
+        SkipWhenNoRecords = False
+        UserName = 'LISTADO_SUGERIDO'
+        MasterDataPipelineName = 'ESTUDIO_ESPECIAL'
+        object ppField1: TppField
+          FieldAlias = 'FECHA_LISTA'
+          FieldName = 'FECHA_LISTA'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'LISTADO_SUGERIDO'
+        end
+        object ppField2: TppField
+          FieldAlias = 'MESANO'
+          FieldName = 'MESANO'
+          FieldLength = 7
+          DisplayWidth = 10
+          Position = 1
+          TableName = 'LISTADO_SUGERIDO'
+        end
+        object ppField3: TppField
+          FieldAlias = 'MODELO'
+          FieldName = 'MODELO'
+          FieldLength = 15
+          DisplayWidth = 10
+          Position = 2
+          TableName = 'LISTADO_SUGERIDO'
+        end
+        object ppField4: TppField
+          FieldAlias = 'PRECIO_SUGERIDO'
+          FieldName = 'PRECIO_SUGERIDO'
+          FieldLength = 3
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 3
+          TableName = 'LISTADO_SUGERIDO'
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'FECHA_VENTA'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'FECHA_VENTA'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'VENTA'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'VENTA'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'MESANO'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'MESANO'
+          DetailSortOrder = soAscending
+        end
+        object TppMasterFieldLink
+          MasterFieldName = 'MODELO'
+          GuidCollationType = gcMSSQLServer
+          DetailFieldName = 'MODELO'
+          DetailSortOrder = soAscending
+        end
+      end
+      object daSQL2: TdaSQL
+        GuidCollationType = gcMSSQLServer
+        DatabaseName = 'SrvConnection'
+        DatabaseType = dtMSSQLServer
+        DataPipelineName = 'LISTADO_SUGERIDO'
+        LinkColor = clNavy
+        LinkType = ltMagicSQL
+        MaxSQLFieldAliasLength = 25
+        SkipWhenNoRecords = False
+        SQLText.Strings = (
+          'SELECT LISTADO_SUGERIDO.FECHA_LISTA, '
+          '       LISTADO_SUGERIDO.MESANO, '
+          '       LISTADO_SUGERIDO.MODELO, '
+          '       LISTADO_SUGERIDO.PRECIO_SUGERIDO'
+          'FROM LISTADO_SUGERIDO LISTADO_SUGERIDO')
+        SQLType = sqSQL2
+        object daField1: TdaField
+          Alias = 'FECHA_LISTA'
+          DataType = dtDateTime
+          DisplayWidth = 10
+          FieldAlias = 'FECHA_LISTA'
+          FieldLength = 0
+          FieldName = 'FECHA_LISTA'
+          SQLFieldName = 'FECHA_LISTA'
+          TableAlias = 'LISTADO_SUGERIDO'
+          TableName = 'LISTADO_SUGERIDO'
+          TableSQLAlias = 'LISTADO_SUGERIDO'
+        end
+        object daField2: TdaField
+          Alias = 'MESANO'
+          DisplayWidth = 10
+          FieldAlias = 'MESANO'
+          FieldLength = 7
+          FieldName = 'MESANO'
+          SQLFieldName = 'MESANO'
+          TableAlias = 'LISTADO_SUGERIDO'
+          TableName = 'LISTADO_SUGERIDO'
+          TableSQLAlias = 'LISTADO_SUGERIDO'
+        end
+        object daField3: TdaField
+          Alias = 'MODELO'
+          DisplayWidth = 10
+          FieldAlias = 'MODELO'
+          FieldLength = 15
+          FieldName = 'MODELO'
+          SQLFieldName = 'MODELO'
+          TableAlias = 'LISTADO_SUGERIDO'
+          TableName = 'LISTADO_SUGERIDO'
+          TableSQLAlias = 'LISTADO_SUGERIDO'
+        end
+        object daField4: TdaField
+          Alias = 'PRECIO_SUGERIDO'
+          DataType = dtDouble
+          DisplayWidth = 10
+          FieldAlias = 'PRECIO_SUGERIDO'
+          FieldLength = 3
+          FieldName = 'PRECIO_SUGERIDO'
+          SQLFieldName = 'PRECIO_SUGERIDO'
+          TableAlias = 'LISTADO_SUGERIDO'
+          TableName = 'LISTADO_SUGERIDO'
+          TableSQLAlias = 'LISTADO_SUGERIDO'
+        end
+        object daTable1: TdaTable
+          ChildType = 5
+          Alias = 'LISTADO_SUGERIDO'
+          JoinType = dajtNone
+          SQLAlias = 'LISTADO_SUGERIDO'
+          TableAlias = 'LISTADO_SUGERIDO'
+          TableName = 'LISTADO_SUGERIDO'
+        end
+        object daSQLLink1: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'MESANO'
+            DisplayWidth = 10
+            FieldAlias = 'MESANO'
+            FieldLength = 7
+            FieldName = 'MESANO'
+            SQLFieldName = 'MESANO'
+            TableAlias = 'ESTUDIO_ESPECIAL'
+            TableName = 'ESTUDIO_ESPECIAL'
+            TableSQLAlias = 'ESTUDIO_ESPECIAL'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'MESANO'
+            DisplayWidth = 10
+            FieldAlias = 'MESANO'
+            FieldLength = 7
+            FieldName = 'MESANO'
+            SQLFieldName = 'MESANO'
+            TableAlias = 'LISTADO_SUGERIDO'
+            TableName = 'LISTADO_SUGERIDO'
+            TableSQLAlias = 'LISTADO_SUGERIDO'
+          end
+        end
+        object daSQLLink2: TdaSQLLink
+          ChildType = 9
+          object daField1: TdaField
+            ChildType = 10
+            Alias = 'MODELO'
+            DisplayWidth = 10
+            FieldAlias = 'MODELO'
+            FieldLength = 25
+            FieldName = 'MODELO'
+            SQLFieldName = 'MODELO'
+            TableAlias = 'ESTUDIO_ESPECIAL'
+            TableName = 'ESTUDIO_ESPECIAL'
+            TableSQLAlias = 'ESTUDIO_ESPECIAL'
+          end
+          object daField2: TdaField
+            ChildType = 11
+            Alias = 'MODELO'
+            DisplayWidth = 10
+            FieldAlias = 'MODELO'
+            FieldLength = 15
+            FieldName = 'MODELO'
+            SQLFieldName = 'MODELO'
+            TableAlias = 'LISTADO_SUGERIDO'
+            TableName = 'LISTADO_SUGERIDO'
+            TableSQLAlias = 'LISTADO_SUGERIDO'
+          end
+        end
+      end
+    end
+  end
+  object raCodeModule1: TraCodeModule
+    ProgramStream = {
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060F
+      5661726961626C65314F6E43616C630B50726F6772616D54797065070B747450
+      726F63656475726506536F75726365069370726F636564757265205661726961
+      626C65314F6E43616C63287661722056616C75653A2056617269616E74293B0D
+      0A626567696E0D0A0D0A202056616C7565203A3D204553545544494F5F455350
+      454349414C5B27544F54414C5F56454E5441275D2D20204C49535441444F5F53
+      5547455249444F5B2750524543494F5F535547455249444F275D0D0A0D0A656E
+      643B0D0A0D436F6D706F6E656E744E616D6506095661726961626C6531094576
+      656E744E616D6506064F6E43616C63074576656E74494402210001060F547261
+      4576656E7448616E646C65720B50726F6772616D4E616D65060F566172696162
+      6C65324F6E43616C630B50726F6772616D54797065070B747450726F63656475
+      726506536F75726365069670726F636564757265205661726961626C65324F6E
+      43616C63287661722056616C75653A2056617269616E74293B0D0A626567696E
+      0D0A0D0A202056616C7565203A3D204553545544494F5F455350454349414C5B
+      27544F54414C5F56454E5441275D2A3130302F4553545544494F5F4553504543
+      49414C5B27544F54414C5F434F4D505241275D2D3130300D0A0D0A656E643B0D
+      0A0D436F6D706F6E656E744E616D6506095661726961626C6532094576656E74
+      4E616D6506064F6E43616C63074576656E74494402210001060F547261457665
+      6E7448616E646C65720B50726F6772616D4E616D65060F5661726961626C6533
+      4F6E43616C630B50726F6772616D54797065070B747450726F63656475726506
+      536F75726365069B70726F636564757265205661726961626C65334F6E43616C
+      63287661722056616C75653A2056617269616E74293B0D0A626567696E0D0A0D
+      0A0D0A202056616C7565203A3D4C49535441444F5F535547455249444F5B2750
+      524543494F5F535547455249444F275D2A3130302F4553545544494F5F455350
+      454349414C5B27544F54414C5F434F4D505241275D2D3130300D0A0D0A656E64
+      3B0D0A0D436F6D706F6E656E744E616D6506095661726961626C653309457665
+      6E744E616D6506064F6E43616C63074576656E74494402210001060F54726145
+      76656E7448616E646C65720B50726F6772616D4E616D65060F5661726961626C
+      65344F6E43616C630B50726F6772616D54797065070B747450726F6365647572
+      6506536F75726365066F70726F636564757265205661726961626C65344F6E43
+      616C63287661722056616C75653A2056617269616E74293B0D0A626567696E0D
+      0A0D0A202056616C7565203A3D205661726961626C65322E56616C7565202D20
+      5661726961626C65332E56616C75650D0A0D0A656E643B0D0A0D436F6D706F6E
+      656E744E616D6506095661726961626C6534094576656E744E616D6506064F6E
+      43616C63074576656E74494402210000}
+  end
+  object ppParameterList1: TppParameterList
+  end
+end

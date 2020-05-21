@@ -1,0 +1,21 @@
+-- ESTE QUERY ACTUALIZA SAPROD.DESCRIP3 Y SAEXIS.PUESTOI DESDE DESCRIP3 EN SAITEMOPI 
+-- ELABORADO EN 05-2012 POR: JOSE RAVELO.
+
+
+
+
+UPDATE    SAEXIS
+SET              PUESTOI = x.Descrip3
+FROM         SAITEMOPI AS x INNER JOIN
+                      SAEXIS Y ON x.CodItem = Y.CodProd
+WHERE     (x.NumeroD = '000189') AND (x.TipoOpI = 'q')
+
+
+
+UPDATE    SAPROD
+SET              Descrip3 = x.Descrip3
+FROM         SAITEMOPI AS x INNER JOIN
+                      SAPROD ON x.CodItem = SAPROD.CodProd
+WHERE     (x.NumeroD = '000189') AND (x.TipoOpI = 'q')
+
+ 

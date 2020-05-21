@@ -1,0 +1,20 @@
+SELECT     *
+FROM         SAACXP INNER JOIN
+                      SAPAGCXP ON SAACXP.NroUnico = SAPAGCXP.NroPpal
+WHERE     (SAACXP.TipoCxP = '81')
+
+
+Este query enlaza cxp con pagos de tal manera que los resultados arrojan todos los datos
+de la transaacion: retenciones en donde; saacxp.numerod= (nro comprobante) y 
+sapagcxp.numerod es la (factura afectada).
+
+sin la condicional este query muestra todos los registros que liquida la cxp es decir
+81:ret IVA, 41: Pago, 21:Ret.ISLR
+
+
+QUERY 2.
+
+SELECT     *
+FROM         SAACXP INNER JOIN
+                      SAPAGCXP ON SAACXP.NumeroD = SAPAGCXP.CodRete
+WHERE     (SAPAGCXP.CodRete IS NOT NULL) AND (SAPAGCXP.TipoCxP = '10') AND (SAACXP.TipoCxP = '81')

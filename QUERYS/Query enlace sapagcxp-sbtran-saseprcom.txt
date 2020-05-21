@@ -1,0 +1,9 @@
+SELECT     x.NroPpal, x.NroUnico, x.NroRegi, x.Monto, x.NumeroD, x.FechaE, z.NroSerial
+FROM         SAPAGCXP x LEFT OUTER JOIN
+                      SBTRAN y ON x.NroPpal = y.NroPpal LEFT OUTER JOIN
+                      SASEPRCOM z ON x.NumeroD = z.NumeroD
+WHERE     (x.NroPpal = 8558)
+
+
+
+-- precursor de vista para reporte de recibo de pago - banco- unidades -fact.comp.

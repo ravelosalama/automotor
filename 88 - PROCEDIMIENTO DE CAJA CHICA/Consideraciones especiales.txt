@@ -1,0 +1,55 @@
+El: 31/10/2014 se establece como procedimiento definitivo en MOA y Liberty el siguiente procedimiento:
+
+
+se crea usuario dentro del grupo administración con privilegios especiales solo para registrar compras de caja chica
+que permita registrar al proveedor real la factura de compra ya cancelada en efectivo y pueda desglosar a otras cuentas x pagar (Caja Chca xxx) 
+a que corresponda.
+
+Concesionarios
+usuario: cajachica     password: cc001
+
+Moa: es usuarios directo por cuanto no tenemos grupos creados
+
+
+De esta manera la compra queda cancelada al proveedor y la cxp se crea en el proveedor (caja chica xxx) acumulándose para una  reposición la cual se realizara por el modulo 
+de banco.
+
+Por Bancos/ cxp / (caja chica xxx) / pagos o abonos/ se seleccionaran los cargos registrados desde compras x cada proveedor y se generara una reposición 
+de caja chica emitiendo un cheque desde cualquier cuenta de bancos contra reposición de caja chica (cuenta de efectivo transaccional o contable de pasivo) como se desee.
+
+
+(Caja chica xxx) debe ser proveedores registrados en Administrativos/proveedores, como cajas chicas hayan, ejemplo: caja chica Caracas, Caja chica Puerto Ordaz, etc
+
+(Caja chica xxx) puede o no estar configurado con ? antecediendo su descripción a fin de poder colocar un nombre de beneficiario distinto a la descripción  en bancos para emitir cheque de reposición.
+
+(Caja chica xxx) también podrá ser el nombre de la persona responsable del cobro del cheque de reposicion de caja y/o su custodia y/o manejo. Podran existir tantas veces en la ficha de proveedores como roles cumpla esa persona. Una de ellas caja chica.
+
+(Caja chica xxx) podrá también sustituirse en banco por un beneficiario en particular método habitual y natural del sistema Saint.
+
+Todos los métodos anteriores citados son lícitos, legítimos  y validos pero tienen pro y contras sera criterio del Administrador del concesionario el método y nivel de riesgo que desee correr según perfil de su personal.
+
+Se exhorta a indicar al usuario responsable de la carga de compras por caja chica que los criterios fiscales se deben cumplir como para cualquier compra por ejemplo
+compras que excedan las 20 UT se deberá realizar retención de IVA + ISLR si diera lugar.
+
+Cuidar de los montos exentos y  bases imponibles registrados.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

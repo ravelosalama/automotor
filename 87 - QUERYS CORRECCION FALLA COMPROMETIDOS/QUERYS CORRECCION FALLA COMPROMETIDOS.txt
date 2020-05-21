@@ -1,0 +1,49 @@
+
+UPDATE    SAPROD
+SET              Existen = 0, ExUnidad = 0, ExistenCon = 0, ExUnidadCon = 0, Compro = 0, Pedido = 0
+WHERE     (Existen < 0)
+
+
+UPDATE    SAEXIS
+SET              Existen = 0, CantPed = 0, CantCom = 0
+WHERE     (Existen < 0)
+
+
+UPDATE    SAEXIS
+SET              UnidPed = 0
+WHERE     (UnidPed < 0)
+
+UPDATE    SAEXIS
+SET              CantCom = 0
+WHERE     (CantCom < 0)
+
+
+UPDATE    SAPROD
+SET              Compro = 0
+WHERE     (Compro < 0)
+
+UPDATE    SAPROD
+SET              Compro = Existen
+WHERE     (Compro <> 0) AND (Compro > Existen)
+
+UPDATE    SAEXIS
+SET              UnidCom = Existen
+WHERE     (UnidCom <> 0) AND (UnidCom > Existen)
+
+
+
+UPDATE    SAPROD
+SET              Compro = SAPROD.Existen
+FROM         SAPROD INNER JOIN
+                      SAEXIS AS y ON SAPROD.CodProd = y.CodProd
+WHERE     (SAPROD.Compro > SAPROD.Existen)
+
+UPDATE    SAEXIS
+SET              ExUnidad = 0, CantPed = 0, UnidPed = 0, CantCom = Existen
+WHERE     (CantCom > Existen)
+
+
+UPDATE    SAEXIS
+SET              CantCom = Y.Compro
+FROM         SAEXIS INNER JOIN
+                      SAPROD AS Y ON SAEXIS.CodProd = Y.CodProd AND SAEXIS.CantCom > Y.Compro

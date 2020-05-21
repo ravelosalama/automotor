@@ -1,0 +1,11 @@
+para la version 8748 del 14/12/2011
+
+se requirio realizar un cambio en los comandos de mensajeria de alertas y errores del raiserror por net send
+
+se requiere iniciar el servicio de mensajero en todas las estaciones de trabajo
+
+se requiere activar el manejo de comandos cmd en sql corriendo el query que se encuentra en esta carpeta
+
+y se requiere realizar cambios de comandos ya realizados y probados stand alone en trigger en modificacion esperando 
+
+ponerlo en practica a la brevedead posible en liberty cars.

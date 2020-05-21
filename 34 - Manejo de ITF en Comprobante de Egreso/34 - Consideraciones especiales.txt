@@ -1,0 +1,5 @@
+El 16/06/2009
+
+Se quita en los formatos de egresos la relacion con la vista y se vuelve a utilizar las tablas 
+originales. para evita que en ls transacciones de tranferencias entre cuentas salga duplicada 
+las lineas de los asientos contables.

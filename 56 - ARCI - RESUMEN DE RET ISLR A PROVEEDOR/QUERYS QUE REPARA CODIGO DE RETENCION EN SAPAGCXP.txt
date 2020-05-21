@@ -1,0 +1,87 @@
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-004'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (x.TipoCxP = '21') AND (y.BaseReten > 0) AND (y.Monto / y.BaseReten * 100 = 2) AND (y.CodRete <> '06-004')
+
+
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0043'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (x.TipoCxP = '21') AND (y.BaseReten > 0) AND (y.Monto / y.BaseReten * 100 = 3) AND (y.CodRete <> '06-0043')
+
+
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0045'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (x.TipoCxP = '21') AND (y.BaseReten > 0) AND (y.Monto / y.BaseReten * 100 = 5) AND (y.CodRete <> '06-0045')
+
+
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-004'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE    (y.BaseReten > 0) and  (x.TipoCxP = '21') AND (y.CodRete <> '06-004') AND (y.CodRete <> '06-0043') AND (y.CodRete <> '06-0045') AND (ROUND(y.Monto / y.BaseReten * 100, 
+    
+
+                  2) = 2)
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0043'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (y.BaseReten > 0) and (x.TipoCxP = '21') AND (y.CodRete <> '06-004') AND (y.CodRete <> '06-0043') AND (y.CodRete <> '06-0045') AND (ROUND(y.Monto / y.BaseReten * 100, 
+                      2) = 3)
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0045'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE    (y.BaseReten > 0) and  (x.TipoCxP = '21') AND (y.CodRete <> '06-004') AND (y.CodRete <> '06-0043') AND (y.CodRete <> '06-0045') AND (ROUND(y.Monto / y.BaseReten * 100, 
+                      2) = 5)
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0049'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (x.TipoCxP = '21') AND (y.CodRete <> '06-004') AND (y.CodRete <> '06-0043') AND (y.CodRete <> '06-0045')
+
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0045'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (y.BaseReten <> 0) AND (x.TipoCxP = '21') AND (ROUND(y.Monto / y.BaseReten * 100, 2) = 5) AND (y.CodRete <> '06-0045')
+
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-0043'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (y.BaseReten <> 0) AND (x.TipoCxP = '21') AND (ROUND(y.Monto / y.BaseReten * 100, 2) = 3) AND (y.CodRete <> '06-0043')
+
+
+
+UPDATE    SAPAGCXP
+SET              CODRETE = '06-004'
+FROM         SAACXP x INNER JOIN
+                      SAPAGCXP y ON x.NroUnico = y.NroPpal
+WHERE     (y.BaseReten <> 0) AND (x.TipoCxP = '21') AND (ROUND(y.Monto / y.BaseReten * 100, 2) = 2) AND (y.CodRete <> '06-004')
+
+
+
+
+
+

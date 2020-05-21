@@ -1,0 +1,9 @@
+Esta solucion consiste en poder cuantificar el numero de ordenes y los items de reparaciones
+atendidos por un ayudante en particular adicionalmente al tecnico (servidor) asignado)
+
+en este caso:
+
+se habilita la linea 10 de comentarios del item para colocar el codigo del ayudante que debe existir en la tabla de servidores
+
+se genera un reporte especial por OR facturadas y/o cerrada agrupado por ayudante.
+

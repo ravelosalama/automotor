@@ -1,0 +1,15 @@
+Hay que colocar por separado los impuesto que aplica a productos con alicuota adicional
+
+hay que arreglar los libros y demas reportes que manejen impuestos IVA + ADI
+
+HAY QUE RECONFIGURAR EL IMP ADI CON EL 10%
+
+hAY QUE REVISAR Y RECONFIGURAR PERMISOLOGIA Y RESTRICCIONES DE USUARIOS ALGUNA LAS PIERDE
+
+MANEJO DE FECHAS CON HORAS ESTRICTAMENTE
+
+hay que cambiar el color de la fuente DEL FORMATO DE FACTURA A NEGRO PORQUE LAS IMPRESORAS NO IMPRIMENCUANDO ES UN COLOR DISTINTO 
+SOLO LAS IMPRESORAS DE MATRIZA DE PUNTO
+
+
+

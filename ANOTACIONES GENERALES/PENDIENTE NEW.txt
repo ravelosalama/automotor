@@ -1,0 +1,85 @@
+QUERY AUTOMATICO EN SATaXCOM PARA VERIFICAR Y CORREGIR ALICUOTAS. (listo)
+TRIGGER AUTOMATICO PARA COLOCAR NOTA DE CREDITO EN CXC DESDE DEVOLUCION EN VEHICULOS.(no hace falta en version 8642)
+ARREGLOS DE SERIALES
+borrar transacciones en compras
+probar y modificar liquidar ordenes de reparacion
+ojo revisar procedimiento de pedidos/oR/accesorios de vehiculos/posible forma de crear dos o mas veces un pedido sobre un orden
+Ensayar con Saint Administrativo 8642 y base de datos de concesionarios.
+Revisar no se estan actualizando todos los datos adicionales de ventas en guardar
+cOLOCAR TRIGGER QUE REGISTRE FECHA DE VENCIMIENTO 30  DIAS A FACTURAS CHRYSLER REPUESTOS SEGUN FECHA REAL.
+revisar lo que ocurre con reporte de comisiones de vendedores vs comisiones tecnicos.
+VALIDAR EN FACTURA DE SERVICIO CODVEND Y CODMEC PARA EVITAR FACTURAR CON COD AAAA
+colocar validacion en pedidos cuando orden de reparacion no exita
+atender necesidad de restar inventario cuando se haga pedidos ojo probar existencia-comprometido=disponible
+IMPLEMENTAR PROCEDIMIENTOS PARA CONTROLAR COTIZACIONES DE VEHICULOS POR EL SISTEMA ventas de vehiculos
+REVISAR POSIBILIDAD DE CREAR OTRO DEPOSITO PARA ACCESORIOS O INSTANCIAS PARA PODER CONFIGURAR PERMISOLOGIA
+REVISAR POSIBILIDAD DE CREAR PEDIDOS COMO NOTAS DE CREDITOS SOLO GARANTIAS/INTERNOS.es decir lo que no sale por caja
+TRIGGER QUE ACTUALICE MARCA= MARCA Y CLASE= MODELO O VEHICULO SEGUNSEA LA CREACION DEL PRODUCTO
+ENLAZAR PAGOS EN BANCOS CON DEVOLUCIONES DE DINERO CLIENTE.
+ojo con el procedimiento para pago de vehiculo a chrysler deben ser por pagos o abonos a exepcion de
+los casos de sobregiro en pago que debera ser por anticipo, siempre y cuando se especifique el
+numero de la factura de compra en el detalle del anticipo por cuanto por anticipo no relaciona a abono a facturas sino a cuenta corriente
+aplicar auditorias a bases de datos eventualmente
+
+OJOJOJO: Anunciar a todas las facturadoras de Vehiculo el Standar que deben seguir para registrar los comen
+         tarios NOTAS1='Ley de Timbre Fiscal', Notas2: 'Reserva de dominio a nombre de:' notas3: Financiadora.
+
+         Anunciar procedimiento oficial para registrar pagos a Chrysler para cancelacion de Vehiculos.
+
+         aNUNCIAR A LAS CAJERAS LO ESTRICTO DE COLOCAR NRO DE FACTURA AFECTADA EN DEVOLUCION POR NUEVO TRIGGER SOBRE SAFACT
+
+
+         aRREGLAR LESLI REPORTES DE RETENCIONES.
+
+Eliminar retenciones aplicadas por error a proveedores solo tumbando retenIva en sacomp y revisar consecuencias en demas tablas 
+pero dejando los registros por la secuencia numerica
+
+dISEÑAR rEPORTE: LISTADO DE RECIBOS EMITIDOS EN CXC POR RECIBO DE DINERO POR FUTURO NEGOCIO O ANTICIPOS
+                 CONSULTA DE FACTURAS /COMPRAS/AFECTADAS/VEHICULO POR RECIBO DE PAGO.
+                 RELACION DE RECIBOS DE PAGOS POR FECHA Y ORDEN NUMERICO.
+                 CERTIFICADO DE ORIGEN
+                 RDG
+                 CERTIFICADO DE GARANTIA O CONTROL DE GARANTIA. 
+                 RESUMEN DE IVA MENSUAL CONTROLANDO ACUMULADOS, CUOTAS TRIBUTARIA, EXCEDENTES ACUMULADOS.             
+
+PROCESOS POR DISEÑAR: AL ANULAR O BORRAR CHEQUES EN BANCOS TAMBIEN REVERSAR OPERACION CXP.
+                      ELIMINAR COMPRAS Y TODOS SUS SUBPROCESOS: RETENCIONES ETC. (SOLO DEL MES EN CURSO)
+                      MODIFICAR DATOS COMO SERIALES, COLOR, SERIAL MOTOR, MODELO, PLACA
+                      ELIMINAR RETENCIONES A PROVEEDORES POR CAUSA DE PAGO POR CAJA CHICA O EXONERADO. NO CONTRIBUYENTE.
+
+
+
+
+
+Las sIETE a abordar antes de instalar en FIAT y Mitsubishi
+
+    1ro. Definir procesos y reportes para CXC CLIENTES VEHICULOS y CXP CHRYSLER.
+    2do. Definir procedimientos y Reportes que Simplifique informacion sobre comisiones de vendedores y tecnicos
+    3ro. Definir procedimientos y reportes que Controle Inventarios repuestos plenamente (GARANTIA,INTERNOS, ACCESORIOS, CLIENTE, SERVICIO-CONTADO)
+    4to. Definir procedimiento para Nuevo control y gestion de Ventas de Vehiculos.
+    5to. Probar procedimiento de liquidacion de ordenes de reparacion.
+    6ta. Actualizar a version 8642
+    7ma. Diseñar y Desarrollar Cuadro Esdados Financieras (Ganancias y perdidas) y Cuenta de Explotacion.
+ 
+
+    
+oRDENAR DOCUMENTOS DE ANOTACIONES ESPECIALES COMO SIGUE:
+
+PENDIENTES: IDEAS DE PROCEDIMIENTOS, REPORTES NUEVOS POR DISEÑAR Y NUEVAS NECESIDADES POR DESARROLLAR.
+
+ACTIVIDADES REALIZADAS: EN VISITAS A CONCESIONARIOS, 
+
+MATERIAL PARA INSTRUCTIVOS PARA USUARIOS FINALES: 
+
+DOCUMENTACION TECNICA DE ANALISIS:
+
+EVALUACIONES Y REVSIONES A VERSIONES:
+
+NOVEDADES: LAS SURGIDAS DEL DIA EN LOS DIFERENTES CONCESIONARIOS FUERA DE LO NORMAL.
+
+
+
+
+
+
+

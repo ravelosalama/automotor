@@ -1,0 +1,64 @@
+
+
+Richard: tiene problemas en el reporte de ventas de repuestos en algunos campos de costos, ocurre cuando el stock esta en negativo.
+
+MIGUEL: REPORTA COLOCAR NO VISIBLE FORMAS DE PAGO CUANDO ES CREDITO A TODOS LOS FORMATOS DE FACTURA
+
+
+DAINERY: ME REPORTO QUE EN LOS COMPROBANTES DE BANCOS NO ESTA SALIENDO LA DESCRIPCION DEL CHEQUE Y DE LA CUENTA BANCARIA
+
+
+Nancy: tiene problemas en el cierre del dia 3/4/2008 en planet version 8720
+
+
+Keiser: me entrego retencones con errores procedimentales para arreglarlas en BD
+
+
+Susan: reporte de Caja diaria de vehiculo.
+
+
+Raiza: reporta: Error cometido en el registro de compra de vehiculo se le olvido colocar tipo de operacion 01-101 
+
+
+DORIS: Reporta que a una OR con repuestos ya cargados se le volaron despues de emitir la prefactura.
+
+
+Sindy: 25/04/2008: reporto duplicacion en el asiento de banco en el comprobante de egreso cuando se toca una cuanta 
+                   bancaria por tranferencia.
+
+Yelitza: 25/04/2008: reporta diferencia en negativo en centimos en monto exonerado en formato de retencion de IVa a proveedor.
+                     Solucion: es un error por diferencias en centimos pero hay que colocar un filtro para que el formato no coloque 
+                               cifras en negativo .
+
+JGRS: rEVISAR PROCEDIMIENTO DE DESCARGO DEL INVENTARIO DE AQUELLOS PRODUCTOS QUE SON CARGADOS A Or DESDE PEDIDOS O NOTAS 
+      DE ENTREGA Y DESPUES SON PRE O FACTURADOS CON LQA OPCION DE DEPOSITOS DESABILIDTADA ¿EN QUE DEPOSITO TERMINA REBANDO EL INVENTARIO?
+
+Keiser:28/04/2008 reporta que en el libro de ventas persisten problemas con decimales en la parte de ajustes.
+
+Raiza: 30/04 reporta arreglar una factura con forma de pago errada
+
+Roxana: 30/04 reporta una OR cerrada con Liquidacion ???
+
+Keiser y Fiscal: reporta rif sin letras de rif V,E,J,G incorporar validacion.
+
+Alejandro: saint en su equipo y trafico de piso.
+
+KEISER: 05/05/2008 REPORTE DE RETENCION ISLR EN PROVEEDORES SALEN PORCENTAJES RAROS  1,55,2,58,4.38,3.58
+
+MARIA ALEJANDRA: CONSULTA SOBRE REPORTE DE REPUESTOS DE BRISA
+
+
+
+planet cars DAVID arreglar estas ordenes 
+005883
+006199
+006296
+006187
+GARANTIA
+
+
+Guayana ensayo para anular factura vieja y realizar factura nueva
+
+
+
+

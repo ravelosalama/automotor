@@ -1,0 +1,56 @@
+-- ESTE PROCEDIMIENTO ESTA COMPUESTO de 4 PARTES
+
+-- 1RO)- LLEVAR A TODOS LOS ARTICULOS A COMPROMETIDOS 0
+--2DO)- CORRER UN PROCESO GENERAL QUE TOME TODOS LOS PEDIDOS SOBRE ORDENES PENDIENTES 
+--            SE PROCESE SUMANDO TODOS LAS UNIDADES POR ARTICULOS Y COLOCARLOS EN COMPROMETIDOS
+--3RO)- HACER UN TRIGGER QUE POR CADA PEDIDO QUE SE PROCESE SE EJECUTE EL RECONTEO POR CADA  ARTICULO DE ESE PEDIDO. (MANTENIMIENTO)
+-- 4TO) QUE POR CADA ARTICULO QUE SE FACTURE SE REBAJEN LOS COMPROMETIDOS. MODIFICACION DE TRIGGER SOBRE SAFACT_02 
+
+
+FALTA ULTIMO PUNTO Y REVISAR EN GENERAL CORRER EN CALIENTE CON PRUEBAS SOBRE BD
+
+ADEMAS FALTA DISE;AR LOS REPORTES PARA NOTAS DE ENTREGAS listo 
+
+
+
+
+0-----------------------0--------------------0------------------------0-----------------------0-------------------------0------------------------0--------------0
+
+
+
+-- QUERY QUE SELECCIONA LOS PEDIDOS DE OR PENDENTES 
+
+SELECT     X.TipoFac, X.NumeroD, X.Nro_OR, X.Vale, Y.TipoFac AS Expr1, Y.NumeroD AS Expr2, Y.Placa, Y.Kilometraje, Y.Liquidacion, Y.Status, Y.Cierre_OR, 
+                      Y.Apertura_OR
+FROM         SAFACT_03 AS X INNER JOIN
+                      SAFACT_01 AS Y ON X.Nro_OR = Y.NumeroD AND Y.TipoFac = 'G'
+WHERE     (X.TipoFac = 'E') AND (Y.Status = 'PENDIENTE')
+ORDER BY X.Nro_OR
+
+0-----------------------0--------------------0------------------------0-----------------------0-------------------------0------------------------0--------------0
+
+-- QUERY QUE SELECCIONA LOS PEDIDOS DE OR PENDENTES Y LOS ITEM DE PEDIDOS Y FECHA EMISION DEL PEDIDO POR ORDEN DE ORDEN DE REPARACION
+
+
+SELECT   *
+FROM         SAFACT_03 AS X INNER JOIN
+                      SAFACT_01 AS Y ON X.Nro_OR = Y.NumeroD AND Y.TipoFac = 'G' INNER JOIN
+                      SAITEMFAC AS Z ON X.TipoFac = Z.TipoFac AND X.NumeroD = Z.NumeroD INNER JOIN
+                      SAFACT AS W ON W.NumeroD = X.NumeroD AND W.TipoFac = X.TipoFac
+WHERE     (X.TipoFac = 'E') AND (Y.Status = 'PENDIENTE')
+ORDER BY X.Nro_OR
+
+0-----------------------0--------------------0------------------------0-----------------------0-------------------------0------------------------0--------------0
+
+--  QUERY DEFINITIVO QUE LISTA TODOS LOS CODIGOS DE REPUESTOS CARGADOS EN DIFERENTES PEDIDOS -- DEL A;O 2011  SOBRE ORDENES PENDIENTES A LA FECHA.
+
+SELECT DISTINCT CODITEM 
+FROM  SAFACT_03 AS X INNER JOIN
+                      SAFACT_01 AS Y ON X.Nro_OR = Y.NumeroD AND Y.TipoFac = 'G' INNER JOIN
+                      SAITEMFAC AS Z ON X.TipoFac = Z.TipoFac AND X.NumeroD = Z.NumeroD INNER JOIN
+                      SAFACT AS W ON W.NumeroD = X.NumeroD AND W.TipoFac = X.TipoFac
+WHERE     (X.TipoFac = 'E') AND (Y.Status = 'PENDIENTE') AND (YEAR(W.FechaE)='2011')
+ORDER BY Z.CodItem
+
+
+

@@ -1,0 +1,8 @@
+FALTA PEDIRELE TRIGGER A CARLOS DE SESA_TG_COMPRA INSERT
+                                   SESA_TG_COMPRA_VEHICLO AMBOS SOBRE SACOMP_01
+
+las vistas RP
+y VW
+
+
+

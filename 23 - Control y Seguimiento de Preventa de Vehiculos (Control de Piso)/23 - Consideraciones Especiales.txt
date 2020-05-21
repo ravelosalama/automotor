@@ -1,0 +1,12 @@
+Solo hay que diseñar un enlace entre Saint y Trafico de Piso de Chrysler
+
+
+Se sugiere generar tablas replicadas de trafico de piso en Base de datos de Saint
+y desarrollar vistas activas para el generador de reportes de Saint.
+
+
+hoy 29032009 se hace configuracion de iconos por estacion y funcion
+
+se crea un grupo de usuarios en saint y un usuario base
+ademas se configura menues y permisologia del grupo
+se crea operacion de presupuesto de vehiculo

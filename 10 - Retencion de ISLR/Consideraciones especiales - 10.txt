@@ -1,0 +1,76 @@
+El reporte debe revisarse el grupo y orden porque no esta haciendo bien la ruptura de control.
+
+y esta hecho en BD libertycard servidor : consultor
+
+Solucion montada solo en Liberty Reporte de retemciones a proveedores de ISLR
+
+-----------------0--------------------0--------------------0--------------------0---------------0
+
+27/11/2007
+
+SE PROCEDE HACER UNA REVISION GENERAL DE  TODO EL PROCESO DE MANEJO DE RETENCIONES DE ISLR EN COMPRAS A PROVEEDORES
+con base de datos de Liberty
+
+1 CASO (A - UNA FACTURA B - VARIAS FACTURAS
+  SE REGISTRA LA COMPRA Y POR ADMINISTRATIVO /CXP SE GERENRA LA RETENCION COMO UN PAGO. (SOLO RETENCION)
+
+  VIA: ADMINISTRATIVO/CXP/SELECCIONAR PROVEEDOR/OPERACION/PAGO O ABONO/SELECCIONAR FACTURA A RETENER/
+COLOCAR EN COLUMNA PAGO O ABONO MONTO DE LA RETENCION (CALCULADORA)/COLOCAR EN COLUMNA RETENCION LA MISMA CIFRA A RETENER/
+DESCRIBIR EL TIPO DE LA RETENCION/COLOCAR BASE IMPONIBLE DEL IMPUESTO/ENTER TANTAS VECES HASTA QUE EL SISTEMA
+CONVALIDE EL PORCENTAJE/SI SE DESEA SEGUIR REGISTRANDO MAS RETENCIONES A MAS FACTURAS SE DEBE SEGUIR SELECCIONANDO OTRA FACTURA
+ASI HASTA CULMINAR EL NUMERO DE FACTURAS A RETENER EN EL MISMO PROCESO/ ESTE PROCESO GENERARA UNA nd UNICA PARA TODAS LAS RETENCIONES
+ACEPTAR /SEGIR PASOS NORMALES DEL PAGO A EXEPCION QUE NO SE DEFINE FORMA DE PAGO Y QUE SETILDA
+IMPRIMIR RETENCION.
+
+
+
+2 CASO   A - UNA FACTURA B - VARIAS FACTURAS
+
+SE GENERA LA RETENCION EN EL PAGO DE LA FACTURAS  
+
+
+
+
+se concluye: corregir en formato de retencion: variable2 de subreporte formula.
+
+quitando el divisor / cuentasporpagar(montoxxxxx) x pagos_proveedor(base_retencion)
+
+se realizo la correccion en los 3 concesionarios madrugada del 28/11/2007
+
+
+
+en prestige no esta realizandose bien este procedimiento. Hablar Urgente con Yelitza solo mes noviembre
+
+ 
+
+
+
+
+
+se observa que ambos procedimiento es decir generar las ret islr por administrativo antes del pago 
+
+o general lñas ret de islr en el pago por bancos son similares y viables solo que en el detalle de pagos
+
+de consulta de la cxp por administrativo muestra el pago conteniendo el monto de la ret de islr cuando se genera por bancos
+
+y cuando se genera por administrativo y luego el pago cada item queda registrado corectamente con sus montos exactos.
+
+Se corrobora que la transaccion bancaria el cheque se genera por el total de la deuda menos todas las retenciones
+
+
+
+
+
+       
+
+
+
+SE PROPONE CREAR TIPOS DE OPETACIONES QUE INDIQUEN
+
+CANCELACION POR BANCO DE CUENTAS POR PAGAR VEHICULOS
+CANCELACION POR BANCO DE CUENTAS POR PAGAR REPUESTOS
+CANCELACION POR BANCO DE CUENTAS POR PAGAR SERVICIOS
+CANCELACION POR BANCO DE CUENTAS POR PAGAR OTROS
+
+
+NOTA DE DEBITO POR RETENCIONES DE ISLR (transaccion global del pago) 
